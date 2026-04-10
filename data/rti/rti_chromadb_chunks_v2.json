@@ -1,0 +1,134 @@
+[
+  {
+    "id": "rti_001_overview",
+    "text": "The Right to Information (RTI) Act 2005 is a powerful Indian law that gives every citizen the right to request information from any government authority. Any Indian citizen can use RTI to ask for documents, records, status of schemes, or inspection of any government work. There is no age limit and no reason needs to be given for filing RTI. The application fee is only Rs 10. BPL card holders are completely exempt from fees. RTI can be used to check status of ration card, pension, PF, scholarship, road construction, government scheme funds, and much more. The government department must respond within 30 days. For urgent matters involving life or liberty, response must come within 48 hours.",
+    "metadata": {
+      "domain": "rti",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "RTI Act 2005 Section 3"
+    }
+  },
+  {
+    "id": "rti_002_eligibility",
+    "text": "Who can file an RTI application? Any Indian citizen can file RTI. There is no age limit. The applicant does not need to give any reason for requesting information — this is clearly stated in Section 6(2) of the RTI Act. Foreign nationals cannot file RTI. NRIs who are Indian citizens can file RTI. BPL (Below Poverty Line) card holders are exempt from the Rs 10 application fee but must attach a copy of their BPL certificate. The applicant only needs to provide contact details so the department can reach them — no justification is needed.",
+    "metadata": {
+      "domain": "rti",
+      "type": "eligibility",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Act 2005 Section 3, Section 6(2)"
+    }
+  },
+  {
+    "id": "rti_003_fees",
+    "text": "What are the fees for filing an RTI application? The application fee is Rs 10 only. BPL card holders are completely free — they must attach a BPL certificate copy. Document photocopies cost Rs 2 per page additionally. Inspection of records is free for the first hour, then Rs 5 per hour after that. First appeal is completely free — no fee at all. Second appeal is also free. Payment can be made via Court Fee Stamp, Indian Postal Order (IPO), or online payment via Net Banking, UPI, Debit/Credit Card. If a public authority fails to respond within the time limit, information must be provided free of charge.",
+    "metadata": {
+      "domain": "rti",
+      "type": "fees",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Act 2005 Section 6(1), Section 7(5)"
+    }
+  },
+  {
+    "id": "rti_004_online_process",
+    "text": "How to file RTI online for Central Government departments? Visit rtionline.gov.in. Click Submit Request. Read the guidelines and tick the checkbox. Select the Ministry or Department. Fill your personal details — name, email, mobile, address. Write your information request in the text box — maximum 3000 characters allowed. If BPL, select Yes and upload BPL certificate PDF. Otherwise pay Rs 10 online via Net Banking, UPI, or Card. After submission, a unique registration number is issued — save this for tracking status. Note: This portal is only for Central Government ministries and departments. For UP State Government departments, use the offline process.",
+    "metadata": {
+      "domain": "rti",
+      "type": "process_online",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Online Portal rtionline.gov.in"
+    }
+  },
+  {
+    "id": "rti_005_offline_process",
+    "text": "How to file RTI offline? First write a clear application in Hindi or English. Clearly state what specific information you need. Identify the PIO (Public Information Officer) of the concerned department — every government department must have one. Attach Rs 10 as Court Fee Stamp or Indian Postal Order. BPL card holders must attach BPL certificate instead of fees. Submit the application to the PIO in person or send via registered post. Always get an acknowledgment receipt. The department must respond within 30 days. If no response comes, file a First Appeal. This offline process is used for both Central and UP State Government departments.",
+    "metadata": {
+      "domain": "rti",
+      "type": "process_offline",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "RTI Act 2005 Section 6"
+    }
+  },
+  {
+    "id": "rti_006_time_limits",
+    "text": "What are the time limits under RTI? The PIO must provide information within 30 days of receiving the application. If the matter involves life or liberty of a person — such as arrest, bail, or medical emergency — information must be provided within 48 hours. If application is given to APIO instead of PIO, 5 extra days are added making it 35 days total. For third party information cases, up to 40 days are allowed. If PIO fails to respond within 30 days, it is treated as a deemed refusal — the applicant can then file a First Appeal. First appeal must be decided in 30 to 45 days.",
+    "metadata": {
+      "domain": "rti",
+      "type": "time_limits",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Act 2005 Section 7(1)"
+    }
+  },
+  {
+    "id": "rti_007_appeal",
+    "text": "What to do if RTI response is not satisfactory or not received? Step 1 — First Appeal: If no response in 30 days or unsatisfied with response, file a First Appeal to the senior officer (First Appellate Authority) in the same department. File within 30 days of receiving response. First Appeal is free. Decision must come in 30 to 45 days. Online filing via rtionline.gov.in using Submit First Appeal. Step 2 — Second Appeal: If still unsatisfied, file Second Appeal within 90 days. For UP State Government matters, file with UP State Information Commission (SIC) — phone 0522-2237838, Lucknow. For Central Government matters, file with Central Information Commission (CIC), New Delhi.",
+    "metadata": {
+      "domain": "rti",
+      "type": "appeal",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "RTI Act 2005 Section 19"
+    }
+  },
+  {
+    "id": "rti_008_exemptions",
+    "text": "What information cannot be obtained through RTI? Under Section 8 of the RTI Act, certain information is exempt: national security and sovereignty, information forbidden by court, parliamentary privilege, trade secrets and commercial confidential information, personal privacy information, foreign government confidential information, information that would endanger life or physical safety, information that would impede investigation or prosecution, and cabinet papers. Under Section 24, intelligence agencies like Intelligence Bureau, RAW, Narcotics Control Bureau are exempt. However, even for these exempt organizations, information related to corruption and human rights violations must be provided.",
+    "metadata": {
+      "domain": "rti",
+      "type": "exemptions",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Act 2005 Section 8, Section 24"
+    }
+  },
+  {
+    "id": "rti_009_penalties",
+    "text": "What penalties can be imposed on PIO under RTI? If a PIO refuses to receive an application, fails to provide information within 30 days without reasonable cause, gives incorrect or misleading information, or destroys information, a penalty of Rs 250 per day can be imposed. The maximum total penalty is Rs 25,000. Additionally, disciplinary action under service rules can be recommended if the PIO repeatedly fails to comply. The penalty is imposed by the Central Information Commission or the UP State Information Commission after giving the PIO an opportunity to be heard. The burden of proving that the PIO acted reasonably lies on the PIO.",
+    "metadata": {
+      "domain": "rti",
+      "type": "penalties",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "RTI Act 2005 Section 20"
+    }
+  },
+  {
+    "id": "rti_010_use_cases",
+    "text": "When to use RTI — common real life situations. Ration not received — file RTI with District Supply Officer. Pension stopped or delayed — file RTI with pension department. Scholarship not credited — file RTI with Social Welfare Department UP. Road not built despite funds released — file RTI with PWD or Gram Panchayat. Electricity connection not given — file RTI with electricity board. PF or salary not paid — file RTI with employer or labour department. Patwari not giving land records — file RTI with Revenue Department. Government scheme benefits not received — file RTI with concerned scheme department. Any government work delayed without reason — RTI is your right.",
+    "metadata": {
+      "domain": "rti",
+      "type": "use_cases",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "RTI Act 2005"
+    }
+  },
+  {
+    "id": "rti_011_up_specific",
+    "text": "RTI in Uttar Pradesh — state specific information. For UP State Government departments, RTI applications must be filed offline directly with the concerned department's PIO — the central portal rtionline.gov.in does not cover state government departments. Key UP Government departments where RTI is commonly used: UP Police (uppolice.gov.in), UP Revenue Board (boardofrevenue.up.nic.in), UP PWD, UP Health Department, UP Food Corporation, UP Education Department, UP Electricity (UPPCL), UP Social Welfare Department. Second appeals for UP state matters go to UP State Information Commission, Lucknow — phone 0522-2237838. Land records can be checked online at upbhulekh.gov.in.",
+    "metadata": {
+      "domain": "rti",
+      "type": "up_specific",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP State Information Commission, UP Government"
+    }
+  },
+  {
+    "id": "rti_012_tips_mistakes",
+    "text": "Practical tips for filing RTI and common mistakes to avoid. Tips: Be specific about what information you need — vague requests get vague responses. File RTI for only one department per application. Mention time period for records if needed. Keep a copy of your application. Use registered post for proof. Note the submission date. Mistakes to avoid: Filing RTI for UP State departments on rtionline.gov.in — that is only for Central Government. Forgetting to attach Rs 10 fee — application will be rejected. Missing appeal deadlines — first appeal must be filed within 30 days. Not getting acknowledgment receipt. Asking for too many things in one application. Writing in vague language instead of specific questions.",
+    "metadata": {
+      "domain": "rti",
+      "type": "tips",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "RTI Best Practices"
+    }
+  }
+]

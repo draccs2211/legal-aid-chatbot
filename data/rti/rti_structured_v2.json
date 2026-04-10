@@ -1,0 +1,315 @@
+{
+  "domain": "rti",
+  "domain_name": "Right to Information (RTI)",
+  "level": "deep",
+  "jurisdiction": [
+    "central",
+    "uttar_pradesh"
+  ],
+  "last_updated": "2025",
+  "source_act": "Right to Information Act, 2005 (No. 22 of 2005)",
+  "overview": "The Right to Information (RTI) Act 2005 empowers every Indian citizen to request information from any government authority. It promotes transparency and accountability in government functioning. Any citizen can ask for documents, records, or inspection of any government work. The fee is only Rs 10. BPL card holders are exempt from fees.",
+  "eligibility": {
+    "who_can_file": "Any Indian citizen can file an RTI application",
+    "age_limit": "No age limit",
+    "reason_required": "No — applicant is not required to give any reason (Section 6(2))",
+    "bpl_exemption": "BPL card holders are exempted from fees — must attach BPL certificate",
+    "section_reference": "Section 3 and Section 6(2) of RTI Act 2005"
+  },
+  "what_you_can_ask": [
+    "Copies of any government document or record",
+    "Inspection of government work",
+    "Certified copies of documents",
+    "Details of where scheme funds were spent",
+    "Salary and posting details of government officers",
+    "Tender and contract details",
+    "Status of ration card, PF, pension, scholarship",
+    "Any information held by a public authority"
+  ],
+  "what_you_cannot_ask": [
+    "Information affecting national security (Section 8a)",
+    "Cabinet papers and Council of Ministers deliberations (Section 8i)",
+    "Information that violates personal privacy (Section 8j)",
+    "Court-forbidden information (Section 8b)",
+    "Intelligence agencies like IB, RAW (Section 24)",
+    "Information that harms investigation (Section 8h)",
+    "Trade secrets and commercial confidential information (Section 8d)"
+  ],
+  "fees": {
+    "application_fee": "Rs 10",
+    "bpl_fee": "Free — must attach BPL certificate",
+    "document_copy_fee": "Rs 2 per page",
+    "inspection_fee": "Free for first hour, Rs 5 per hour after that",
+    "first_appeal_fee": "Free — no fee required",
+    "second_appeal_fee": "Free — no fee required",
+    "payment_modes": [
+      "Court Fee Stamp",
+      "Indian Postal Order (IPO)",
+      "Online payment (Net Banking, UPI, Debit/Credit Card)"
+    ],
+    "section_reference": "Section 6(1) and Section 7(5) of RTI Act 2005"
+  },
+  "time_limits": {
+    "normal_response": "30 days from receipt of application",
+    "life_or_liberty_matter": "48 hours — for urgent matters involving life or liberty",
+    "application_via_apio": "35 days — 5 extra days added when filed through APIO",
+    "third_party_information": "Up to 40 days",
+    "first_appeal_disposal": "30 to 45 days",
+    "second_appeal_filing": "Within 90 days of receiving first appeal decision",
+    "section_reference": "Section 7(1) of RTI Act 2005"
+  },
+  "process_offline": {
+    "steps": [
+      {
+        "step": 1,
+        "title": "Write the application",
+        "description": "Write a clear application in Hindi, English, or the official language of the area. Clearly mention what specific information you need. Be specific — do not write vague requests.",
+        "tip": "Ask for information from only one department per application"
+      },
+      {
+        "step": 2,
+        "title": "Identify the PIO",
+        "description": "Find the name and address of the PIO (Public Information Officer) of the department from which you need information. Every government department must have a designated PIO.",
+        "tip": "PIO details are usually available on the department's official website"
+      },
+      {
+        "step": 3,
+        "title": "Attach fees",
+        "description": "Attach Rs 10 as Court Fee Stamp or Indian Postal Order (IPO). BPL card holders must attach a copy of their BPL certificate instead of fees.",
+        "tip": "Cash payment is generally not accepted. Use IPO or Demand Draft."
+      },
+      {
+        "step": 4,
+        "title": "Submit the application",
+        "description": "Submit the application to the PIO in person or send via registered post. Always take an acknowledgment receipt.",
+        "tip": "Sending via registered post gives you a tracking number as proof of submission"
+      },
+      {
+        "step": 5,
+        "title": "Wait for response",
+        "description": "You should receive a response within 30 days. For urgent matters involving life or liberty, the response must come within 48 hours.",
+        "tip": "Note the date of submission — 30 days are counted from that date"
+      }
+    ]
+  },
+  "process_online": {
+    "portal": "https://rtionline.gov.in",
+    "applicable_for": "Central Government ministries and departments only. For UP State Government departments, use offline process or UP state portal.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit portal",
+        "description": "Go to rtionline.gov.in and click on Submit Request"
+      },
+      {
+        "step": 2,
+        "title": "Read guidelines",
+        "description": "Read the guidelines, tick the checkbox 'I have read and understood the guidelines' and click Submit"
+      },
+      {
+        "step": 3,
+        "title": "Fill the form",
+        "description": "Select Ministry/Department. Fill your name, email, mobile number, and address. Write your information request in the text box (maximum 3000 characters)."
+      },
+      {
+        "step": 4,
+        "title": "BPL status",
+        "description": "If you are BPL, select Yes and upload your BPL certificate PDF (max 1MB). Otherwise select No."
+      },
+      {
+        "step": 5,
+        "title": "Make payment",
+        "description": "Non-BPL applicants pay Rs 10 online via Net Banking, UPI, Debit/Credit Card, or RuPay Card."
+      },
+      {
+        "step": 6,
+        "title": "Save registration number",
+        "description": "After submission, you will receive a unique registration number. Save it for tracking your application status."
+      }
+    ],
+    "payment_modes": [
+      "Internet Banking",
+      "Debit/Credit Card (Master/Visa/RuPay)",
+      "UPI"
+    ],
+    "helpline_phone": "011-24622461",
+    "helpline_hours": "Monday to Friday, 9:00 AM to 5:30 PM",
+    "helpline_email": "helprtionline-dopt@nic.in"
+  },
+  "appeal_process": {
+    "first_appeal": {
+      "when": "If no response received within 30 days, or if dissatisfied with the response",
+      "time_limit_to_file": "Within 30 days of receiving response or expiry of 30-day period",
+      "to_whom": "First Appellate Authority — a senior officer in the same department",
+      "fee": "Free — no fee required",
+      "online": "File via rtionline.gov.in using Submit First Appeal option",
+      "disposal_time": "30 to 45 days",
+      "section_reference": "Section 19(1) of RTI Act 2005"
+    },
+    "second_appeal": {
+      "when": "If dissatisfied with first appeal decision",
+      "time_limit_to_file": "Within 90 days of receiving first appeal decision",
+      "to_whom_central": "Central Information Commission (CIC), New Delhi",
+      "to_whom_up_state": "UP State Information Commission (SIC), Lucknow",
+      "up_sic_phone": "0522-2237838",
+      "section_reference": "Section 19(3) of RTI Act 2005"
+    }
+  },
+  "penalties": {
+    "daily_penalty": "Rs 250 per day if PIO refuses or delays without reason",
+    "maximum_penalty": "Rs 25,000 maximum total penalty on PIO",
+    "disciplinary_action": "Recommended if PIO repeatedly fails to provide information",
+    "who_imposes": "Central Information Commission or State Information Commission",
+    "section_reference": "Section 20 of RTI Act 2005"
+  },
+  "exemptions": {
+    "section_8_exemptions": [
+      "National security and sovereignty",
+      "Information forbidden by court",
+      "Parliamentary privilege breach",
+      "Trade secrets and commercial confidence",
+      "Fiduciary relationship information",
+      "Foreign government confidential information",
+      "Life or physical safety endangering information",
+      "Investigation or prosecution related information",
+      "Cabinet papers and Council of Ministers deliberations",
+      "Personal privacy information"
+    ],
+    "section_24_exemptions": [
+      "Intelligence Bureau (IB)",
+      "Research and Analysis Wing (RAW)",
+      "Directorate of Revenue Intelligence",
+      "Narcotics Control Bureau",
+      "Border Security Force",
+      "Central Reserve Police Force",
+      "National Security Guards"
+    ],
+    "important_note": "Even exempt organizations must provide information related to corruption and human rights violations"
+  },
+  "sample_templates": [
+    {
+      "id": "rti_template_001_basic",
+      "title": "Basic RTI Application (Hindi)",
+      "language": "hindi",
+      "use_case": "General information request from any government department",
+      "template": "सेवा में,\nजन सूचना अधिकारी\n[विभाग का नाम]\n[पता]\n\nविषय: सूचना का अधिकार अधिनियम, 2005 की धारा 6(1) के अंतर्गत सूचना प्राप्त करने हेतु आवेदन\n\nमहाशय/महाशया,\n\nमैं [आवेदक का नाम], निवासी [पूरा पता], इस आवेदन के माध्यम से निम्नलिखित सूचनाएं प्राप्त करना चाहता/चाहती हूं:\n\n1. [सूचना का विवरण — स्पष्ट और विशिष्ट रूप से लिखें]\n2. [यदि और सूचना चाहिए तो यहां लिखें]\n\nआवेदन शुल्क: रुपये 10/- कोर्ट फीस स्टाम्प के रूप में संलग्न है।\n\nभवदीय,\n[नाम]\n[हस्ताक्षर]\n[दिनांक]\n[मोबाइल नंबर]"
+    },
+    {
+      "id": "rti_template_002_ration",
+      "title": "RTI for Ration Not Received (Hindi)",
+      "language": "hindi",
+      "use_case": "When ration has not been received from fair price shop",
+      "template": "सेवा में,\nजन सूचना अधिकारी\nजिला पूर्ति अधिकारी कार्यालय\n[जिला], उत्तर प्रदेश\n\nविषय: राशन वितरण से संबंधित सूचना हेतु RTI आवेदन\n\nमहाशय,\n\nमेरा राशन कार्ड नंबर [XXXX] है। पिछले [X] महीनों से मुझे उचित मूल्य दुकान से राशन नहीं मिल रहा है।\n\nमुझे निम्नलिखित सूचनाएं चाहिए:\n1. मेरे राशन कार्ड पर पिछले 6 महीनों में कितना राशन आवंटित हुआ?\n2. क्या मेरे कार्ड पर राशन वितरित दिखाया गया है?\n3. उचित मूल्य दुकानदार के विरुद्ध क्या कार्रवाई की जा सकती है?\n\nसंलग्न: Rs 10/- कोर्ट फीस स्टाम्प\n\nभवदीय,\n[नाम, पता, दिनांक, मोबाइल]"
+    },
+    {
+      "id": "rti_template_003_pension",
+      "title": "RTI for Pension Not Received (Hindi)",
+      "language": "hindi",
+      "use_case": "When pension payment is delayed or stopped",
+      "template": "सेवा में,\nजन सूचना अधिकारी\n[संबंधित पेंशन विभाग]\n[पता]\n\nविषय: पेंशन भुगतान से संबंधित सूचना हेतु RTI आवेदन\n\nमहाशय,\n\nमेरा पेंशन खाता संख्या [XXXX] है। पिछले [X] महीनों से मेरी पेंशन नहीं आई है।\n\nमुझे निम्नलिखित सूचनाएं चाहिए:\n1. मेरी पेंशन रोकने का क्या कारण है?\n2. पिछले 12 महीनों का पेंशन भुगतान विवरण\n3. पेंशन कब तक जारी होगी?\n\nसंलग्न: Rs 10/- कोर्ट फीस स्टाम्प\n\nभवदीय,\n[नाम, पता, दिनांक, मोबाइल]"
+    },
+    {
+      "id": "rti_template_004_scholarship",
+      "title": "RTI for Scholarship Not Received (Hindi)",
+      "language": "hindi",
+      "use_case": "When scholarship amount has not been credited",
+      "template": "सेवा में,\nजन सूचना अधिकारी\nसमाज कल्याण विभाग / छात्रवृत्ति विभाग\n[जिला], उत्तर प्रदेश\n\nविषय: छात्रवृत्ति भुगतान से संबंधित सूचना हेतु RTI आवेदन\n\nमहाशय,\n\nमेरा छात्रवृत्ति आवेदन संख्या [XXXX] है, शैक्षणिक वर्ष [XXXX]।\n\nमुझे निम्नलिखित सूचनाएं चाहिए:\n1. मेरा छात्रवृत्ति आवेदन किस स्तर पर लंबित है?\n2. छात्रवृत्ति कब तक जारी होगी?\n3. यदि आवेदन अस्वीकृत है तो कारण बताएं\n\nसंलग्न: Rs 10/- कोर्ट फीस स्टाम्प\n\nभवदीय,\n[नाम, पता, दिनांक, मोबाइल]"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is RTI and when to use it?",
+      "a": "RTI (Right to Information) Act 2005 gives every Indian citizen the right to ask for information from any government department. Use it when you face delays in ration, pension, scholarship, road construction, or any government scheme."
+    },
+    {
+      "q": "Can RTI application be filed in Hindi?",
+      "a": "Yes. RTI application can be filed in Hindi, English, or the official language of the area. Section 6(1) of the RTI Act clearly allows this."
+    },
+    {
+      "q": "What is the fee for filing RTI?",
+      "a": "Application fee is only Rs 10. BPL card holders are completely exempt from fees. First appeal is free. Document copies cost Rs 2 per page extra."
+    },
+    {
+      "q": "How many days to get RTI response?",
+      "a": "Response must come within 30 days. If the matter involves life or liberty of a person, response must come within 48 hours."
+    },
+    {
+      "q": "What to do if no response received?",
+      "a": "File a First Appeal within 30 days. This is completely free. If that also fails, file a Second Appeal with UP State Information Commission (phone: 0522-2237838) within 90 days."
+    },
+    {
+      "q": "Is it mandatory to give reason for filing RTI?",
+      "a": "No. Section 6(2) of RTI Act clearly states that applicant is not required to give any reason for requesting information."
+    },
+    {
+      "q": "Can RTI be filed online?",
+      "a": "Yes, for Central Government departments via rtionline.gov.in. Payment can be done online via Net Banking, UPI, or Card. For UP State Government departments, offline process is used."
+    },
+    {
+      "q": "Where to file second appeal in UP?",
+      "a": "UP State Information Commission in Lucknow. Phone: 0522-2237838. For Central Government matters, appeal goes to Central Information Commission (CIC) in New Delhi."
+    },
+    {
+      "q": "What if PIO refuses to give information?",
+      "a": "File First Appeal first. If that fails, file Second Appeal with UP SIC or CIC. The Commission can impose a penalty of up to Rs 25,000 on the PIO."
+    },
+    {
+      "q": "What information cannot be obtained through RTI?",
+      "a": "National security, cabinet decisions, personal privacy, court-forbidden information, intelligence agencies (IB, RAW), and trade secrets are exempt. But corruption and human rights violations can be asked even from intelligence agencies."
+    }
+  ],
+  "helplines": {
+    "central": [
+      {
+        "name": "RTI Online Portal Helpline",
+        "phone": "011-24622461",
+        "email": "helprtionline-dopt@nic.in",
+        "hours": "Monday to Friday, 9:00 AM to 5:30 PM",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "Central Information Commission (CIC)",
+        "address": "August Kranti Bhawan, Bhikaji Cama Place, New Delhi 110066",
+        "jurisdiction": "central"
+      }
+    ],
+    "uttar_pradesh": [
+      {
+        "name": "UP State Information Commission (SIC)",
+        "phone": "0522-2237838",
+        "address": "Lucknow, Uttar Pradesh",
+        "jurisdiction": "uttar_pradesh",
+        "note": "For second appeals and complaints against UP State Government departments"
+      }
+    ]
+  },
+  "key_sections": {
+    "section_3": "All citizens shall have the right to information",
+    "section_6": "How to make a request for obtaining information",
+    "section_7": "Disposal of request — 30 day time limit rule",
+    "section_8": "Exemptions — what information cannot be provided",
+    "section_19": "Appeal process — first and second appeal",
+    "section_20": "Penalties on PIO for non-compliance — up to Rs 25,000"
+  },
+  "common_mistakes": [
+    "Asking for information from wrong department — always identify correct PIO first",
+    "Writing vague requests — always be specific about what information you need",
+    "Forgetting to attach fees — application will be rejected without Rs 10",
+    "Not keeping receipt — always get acknowledgment of submission",
+    "Filing RTI for state departments on rtionline.gov.in — that portal is for central govt only",
+    "Missing appeal deadlines — first appeal must be filed within 30 days"
+  ],
+  "emergency_keywords": [
+    "urgent",
+    "life",
+    "liberty",
+    "arrest",
+    "bail",
+    "medical emergency",
+    "jaan",
+    "jeevan",
+    "giraftari",
+    "hospital",
+    "emergency"
+  ]
+}

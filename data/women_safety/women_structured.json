@@ -1,0 +1,427 @@
+{
+  "domain": "women_safety",
+  "domain_name": "Women Safety & Domestic Violence",
+  "level": "deep",
+  "jurisdiction": [
+    "central",
+    "uttar_pradesh"
+  ],
+  "last_updated": "2025",
+  "source_acts": [
+    "Protection of Women from Domestic Violence Act, 2005",
+    "Indian Penal Code (IPC) 1860 — Sections 354, 376, 498A, 509",
+    "Dowry Prohibition Act, 1961",
+    "POCSO Act, 2012",
+    "Sexual Harassment of Women at Workplace Act, 2013",
+    "Bharatiya Nyaya Sanhita (BNS) 2023 — replaced IPC"
+  ],
+  "overview": "The Protection of Women from Domestic Violence Act 2005 and related laws provide comprehensive protection to women in India against domestic violence, dowry harassment, sexual offenses, and workplace harassment. Any woman facing abuse at home or outside has multiple legal options — filing FIR, getting Protection Orders, and accessing free shelter and legal aid. In UP, dedicated helplines like 1090 (Mahila Power Line) and One Stop Centres (Sakhi) provide immediate support.",
+  "who_is_protected": {
+    "under_dv_act": "Wife, live-in partner, mother, sister, daughter — any woman in domestic relationship",
+    "under_pocso": "Any child (below 18 years) — both boys and girls",
+    "under_workplace_act": "Any woman employed in organized or unorganized sector",
+    "note": "A woman can file complaint on behalf of herself or any other woman in distress"
+  },
+  "types_of_domestic_violence": {
+    "physical": "Hitting, beating, kicking, burning, using weapons — any physical harm",
+    "emotional": "Insults, humiliation, threats, controlling behavior, isolation",
+    "sexual": "Forcing sexual acts, marital rape, sexual abuse",
+    "economic": "Denying money, not allowing to work, taking away salary, property rights denial",
+    "dowry_related": "Harassment for dowry demands before or after marriage"
+  },
+  "key_rights": [
+    "Right to live in shared household — cannot be thrown out of house (Section 17 DV Act)",
+    "Right to Protection Order — court can order abuser to stop violence (Section 18)",
+    "Right to Residence Order — court ensures woman stays in her home (Section 19)",
+    "Right to Monetary Relief — maintenance, medical expenses, loss of earnings (Section 20)",
+    "Right to Custody Order — temporary custody of children (Section 21)",
+    "Right to free legal aid — UPSLSA provides free lawyer (Legal Services Authorities Act)",
+    "Right to file FIR without paying any fee — 24x7 at any police station",
+    "Right to woman police officer for recording statement — Section 161 CrPC",
+    "Right to medical examination by female doctor",
+    "Right to shelter at One Stop Centre (Sakhi) — free food, shelter, legal aid",
+    "POCSO — child victim's identity cannot be disclosed — strict confidentiality"
+  ],
+  "important_laws": [
+    {
+      "act": "Protection of Women from Domestic Violence Act, 2005",
+      "key_sections": {
+        "Section 3": "Definition of domestic violence — physical, sexual, verbal, emotional, economic abuse",
+        "Section 12": "Application to Magistrate for relief — any woman can file",
+        "Section 17": "Right to reside in shared household — cannot be evicted",
+        "Section 18": "Protection Order — court orders abuser to stop violence",
+        "Section 19": "Residence Order — ensures woman's right to stay",
+        "Section 20": "Monetary relief — maintenance, medical costs",
+        "Section 21": "Custody Order — temporary child custody",
+        "Section 22": "Compensation Order — damages for injury and mental torture",
+        "Section 31": "Breach of Protection Order is a cognizable offense — arrest without warrant"
+      },
+      "jurisdiction": "central"
+    },
+    {
+      "act": "Indian Penal Code / Bharatiya Nyaya Sanhita (BNS) 2023",
+      "key_sections": {
+        "IPC 498A / BNS 85": "Husband or relatives subjecting wife to cruelty — 3 years jail",
+        "IPC 376 / BNS 64": "Rape — minimum 7 years, can extend to life imprisonment",
+        "IPC 354 / BNS 74": "Assault or criminal force on woman to outrage modesty — 1-5 years",
+        "IPC 354A / BNS 75": "Sexual harassment — unwelcome physical contact, demands for sexual favors",
+        "IPC 354B / BNS 76": "Assault with intent to disrobe — 3-7 years jail",
+        "IPC 354C / BNS 77": "Voyeurism — watching or capturing private acts — 1-7 years",
+        "IPC 354D / BNS 78": "Stalking — 1-5 years jail",
+        "IPC 509 / BNS 79": "Words, gesture or act intended to insult modesty of woman"
+      },
+      "jurisdiction": "central"
+    },
+    {
+      "act": "Dowry Prohibition Act, 1961",
+      "key_sections": {
+        "Section 3": "Giving or taking dowry — 5 years jail + Rs 15,000 fine",
+        "Section 4": "Demanding dowry — 6 months to 2 years jail",
+        "Section 6": "Dowry to be for benefit of wife — if given, belongs to wife only"
+      },
+      "jurisdiction": "central"
+    },
+    {
+      "act": "POCSO Act, 2012 (Protection of Children from Sexual Offences)",
+      "key_sections": {
+        "Section 4": "Penetrative sexual assault on child — minimum 10 years, can be life",
+        "Section 7": "Sexual assault on child — 3-5 years jail",
+        "Section 11": "Sexual harassment of child — 3 years jail",
+        "Section 19": "Mandatory reporting — any person knowing of offense MUST report",
+        "Section 23": "Identity of child victim cannot be disclosed in media"
+      },
+      "jurisdiction": "central"
+    },
+    {
+      "act": "Sexual Harassment of Women at Workplace Act, 2013 (POSH Act)",
+      "key_sections": {
+        "Section 4": "Every employer must set up Internal Complaints Committee (ICC)",
+        "Section 9": "Woman can file complaint within 3 months of incident",
+        "Section 13": "Inquiry must be completed in 90 days",
+        "Section 17": "Confidentiality of complaint and proceedings mandatory"
+      },
+      "jurisdiction": "central"
+    }
+  ],
+  "process": {
+    "immediate_emergency": {
+      "title": "Immediate Emergency — What to Do First",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Call 112 or 1090 immediately",
+          "detail": "UP 112 emergency service reaches within 15-20 minutes. UP Mahila Power Line 1090 is available 24x7 specifically for women in distress."
+        },
+        {
+          "step": 2,
+          "action": "Go to nearest safe place",
+          "detail": "Neighbor, relative, temple, community center — anywhere safe. One Stop Centre (Sakhi) provides immediate shelter."
+        },
+        {
+          "step": 3,
+          "action": "Preserve evidence",
+          "detail": "Take photos of injuries, keep torn clothes, note dates and times of incidents, save threatening messages/audio."
+        },
+        {
+          "step": 4,
+          "action": "Get medical help",
+          "detail": "Go to government hospital for medical examination — doctor's report is strong evidence. Female doctor must examine if requested."
+        }
+      ]
+    },
+    "filing_complaint": {
+      "title": "How to File Complaint",
+      "options": [
+        {
+          "option": "A — Police FIR",
+          "when": "For physical violence, rape, stalking, dowry harassment",
+          "how": "Go to nearest police station and file FIR. If police refuses, go to SP or file online at uppolice.gov.in. Woman police officer must record statement.",
+          "result": "Criminal case — abuser can be arrested"
+        },
+        {
+          "option": "B — Magistrate Complaint under DV Act",
+          "when": "For domestic violence, protection order, maintenance, residence rights",
+          "how": "File application to Judicial Magistrate under Section 12 of DV Act. Can file through Protection Officer or lawyer.",
+          "result": "Civil protection — court orders, maintenance, residence rights"
+        },
+        {
+          "option": "C — Protection Officer Complaint",
+          "when": "For domestic violence — easiest option for rural women",
+          "how": "Contact District Protection Officer — appointed in every district. Free help to file application.",
+          "result": "Protection Officer files case in court on your behalf"
+        },
+        {
+          "option": "D — National Commission for Women (NCW)",
+          "when": "If police and local authorities are not helping",
+          "how": "File online complaint at ncwapps.nic.in or call 7827170170",
+          "result": "NCW can intervene and direct authorities to act"
+        },
+        {
+          "option": "E — UP Mahila Helpline 1090",
+          "when": "Any woman in distress — fastest option",
+          "how": "Call 1090 — counselors available 24x7. They can coordinate police action, shelter, legal aid.",
+          "result": "Immediate support, police coordination, shelter arrangement"
+        }
+      ]
+    },
+    "getting_protection_order": {
+      "title": "Getting Protection Order from Court",
+      "steps": [
+        {
+          "step": 1,
+          "action": "File application under Section 12 DV Act",
+          "detail": "File in court of Judicial Magistrate of First Class (JMFC) in your area. You can file yourself or through Protection Officer or lawyer."
+        },
+        {
+          "step": 2,
+          "action": "Ex-parte order possible",
+          "detail": "In emergency, court can give Protection Order same day without hearing abuser — called ex-parte order."
+        },
+        {
+          "step": 3,
+          "action": "Court hearing",
+          "detail": "Both sides are heard. Court can give Protection Order, Residence Order, Maintenance, Custody Order — all in one application."
+        },
+        {
+          "step": 4,
+          "action": "Order enforcement",
+          "detail": "If abuser violates Protection Order — it is a cognizable offense (Section 31). Police can arrest without warrant."
+        }
+      ]
+    }
+  },
+  "up_specific": {
+    "mahila_helpline_1090": {
+      "name": "UP Mahila Power Line",
+      "number": "1090",
+      "available": "24x7",
+      "services": [
+        "Immediate counseling for women in distress",
+        "Police coordination for emergency response",
+        "Arrangement of shelter at One Stop Centre",
+        "Legal aid coordination",
+        "Follow-up on registered complaints"
+      ],
+      "app": "Mahila 1090 App available on Google Play Store"
+    },
+    "one_stop_centres": {
+      "name": "Sakhi — One Stop Centre",
+      "description": "Government-run centers providing comprehensive support to women affected by violence",
+      "services": [
+        "Emergency shelter — free stay up to 5 days",
+        "Medical assistance",
+        "Legal aid — free lawyer",
+        "Police assistance",
+        "Psycho-social counseling",
+        "Video conferencing with court"
+      ],
+      "how_to_reach": "Call 181 or 1090, or go directly to District Women Hospital",
+      "available_in": "All 75 districts of Uttar Pradesh"
+    },
+    "protection_officers": {
+      "description": "District Protection Officers appointed under DV Act in every UP district",
+      "role": "Help women file DV Act complaints, accompany to court, provide information about rights",
+      "how_to_find": "Contact District Magistrate office or Women Welfare Department"
+    },
+    "up_police_women_helpdesk": {
+      "description": "Every UP police station must have Women Helpdesk",
+      "services": "FIR registration, counseling, referral to OSC",
+      "contact": "Visit nearest police station"
+    },
+    "legal_aid": {
+      "name": "UP State Legal Services Authority (UPSLSA)",
+      "phone": "0522-2209457",
+      "services": "Free lawyer for women victims of domestic violence, rape, dowry harassment",
+      "eligibility": "All women victims — no income limit for gender-based violence cases"
+    },
+    "helplines_up": [
+      {
+        "name": "UP Mahila Power Line",
+        "number": "1090",
+        "available": "24x7"
+      },
+      {
+        "name": "UP Police Emergency",
+        "number": "112",
+        "available": "24x7"
+      },
+      {
+        "name": "One Stop Centre (Sakhi)",
+        "number": "181",
+        "available": "24x7"
+      },
+      {
+        "name": "UP Legal Services Authority",
+        "number": "0522-2209457",
+        "available": "Working hours"
+      },
+      {
+        "name": "CM Helpline UP",
+        "number": "1076",
+        "available": "24x7"
+      },
+      {
+        "name": "Child Helpline (POCSO)",
+        "number": "1098",
+        "available": "24x7"
+      }
+    ]
+  },
+  "national_helplines": [
+    {
+      "name": "Women Helpline (National)",
+      "number": "181",
+      "available": "24x7"
+    },
+    {
+      "name": "Police Emergency",
+      "number": "112",
+      "available": "24x7"
+    },
+    {
+      "name": "National Commission for Women",
+      "number": "7827170170",
+      "available": "Working hours"
+    },
+    {
+      "name": "Child Helpline",
+      "number": "1098",
+      "available": "24x7"
+    },
+    {
+      "name": "POCSO e-Box (online complaint)",
+      "url": "pocso.ncpcr.gov.in",
+      "available": "Online"
+    },
+    {
+      "name": "NCW Online Complaint",
+      "url": "ncwapps.nic.in",
+      "available": "Online"
+    }
+  ],
+  "dowry_harassment": {
+    "what_is_dowry": "Any property or valuable given or demanded in connection with marriage — illegal in India",
+    "what_to_do": [
+      "File FIR under IPC 498A for cruelty and dowry harassment",
+      "File complaint under Dowry Prohibition Act Section 3/4",
+      "Both criminal and civil cases can be filed simultaneously",
+      "Demand written proof of dowry demands if possible (WhatsApp messages, emails)"
+    ],
+    "important": "498A is a cognizable and non-bailable offense — police must arrest without warrant"
+  },
+  "workplace_harassment": {
+    "what_is_sexual_harassment": "Unwelcome sexual advances, requests for sexual favors, verbal or physical sexual conduct at workplace",
+    "where_to_complain": [
+      "Internal Complaints Committee (ICC) of your organization — within 3 months",
+      "Local Complaints Committee (LCC) at District level — if no ICC or ICC not working",
+      "Police FIR under IPC 354A"
+    ],
+    "employer_obligation": "Every organization with 10+ employees must have ICC — failure is punishable",
+    "protection": "Cannot be transferred, demoted, or fired for filing complaint"
+  },
+  "sample_templates": [
+    {
+      "id": "women_template_001",
+      "title": "FIR Application for Domestic Violence (Hindi)",
+      "language": "hindi",
+      "use_case": "When facing physical violence at home and filing police complaint",
+      "template": "सेवा में,\nथाना अध्यक्ष\n[थाने का नाम]\n[जिला], उत्तर प्रदेश\n\nविषय: घरेलू हिंसा की प्रथम सूचना रिपोर्ट दर्ज कराने हेतु\n\nमहाशय,\n\nमैं [नाम], पत्नी/पुत्री [नाम], निवासी [पूरा पता], यह सूचित करना चाहती हूं कि दिनांक [तारीख] को [समय] बजे मेरे [पति/ससुर/सास] ने मेरे साथ निम्नलिखित दुर्व्यवहार किया:\n\n[घटना का विस्तृत विवरण — क्या हुआ, कैसे हुआ, कहां हुआ]\n\nइस घटना के साक्षी: [साक्षियों के नाम यदि हों]\nचोटों का विवरण: [यदि शारीरिक चोट लगी हो]\n\nमैं घरेलू हिंसा से महिला संरक्षण अधिनियम 2005 एवं भारतीय दंड संहिता की धारा 498A के अंतर्गत कार्रवाई चाहती हूं।\n\nभवदीया,\n[नाम]\n[पता]\n[दिनांक]\n[मोबाइल नंबर]"
+    },
+    {
+      "id": "women_template_002",
+      "title": "Application for Protection Order under DV Act (Hindi)",
+      "language": "hindi",
+      "use_case": "Filing application in court for Protection Order under Section 12 of DV Act",
+      "template": "न्यायिक दण्डाधिकारी (प्रथम श्रेणी) के समक्ष\n[जिला], उत्तर प्रदेश\n\nधारा 12, घरेलू हिंसा से महिला संरक्षण अधिनियम, 2005 के अंतर्गत आवेदन\n\nआवेदिका: [महिला का नाम व पता]\nप्रत्यर्थी: [अभियुक्त का नाम व पता]\n\nविषय: संरक्षण आदेश, निवास आदेश एवं आर्थिक राहत हेतु आवेदन\n\nमहाशय,\n\nआवेदिका उपरोक्त प्रत्यर्थी के विरुद्ध निम्नलिखित तथ्यों के आधार पर आवेदन प्रस्तुत करती है:\n\n1. [घटनाओं का विवरण — तारीख सहित]\n2. [हिंसा का प्रकार — शारीरिक/मानसिक/आर्थिक]\n\nआवेदिका निम्नलिखित राहत चाहती है:\n- संरक्षण आदेश (धारा 18)\n- निवास आदेश (धारा 19)\n- आर्थिक राहत रु. [राशि] प्रतिमाह (धारा 20)\n\n[तारीख]\n[आवेदिका के हस्ताक्षर]"
+    },
+    {
+      "id": "women_template_003",
+      "title": "Complaint to NCW — If Police Not Helping (Hindi)",
+      "language": "hindi",
+      "use_case": "When local police is not registering FIR or not taking action",
+      "template": "सेवा में,\nअध्यक्षा,\nराष्ट्रीय महिला आयोग\nनई दिल्ली\n\nविषय: पुलिस द्वारा कार्रवाई न करने की शिकायत एवं सहायता हेतु\n\nमहाशया,\n\nमैं [नाम], निवासी [पता, जिला, UP] आपसे निवेदन करती हूं कि:\n\n1. दिनांक [तारीख] को मेरे साथ [घटना का विवरण] हुआ।\n2. मैंने [थाने का नाम] थाने में FIR दर्ज कराने की कोशिश की, परंतु पुलिस ने [कारण] कहकर FIR लिखने से मना कर दिया।\n3. [अब तक की गई कार्रवाई का विवरण]\n\nमैं आपसे निवेदन करती हूं कि उचित कार्रवाई हेतु निर्देश दें।\n\nसंलग्न: [कोई भी प्रमाण — फोटो, मेडिकल रिपोर्ट, आदि]\n\nभवदीया,\n[नाम, पता, दिनांक, मोबाइल]"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What if husband/family is threatening to kick out of house?",
+      "a": "Under Section 17 of DV Act, a woman in domestic relationship has the right to reside in shared household. No one can forcibly evict her. File application under Section 19 for Residence Order immediately. Contact 1090 or nearest One Stop Centre."
+    },
+    {
+      "q": "Can a woman file DV case against mother-in-law or other female relatives?",
+      "a": "Yes. The DV Act covers all members of household — husband, his parents, siblings, and other relatives including female family members. Complaint can be filed against any person in domestic relationship."
+    },
+    {
+      "q": "What if police refuses to register FIR?",
+      "a": "Go to Superintendent of Police (SP) with a written complaint. File online complaint at uppolice.gov.in. Call 1090 Mahila helpline. File complaint under Section 156(3) before Magistrate. NCW complaint at 7827170170."
+    },
+    {
+      "q": "Is dowry case registration automatically arrest?",
+      "a": "IPC 498A is cognizable and non-bailable. Police can arrest without warrant. However, Supreme Court guidelines require some verification before arrest. Still, filing FIR under 498A is very effective."
+    },
+    {
+      "q": "What free support is available in UP?",
+      "a": "UP has excellent support: 1090 Mahila Power Line (24x7 counseling + police coordination), One Stop Centre Sakhi (free shelter, medical, legal aid in all 75 districts), UPSLSA (free lawyer at 0522-2209457), Women Helpdesk at every police station."
+    },
+    {
+      "q": "Can a woman get maintenance under DV Act?",
+      "a": "Yes. Section 20 of DV Act allows court to order monetary relief including maintenance, medical expenses, loss of earnings, and damage to property. This is in addition to maintenance under Section 125 CrPC."
+    },
+    {
+      "q": "What is POCSO and when does it apply?",
+      "a": "POCSO Act 2012 protects children below 18 years from sexual offenses. Any sexual assault, harassment, or exploitation of a child is covered. Mandatory reporting — any person knowing of offense must report to police or SJPU. Child helpline: 1098."
+    },
+    {
+      "q": "What to do in workplace sexual harassment?",
+      "a": "File complaint with Internal Complaints Committee (ICC) of your organization within 3 months. If no ICC exists, file with Local Complaints Committee at district level. Also file FIR under IPC 354A. You cannot be punished for filing complaint."
+    },
+    {
+      "q": "How to reach One Stop Centre in UP?",
+      "a": "Call 181 (national helpline) or 1090 (UP Mahila Power Line). Can also directly visit District Women Hospital. Available in all 75 UP districts. Provides free shelter (up to 5 days), medical help, legal aid, counseling."
+    },
+    {
+      "q": "Is it safe to file complaint? Will abuser know?",
+      "a": "Identity protection is given. For POCSO cases, identity of child must not be disclosed. For DV cases, ex-parte Protection Order can be obtained without abuser being present initially. Contact 1090 — they can guide safely."
+    }
+  ],
+  "emergency_keywords": [
+    "maar pit",
+    "maar raha hai",
+    "maar diya",
+    "peet raha hai",
+    "jaan ka khatra",
+    "bachao",
+    "help",
+    "emergency",
+    "rape",
+    "jabardasti",
+    "chhed chhad",
+    "chhoo raha hai",
+    "ghar se nikal diya",
+    "nikaal diya",
+    "dhamki",
+    "pistal",
+    "chaku",
+    "aag",
+    "jalaya",
+    "jala diya",
+    "dahej",
+    "dahej ke liye maar raha",
+    "ससुर",
+    "saas maar rahi",
+    "pati maar raha",
+    "pati ne mara",
+    "domestic violence",
+    "bache ko maar raha",
+    "child abuse",
+    "ladki ko pakad liya"
+  ],
+  "common_mistakes": [
+    "Not preserving evidence — always photograph injuries, save threatening messages",
+    "Delaying complaint — the sooner you report, the stronger the case",
+    "Not knowing about One Stop Centre — free shelter and legal aid available in all UP districts",
+    "Thinking DV Act is only for physical violence — emotional, economic, sexual abuse are equally covered",
+    "Not knowing about right to stay in house — no one can evict you from shared household",
+    "Not using 1090 — UP Mahila Power Line is extremely effective and responsive"
+  ]
+}

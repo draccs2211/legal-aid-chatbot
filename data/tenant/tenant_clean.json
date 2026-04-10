@@ -1,0 +1,930 @@
+{
+  "domain": "tenant",
+  "domain_name": "Tenant & Rent Disputes",
+  "level": "deep",
+  "version": "2.0",
+  "jurisdiction": [
+    "central",
+    "uttar_pradesh"
+  ],
+  "applicable_courts": [
+    "Rent Control Court",
+    "Civil Court (Munsif)",
+    "District Court",
+    "High Court (Allahabad)",
+    "Consumer Forum (for deposit issues)"
+  ],
+  "last_updated": "2025",
+  "source_act": [
+    "Transfer of Property Act 1882",
+    "Model Tenancy Act 2021",
+    "UP Urban Buildings (Regulation of Letting, Rent and Eviction) Act 1972",
+    "Code of Civil Procedure 1908",
+    "Indian Contract Act 1872"
+  ],
+  "tags": [
+    "tenancy",
+    "rent",
+    "eviction",
+    "landlord",
+    "lease",
+    "security deposit",
+    "rental agreement",
+    "UP rent law"
+  ],
+  "overview": "Tenant and rent disputes arise between landlords and tenants regarding rent payment, eviction, maintenance, security deposit refund, and agreement violations. These disputes are governed primarily by the Transfer of Property Act 1882 and, in Uttar Pradesh, by the UP Urban Buildings Act 1972 which provides additional protection to tenants in urban areas.",
+  "eligibility": {
+    "who_can_use": "Tenant, landlord, legal heir, co-tenant, sub-tenant, or any affected party to a rental arrangement",
+    "conditions": "Dispute must arise from a rental agreement, tenancy, or occupation of premises as a tenant",
+    "section_reference": {
+      "central": "Transfer of Property Act Sec 105–117",
+      "uttar_pradesh": "UP Urban Buildings Act 1972, Sec 20–25",
+      "model": "Model Tenancy Act 2021, Sec 4–38"
+    }
+  },
+  "types_of_tenancy": [
+    {
+      "type": "Monthly Tenancy",
+      "description": "Rent paid monthly, terminable with one month notice",
+      "legal_basis": "Transfer of Property Act Sec 106"
+    },
+    {
+      "type": "Fixed-Term Lease",
+      "description": "Agreement for a fixed period (6 months, 1 year etc.)",
+      "legal_basis": "Transfer of Property Act Sec 105"
+    },
+    {
+      "type": "Periodic Tenancy",
+      "description": "Tenancy that continues period to period until terminated",
+      "legal_basis": "Transfer of Property Act Sec 106"
+    },
+    {
+      "type": "Tenancy at Will",
+      "description": "Terminable by either party at any time with notice",
+      "legal_basis": "Transfer of Property Act Sec 105"
+    },
+    {
+      "type": "Sub-Tenancy",
+      "description": "Tenant lets part of premises to another person",
+      "legal_basis": "Transfer of Property Act Sec 108(j)"
+    },
+    {
+      "type": "Commercial Tenancy",
+      "description": "Premises rented for business purposes",
+      "legal_basis": "Transfer of Property Act Sec 105; UP Act 1972"
+    }
+  ],
+  "key_rights": {
+    "tenant_rights": [
+      {
+        "right": "Right against illegal eviction",
+        "detail": "A tenant cannot be evicted without a valid court order preceded by proper legal notice",
+        "section": "UP Urban Buildings Act Sec 20"
+      },
+      {
+        "right": "Right to basic amenities",
+        "detail": "Landlord must not cut water, electricity, or other essential services to coerce the tenant",
+        "section": "Transfer of Property Act Sec 108(e)"
+      },
+      {
+        "right": "Right to peaceful enjoyment",
+        "detail": "Tenant is entitled to quiet enjoyment of the premises without interference from the landlord",
+        "section": "Transfer of Property Act Sec 108(c)"
+      },
+      {
+        "right": "Right to security deposit refund",
+        "detail": "After vacating, tenant is entitled to refund of security deposit after deducting legitimate damages",
+        "section": "Model Tenancy Act 2021 Sec 11"
+      },
+      {
+        "right": "Right to privacy",
+        "detail": "Landlord cannot enter rented premises without prior notice (at least 24 hours) except in emergency",
+        "section": "Model Tenancy Act 2021 Sec 17"
+      },
+      {
+        "right": "Right to rent receipt",
+        "detail": "Tenant can demand a signed receipt for every rent payment made",
+        "section": "Model Tenancy Act 2021 Sec 12"
+      },
+      {
+        "right": "Right to copy of agreement",
+        "detail": "Tenant is entitled to receive a signed copy of the rental agreement",
+        "section": "Model Tenancy Act 2021 Sec 4"
+      },
+      {
+        "right": "Right to contest rent increase",
+        "detail": "Rent can be increased only as per agreement terms or after proper notice; tenant can approach Rent Authority",
+        "section": "UP Urban Buildings Act Sec 13"
+      },
+      {
+        "right": "Right to legal remedy",
+        "detail": "Tenant may approach Rent Court, Civil Court, or Consumer Forum depending on the nature of dispute",
+        "section": "CPC 1908"
+      },
+      {
+        "right": "Right to repair deduction",
+        "detail": "If landlord fails to carry out essential repairs after notice, tenant may carry them out and deduct from rent",
+        "section": "Transfer of Property Act Sec 108(b)"
+      }
+    ],
+    "landlord_rights": [
+      {
+        "right": "Right to receive rent",
+        "detail": "Landlord is entitled to receive agreed rent on due date",
+        "section": "Transfer of Property Act Sec 105"
+      },
+      {
+        "right": "Right to evict legally",
+        "detail": "Landlord can file eviction suit on valid grounds after serving proper notice",
+        "section": "UP Urban Buildings Act Sec 20"
+      },
+      {
+        "right": "Right to inspect property",
+        "detail": "Landlord may inspect property with prior notice to check condition and maintenance",
+        "section": "Model Tenancy Act 2021 Sec 17"
+      },
+      {
+        "right": "Right to claim damages",
+        "detail": "Landlord can deduct legitimate repair costs from security deposit or sue for damages caused by tenant",
+        "section": "Indian Contract Act Sec 73"
+      },
+      {
+        "right": "Right to terminate for non-payment",
+        "detail": "If tenant fails to pay rent for 2+ months, landlord can send notice and initiate eviction proceedings",
+        "section": "UP Urban Buildings Act Sec 20(2)(a)"
+      },
+      {
+        "right": "Right to deny subletting",
+        "detail": "Landlord can prohibit subletting in the agreement and take action if violated",
+        "section": "Transfer of Property Act Sec 108(j)"
+      },
+      {
+        "right": "Right to require premises for own use",
+        "detail": "Landlord can seek eviction if genuinely required for self-occupation or family",
+        "section": "UP Urban Buildings Act Sec 21"
+      },
+      {
+        "right": "Right to fair rent revision",
+        "detail": "Landlord may apply for rent revision to Rent Authority if current rent is below fair market value",
+        "section": "UP Urban Buildings Act Sec 13"
+      }
+    ]
+  },
+  "common_issues": [
+    {
+      "issue": "Non-payment of rent",
+      "landlord_remedy": "Send notice, then file eviction and recovery suit",
+      "tenant_note": "Even disputed rent should be deposited in court to avoid eviction"
+    },
+    {
+      "issue": "Delay in rent payment",
+      "landlord_remedy": "Charge late fee if agreed; persistent delay is valid eviction ground",
+      "tenant_note": "Pay within grace period mentioned in agreement"
+    },
+    {
+      "issue": "Illegal eviction",
+      "tenant_remedy": "File injunction in Civil Court; claim compensation",
+      "landlord_note": "Forceful eviction attracts criminal liability under IPC"
+    },
+    {
+      "issue": "Security deposit not returned",
+      "tenant_remedy": "Send legal notice; file consumer complaint or civil suit",
+      "timeline": "Deposit must be returned within 30 days of vacating (Model Tenancy Act)"
+    },
+    {
+      "issue": "Maintenance and repair disputes",
+      "detail": "Structural repairs are landlord's duty; internal maintenance is tenant's duty unless agreed otherwise",
+      "section": "Transfer of Property Act Sec 108(m)"
+    },
+    {
+      "issue": "Harassment by landlord",
+      "tenant_remedy": "File complaint with police or Rent Authority; approach court for injunction",
+      "acts_covered": "Cutting utilities, threatening, intimidating, entering without permission"
+    },
+    {
+      "issue": "Unauthorized subletting by tenant",
+      "landlord_remedy": "Issue notice and file eviction suit",
+      "section": "UP Urban Buildings Act Sec 20(2)(e)"
+    },
+    {
+      "issue": "Property damage by tenant",
+      "landlord_remedy": "Deduct from deposit; file civil suit for excess damages",
+      "section": "Indian Contract Act Sec 73"
+    },
+    {
+      "issue": "Rent increase disputes",
+      "tenant_remedy": "Approach Rent Authority if increase is beyond agreed terms",
+      "section": "UP Urban Buildings Act Sec 13"
+    },
+    {
+      "issue": "Agreement violation",
+      "remedy": "Send notice citing specific clause violated; file civil suit if unresolved"
+    },
+    {
+      "issue": "Landlord not providing receipt",
+      "tenant_remedy": "Maintain bank transfer records; report to Rent Authority",
+      "section": "Model Tenancy Act 2021 Sec 12"
+    },
+    {
+      "issue": "Tenancy after death of tenant",
+      "detail": "Legal heirs of deceased tenant may continue tenancy; landlord cannot evict without proper procedure",
+      "section": "UP Urban Buildings Act Sec 3(g)"
+    }
+  ],
+  "process": {
+    "overview": "Follow a step-by-step approach: start with informal resolution and escalate legally only when necessary. Document every step.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Review the Rental Agreement",
+        "detail": "Read the rental agreement carefully from start to finish. Identify clauses relevant to your dispute—notice period, rent due date, security deposit terms, maintenance responsibilities, and termination conditions.",
+        "tip": "Highlight clauses that support your position. If the agreement is verbal, document all prior conduct.",
+        "time_required": "1–2 days"
+      },
+      {
+        "step": 2,
+        "title": "Communicate with the Other Party",
+        "detail": "Attempt to resolve the issue through direct conversation or WhatsApp/email. Clearly state your grievance and the resolution you seek. Be respectful but firm.",
+        "tip": "Use written communication (WhatsApp, email, SMS) so you have evidence. Avoid verbal arguments without witnesses.",
+        "time_required": "1–7 days"
+      },
+      {
+        "step": 3,
+        "title": "Send a Formal Legal Notice",
+        "detail": "If informal talks fail, send a written legal notice through a lawyer or by registered post. State the problem, the relevant law or clause, and give a clear deadline (usually 15–30 days) for resolution.",
+        "tip": "Send by Speed Post or Registered AD so you have delivery proof. Keep the postal receipt.",
+        "time_required": "1 day to send; wait 15–30 days for response"
+      },
+      {
+        "step": 4,
+        "title": "Attempt Mediation or Negotiation",
+        "detail": "Before going to court, consider mediation through a local mediator, Lok Adalat, or the Rent Authority's conciliation process. This saves time and money.",
+        "tip": "Lok Adalat settlements are final and binding. They are free to approach.",
+        "time_required": "1–4 weeks"
+      },
+      {
+        "step": 5,
+        "title": "File Case with Rent Authority or Court",
+        "detail": "If mediation fails, file your complaint with the appropriate authority. For eviction and rent recovery, approach the Rent Control Court or Civil Court. For deposit refund, you may also approach Consumer Forum.",
+        "tip": "Ensure all documents are organized and photocopied. Pay court fees as applicable.",
+        "time_required": "Filing: 1 day. Hearing schedule: varies"
+      },
+      {
+        "step": 6,
+        "title": "Attend Hearings and Present Evidence",
+        "detail": "Attend all scheduled hearings. Bring original documents along with photocopies. Present your evidence clearly and calmly. If represented by a lawyer, stay in regular contact.",
+        "tip": "Missing hearings can result in ex-parte orders against you.",
+        "time_required": "Months to 1–2 years depending on court"
+      },
+      {
+        "step": 7,
+        "title": "Enforcement of Order",
+        "detail": "Once you receive a favorable court order, apply for execution if the other party does not comply. The court can attach property or issue a warrant of possession.",
+        "tip": "File an execution petition promptly after the decree.",
+        "time_required": "2–6 months"
+      }
+    ]
+  },
+  "documents_required": {
+    "both_parties": [
+      {
+        "document": "Rental Agreement / Lease Deed",
+        "importance": "Primary evidence of tenancy terms",
+        "note": "Registered agreement carries more legal weight"
+      },
+      {
+        "document": "Government ID Proof",
+        "examples": [
+          "Aadhaar Card",
+          "PAN Card",
+          "Voter ID",
+          "Passport"
+        ],
+        "importance": "Identity verification for court filings"
+      },
+      {
+        "document": "Address Proof",
+        "examples": [
+          "Electricity bill",
+          "Aadhaar",
+          "Bank statement"
+        ],
+        "importance": "Establishing residence / ownership"
+      },
+      {
+        "document": "Communication Records",
+        "examples": [
+          "WhatsApp screenshots",
+          "Email printouts",
+          "SMS"
+        ],
+        "importance": "Evidence of prior communication and dispute"
+      },
+      {
+        "document": "Legal Notice Copy",
+        "importance": "Shows due process was followed before filing case"
+      },
+      {
+        "document": "Postal Receipt / Acknowledgment",
+        "importance": "Proof that notice was delivered"
+      }
+    ],
+    "tenant_specific": [
+      {
+        "document": "Rent Receipts",
+        "importance": "Proof of rent payments made",
+        "note": "Maintain receipts for all years of tenancy"
+      },
+      {
+        "document": "Bank Statements",
+        "importance": "Corroborates digital rent payments",
+        "note": "Highlight relevant transactions"
+      },
+      {
+        "document": "Security Deposit Receipt",
+        "importance": "Proof of deposit amount paid",
+        "note": "Keep original safe"
+      },
+      {
+        "document": "Photos/Videos of Property Condition",
+        "importance": "Evidence in maintenance and damage disputes",
+        "tip": "Take timestamped photos at move-in and move-out"
+      }
+    ],
+    "landlord_specific": [
+      {
+        "document": "Property Ownership Documents",
+        "examples": [
+          "Sale deed",
+          "Registry",
+          "Property tax receipt"
+        ],
+        "importance": "Establishes right to let the property"
+      },
+      {
+        "document": "Rent Ledger",
+        "importance": "Record of rent received and arrears",
+        "note": "Maintain month-by-month records"
+      },
+      {
+        "document": "Inspection Reports",
+        "importance": "Documents property condition and damages claimed"
+      }
+    ]
+  },
+  "eviction_rules": {
+    "overview": "Eviction in Uttar Pradesh is governed by the UP Urban Buildings Act 1972 for urban properties. Eviction without a court order is illegal regardless of the reason.",
+    "valid_grounds": [
+      {
+        "ground": "Non-payment of rent for 2+ months",
+        "section": "UP Urban Buildings Act Sec 20(2)(a)",
+        "note": "Tenant can avoid eviction by paying arrears before decree"
+      },
+      {
+        "ground": "Sub-letting without landlord's consent",
+        "section": "UP Urban Buildings Act Sec 20(2)(e)"
+      },
+      {
+        "ground": "Misuse of property or nuisance",
+        "section": "UP Urban Buildings Act Sec 20(2)(b)"
+      },
+      {
+        "ground": "Material alteration without consent",
+        "section": "UP Urban Buildings Act Sec 20(2)(c)"
+      },
+      {
+        "ground": "Owner bona fide requirement",
+        "section": "UP Urban Buildings Act Sec 21",
+        "note": "Must prove genuine need; tenant gets relocation time"
+      },
+      {
+        "ground": "Demolition or reconstruction",
+        "section": "UP Urban Buildings Act Sec 24"
+      },
+      {
+        "ground": "Agreement expiry (non-protected tenancy)",
+        "note": "Applies to properties NOT covered under UP Urban Buildings Act"
+      }
+    ],
+    "illegal_actions": [
+      {
+        "action": "Forceful physical eviction",
+        "punishment": "Criminal assault charges under IPC; civil damages"
+      },
+      {
+        "action": "Changing locks without court order",
+        "punishment": "Trespass and wrongful confinement charges"
+      },
+      {
+        "action": "Disconnecting electricity or water",
+        "punishment": "Civil injunction; compensation order"
+      },
+      {
+        "action": "Removing tenant's belongings",
+        "punishment": "Theft charges under IPC Sec 378; civil damages"
+      },
+      {
+        "action": "Threatening or intimidating tenant",
+        "punishment": "IPC Sec 503 (Criminal Intimidation)"
+      },
+      {
+        "action": "Entering premises without permission",
+        "punishment": "Trespass under IPC Sec 441"
+      }
+    ],
+    "eviction_procedure": [
+      "Identify valid legal ground for eviction",
+      "Consult a lawyer to draft eviction notice",
+      "Serve notice by registered post (30–90 days as applicable)",
+      "If tenant does not vacate, file eviction suit in Rent Control Court",
+      "Attend hearings and present evidence",
+      "Obtain eviction decree from court",
+      "Apply for warrant of possession if tenant still refuses"
+    ]
+  },
+  "notice_rules": {
+    "rent_demand_notice": {
+      "period": "15–30 days",
+      "format": "Written; state amount due, due date, and consequence of non-payment",
+      "mode": "Registered post or hand delivery with acknowledgment"
+    },
+    "eviction_notice": {
+      "period": "30–90 days depending on ground",
+      "format": "Written; state ground for eviction, relevant section, and deadline to vacate",
+      "mode": "Registered post AD"
+    },
+    "rent_increase_notice": {
+      "period": "30 days minimum",
+      "format": "Written; state new amount, effective date, and legal basis"
+    },
+    "landlord_entry_notice": {
+      "period": "24 hours minimum",
+      "section": "Model Tenancy Act 2021 Sec 17"
+    },
+    "termination_by_tenant": {
+      "period": "As per agreement; usually 30 days",
+      "note": "Tenant must leave in clean condition to receive full deposit"
+    }
+  },
+  "security_deposit_rules": {
+    "maximum_allowed": {
+      "residential": "2 months rent (Model Tenancy Act 2021)",
+      "commercial": "6 months rent (Model Tenancy Act 2021)"
+    },
+    "refund_timeline": "Within 30 days of vacating after deduction of legitimate dues",
+    "deductible_items": [
+      "Unpaid rent or utility bills",
+      "Cost of repairing tenant-caused damages",
+      "Cleaning charges if premises left dirty"
+    ],
+    "non_deductible_items": [
+      "Normal wear and tear",
+      "Pre-existing damage",
+      "Repairs that are landlord's duty"
+    ]
+  },
+  "rent_control_provisions_up": {
+    "act": "UP Urban Buildings (Regulation of Letting, Rent and Eviction) Act 1972",
+    "applicability": "Urban areas in Uttar Pradesh; buildings constructed before 1972 primarily",
+    "key_provisions": [
+      {
+        "provision": "Fair Rent Determination",
+        "detail": "Either party can apply to Rent Controller to fix fair rent",
+        "section": "UP Urban Buildings Act Sec 13"
+      },
+      {
+        "provision": "Rent Enhancement",
+        "detail": "Rent can be enhanced by up to 10% every 3 years",
+        "section": "UP Urban Buildings Act Sec 14"
+      },
+      {
+        "provision": "Prohibition on Premium",
+        "detail": "No landlord shall charge any premium (pagri) for letting premises",
+        "section": "UP Urban Buildings Act Sec 30"
+      },
+      {
+        "provision": "Tenant's Right to Deposit Rent",
+        "detail": "If landlord refuses to accept rent, tenant may deposit it with Rent Authority",
+        "section": "UP Urban Buildings Act Sec 34"
+      },
+      {
+        "provision": "Inheritance of Tenancy",
+        "detail": "Family members residing with deceased tenant can inherit tenancy rights",
+        "section": "UP Urban Buildings Act Sec 3(g)"
+      }
+    ]
+  },
+  "model_tenancy_act_2021_highlights": {
+    "status": "Central Model Act; adopted by states voluntarily",
+    "key_features": [
+      "Mandatory written agreement for all tenancies",
+      "Rent Authority to be established in each district",
+      "Security deposit capped at 2 months (residential)",
+      "24-hour notice required for landlord entry",
+      "Rent Court and Rent Tribunal for dispute resolution",
+      "Rent can be revised only as per agreement terms"
+    ],
+    "up_adoption_status": "UP is in process of adopting the Model Tenancy Act 2021"
+  },
+  "penalties_and_remedies": {
+    "against_landlord": [
+      {
+        "violation": "Illegal eviction",
+        "penalty": "Compensation to tenant; criminal charges possible",
+        "section": "UP Urban Buildings Act Sec 20; IPC"
+      },
+      {
+        "violation": "Withholding security deposit without cause",
+        "penalty": "Return deposit + interest + compensation up to 2x deposit",
+        "section": "Model Tenancy Act 2021 Sec 11"
+      },
+      {
+        "violation": "Cutting essential services",
+        "penalty": "Civil injunction + damages",
+        "section": "Transfer of Property Act Sec 108(e)"
+      },
+      {
+        "violation": "Charging excess rent",
+        "penalty": "Refund of excess + penalty",
+        "section": "UP Urban Buildings Act Sec 13"
+      }
+    ],
+    "against_tenant": [
+      {
+        "violation": "Non-payment of rent",
+        "penalty": "Eviction + recovery of arrears + interest",
+        "section": "UP Urban Buildings Act Sec 20(2)(a)"
+      },
+      {
+        "violation": "Unauthorized subletting",
+        "penalty": "Eviction",
+        "section": "UP Urban Buildings Act Sec 20(2)(e)"
+      },
+      {
+        "violation": "Property damage",
+        "penalty": "Deduction from deposit + civil suit for excess amount",
+        "section": "Indian Contract Act Sec 73"
+      },
+      {
+        "violation": "Overstaying after valid eviction order",
+        "penalty": "Contempt of court; forcible execution of warrant of possession"
+      }
+    ]
+  },
+  "tenant_duties": [
+    {
+      "duty": "Pay rent on time",
+      "detail": "Pay on or before due date as per agreement",
+      "consequence_if_not": "Eviction proceedings and recovery suit"
+    },
+    {
+      "duty": "Maintain property in good condition",
+      "detail": "Keep premises clean; repair minor damages promptly",
+      "section": "Transfer of Property Act Sec 108(p)"
+    },
+    {
+      "duty": "Follow agreement terms",
+      "detail": "Do not use premises for prohibited purposes"
+    },
+    {
+      "duty": "Avoid illegal activities on premises",
+      "consequence_if_not": "Immediate eviction ground"
+    },
+    {
+      "duty": "Do not carry out structural alterations",
+      "detail": "Any structural change requires prior written consent of landlord",
+      "section": "Transfer of Property Act Sec 108(o)"
+    },
+    {
+      "duty": "Vacate after proper notice",
+      "detail": "On expiry of agreement or after receiving valid eviction notice"
+    },
+    {
+      "duty": "Inform landlord of needed major repairs",
+      "detail": "Report structural damage or leakages promptly to avoid liability"
+    }
+  ],
+  "landlord_duties": [
+    {
+      "duty": "Provide basic facilities",
+      "detail": "Ensure water supply, electricity connection, and sanitation are functional",
+      "section": "Transfer of Property Act Sec 108(e)"
+    },
+    {
+      "duty": "Carry out structural repairs",
+      "detail": "Roof, walls, plumbing, electrical wiring maintenance is landlord's responsibility",
+      "section": "Transfer of Property Act Sec 108(m)"
+    },
+    {
+      "duty": "Respect tenant's right to privacy",
+      "detail": "Give 24-hour prior notice before entering except in genuine emergency"
+    },
+    {
+      "duty": "Return security deposit on time",
+      "detail": "Within 30 days after tenant vacates, after legitimate deductions",
+      "section": "Model Tenancy Act 2021 Sec 11"
+    },
+    {
+      "duty": "Issue rent receipts",
+      "detail": "Provide signed receipt for every rent payment received",
+      "section": "Model Tenancy Act 2021 Sec 12"
+    },
+    {
+      "duty": "Follow legal eviction process",
+      "detail": "No self-help eviction; must obtain court order"
+    },
+    {
+      "duty": "Disclose material defects in property",
+      "detail": "Must inform tenant of known defects at time of letting",
+      "section": "Transfer of Property Act Sec 108(a)"
+    }
+  ],
+  "dispute_resolution_forums": [
+    {
+      "forum": "Rent Control Court / Rent Authority",
+      "jurisdiction": "Eviction, fair rent, deposit in UP urban areas",
+      "fee": "Nominal court fees",
+      "time": "6 months to 2 years typically"
+    },
+    {
+      "forum": "Civil Court (Munsif / Civil Judge)",
+      "jurisdiction": "Recovery of money, injunctions, damages",
+      "fee": "Ad valorem court fees",
+      "time": "1–3 years"
+    },
+    {
+      "forum": "Consumer Forum (District Commission)",
+      "jurisdiction": "Deposit refund (if treated as service deficiency)",
+      "fee": "Minimal (₹200–₹1000)",
+      "time": "3–12 months"
+    },
+    {
+      "forum": "Lok Adalat",
+      "jurisdiction": "Mediated settlement for any dispute",
+      "fee": "Free",
+      "time": "Single sitting in many cases",
+      "note": "Award is final, binding, and not appealable"
+    },
+    {
+      "forum": "High Court (Allahabad)",
+      "jurisdiction": "Revision and appeals from lower courts in UP",
+      "fee": "Higher court fees",
+      "time": "1–5 years"
+    }
+  ],
+  "case_examples": [
+    {
+      "id": "CE001",
+      "title": "Tenant not paying rent for 6 months",
+      "facts": "Landlord in Lucknow had a tenant who stopped paying rent. No written agreement existed.",
+      "steps_taken": [
+        "Landlord sent written demand notice by registered post",
+        "Tenant ignored notice",
+        "Landlord filed eviction and recovery suit in Rent Control Court"
+      ],
+      "outcome": "Court ordered eviction and recovery of 6 months arrears with 9% interest",
+      "lesson": "Even without written agreement, consistent non-payment is a valid eviction ground. Always send notice first.",
+      "section": "UP Urban Buildings Act Sec 20(2)(a)"
+    },
+    {
+      "id": "CE002",
+      "title": "Landlord refusing to return security deposit",
+      "facts": "Tenant in Agra vacated flat. Landlord claimed property damage and withheld ₹30,000 deposit without any evidence.",
+      "steps_taken": [
+        "Tenant sent legal notice demanding refund within 15 days",
+        "Landlord did not respond",
+        "Tenant filed complaint in District Consumer Forum"
+      ],
+      "outcome": "Consumer Forum ordered landlord to return full deposit with 12% interest and ₹5,000 compensation",
+      "lesson": "Take timestamped photos at move-out. Consumer Forum is faster and cheaper than civil court for deposit disputes."
+    },
+    {
+      "id": "CE003",
+      "title": "Landlord illegally cut electricity",
+      "facts": "Tenant in Varanasi had minor rent dispute. Landlord cut electricity to force eviction.",
+      "steps_taken": [
+        "Tenant immediately filed injunction petition in Civil Court",
+        "Tenant also filed police complaint for coercion"
+      ],
+      "outcome": "Court issued injunction within 48 hours ordering electricity restoration. Landlord warned of contempt action.",
+      "lesson": "Courts act quickly on utility disconnection. Do not delay filing injunction."
+    },
+    {
+      "id": "CE004",
+      "title": "Tenant sublet without permission",
+      "facts": "Landlord in Kanpur discovered tenant had sublet entire flat without consent.",
+      "steps_taken": [
+        "Landlord sent notice to both tenant and sub-tenant",
+        "Filed eviction suit citing unauthorized subletting"
+      ],
+      "outcome": "Eviction decree granted. Both tenant and sub-tenant ordered to vacate.",
+      "section": "UP Urban Buildings Act Sec 20(2)(e)"
+    },
+    {
+      "id": "CE005",
+      "title": "Landlord seeking eviction for own use",
+      "facts": "Landlord in Meerut retired and needed house for own residence. Tenant had lived there 15 years.",
+      "steps_taken": [
+        "Landlord filed bona fide requirement petition",
+        "Submitted evidence of own need (no other property)",
+        "Tenant contested claiming hardship"
+      ],
+      "outcome": "Court granted eviction with 6-month compliance period. Tenant allowed time to find alternate accommodation.",
+      "section": "UP Urban Buildings Act Sec 21"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can landlord evict without notice?",
+      "a": "No. Eviction without proper legal notice and a court order is illegal in Uttar Pradesh.",
+      "section": "UP Urban Buildings Act Sec 20"
+    },
+    {
+      "q": "What if tenant is not paying rent?",
+      "a": "Send a legal demand notice. If still unpaid, file an eviction and recovery suit in Rent Control Court."
+    },
+    {
+      "q": "Can landlord cut electricity or water?",
+      "a": "No. Cutting essential services is illegal and can attract civil and criminal liability.",
+      "section": "Transfer of Property Act Sec 108(e)"
+    },
+    {
+      "q": "Is a written rental agreement mandatory?",
+      "a": "Under Model Tenancy Act 2021 it is mandatory, but currently in UP most tenancies rely on verbal or informal agreements. A written registered agreement is highly recommended for legal protection."
+    },
+    {
+      "q": "Security deposit not returned after vacating?",
+      "a": "Send a legal notice demanding refund within 30 days. If ignored, file complaint in Consumer Forum or Civil Court. You may claim deposit + interest + compensation."
+    },
+    {
+      "q": "Can landlord increase rent anytime?",
+      "a": "No. Rent can be increased only as per agreement terms or with 30-day written notice. In UP urban areas, Rent Authority controls enhancement."
+    },
+    {
+      "q": "Can tenant refuse landlord's entry?",
+      "a": "Yes, if landlord has not given 24-hour prior notice. Except in genuine emergencies, prior notice is mandatory."
+    },
+    {
+      "q": "What if tenant damages property?",
+      "a": "Landlord can deduct repair cost from security deposit. If damage exceeds deposit, landlord can file civil suit for balance amount."
+    },
+    {
+      "q": "Can tenant be evicted during winter?",
+      "a": "There is no seasonal restriction on eviction in UP law. Eviction requires a valid court order regardless of season."
+    },
+    {
+      "q": "Is verbal tenancy agreement valid?",
+      "a": "Yes, verbal agreements are legally valid but very hard to prove. All terms must be demonstrated through conduct and evidence. Written agreements are strongly recommended."
+    }
+  ],
+  "best_practices": [
+    {
+      "practice": "Always create a written and registered rental agreement",
+      "why": "Provides strong legal evidence of all terms and protects both parties"
+    },
+    {
+      "practice": "Use digital payment for rent",
+      "why": "Bank records serve as automatic proof of payment history"
+    },
+    {
+      "practice": "Issue and retain rent receipts",
+      "why": "Primary evidence in rent dispute cases"
+    },
+    {
+      "practice": "Take timestamped photos at move-in and move-out",
+      "why": "Prevents false claims of property damage"
+    },
+    {
+      "practice": "Communicate in writing (WhatsApp/email)",
+      "why": "Creates a paper trail for court proceedings"
+    },
+    {
+      "practice": "Verify tenant background before renting",
+      "why": "Reduces risk of problematic tenancies"
+    },
+    {
+      "practice": "Register agreement for tenancies over 11 months",
+      "why": "Unregistered agreements over 11 months have limited legal enforceability",
+      "law": "Registration Act 1908 Sec 17"
+    },
+    {
+      "practice": "Specify all terms clearly in agreement",
+      "items": [
+        "Rent amount and due date",
+        "Security deposit amount",
+        "Notice period",
+        "Maintenance responsibilities",
+        "Permitted use of premises",
+        "Sub-letting permission or prohibition"
+      ]
+    }
+  ],
+  "red_flags": [
+    {
+      "flag": "No written agreement",
+      "risk": "High; disputes become difficult to resolve legally"
+    },
+    {
+      "flag": "Cash-only rent payments",
+      "risk": "High; no proof of payment if dispute arises"
+    },
+    {
+      "flag": "No rent receipts issued",
+      "risk": "High; tenant cannot prove payments made"
+    },
+    {
+      "flag": "Landlord demands excessive deposit (more than 2 months rent)",
+      "risk": "Medium; illegal under Model Tenancy Act 2021"
+    },
+    {
+      "flag": "Frequent verbal disputes without resolution",
+      "risk": "Medium; escalation likely; document everything"
+    },
+    {
+      "flag": "Landlord pressuring for quick decisions",
+      "risk": "Medium; read all terms carefully before signing"
+    },
+    {
+      "flag": "Property with legal disputes or encumbrances",
+      "risk": "High; verify property ownership before renting"
+    }
+  ],
+  "useful_contacts_up": [
+    {
+      "authority": "District Rent Control Authority",
+      "location": "At each district headquarters in UP",
+      "jurisdiction": "Fair rent, eviction cases, deposit disputes"
+    },
+    {
+      "authority": "District Consumer Disputes Redressal Commission",
+      "location": "At each district headquarters",
+      "jurisdiction": "Consumer complaints including security deposit refund"
+    },
+    {
+      "authority": "Lok Adalat (DLSA)",
+      "location": "District Legal Services Authority office",
+      "jurisdiction": "Mediated settlement of all types of disputes",
+      "fee": "Free"
+    },
+    {
+      "authority": "State Legal Services Authority UP (UPSLSA)",
+      "website": "upslsa.up.nic.in",
+      "services": "Free legal aid for eligible persons"
+    }
+  ],
+  "legal_aid_eligibility": {
+    "who_qualifies": "Persons with annual income below ₹3 lakh (UP), SC/ST persons, women, children, disabled persons",
+    "how_to_apply": "Visit nearest DLSA (District Legal Services Authority) office with income proof and ID",
+    "benefit": "Free lawyer and court representation"
+  },
+  "glossary": [
+    {
+      "term": "Tenant",
+      "definition": "Person who occupies premises on rent"
+    },
+    {
+      "term": "Landlord",
+      "definition": "Owner who lets property on rent"
+    },
+    {
+      "term": "Rent",
+      "definition": "Consideration paid by tenant for use of premises"
+    },
+    {
+      "term": "Security Deposit",
+      "definition": "Refundable amount paid by tenant as security"
+    },
+    {
+      "term": "Eviction",
+      "definition": "Legal process of removing tenant from premises"
+    },
+    {
+      "term": "Lease",
+      "definition": "Written agreement for fixed-term tenancy"
+    },
+    {
+      "term": "Notice Period",
+      "definition": "Time given before termination of tenancy"
+    },
+    {
+      "term": "Rent Authority",
+      "definition": "Government body handling rent disputes"
+    },
+    {
+      "term": "Sub-tenancy",
+      "definition": "Tenant renting out part of premises to another"
+    },
+    {
+      "term": "Fair Rent",
+      "definition": "Rent determined by Rent Authority as reasonable"
+    },
+    {
+      "term": "Decree",
+      "definition": "Final court order in a civil case"
+    },
+    {
+      "term": "Injunction",
+      "definition": "Court order prohibiting or requiring an action"
+    }
+  ]
+}

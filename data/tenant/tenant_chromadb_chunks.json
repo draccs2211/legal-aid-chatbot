@@ -1,0 +1,134 @@
+[
+  {
+    "id": "tenant_001_overview",
+    "text": "Tenant and Rent Disputes — Overview. Tenant and rent disputes arise between landlords and tenants over rent payment, eviction, maintenance, security deposit refund, and agreement violations. In Uttar Pradesh, these disputes are governed primarily by the UP Urban Buildings (Regulation of Letting, Rent and Eviction) Act 1972 for urban areas, and the Transfer of Property Act 1882 for general property matters. The Model Tenancy Act 2021 has been introduced by the Central Government to modernize tenancy laws — UP is in the process of adopting it. Key principle: Both landlords and tenants have legally defined rights and duties. A tenant cannot be evicted without a valid court order. A landlord cannot cut electricity or water to force eviction. Disputes can be resolved through Rent Control Court, Civil Court, Consumer Forum, or Lok Adalat.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act 1972, Transfer of Property Act 1882"
+    }
+  },
+  {
+    "id": "tenant_002_tenant_rights",
+    "text": "What are a tenant's legal rights in Uttar Pradesh? A tenant has these key rights under Indian law. Right against illegal eviction: A tenant cannot be evicted without a valid court order preceded by proper legal notice — UP Urban Buildings Act Section 20. Right to basic amenities: Landlord cannot cut water, electricity, or other essential services to coerce or force the tenant to leave — Transfer of Property Act Section 108(e). Right to peaceful enjoyment: Tenant is entitled to quiet, undisturbed use of the premises without interference — Section 108(c). Right to security deposit refund: After vacating, tenant is entitled to refund of full security deposit minus only legitimate, documented damages — Model Tenancy Act Section 11. Right to privacy: Landlord cannot enter rented premises without at least 24 hours prior notice, except in genuine emergency — Model Tenancy Act Section 17. Right to written receipt: Tenant must receive rent receipt for every payment made. Right to proper notice before eviction: Legal notice of at least 15-30 days mandatory before any eviction proceedings.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "rights",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act 1972, Transfer of Property Act, Model Tenancy Act 2021"
+    }
+  },
+  {
+    "id": "tenant_003_eviction_rules",
+    "text": "Eviction rules — when can a landlord legally evict a tenant in UP? A landlord can only evict a tenant through a court order after following proper legal procedure. Valid legal grounds for eviction under UP Urban Buildings Act: Non-payment of rent for two or more months. Subletting without landlord's permission. Using property for a purpose other than agreed. Causing deliberate damage to the property. Landlord genuinely requires property for personal or family use. Property needed for demolition or reconstruction. Tenant has acquired or built alternative accommodation. Illegal eviction — what landlord CANNOT do: Forcibly lock out tenant, remove belongings, cut electricity or water supply, physically intimidate, or change locks. These actions attract criminal charges under IPC and compensation claims. Eviction procedure: Send legal notice → file eviction petition in Rent Control Court → court hearing → court order → only then can tenant be asked to vacate.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "eviction",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act 1972 Section 20"
+    }
+  },
+  {
+    "id": "tenant_004_security_deposit",
+    "text": "Security deposit rules for tenants and landlords. Maximum security deposit allowed: Residential property — maximum 2 months rent. Commercial property — maximum 6 months rent. These limits are per Model Tenancy Act 2021. Refund timeline: Security deposit must be returned within 30 days of tenant vacating the property. Landlord can deduct only for: Unpaid rent, documented damage beyond normal wear and tear, unpaid utility bills. Landlord CANNOT deduct for: Normal wear and tear, pre-existing damage, painting or minor repairs that are landlord's routine duty. If landlord wrongfully withholds deposit: Send legal notice demanding refund. File complaint at District Consumer Disputes Commission — this is treated as service deficiency. Can also file civil recovery suit. Tenant should always take written acknowledgment of deposit payment with receipt.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "security_deposit",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Model Tenancy Act 2021 Section 11"
+    }
+  },
+  {
+    "id": "tenant_005_notice_rules",
+    "text": "Notice rules in tenant-landlord disputes. Rent demand notice: Landlord must send written notice demanding unpaid rent before filing eviction case. Notice period is typically 15 days. Send via registered post for legal proof. Eviction notice: Minimum 15 days notice required for month-to-month tenancy. For longer tenancies, 30 to 90 days notice depending on agreement terms. Notice must state specific legal grounds for eviction. Rent increase notice: Landlord must give advance written notice before increasing rent — typically 30 to 90 days as per agreement or local law. Sudden rent increase without notice is not legally valid. Landlord entry notice: Landlord must give minimum 24 hours written notice before entering premises, except in genuine emergency like fire or flood. Tenant termination notice: Tenant wishing to vacate must give notice as per rental agreement — typically 30 to 60 days. Failure to give notice can result in forfeiture of deposit. All notices should be sent via registered post or courier with acknowledgment for legal proof.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "notice_rules",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Transfer of Property Act, Model Tenancy Act 2021"
+    }
+  },
+  {
+    "id": "tenant_006_common_issues",
+    "text": "Common tenant-landlord problems and solutions in UP. Problem 1 — Tenant not paying rent: Landlord should send written demand notice, then file eviction and recovery suit. Even if tenant disputes rent amount, disputed amount must be deposited in court. Problem 2 — Security deposit not returned: Send legal notice, file Consumer Forum complaint or civil recovery suit. Deposit must be returned within 30 days. Problem 3 — Illegal eviction by landlord: File injunction in Civil Court immediately. Claim compensation. Forceful eviction attracts criminal liability under IPC. Problem 4 — Landlord cutting amenities: File complaint in Civil Court. Court can restore amenities immediately via injunction — Section 108(e) Transfer of Property Act. Problem 5 — Landlord entering without notice: Document instances, send written complaint, file civil complaint. Problem 6 — Rent increase dispute: Check rental agreement clauses. Sudden increase without proper notice is not valid. Problem 7 — Maintenance dispute: Structural repairs are landlord's legal duty. Internal maintenance is tenant's duty unless agreed otherwise in rental agreement.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "common_issues",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act, Transfer of Property Act"
+    }
+  },
+  {
+    "id": "tenant_007_dispute_process",
+    "text": "Step-by-step process to resolve tenant-landlord dispute in UP. Step 1 — Review rental agreement: Read the agreement carefully. Identify the clause being violated. Check notice periods and dispute resolution clauses. Step 2 — Communicate first: Try to resolve directly with the other party in writing — email or WhatsApp message serves as documented communication. Step 3 — Send formal legal notice: Send registered post notice clearly stating the grievance, legal basis, and demanded remedy with a 15-30 day response deadline. Step 4 — Attempt mediation: Lok Adalat is free and can resolve many disputes in a single sitting — contact DLSA (District Legal Services Authority). Step 5 — File case in appropriate court: Eviction and rent matters — Rent Control Court (Rent Authority). Money recovery — Civil Court (Munsif). Deposit refund — Consumer Commission (free up to Rs 50 lakh). Step 6 — Attend hearings: Bring all documents — agreement, rent receipts, notices, photos, correspondence. Step 7 — Enforcement: Once order is received, police can help enforce if other party does not comply.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "CPC, UP Urban Buildings Act, Consumer Protection Act 2019"
+    }
+  },
+  {
+    "id": "tenant_008_dispute_forums",
+    "text": "Where to file complaint for tenant-landlord disputes in UP? Forum 1 — Rent Control Court (Rent Authority): For eviction cases, fair rent fixation, and deposit disputes in UP urban areas. Available at district headquarters. Forum 2 — Civil Court (Munsif or Civil Judge): For money recovery, injunctions, and damages claims. Court fees are ad valorem (percentage of claim amount). Forum 3 — Consumer Forum (District Commission): For security deposit refund treated as service deficiency. Free to file, fast track for cases up to Rs 50 lakh. Forum 4 — Lok Adalat: Free, fast, and informal mediation. Cases settled in single sitting. No court fees. Settlement is legally binding. Contact District Legal Services Authority (DLSA). Forum 5 — High Court Allahabad: For revision and appeals from lower UP courts. UP Legal Services Authority (UPSLSA) at upslsa.up.nic.in provides free legal aid for economically weaker tenants.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "dispute_forums",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "CPC, Consumer Protection Act 2019, UP Urban Buildings Act"
+    }
+  },
+  {
+    "id": "tenant_009_red_flags_tips",
+    "text": "Red flags and best practices for tenants and landlords in UP. Red flags — watch out for these: No written rental agreement — extremely high risk, disputes become impossible to resolve legally. Landlord refusing to give rent receipts — keep records of all payments via bank transfer if possible. Security deposit paid in cash without receipt — always get written acknowledgment. Verbal-only agreement on rent increase — insist on written communication for all changes. Landlord threatening eviction without legal notice — this is illegal, do not vacate without court order. No clause for notice period in agreement — specify minimum 30 days in writing. Subletting clause missing — clarify upfront to avoid later disputes. Best practices: Always create written registered rental agreement — register at local Sub-Registrar office. Pay rent via bank transfer for automatic paper trail. Keep copies of all receipts, notices, and correspondence. Take photos of property condition before moving in and out. Read agreement carefully before signing — especially eviction, notice, and deposit clauses.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "tips",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Transfer of Property Act, Model Tenancy Act 2021"
+    }
+  },
+  {
+    "id": "tenant_010_faqs",
+    "text": "Frequently asked questions about tenant rights in UP. Q: Can landlord evict without notice? No — eviction without proper legal notice and court order is illegal under UP Urban Buildings Act Section 20. Q: Can landlord cut electricity or water to force vacating? No — this is illegal and attracts court injunction and criminal charges. Q: What if no written agreement exists? Verbal tenancy is valid but very difficult to prove. Tenant still has rights, but evidence is weak. Always insist on written agreement. Q: Security deposit not returned after 3 months of vacating — what to do? Send legal notice. File complaint at District Consumer Commission. Also can file civil recovery suit. Q: Can landlord raise rent suddenly? No — proper advance notice required as per agreement terms. Sudden increase without notice is not legally valid. Q: What documents needed for Rent Court case? Rental agreement, rent receipts, copy of legal notice sent, any written communication, photos of property if relevant. Q: Is Lok Adalat effective for tenant disputes? Yes — many deposit and rent disputes settle in single sitting, legally binding, completely free.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "faqs",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act, Transfer of Property Act, Model Tenancy Act 2021"
+    }
+  },
+  {
+    "id": "tenant_011_case_examples",
+    "text": "Real case examples of tenant disputes in UP. Case 1 — Tenant not paying rent 6 months, no written agreement in Lucknow: Landlord sent written demand notice via registered post, filed eviction petition in Rent Authority. Tenant had to either pay or vacate by court order. Lesson: Even without written agreement, landlord can file for eviction for non-payment. Case 2 — Landlord cutting water supply to force vacating in Kanpur: Tenant filed civil court injunction under Transfer of Property Act Section 108(e). Court restored water supply within days. Landlord faced contempt if repeated. Lesson: Court acts fast when basic amenities are cut. Case 3 — Security deposit of Rs 50,000 not returned in Varanasi: Tenant filed complaint at District Consumer Commission. Matter resolved in 3 hearings. Full deposit returned plus compensation. Lesson: Consumer Forum is fastest for deposit recovery. Case 4 — Forceful eviction attempt with lock change in Agra: Tenant filed FIR against landlord for criminal trespass and filed injunction in Civil Court. Landlord faced criminal charges. Lesson: Forceful eviction is a criminal offense in India.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "case_examples",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act, IPC, Consumer Protection Act"
+    }
+  },
+  {
+    "id": "tenant_012_up_contacts",
+    "text": "Important contacts for tenant disputes in Uttar Pradesh. District Rent Control Authority: Available at each district headquarters in UP. Handles eviction cases, fair rent fixation, and deposit matters under UP Urban Buildings Act. District Consumer Disputes Redressal Commission: Available at each district headquarters. Handles deposit refund and service deficiency complaints. File online at edaakhil.nic.in. Lok Adalat (DLSA — District Legal Services Authority): Free dispute resolution. Contact DLSA office in your district for Lok Adalat dates. Lok Adalat settlement is legally binding and free. UP State Legal Services Authority (UPSLSA): Free legal aid for economically weaker sections. Website: upslsa.up.nic.in. Sub-Registrar Office: For registering rental agreements — strongly recommended for all tenancies above 11 months. Rental agreements above 11 months must be registered by law.",
+    "metadata": {
+      "domain": "tenant",
+      "type": "up_specific",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Urban Buildings Act, UPSLSA"
+    }
+  }
+]

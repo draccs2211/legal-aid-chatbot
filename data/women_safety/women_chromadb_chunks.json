@@ -1,0 +1,167 @@
+[
+  {
+    "id": "women_001_overview",
+    "text": "Women Safety and Domestic Violence — Overview. The Protection of Women from Domestic Violence Act 2005 and related Indian laws provide comprehensive protection to women against domestic violence, dowry harassment, rape, stalking, and workplace sexual harassment. Any woman facing abuse — whether physical, emotional, sexual, or economic — has strong legal rights and multiple ways to get help. In Uttar Pradesh, the UP Mahila Power Line 1090 operates 24x7 and is highly effective. One Stop Centres (Sakhi) exist in all 75 UP districts providing free shelter, medical help, legal aid, and counseling. Emergency: call 112 for immediate police response or 1090 for women-specific support.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "DV Act 2005, IPC"
+    }
+  },
+  {
+    "id": "women_002_who_is_protected",
+    "text": "Who is protected under women safety laws in India? Under the Domestic Violence Act 2005, any woman in a domestic relationship is protected — wife, live-in partner, mother, sister, daughter, or any woman living in the same household. Protection is not limited to married women — live-in partners are also fully covered. Under POCSO Act 2012, all children below 18 years (both boys and girls) are protected from sexual offenses. Under POSH Act 2013, all women employees in organized and unorganized sectors are protected from workplace sexual harassment. A woman can file complaint on behalf of herself or any other woman in distress — no restriction.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "eligibility",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "DV Act 2005 Section 2, POCSO 2012"
+    }
+  },
+  {
+    "id": "women_003_types_of_violence",
+    "text": "What counts as domestic violence under Indian law? Domestic violence is not just physical beating. Under Section 3 of the DV Act 2005, these are all forms of domestic violence: Physical abuse — hitting, slapping, kicking, burning, using weapons, any bodily harm. Emotional or verbal abuse — insults, constant humiliation, threats, controlling behavior, preventing from meeting family, public humiliation. Sexual abuse — forcing sexual acts, marital rape, sexual abuse within marriage. Economic abuse — denying money for household needs, preventing woman from working, taking away her salary or property, not allowing access to shared resources. Dowry-related harassment — demanding or pressuring for dowry items before or after marriage. All these forms are equally punishable under law.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "rights",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "DV Act 2005 Section 3"
+    }
+  },
+  {
+    "id": "women_004_key_rights",
+    "text": "What are a woman's legal rights in domestic violence situation? Right to stay in house: Under Section 17 of DV Act, a woman cannot be thrown out of her shared household — even if she does not own it. Right to Protection Order: Court can order abuser to stop all forms of violence (Section 18). Right to Residence Order: Court ensures woman's right to continue living in the house (Section 19). Right to Monetary Relief: Court can order maintenance, medical expenses, and compensation (Section 20). Right to Custody: Temporary custody of children can be granted (Section 21). Right to free legal aid: UPSLSA provides free lawyer — call 0522-2209457. Right to woman police officer: Woman's statement must be recorded by female officer. Right to free shelter: One Stop Centre provides shelter — call 181 or 1090.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "rights",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "DV Act 2005 Sections 17-22"
+    }
+  },
+  {
+    "id": "women_005_emergency_steps",
+    "text": "What to do immediately in a domestic violence emergency? Step 1 — Get to safety first: Leave the situation if possible. Go to a neighbor, relative, or any safe place. Step 2 — Call for help: Call 112 for immediate police response. Call 1090 (UP Mahila Power Line) — available 24x7, specifically for women, extremely responsive. Call 181 for One Stop Centre shelter. Step 3 — Preserve evidence: Photograph all injuries immediately. Save all threatening messages, emails, WhatsApp chats. Keep torn or bloodstained clothes. Note dates and times of incidents. Step 4 — Get medical help: Go to government hospital for medical examination — doctor's report is critical evidence. Female doctor must examine you if requested. Step 5 — Do not delay complaint: File FIR at police station or call 1090 to get help filing. The earlier you report, the stronger your case.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "emergency",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "DV Act 2005, CrPC"
+    }
+  },
+  {
+    "id": "women_006_filing_complaint",
+    "text": "How to file a complaint for domestic violence in UP? There are 5 ways to get legal help: Option 1 — Police FIR: Go to nearest police station. File FIR under IPC 498A and DV Act. If police refuses, contact SP or file online at uppolice.gov.in. Woman police officer must record your statement. Option 2 — Magistrate Application: File under Section 12 of DV Act in JMFC court for Protection Order, Residence Order, and maintenance. Can be done through free Protection Officer. Option 3 — Protection Officer: Every UP district has a District Protection Officer under DV Act. They help file application for free and accompany you to court. Option 4 — UP Mahila Helpline 1090: Call 1090 — counselors coordinate police, shelter, legal aid for you. Option 5 — NCW Complaint: If local authorities are not helping, file online at ncwapps.nic.in or call 7827170170.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "DV Act 2005, CrPC Section 154"
+    }
+  },
+  {
+    "id": "women_007_protection_order",
+    "text": "How to get a Protection Order from court? File application under Section 12 of Domestic Violence Act 2005 in the court of Judicial Magistrate First Class (JMFC) in your area. In emergency, court can give Protection Order the same day without hearing the abuser — called ex-parte order. The court can give multiple orders in one application: Protection Order (stop violence), Residence Order (right to stay), Monetary Relief (maintenance), Custody Order (children). If abuser violates the Protection Order, it is a cognizable offense under Section 31 — police can arrest without warrant. Free legal help available from UPSLSA — call 0522-2209457. Protection Officer can file application on your behalf for free.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "process",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "DV Act 2005 Sections 12, 18, 19, 20, 31"
+    }
+  },
+  {
+    "id": "women_008_dowry_harassment",
+    "text": "Dowry harassment and IPC 498A — what to do? Dowry is illegal in India. Giving or taking dowry is punishable by 5 years jail and fine under Dowry Prohibition Act. Demanding dowry is punishable by 6 months to 2 years jail. If husband or his relatives are harassing for dowry, file FIR under IPC 498A (cruelty by husband or relatives) — this is a cognizable and non-bailable offense, meaning police must act and abuser cannot easily get bail. Both criminal case (IPC 498A) and civil case (DV Act) can be filed simultaneously for maximum protection. Preserve all evidence of dowry demands — WhatsApp messages, phone recordings, witness statements. In UP, call 1090 Mahila Power Line for immediate help.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "dowry",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Dowry Prohibition Act 1961, IPC 498A"
+    }
+  },
+  {
+    "id": "women_009_pocso",
+    "text": "POCSO Act — Protection of Children from Sexual Offenses. POCSO Act 2012 protects all children below 18 years (both boys and girls) from sexual offenses. Penetrative sexual assault on child carries minimum 10 years imprisonment, can extend to life. Sexual assault carries 3 to 5 years. Sexual harassment of child carries 3 years. Key feature — Mandatory Reporting: Any person who knows about a sexual offense against a child MUST report it to police or Special Juvenile Police Unit (SJPU). Failure to report is itself an offense. Identity of child victim cannot be disclosed in any media — strict confidentiality rule. Child helpline: 1098. POCSO e-box online complaint: pocso.ncpcr.gov.in. In UP, SJPU operates in every district.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "pocso",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "POCSO Act 2012 Sections 4, 7, 11, 19, 23"
+    }
+  },
+  {
+    "id": "women_010_workplace_harassment",
+    "text": "Workplace sexual harassment and POSH Act 2013. Sexual harassment at workplace means unwelcome sexual advances, requests for sexual favors, verbal or physical conduct of sexual nature. Every organization with 10 or more employees must have an Internal Complaints Committee (ICC). Employer who does not set up ICC is punishable. How to complain: File complaint with ICC of your organization within 3 months of incident. If no ICC, file with Local Complaints Committee (LCC) at district level. Also can file FIR under IPC 354A. Inquiry must be completed within 90 days. You cannot be transferred, demoted, or fired for filing complaint — this is protected. UP Labour Department oversees implementation. File complaint at labour department if employer is not cooperating.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "workplace",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "POSH Act 2013 Sections 4, 9, 13, 17"
+    }
+  },
+  {
+    "id": "women_011_up_specific",
+    "text": "UP-specific women safety support systems. Uttar Pradesh has one of the strongest women safety infrastructure in India. UP Mahila Power Line 1090: Available 24x7, not just a helpline but an action center — counselors coordinate police action, arrange shelter, provide legal aid. Over 1 million calls handled. One Stop Centre (Sakhi): Available in all 75 UP districts, provides comprehensive support — free shelter up to 5 days, medical help, legal aid, counseling, police assistance, even video conferencing with court. How to reach: call 181 or 1090, or visit District Women Hospital. Women Helpdesk: Every UP police station must have Women Helpdesk for FIR registration and referral. UP Legal Services Authority (UPSLSA) at 0522-2209457 provides free lawyer for all women victims — no income limit for gender-based violence cases. District Protection Officers appointed in every UP district under DV Act.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "up_specific",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Government, DV Act"
+    }
+  },
+  {
+    "id": "women_012_helplines",
+    "text": "Important helplines for women safety in Uttar Pradesh. Emergency and Immediate Help: 112 — UP Police Emergency (24x7, GPS-enabled response). 1090 — UP Mahila Power Line (24x7, women-specific, counseling + action). 181 — One Stop Centre / Women Helpline (24x7, shelter + legal aid). Legal Support: 0522-2209457 — UP State Legal Services Authority for free lawyer. 1076 — UP CM Helpline for complaints against authorities. National Level: 7827170170 — National Commission for Women (working hours). 1098 — Child Helpline for POCSO cases. Online Complaints: ncwapps.nic.in — NCW online complaint. uppolice.gov.in — UP Police online FIR. pocso.ncpcr.gov.in — POCSO e-box for child abuse. Mahila 1090 App is available on Google Play Store for quick access.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "helplines",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Government, NCW, MHA"
+    }
+  },
+  {
+    "id": "women_013_ipc_sections",
+    "text": "Key IPC sections for crimes against women. Note: IPC has been replaced by Bharatiya Nyaya Sanhita (BNS) 2023, but old IPC sections are still widely referenced. IPC 354 / BNS 74: Assault to outrage modesty of woman — 1 to 5 years jail. IPC 354A / BNS 75: Sexual harassment — physical contact, demanding sexual favors — 1 to 3 years. IPC 354B / BNS 76: Assault to disrobe woman — 3 to 7 years. IPC 354C / BNS 77: Voyeurism — 1 to 7 years. IPC 354D / BNS 78: Stalking a woman — 1 to 5 years, repeat offense up to 7 years. IPC 376 / BNS 64: Rape — minimum 7 years, maximum life imprisonment. IPC 498A / BNS 85: Cruelty by husband or relatives — up to 3 years, non-bailable. IPC 509 / BNS 79: Words or gestures to insult modesty of woman — 1 to 3 years. All these are cognizable offenses — police must register FIR.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "laws",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "IPC 1860, BNS 2023"
+    }
+  },
+  {
+    "id": "women_014_faqs",
+    "text": "Frequently asked questions about women safety and domestic violence. Q: Can mother-in-law be included in DV complaint? Yes — DV Act covers all household members including female relatives like mother-in-law, sister-in-law. Q: What if police refuses FIR? Go to SP, file online at uppolice.gov.in, call 1090, or file Section 156(3) application before Magistrate. Q: Can woman file DV case and divorce simultaneously? Yes — both can proceed simultaneously. DV case gives immediate protection and maintenance while divorce proceeds. Q: Is 498A automatically an arrest? Police can arrest without warrant but Supreme Court guidelines ask for some preliminary verification. Filing is still very effective. Q: Can live-in partner file DV complaint? Yes — live-in partners are fully protected under DV Act 2005. Q: What if abuser has political connections? Contact NCW at 7827170170, file online complaint. NCW can directly intervene.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "faqs",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "DV Act 2005, IPC, Supreme Court judgments"
+    }
+  },
+  {
+    "id": "women_015_tips",
+    "text": "Practical tips for women seeking legal help. Document everything: Photograph injuries immediately before they fade. Save all threatening messages, voice notes, emails. Ask witnesses to give written statements. Keep medical reports carefully. Use 1090 first: UP Mahila Power Line 1090 is the most effective first step in UP — they handle everything from counseling to police action to shelter. Do not delay: Evidence fades over time. Medical examination should happen within 24-48 hours of assault. You have the right to stay in your house: Under DV Act, no one can throw you out of shared household. Get protection order if threatened with eviction. Free help is available: One Stop Centre, UPSLSA, Protection Officer — all free services in UP. You do not need a lawyer to file DV case — Protection Officer can help file application for free. 1090 App available on Google Play Store for quick access.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "tips",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "DV Act 2005, UP Government"
+    }
+  }
+]

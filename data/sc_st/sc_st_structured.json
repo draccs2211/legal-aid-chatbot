@@ -1,0 +1,233 @@
+{
+  "domain": "sc_st",
+  "domain_name": "SC/ST Atrocities — Scheduled Castes & Scheduled Tribes Protection",
+  "level": "basic",
+  "jurisdiction": [
+    "central",
+    "uttar_pradesh"
+  ],
+  "last_updated": "2025",
+  "source_act": "Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 — amended 2015, 2018",
+  "overview": "The SC/ST (Prevention of Atrocities) Act 1989 protects members of Scheduled Castes and Scheduled Tribes from caste-based discrimination, violence, and social injustice. The Act defines specific crimes as 'atrocities' and prescribes strict punishments. All offenses are cognizable — police can arrest without warrant. No anticipatory bail is available to the accused. UP has the highest number of SC/ST atrocity cases in India — over 3.3 lakh calls from UP to the National Helpline since 2021. National Helpline: 14566 (24x7, Hindi, English, regional languages).",
+  "who_is_protected": {
+    "scheduled_castes": "Communities listed in Presidential Order under Article 341 of Constitution — commonly called Dalits. Includes Chamar, Valmiki, Pasi, Kori, and many other UP communities.",
+    "scheduled_tribes": "Communities listed under Article 342 of Constitution — Adivasi communities.",
+    "important_note": "The Act protects SC/ST members from offenses committed by NON-SC/ST persons. Offenses between SC/ST members inter se are NOT covered by this Act.",
+    "obc_coverage": "OBC (Other Backward Classes) are NOT covered under this Act. This Act is specifically for SC and ST communities only."
+  },
+  "what_counts_as_atrocity": {
+    "physical_atrocities": [
+      "Forcing SC/ST person to drink or eat inedible/obnoxious substances",
+      "Dumping excreta, waste, or carcasses in SC/ST person's premises",
+      "Forcibly removing clothes or parading naked — derogatory to human dignity",
+      "Garland with shoes/chappals — act of humiliation",
+      "Tonsuring head or removing moustache in derogatory manner",
+      "Physical assault, beating, grievous hurt",
+      "Forcing manual scavenging — carrying human excreta"
+    ],
+    "land_and_property": [
+      "Wrongfully occupying or cultivating land belonging to SC/ST",
+      "Wrongfully dispossessing SC/ST from land",
+      "Destroying crops or property of SC/ST",
+      "Denying access to irrigation water or forest rights"
+    ],
+    "social_atrocities": [
+      "Imposing social or economic boycott on SC/ST community",
+      "Preventing SC/ST from using public paths, water sources, or places",
+      "Abusing in caste name publicly — using caste slurs",
+      "Dedicating SC/ST women as devadasi",
+      "Preventing SC/ST from voting or exercising democratic rights",
+      "Forcing SC/ST to leave village or locality"
+    ],
+    "sexual_atrocities": [
+      "Sexual assault on SC/ST woman",
+      "Using or permitting sexual exploitation of SC/ST woman",
+      "Intentionally touching SC/ST woman without consent in sexual manner"
+    ],
+    "legal_harassment": [
+      "Filing false or malicious legal case against SC/ST person",
+      "Giving false information to authorities to harm SC/ST person"
+    ],
+    "witchcraft": [
+      "Perpetrating witchcraft atrocities on SC/ST members"
+    ]
+  },
+  "key_legal_provisions": {
+    "section_3": "Main section — defines all offenses as atrocities with punishments",
+    "section_4": "Punishment for neglect of duties by public servant — 6 months to 1 year",
+    "section_8": "Presumption of offense — accused must prove innocence in certain cases",
+    "section_14": "Special Courts — dedicated court in each district for speedy trial",
+    "section_15": "Special Public Prosecutor — dedicated prosecutor for SC/ST cases",
+    "section_18": "No anticipatory bail for accused under this Act",
+    "section_18A": "2018 amendment — no preliminary inquiry needed before FIR, no approval needed for arrest",
+    "section_21": "Duties of Government — relief and rehabilitation of victims"
+  },
+  "punishments": {
+    "general_offenses_section_3_1": "Minimum 6 months, maximum 5 years imprisonment + fine",
+    "serious_ipc_offenses_on_sc_st": "Life imprisonment + fine (if underlying IPC offense carries 10+ years)",
+    "second_and_subsequent_offenses": "Minimum 1 year imprisonment — enhanced penalty for repeat offenders",
+    "public_servant_neglect": "6 months to 1 year imprisonment",
+    "property_forfeiture": "Property used for committing offense may be forfeited to government",
+    "collective_fine": "Community that participated in or abetted offense may face collective fine"
+  },
+  "special_features": {
+    "cognizable_offense": "All offenses under this Act are cognizable — police can arrest WITHOUT warrant",
+    "no_anticipatory_bail": "Accused cannot get anticipatory bail (pre-arrest bail) under Section 438 CrPC — absolute bar",
+    "no_preliminary_inquiry": "2018 amendment removed requirement of preliminary inquiry before FIR — FIR must be registered directly",
+    "no_senior_approval": "2018 amendment — police officer does not need DSP/SSP approval for arrest",
+    "special_court": "Cases must be tried in Special Court under SC/ST Act — not ordinary court",
+    "investigation_rank": "Investigation must be conducted by officer not below rank of Deputy SP (DSP)"
+  },
+  "process": {
+    "filing_complaint": [
+      {
+        "step": 1,
+        "title": "File FIR at police station",
+        "detail": "Go to nearest police station and report the atrocity. Since all offenses are cognizable, police MUST register FIR — they cannot refuse. Police can arrest accused without warrant immediately."
+      },
+      {
+        "step": 2,
+        "title": "If police refuses FIR",
+        "detail": "Go to SP/DIG/DGP. File online complaint at uppolice.gov.in. Call National Helpline 14566. File complaint before Magistrate under Section 156(3) CrPC. Contact SC/ST Commission."
+      },
+      {
+        "step": 3,
+        "title": "Investigation by DSP level officer",
+        "detail": "Under Rule 7 of SC/ST Rules 1995, investigation must be by officer not below Deputy SP rank. If police station officer is investigating, ask for DSP-level officer."
+      },
+      {
+        "step": 4,
+        "title": "Trial in Special Court",
+        "detail": "Case goes to Special Court (Exclusive Special Court) — not ordinary sessions court. UP has 65 exclusive Special Courts. Ensures faster trial."
+      },
+      {
+        "step": 5,
+        "title": "Relief and Rehabilitation",
+        "detail": "Victim is entitled to financial compensation, medical aid, legal aid, and rehabilitation under the Act. Apply through District Magistrate office."
+      }
+    ]
+  },
+  "victim_relief": {
+    "entitlements": [
+      "Free legal aid — state must provide Special Public Prosecutor",
+      "Financial compensation — varies by offense type",
+      "Medical aid and treatment",
+      "Traveling expenses for attending court hearings",
+      "Food and shelter if displaced",
+      "Agricultural and economic rehabilitation if land taken"
+    ],
+    "how_to_claim": "Apply to District Magistrate or SC/ST Protection Cell in your district"
+  },
+  "up_specific": {
+    "statistics": "UP has highest number of SC/ST atrocity cases in India — 23.78% of all national SC atrocity cases (2022). Over 3.3 lakh calls from UP to National Helpline since 2021.",
+    "special_courts": "UP has 65 Exclusive Special Courts for SC/ST cases — highest in India",
+    "protection_cell": "SC/ST Protection Cell at State level — senior police officers oversee implementation",
+    "relevant_departments": [
+      "UP Police SC/ST Cell",
+      "UP Social Welfare Department (Samaj Kalyan Vibhag)",
+      "UP SC/ST Commission, Lucknow",
+      "District Magistrate office — for relief and rehabilitation",
+      "UP Legal Services Authority (UPSLSA) — free legal aid"
+    ],
+    "helplines": [
+      {
+        "name": "National Helpline Against Atrocities (NHAA)",
+        "number": "14566",
+        "available": "24x7, Hindi/English/Regional languages"
+      },
+      {
+        "name": "UP Police Emergency",
+        "number": "112",
+        "available": "24x7"
+      },
+      {
+        "name": "UP SC/ST Commission, Lucknow",
+        "number": "0522-2236311",
+        "available": "Working hours"
+      },
+      {
+        "name": "UP Legal Services Authority (Free Legal Aid)",
+        "number": "0522-2209457",
+        "available": "Working hours"
+      },
+      {
+        "name": "CM Helpline UP",
+        "number": "1076",
+        "available": "24x7"
+      },
+      {
+        "name": "NHAA Online Portal",
+        "url": "nhapoa.gov.in",
+        "available": "Online complaint 24x7"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Can OBC person use SC/ST Act?",
+      "a": "No. The SC/ST (Prevention of Atrocities) Act specifically protects only Scheduled Castes and Scheduled Tribes. OBC (Other Backward Classes) are not covered under this Act. OBCs can use general IPC sections for similar offenses."
+    },
+    {
+      "q": "Can accused get bail in SC/ST case?",
+      "a": "Regular bail can be granted by court, but anticipatory bail (pre-arrest bail) is completely barred under Section 18 of the Act. After arrest, accused can apply for bail in Special Court or High Court, but courts are generally strict in SC/ST cases."
+    },
+    {
+      "q": "What if offense happened in a private place — not in public view?",
+      "a": "Section 3(1)(x) offenses like caste abuse require 'public view' — insult must happen in front of others. However, most other offenses under the Act do not need public view requirement. Supreme Court in Shajan Skaria case (2024) clarified this."
+    },
+    {
+      "q": "What if SC/ST person commits offense against another SC/ST person?",
+      "a": "The SC/ST Act does NOT apply for intra-community offenses — between SC/ST members. The perpetrator must be a NON-SC/ST person for this Act to apply. For inter-SC/ST offenses, general IPC applies."
+    },
+    {
+      "q": "Where to complain if police is not registering FIR?",
+      "a": "Call National Helpline 14566. File complaint with SP/SSP. File online at uppolice.gov.in. Contact UP SC/ST Commission at 0522-2236311. File application before Magistrate under Section 156(3) CrPC. Contact UPSLSA for free legal help."
+    },
+    {
+      "q": "Is there compensation for SC/ST atrocity victims?",
+      "a": "Yes. Government provides financial compensation under SC/ST Act Rules. Amount varies by type of offense. Apply through District Magistrate office or Social Welfare Department. Also entitled to free legal aid, medical help, and rehabilitation."
+    },
+    {
+      "q": "What is the NHAA helpline 14566?",
+      "a": "National Helpline Against Atrocities (NHAA) launched by Ministry of Social Justice. Available 24x7 in Hindi, English, and regional languages. Helps in FIR registration, provides legal guidance, tracks grievances. UP alone has made over 3.3 lakh calls since 2021."
+    }
+  ],
+  "sample_templates": [
+    {
+      "id": "sc_st_template_001",
+      "title": "FIR Application for SC/ST Atrocity (Hindi)",
+      "language": "hindi",
+      "use_case": "When filing police complaint for caste-based atrocity",
+      "template": "सेवा में,\nथाना अध्यक्ष\n[थाने का नाम]\n[जिला], उत्तर प्रदेश\n\nविषय: अनुसूचित जाति एवं अनुसूचित जनजाति (अत्याचार निवारण) अधिनियम, 1989 के अंतर्गत प्रथम सूचना रिपोर्ट\n\nमहाशय,\n\nमैं [नाम], जाति [SC/ST जाति का नाम], निवासी [पूरा पता], यह सूचित करता/करती हूं कि दिनांक [तारीख] को [समय] बजे [अभियुक्त का नाम], जो [जाति — गैर SC/ST] का है, ने मेरे साथ निम्नलिखित अत्याचार किया:\n\n[घटना का विस्तृत विवरण — क्या हुआ, कहां हुआ, साक्षी कौन थे]\n\nयह अपराध SC/ST अत्याचार निवारण अधिनियम की धारा 3 के अंतर्गत दंडनीय है। मैं तत्काल FIR दर्ज कराने एवं अभियुक्त के विरुद्ध कड़ी कार्रवाई का निवेदन करता/करती हूं।\n\nभवदीय,\n[नाम]\n[जाति प्रमाण पत्र संख्या]\n[पता, दिनांक, मोबाइल]"
+    }
+  ],
+  "emergency_keywords": [
+    "jati ke naam pe gaali",
+    "chamar",
+    "bhangi",
+    "caste abuse",
+    "jati abhishap",
+    "zameen chhin li",
+    "ghar se nikaala",
+    "maar peet jati ke naam pe",
+    "samajik bahishkar",
+    "social boycott",
+    "dalit pe hamla",
+    "atrocity",
+    "sc st act",
+    "manav mala",
+    "chappal ki mala",
+    "nanga kiya",
+    "paani nahi diya",
+    "kuwa se paani band",
+    "vote dene se roka"
+  ],
+  "common_mistakes": [
+    "OBC victims trying to use SC/ST Act — Act only covers SC/ST communities",
+    "Not knowing FIR must be registered directly — no preliminary inquiry needed after 2018 amendment",
+    "Not knowing accused cannot get anticipatory bail — this is a strong protection",
+    "Not claiming victim compensation — many victims unaware of financial relief entitlement",
+    "Filing in wrong court — SC/ST cases must go to Special Court, not ordinary court",
+    "Not knowing National Helpline 14566 — most effective first step"
+  ]
+}

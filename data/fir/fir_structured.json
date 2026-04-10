@@ -1,0 +1,449 @@
+{
+  "domain": "fir",
+  "domain_name": "FIR & Police Complaints",
+  "level": "deep",
+  "jurisdiction": ["central", "uttar_pradesh"],
+  "last_updated": "2025",
+  "source_act": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023 [replaces CrPC 1973], Indian Penal Code (IPC) 1860 / Bharatiya Nyaya Sanhita (BNS) 2023",
+
+  "overview": {
+    "english": "FIR (First Information Report) is the first official complaint registered with police when a cognizable offence occurs. It is registered under Section 173 of the Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023, which replaced the old CrPC Section 154 from July 1, 2024. Every citizen has a legal right to have their FIR registered — police cannot refuse for cognizable offences. If police refuses, the complainant can escalate to the SP, file online via uppolice.gov.in, or approach a Magistrate directly. Zero FIR can be filed at any police station regardless of where the crime occurred."
+  },
+
+  "eligibility": {
+    "who_can_use": "Any person — victim, witness, or any citizen aware of a crime — can file an FIR. This includes men, women, children (through guardians), senior citizens, and persons with disabilities.",
+    "conditions": "FIR is registered directly only for cognizable offences — crimes where police can arrest without a warrant, such as murder, rape, kidnapping, dacoity, and theft above Rs. 5,000. For non-cognizable offences (minor assault, verbal abuse), a Non-Cognizable Report (NCR) is filed and a Magistrate's order is needed for investigation.",
+    "section_reference": "BNSS Section 173 (FIR for cognizable offence), BNSS Section 174 (non-cognizable), BNSS Section 175(3) (Magistrate order for investigation) — these correspond to old CrPC Sections 154, 155, 156(3)"
+  },
+
+  "key_rights": [
+    "Police CANNOT refuse to register an FIR for a cognizable offence — BNSS Section 173 (formerly CrPC Section 154). Refusal is itself a punishable offence under BNS Section 166A.",
+    "You are entitled to a FREE copy of the FIR immediately after registration — no fee, no delay.",
+    "For crimes against women (rape, sexual assault, IPC/BNS Sections 354, 376), the FIR MUST be recorded by a woman police officer — BNSS Section 173(1) proviso.",
+    "Zero FIR right — you can file an FIR at ANY police station regardless of jurisdiction. The station must transfer it to the correct station afterward.",
+    "If police refuses, you can escalate to SP in writing under BNSS Section 173(3) [old CrPC 154(3)].",
+    "You can approach a Judicial Magistrate directly under BNSS Section 175(3) [old CrPC 156(3)] to order police investigation.",
+    "Right to know grounds of arrest — BNSS Section 47 [old CrPC Section 50]. Police must inform you why you are being arrested.",
+    "Right to legal counsel — Article 22 of the Constitution. You can call your lawyer immediately on arrest.",
+    "No detention beyond 24 hours without Magistrate's order — BNSS Section 58 [old CrPC Section 57].",
+    "BNSS New Right (2023): You have the right to inform one person of your choice about your arrest — Section 35 BNSS. Police must maintain an arrest memo and get your signature.",
+    "BNSS New Right (2023): For certain offences, electronic FIR (e-FIR) is now valid — Section 173(1) BNSS. UP is implementing this progressively."
+  ],
+
+  "process": {
+    "steps": [
+      {
+        "step": 1,
+        "title": "Visit the Police Station and Meet the SHO",
+        "english": "Go to the nearest police station and meet the Station House Officer (SHO) or the duty officer. You can give information orally or in writing. If you cannot write, the officer must write it for you — BNSS Section 173(1). You do not need to speak English — Hindi or your local language is fully acceptable.",
+        "tip": "Take a witness (neighbor, friend, or relative) with you. Note the exact date, time, location of the crime, and the accused's name or description before going."
+      },
+      {
+        "step": 2,
+        "title": "Get the FIR Written and Collect Your Copy",
+        "english": "The officer will write down your complaint and read it back to you. Sign it or give your thumb impression only after confirming everything is accurate. Immediately ask for a FREE copy of the FIR — this is your legal right under BNSS Section 173(2).",
+        "tip": "Note the FIR number. The copy must carry the station seal and the officer's signature. Photograph it immediately as backup."
+      },
+      {
+        "step": 3,
+        "title": "If Police Refuses to Register the FIR",
+        "english": "Do not panic. Step 1: Submit a written complaint to the SP/DSP under BNSS Section 173(3). Step 2: File an online complaint at uppolice.gov.in. Step 3: Call 112 (emergency) or 1090 (women). Step 4: File an application before the Judicial Magistrate under BNSS Section 175(3) — the Magistrate can directly order police to investigate and register the FIR.",
+        "tip": "Always get written acknowledgement of every complaint you submit. This becomes proof of escalation."
+      },
+      {
+        "step": 4,
+        "title": "Zero FIR — File at Any Station",
+        "english": "If the crime happened in a different police station's jurisdiction but you cannot reach that station, file a Zero FIR at the nearest station. The station must accept it and transfer it to the correct jurisdiction. Zero FIR cannot be refused — refusal is illegal. The number starts with '0' temporarily until it reaches the correct station.",
+        "tip": "This is especially useful in rape, accident, and kidnapping cases where the victim is at a hospital away from the crime scene."
+      },
+      {
+        "step": 5,
+        "title": "Online Complaint — UP Police Portal",
+        "english": "In Uttar Pradesh, you can file an online complaint at uppolice.gov.in. You will receive a tracking number. Note: an online complaint is not the same as an FIR — police verify and then register the FIR. You can also track your FIR status online using your FIR number.",
+        "tip": "Screenshot the confirmation page. If no action within 7 days, escalate to SP or CM Helpline 1076."
+      },
+      {
+        "step": 6,
+        "title": "Magistrate Complaint — BNSS Section 175(3)",
+        "english": "If police still refuses after SP complaint, go directly to the Judicial Magistrate's court. File a written application under BNSS Section 175(3) [formerly CrPC 156(3)]. The Magistrate has the power to order police to investigate and register an FIR. Court fee is minimal (Rs. 10–50). A lawyer is helpful but not mandatory.",
+        "tip": "Attach a copy of your SP complaint as proof that you already tried to escalate. This strengthens your Magistrate application."
+      }
+    ]
+  },
+
+  "chargesheet_process": {
+    "what_is_chargesheet": "After FIR is registered, police conduct an investigation (BNSS Section 176, formerly CrPC 157). At the end of investigation, police submit a 'Police Report' (commonly called Chargesheet) to the Magistrate under BNSS Section 193 [formerly CrPC 173]. This is the document that formally accuses a person and moves the case to trial.",
+    "timeline": {
+      "standard_cases": "Police must file chargesheet within 60 days of arrest.",
+      "serious_offences": "For offences punishable with death, life imprisonment, or 10+ years — chargesheet must be filed within 90 days.",
+      "consequence_of_delay": "If police fail to file chargesheet within 60/90 days, the arrested accused is entitled to 'Default Bail' (also called Statutory Bail) under BNSS Section 187(2) [formerly CrPC 167(2)]. The accused can apply for bail and must be released if the period has expired.",
+      "up_note": "In UP, chargesheet filing delays are common in overburdened courts. Track your case at uppolice.gov.in and follow up with the investigating officer."
+    },
+    "chargesheet_contents": [
+      "Names of the parties — complainant and accused",
+      "Nature and details of the offence (IPC/BNS sections)",
+      "Witness list and their statements",
+      "Evidence collected — physical, forensic, digital",
+      "Whether accused is in custody or on bail",
+      "Police's recommendation — whether to prosecute or not"
+    ],
+    "after_chargesheet": "Once chargesheet is filed, the Magistrate takes cognizance of the offence (BNSS Section 210) and issues summons or warrant to the accused. The trial process begins. The complainant (victim) should follow up with the Public Prosecutor assigned to the case."
+  },
+
+  "bail_types": {
+    "overview": "Bail is the temporary release of an arrested person, with a promise to appear in court when required. Under BNSS 2023, bail provisions are largely similar to CrPC but with some new additions. There are four main types of bail in India:",
+
+    "types": [
+      {
+        "type": "Regular Bail",
+        "section": "BNSS Section 480 [formerly CrPC Section 437/439]",
+        "when": "After a person has already been arrested and is in custody.",
+        "who_grants": "Magistrate (for most offences), Sessions Court or High Court (for serious offences).",
+        "how_to_apply": "File a bail application through a lawyer in the relevant court. Attach ID proof, address proof, surety details. Court considers — nature of crime, criminal history, flight risk, likelihood of tampering with evidence.",
+        "bailable_offences": "For bailable offences (listed in BNSS First Schedule), bail is a right — police must grant it at the station itself. No court needed.",
+        "non_bailable_offences": "For non-bailable offences (murder, rape, dacoity), bail is at the court's discretion. Magistrate or Sessions Court decides."
+      },
+      {
+        "type": "Anticipatory Bail",
+        "section": "BNSS Section 482 [formerly CrPC Section 438]",
+        "when": "BEFORE arrest — when a person apprehends they may be arrested for a non-bailable offence.",
+        "who_grants": "Sessions Court or High Court (UP High Court, Allahabad).",
+        "how_to_apply": "File application through a lawyer. Court may grant same-day hearing in urgent cases. If granted, the person is released on bail immediately upon arrest — no need to go to jail first.",
+        "conditions_court_can_impose": [
+          "Must be available for police interrogation when called",
+          "Cannot leave India without court's permission",
+          "Must not threaten or influence witnesses",
+          "May need to surrender passport"
+        ],
+        "when_useful": "False FIR situations, family/property disputes where other party has filed a case, business disputes, any case where you fear wrongful arrest.",
+        "up_note": "UP Sessions Courts handle anticipatory bail applications. For very serious cases, file in UP High Court Allahabad. Free legal aid available from UPSLSA (0522-2209457)."
+      },
+      {
+        "type": "Default Bail (Statutory Bail)",
+        "section": "BNSS Section 187(2) [formerly CrPC Section 167(2)]",
+        "when": "Police fail to file chargesheet within 60 days (standard) or 90 days (serious offences) of arrest.",
+        "who_grants": "Magistrate — as a right, not discretion. If period has expired and accused applies, Magistrate MUST grant bail.",
+        "how_to_apply": "The accused (or their lawyer) files an application before the Magistrate stating that the mandatory period has elapsed without chargesheet. If true, bail must be granted.",
+        "important_note": "This right is lost if the accused does not apply BEFORE chargesheet is filed. Once chargesheet is filed even after delay, this right lapses. So timing matters."
+      },
+      {
+        "type": "Interim Bail",
+        "section": "Court's inherent powers; BNSS Section 482 proviso",
+        "when": "Temporary short-term bail granted while a regular or anticipatory bail application is being heard.",
+        "who_grants": "Any court — Magistrate, Sessions Court, or High Court.",
+        "duration": "Usually 7–30 days, until the main bail hearing is decided.",
+        "when_useful": "Medical emergencies, urgent family matters (death of close relative), when regular bail application is pending."
+      }
+    ]
+  },
+
+  "bnss_2023_changes": {
+    "overview": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023 replaced the old Code of Criminal Procedure (CrPC) 1973, effective from July 1, 2024. For citizens filing FIRs or dealing with police, most practical procedures remain the same — but here are the important new additions:",
+    "key_changes": [
+      {
+        "change": "Electronic FIR (e-FIR) now valid",
+        "bnss_section": "Section 173(1)",
+        "old_crpc": "No provision",
+        "impact": "FIR can now be filed electronically for certain offences. UP is progressively implementing this via uppolice.gov.in."
+      },
+      {
+        "change": "Mandatory arrest memo with witness",
+        "bnss_section": "Section 35",
+        "old_crpc": "No specific provision",
+        "impact": "Police must prepare an arrest memo, get it signed by a family member or witness, and give a copy to the arrested person. Protects against illegal arrest."
+      },
+      {
+        "change": "Right to inform a person of arrest",
+        "bnss_section": "Section 35(3)",
+        "old_crpc": "Section 50A (similar)",
+        "impact": "Arrested person has the right to have one person of their choice informed of their arrest and location."
+      },
+      {
+        "change": "Trial in absentia for proclaimed offenders",
+        "bnss_section": "Section 356",
+        "old_crpc": "No provision",
+        "impact": "If accused continuously evades arrest, court can now conduct trial in their absence. This helps victims get justice faster."
+      },
+      {
+        "change": "Forensic investigation mandatory for 7+ year offences",
+        "bnss_section": "Section 176(3)",
+        "old_crpc": "No mandatory provision",
+        "impact": "For crimes carrying 7 or more years imprisonment, forensic team must visit the crime scene. Strengthens evidence quality."
+      },
+      {
+        "change": "Timeline for investigation — 90 days for serious crimes",
+        "bnss_section": "Section 193",
+        "old_crpc": "Section 173 (60 days standard)",
+        "impact": "Extended timeline for serious offences to ensure thorough investigation before chargesheet."
+      }
+    ],
+    "note": "Old CrPC section numbers are still widely used in practice by lawyers, police, and courts. Both BNSS and CrPC references are valid during the transition period. For UP citizens, practical procedure at police station level is unchanged."
+  },
+
+  "important_laws": [
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "173 [old CrPC 154]",
+      "what_it_says": "Police MUST register FIR for cognizable offences. Oral information must be written down and read back to the informant. FIR copy must be given free of charge. For crimes against women, a woman police officer must record the FIR.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "173(3) [old CrPC 154(3)]",
+      "what_it_says": "If police refuses to register FIR, the complainant can send the information in writing to the SP. If the SP is satisfied, they must either investigate themselves or direct a subordinate officer to investigate.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "174 [old CrPC 155]",
+      "what_it_says": "For non-cognizable offences, police registers an NCR (Non-Cognizable Report) and refers the complainant to the Magistrate. Police cannot investigate without Magistrate's order.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "175(1) and 175(3) [old CrPC 156(1) and 156(3)]",
+      "what_it_says": "175(1): Police officer can investigate a cognizable case without Magistrate's order. 175(3): A Magistrate can order police to investigate a cognizable case — powerful remedy when police refuse to act.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "187 [old CrPC 167]",
+      "what_it_says": "Arrested person must be produced before Magistrate within 24 hours. Magistrate can authorize custody up to 15 days at a time. Default bail kicks in if chargesheet not filed within 60 days (standard) or 90 days (serious offences).",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "193 [old CrPC 173]",
+      "what_it_says": "Police report (chargesheet) must be filed with the Magistrate on completion of investigation. Must include: nature of offence, names of accused, evidence, witness list, and whether accused is in custody or bail.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "480 [old CrPC 437/439]",
+      "what_it_says": "Regular bail provisions. For bailable offences — bail is a right at the station itself. For non-bailable offences — bail is discretionary, granted by Magistrate or Sessions Court based on case merits.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "482 [old CrPC 438]",
+      "what_it_says": "Anticipatory Bail — person fearing arrest for non-bailable offence can apply to Sessions Court or High Court BEFORE arrest. Court may impose conditions. If granted, person is released on bail immediately upon arrest.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nyaya Sanhita (BNS) 2023 [replaces IPC]",
+      "section": "202 [old IPC 166A]",
+      "what_it_says": "If a public servant (police officer) fails to register FIR or fails to investigate a cognizable offence — punishment of 6 months to 2 years imprisonment plus fine. This is how police officers are held accountable.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nyaya Sanhita (BNS) 2023 [replaces IPC]",
+      "section": "215 [old IPC 182]",
+      "what_it_says": "Filing a false FIR against an innocent person is a criminal offence — punishable with 6 months imprisonment or fine or both. Always provide truthful information.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023",
+      "section": "528 [old CrPC 482]",
+      "what_it_says": "High Court's inherent powers — can quash (cancel) an FIR if it is false, malicious, or an abuse of legal process. Victims of false FIRs can petition the UP High Court Allahabad under this section.",
+      "jurisdiction": "central"
+    }
+  ],
+
+  "time_limits": {
+    "FIR registration": "No statutory time limit — FIR can be filed months or years after a crime. However, filing promptly is strongly advised as evidence degrades over time.",
+    "Production before Magistrate after arrest": "Mandatory within 24 hours of arrest — BNSS Section 58 [old CrPC 57]. Violation is illegal detention.",
+    "Chargesheet filing — standard cases": "60 days from date of arrest. If missed, accused gets Default Bail right.",
+    "Chargesheet filing — serious offences (death/life imprisonment/10+ years)": "90 days from date of arrest. If missed, accused gets Default Bail right.",
+    "Default Bail application window": "Must be applied by accused BEFORE chargesheet is filed — even if 60/90 days have passed. Once chargesheet is filed, this right lapses.",
+    "SP complaint after police refusal": "File immediately after refusal — no fixed limit, but delays weaken your case.",
+    "Magistrate Section 175(3) application": "No fixed limit, but file as soon as SP complaint fails — ideally within 2–4 weeks.",
+    "Anticipatory bail application": "Any time before arrest — the moment you apprehend arrest, apply immediately.",
+    "FIR quashing petition (High Court)": "No fixed limit, but courts may dismiss very delayed petitions without explanation."
+  },
+
+  "penalties_for_offender": {
+    "Police officer refusing to register FIR (BNS Section 202 / old IPC 166A)": "6 months to 2 years imprisonment plus fine",
+    "Police officer failing to investigate after FIR (BNS 202)": "6 months to 2 years imprisonment plus fine",
+    "Filing a false FIR against an innocent person (BNS 215 / old IPC 182)": "6 months imprisonment or fine or both",
+    "Custodial torture by police (BNS 117 / old IPC 330)": "Up to 7 years imprisonment plus fine",
+    "Illegal detention by police officer (BNS 132 / old IPC 342)": "1 year imprisonment or Rs. 5,000 fine or both",
+    "Destroying or concealing evidence (BNS 238 / old IPC 201)": "Up to 7 years imprisonment depending on severity of underlying offence",
+    "Threatening or inducing a witness (BNS 227 / old IPC 195A)": "Up to 7 years imprisonment"
+  },
+
+  "sample_templates": [
+    {
+      "id": "fir_template_001",
+      "title": "Written Complaint to SP — When Police Refuses FIR",
+      "language": "english",
+      "use_case": "Use when the local police station refuses to register your FIR. Submit this to the Superintendent of Police (SP) of the district.",
+      "template": "To,\nThe Superintendent of Police (SP),\n[District Name], Uttar Pradesh\n\nSubject: Complaint regarding non-registration of FIR by Police Station [Station Name] — under BNSS Section 173(3)\n\nRespected Sir/Madam,\n\nI, [Your Full Name], son/daughter of [Father's Name], resident of [Full Address], hereby submit this complaint regarding the refusal of Police Station [Station Name] to register my FIR.\n\nThe facts of the incident are as follows:\nOn [Date], at approximately [Time], at [Location — Mohalla/Village/Town], [describe what happened clearly — who did what, how, what was the loss or injury].\n\nI visited Police Station [Station Name] on [Date] to report the above incident and requested registration of FIR. However, [Officer's Name/Designation, if known] refused to register the FIR without giving a valid legal reason.\n\nI respectfully request you to:\n1. Direct the concerned police station to register the FIR immediately under BNSS Section 173.\n2. Take appropriate disciplinary action against the officer who refused.\n\nYour Name: [Name]\nAddress: [Full Address]\nMobile: [Number]\nDate: [Today's Date]\nSignature: ___________"
+    },
+    {
+      "id": "fir_template_002",
+      "title": "Application to Judicial Magistrate — Under BNSS Section 175(3)",
+      "language": "english",
+      "use_case": "Use when police AND SP have both failed to act. File this in the Judicial Magistrate's court of your district.",
+      "template": "In the Court of: Judicial Magistrate [First/Second Class], [District], Uttar Pradesh\n\nApplication under BNSS Section 175(3) [formerly CrPC Section 156(3)]\nDirecting police to investigate and register FIR\n\nApplicant: [Your Full Name], son/daughter of [Father's Name], resident of [Full Address]\n\nFacts of the Case:\n\n1. That on [Date], at [Location], the following cognizable offence took place against the applicant: [clear description of the crime — what happened, who did it, what injury/loss occurred].\n\n2. That the said offence is cognizable in nature as per the First Schedule of the BNSS 2023 [mention the specific offence — theft/assault/fraud etc.].\n\n3. That the applicant visited Police Station [Station Name] on [Date] to register an FIR, but the police refused to register the same.\n\n4. That the applicant also submitted a written complaint to the SP, [District] on [Date], but no action has been taken till date.\n\nPrayer:\nIn light of the above, it is most respectfully prayed that this Hon'ble Court may be pleased to direct the Station House Officer, Police Station [Station Name], to register an FIR and conduct a proper investigation into the above cognizable offence under BNSS Section 175(3).\n\nApplicant's Name: [Name]\nDate: [Today's Date]\nSignature: ___________\n\nEnclosures:\n1. Copy of SP complaint with submission proof\n2. Any available evidence (photos, medical certificate, etc.)"
+    },
+    {
+      "id": "fir_template_003",
+      "title": "UP Police Online Complaint — Draft Text",
+      "language": "english",
+      "use_case": "Use for filing an online complaint at uppolice.gov.in when you cannot visit the police station or as an additional escalation step.",
+      "template": "Complaint Subject: [Type of Crime — e.g., Theft / Assault / Fraud / Threat]\n\nComplaint Details:\nMy name is [Name]. I am a resident of [Full Address, District, PIN].\n\nOn [Date], at approximately [Time], at [Location — Mohalla/Village/Town], [describe what happened clearly and factually — who was involved, what actions were taken, what was the loss or injury].\n\nEstimated Loss/Injury: [Physical injury description / Property stolen / Financial amount / Other loss]\n\nSuspect's name (if known): [Name / Physical description]\nWitnesses (if any): [Name and contact number]\n\nI request immediate police action as [reason — threat is ongoing / evidence may be destroyed / medical attention needed / other].\n\nMy Mobile: [Number]\nMy Email (if any): [Email]\nPreferred contact time: [Morning/Evening]"
+    }
+  ],
+
+  "faqs": [
+    {
+      "q": "Police is refusing to register my FIR — what should I do?",
+      "a": "Do not panic. First, speak to the SHO directly. If still refused: (1) File written complaint to SP under BNSS Section 173(3). (2) File online complaint at uppolice.gov.in. (3) Call 112 (emergency) or 1090 (women). (4) Approach the Judicial Magistrate and file an application under BNSS Section 175(3) — the Magistrate can order the police to register the FIR. Always get written acknowledgement of every complaint you make."
+    },
+    {
+      "q": "What is Zero FIR and when should I use it?",
+      "a": "Zero FIR means you can file an FIR at ANY police station, even if the crime happened in a different area. It is critical in emergencies — for example, if an accident happened in Agra but the victim is in a Lucknow hospital, file Zero FIR at the nearest Lucknow station. Police must accept it and transfer it to the correct jurisdiction. Zero FIR number starts with '0'. Police cannot legally refuse a Zero FIR."
+    },
+    {
+      "q": "What is the difference between FIR and NCR?",
+      "a": "FIR (First Information Report) is filed for cognizable offences — serious crimes like murder, rape, kidnapping, dacoity, theft above Rs. 5,000. Police can arrest without a warrant in these cases. NCR (Non-Cognizable Report) is filed for minor offences like petty verbal abuse or minor scuffles — police need a Magistrate's order before they can investigate. If you feel your NCR should be an FIR, escalate to SP or Magistrate."
+    },
+    {
+      "q": "Can someone else file an FIR on my behalf?",
+      "a": "Yes. BNSS Section 173 does not restrict FIR to the victim only. Any citizen — a witness, relative, neighbor, or even a stranger who saw the crime — can file an FIR. For children, the guardian files. For disabled or elderly persons, a relative can file on their behalf."
+    },
+    {
+      "q": "What happens after FIR is filed?",
+      "a": "After FIR registration, police must begin investigation (BNSS Section 176). They must file a chargesheet (police report) with the Magistrate within 60 days (or 90 days for serious offences). If they miss this deadline and the accused is in custody, the accused is entitled to Default Bail. You can track your FIR status at uppolice.gov.in. If investigation is stalled, approach SP or Magistrate."
+    },
+    {
+      "q": "A false FIR has been filed against me — what are my options?",
+      "a": "You have three main options: (1) Apply for Anticipatory Bail under BNSS Section 482 [old CrPC 438] from Sessions Court or UP High Court — this protects you from arrest. (2) File a petition in UP High Court Allahabad to quash (cancel) the FIR under BNSS Section 528 [old CrPC 482]. (3) File a counter-complaint against the false FIR filer under BNS Section 215 [old IPC 182]. Consult a lawyer immediately."
+    },
+    {
+      "q": "What are my rights if I am arrested?",
+      "a": "Key rights on arrest under BNSS 2023: (1) Right to know grounds of arrest — Section 47. (2) Police must prepare an arrest memo with witness — Section 35. (3) Right to inform one person of your choice — Section 35(3). (4) Must be produced before Magistrate within 24 hours — Section 58. (5) Right to legal counsel — Article 22 of Constitution. (6) Right to free legal aid if you cannot afford a lawyer — contact UPSLSA at 0522-2209457 or NALSA at 15100."
+    },
+    {
+      "q": "What is anticipatory bail and when should I apply?",
+      "a": "Anticipatory bail (BNSS Section 482) is bail granted BEFORE arrest when you apprehend being arrested for a non-bailable offence. Apply immediately to Sessions Court or UP High Court the moment you fear arrest. In urgent situations, courts hear it the same day. A lawyer is strongly recommended. If granted, you are released on bail immediately upon arrest — no time in police custody. Court may impose conditions like surrendering passport or being available for interrogation."
+    },
+    {
+      "q": "Is there any fee for filing an FIR?",
+      "a": "No. FIR registration is completely FREE. If any officer demands money, that is bribery — report it to the UP Anti-Corruption Helpline at 1064. You can also report to the SP or the CM Helpline 1076."
+    }
+  ],
+
+  "helplines": {
+    "central": [
+      {
+        "name": "National Emergency Number",
+        "phone": "112",
+        "note": "All emergencies — police, ambulance, fire",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "NALSA — National Legal Services Authority (Free Legal Aid)",
+        "phone": "15100",
+        "note": "Free legal aid for all citizens, especially SC/ST, women, disabled, elderly",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "National Commission for Women (NCW)",
+        "phone": "7827170170",
+        "note": "Women's rights, harassment, domestic violence — national level",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "Childline",
+        "phone": "1098",
+        "note": "Crimes against children, abuse, missing children — 24x7",
+        "jurisdiction": "central"
+      }
+    ],
+    "uttar_pradesh": [
+      {
+        "name": "UP Police Emergency (UP 112)",
+        "phone": "112",
+        "note": "24x7, GPS-tracked. PRV reaches in 10–20 min in cities",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Mahila Helpline — Mahila Power Line",
+        "phone": "1090",
+        "note": "For women only — harassment, stalking, domestic violence, rape. Anonymous complaints accepted. 24x7.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Chief Minister Helpline",
+        "phone": "1076",
+        "note": "For complaints against police inaction or government officials. Tracked and followed up.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Anti-Corruption Helpline",
+        "phone": "1064",
+        "note": "Report police or government officials demanding bribe",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP State Legal Services Authority (Free Legal Aid)",
+        "phone": "0522-2209457",
+        "note": "Free lawyers for those who cannot afford one. District offices in every jila (DLSA).",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Police Online Complaint Portal",
+        "phone": "uppolice.gov.in",
+        "note": "File complaint, track FIR status, find police station details",
+        "jurisdiction": "uttar_pradesh"
+      }
+    ]
+  },
+
+  "up_specific": {
+    "relevant_departments": [
+      "UP Police — uppolice.gov.in",
+      "UP Director General of Police (DGP) Office, Lucknow",
+      "District Superintendent of Police (SP) Office — in each district",
+      "UP State Legal Services Authority (UPSLSA) — Lucknow",
+      "District Legal Services Authority (DLSA) — in every district",
+      "UP Mahila Shakti Kendra"
+    ],
+    "state_specific_rules": "UP follows UP Police Act 2007 in addition to central BNSS 2023. A Mahila Help Desk is mandatory in every police station in UP. The UP 112 system is GPS-enabled — PRV (Police Response Vehicle) responds in 10–15 minutes in cities and 20–30 minutes in rural areas. UP has a Beat Constable system — each locality has a designated beat officer who can be contacted for minor issues without visiting the police station. CM Helpline 1076 is an effective escalation tool — complaints are logged and followed up by a dedicated team.",
+    "local_contacts": "Online FIR complaint: uppolice.gov.in | FIR status tracking: uppolice.gov.in (Track FIR option) | 1090 app available on Play Store | UP Police on Twitter/X: @UPPolice | District courts: districts.ecourts.gov.in"
+  },
+
+  "emergency_keywords": [
+    "being attacked",
+    "physical assault",
+    "murder",
+    "being killed",
+    "help me",
+    "kidnapping",
+    "abducted",
+    "taken away",
+    "rape",
+    "sexual assault",
+    "gun",
+    "knife",
+    "weapon",
+    "life threat",
+    "death threat",
+    "broke into house",
+    "robbery",
+    "dacoity",
+    "bleeding",
+    "accident",
+    "fire",
+    "bomb",
+    "threatening me",
+    "fear for life",
+    "missing person",
+    "child missing",
+    "hostage",
+    "maar pit",
+    "bachao",
+    "jaan ka khatra"
+  ]
+}

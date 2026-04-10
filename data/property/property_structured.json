@@ -1,0 +1,412 @@
+{
+  "domain": "property",
+  "domain_name": "Property & Land Disputes",
+  "level": "deep",
+  "jurisdiction": ["central", "uttar_pradesh"],
+  "last_updated": "2025",
+  "source_act": "UP Zamindari Abolition & Land Reforms Act 1950, UP Revenue Code 2006, RERA 2016, Benami Transactions (Prohibition) Act 1988 (amended 2016), Transfer of Property Act 1882, Registration Act 1908",
+
+  "overview": {
+    "english": "Property and land disputes in Uttar Pradesh are governed by multiple laws depending on the nature of the dispute. For agricultural land, the UP Zamindari Abolition & Land Reforms Act 1950 and the UP Revenue Code 2006 are primary laws. Land records (Khatauni, Khasra) are maintained by the Revenue Department and are now available online via upbhulekh.gov.in. For real estate (flats, plots, builder projects), RERA 2016 protects buyers from builder fraud. For benami property (land purchased in someone else's name), the Benami Transactions Act 1988 applies. Every property transaction above Rs. 100 must be registered at the Sub-Registrar's office under the Registration Act 1908."
+  },
+
+  "eligibility": {
+    "who_can_use": "Any landowner, tenant (bhumidhar, asami), homebuyer, family member disputing inheritance, or citizen facing encroachment or illegal eviction can use these laws. For RERA, any person who has booked or purchased a flat/plot from a registered builder can file a complaint.",
+    "conditions": "For revenue/land disputes — must have standing as a tenure-holder or adjacent landowner. For RERA — project must be RERA-registered (check at up-rera.in). For Benami Act — complaints can be filed by the Income Tax/Revenue authority; citizens can report benami property to the Initiating Officer.",
+    "section_reference": "UP Revenue Code 2006 S.35 (mutation), S.207 (appeal); RERA 2016 S.31 (complaint); Benami Act 1988 S.24 (attachment); Registration Act 1908 S.17 (compulsory registration)"
+  },
+
+  "key_rights": [
+    "Right to inspect and obtain certified copies of all land records (Khatauni, Khasra, maps) — UP Revenue Code 2006, Section 221. Available free online at upbhulekh.gov.in.",
+    "Right to mutation (Dakhil Kharij) — when land is transferred by sale, inheritance, or gift, the new owner has the right to get the Khatauni updated in their name — UP Revenue Code 2006, Section 35.",
+    "Right to appeal mutation order to Sub-Divisional Officer within 30 days, and second appeal to Board of Revenue within 90 days — UP Revenue Code 2006, Sections 35(2), 207, 208.",
+    "Encroachment on your land — right to approach Tahsildar or SDO who must resolve boundary disputes within 3 months — UP Revenue Code 2006, Section 23.",
+    "Bhumidhar rights — highest land tenure in UP, transferable. Bhumidhar can sell, mortgage, or gift land. Inherited by legal heirs — UP Zamindari Abolition Act 1950.",
+    "RERA right — homebuyer can file complaint against builder for delay, defect, or fraud at up-rera.in. Complaint fee Rs. 1,000 — RERA 2016, Section 31.",
+    "RERA right — builder must refund full amount with interest if project is delayed and buyer wants to withdraw — RERA 2016, Section 18.",
+    "RERA right — 5-year structural defect warranty on new flats. Builder must fix defects within 30 days of intimation — RERA 2016, Section 14(3).",
+    "RERA right — builder cannot take more than 10% advance before signing a registered Agreement for Sale — RERA 2016, Section 13.",
+    "RERA right — 70% of collected buyer funds must be kept in a separate escrow bank account and used only for that project — RERA 2016, Section 4(2)(l)(D).",
+    "Right against benami property — real owner of benami property loses right to recover it; property is confiscated by Central Government — Benami Act 1988, Sections 4, 5.",
+    "Registration right — any property transaction above Rs. 100 must be registered at Sub-Registrar's office to be legally valid — Registration Act 1908, Section 17. Unregistered documents cannot be used as evidence in court — Section 49.",
+    "Stamp duty right in UP — property transfer between blood relatives: flat Rs. 5,000 stamp duty. Women buyers: 6% stamp duty (vs 7% for men) for properties up to Rs. 10 lakh — UP Stamp Amendment 2024.",
+    "Right to check if a plot is under dispute or sale-restricted before buying — available at upbhulekh.gov.in under 'Dispute Status' and 'Sale Status' of plot."
+  ],
+
+  "process": {
+    "steps": [
+      {
+        "step": 1,
+        "title": "Check Land Records Online — Before Any Action",
+        "english": "Before buying land or taking any legal action, check land records at upbhulekh.gov.in. Search by district, tehsil, village, and Khasra/Khata number. View: owner name, plot area, tenure type (bhumidhar/asami), dispute status, sale-restricted status, and Bhu-Naksha (boundary map). Download the Real-Time Khatauni — this is legally valid and accepted by banks and courts.",
+        "tip": "Always check dispute status and sale status before paying any money for land. A plot with an active dispute or sale restriction cannot be legally transferred."
+      },
+      {
+        "step": 2,
+        "title": "Mutation (Dakhil Kharij) — Getting Land Transferred in Your Name",
+        "english": "When you buy, inherit, or receive land as a gift, you must apply for mutation (Dakhil Kharij) to update the Khatauni in your name. Process: (1) Report the transfer to the Tahsildar of that area — Section 34 UP Revenue Code 2006. (2) Tahsildar issues a proclamation and holds inquiry. (3) If undisputed, Khatauni is updated — Section 35(1)(a). (4) If disputed, Tahsildar decides the dispute and then updates records. (5) Order can be appealed to SDO within 30 days.",
+        "tip": "Mutation does not give you ownership — it updates the revenue record. Actual ownership transfer happens through a registered Sale Deed at the Sub-Registrar's office."
+      },
+      {
+        "step": 3,
+        "title": "Property Registration — Sale Deed at Sub-Registrar Office",
+        "english": "Every property sale above Rs. 100 must be registered at the Sub-Registrar's office — Registration Act 1908, Section 17. Steps: (1) Both buyer and seller appear in person with ID proof, PAN, Aadhaar. (2) Sale deed drafted and stamped (stamp duty: 7% for men, 6% for women in UP up to Rs. 10 lakh). (3) Registration fee: 1% of property value. (4) Document must be presented for registration within 4 months of execution. (5) After registration, apply for mutation at Tahsildar's office.",
+        "tip": "An unregistered sale deed has NO legal validity. The seller can sell the same property to another person and that later registered deed will win in court — Section 49, Registration Act 1908."
+      },
+      {
+        "step": 4,
+        "title": "Boundary Dispute / Encroachment — Approach SDO or Tahsildar",
+        "english": "If someone has encroached on your land or there is a boundary dispute: (1) File written complaint at Tahsildar's office with your Khatauni copy and Bhu-Naksha. (2) SDO must conduct a summary inquiry and put the rightful person in possession — UP Revenue Code 2006, Section 23. (3) Proceedings must be concluded within 3 months. (4) If dissatisfied with SDO order, appeal to Commissioner within 30 days — order of Commissioner is final at revenue level.",
+        "tip": "Also report encroachment on public/common land to the Tahsildar — fine of Rs. 1,000–10,000 can be imposed on the encroacher — UP Revenue Code 2006, Section 227."
+      },
+      {
+        "step": 5,
+        "title": "RERA Complaint — Builder Fraud, Delay, or Defect",
+        "english": "For disputes with builders or real estate agents: (1) First check if project is RERA-registered at up-rera.in. (2) Visit up-rera.in, click 'Complaints'. (3) A prompt will ask if you want conciliation with the builder — choose as appropriate. (4) Pay Rs. 1,000 fee online. (5) Upload complaint form + documents (allotment letter, payment receipts, BBA). (6) Physical copy of complaint and documents must also be submitted to UP RERA office. (7) UP RERA legal division scrutinizes complaint within 7 days and communicates objections. (8) Hearing scheduled before bench.",
+        "tip": "UP RERA handles about 40% of all RERA complaints in India. File promptly — the authority is active and has penalized major builders including in Noida, Greater Noida, and Lucknow."
+      },
+      {
+        "step": 6,
+        "title": "RERA Appeal — If Dissatisfied with RERA Order",
+        "english": "If dissatisfied with RERA Authority's order: (1) File appeal before the UP Real Estate Appellate Tribunal within 60 days. (2) Promoter must deposit at least 30% of the penalty amount before appeal is heard — RERA Section 43(5). (3) Tribunal endeavors to decide within 60 days. (4) Further appeal lies to Allahabad High Court within 60 days on questions of law — RERA Section 58.",
+        "tip": "Civil courts have NO jurisdiction over RERA matters — RERA Section 79. Do not file a civil suit for builder disputes covered by RERA."
+      },
+      {
+        "step": 7,
+        "title": "Revenue Court Appeal Hierarchy for Land Disputes",
+        "english": "Revenue disputes (mutation, encroachment, land records) follow a specific appeal hierarchy: (1) Tahsildar → appeal to Sub-Divisional Officer (SDO) within 30 days. (2) SDO → appeal to Collector within 30 days. (3) Collector → appeal to Commissioner within 30 days. (4) Commissioner → second appeal to Board of Revenue within 90 days (only on substantial questions of law). At each level, present your Khatauni, sale deed, and relevant documents.",
+        "tip": "Revenue courts are separate from civil courts. For title disputes involving fraud or complex legal issues, you may also need to approach a civil court simultaneously."
+      }
+    ]
+  },
+
+  "land_records_guide": {
+    "khatauni": "Record of Rights — lists all land owners/tenure holders in a village with their plot numbers, area, tenure type, and revenue payable. Updated after every mutation. Maintained by Tahsildar. Available at upbhulekh.gov.in — click 'Khatauni (Adhikar Abhilekh) ki Nakal Dekhein'.",
+    "khasra": "Field book — detailed plot-level record maintained by Patwari. Contains survey numbers, land use (agricultural/residential), crop information, and physical boundaries. Used to verify actual land use vs. recorded use.",
+    "bhu_naksha": "Digital cadastral map showing exact boundaries, layout, and geographic location of each plot. Available at upbhunaksha.gov.in. Essential for boundary disputes.",
+    "real_time_khatauni": "Updated digital version of Khatauni reflecting latest mutations and entries. Legally valid — accepted by banks for loans, courts as evidence, and government departments.",
+    "how_to_check_online": "Step 1: Visit upbhulekh.gov.in. Step 2: Select district, tehsil, and village from dropdowns. Step 3: Search by Khasra number, Khata number, or owner name. Step 4: View and download the record. For Bhu-Naksha: visit upbhunaksha.gov.in and follow same location selection.",
+    "certified_copy": "For legal proceedings, get a certified copy from the Tahsildar's office on payment of prescribed fee. Online copies are valid for reference but certified copies may be required for court submissions."
+  },
+
+  "bhumidhar_rights": {
+    "what_is_bhumidhar": "The highest category of land tenure in Uttar Pradesh, created by the UP Zamindari Abolition Act 1950. Bhumidhar has permanent, heritable, and (in case of transferable bhumidhar) transferable rights over land.",
+    "types": {
+      "bhumidhar_with_transferable_rights": "Can sell, mortgage, gift, or exchange land freely. Most common land tenure in UP.",
+      "bhumidhar_with_non_transferable_rights": "Cannot sell or transfer land except by inheritance. Mostly applies to land allotted by the government under special schemes."
+    },
+    "succession": "On death of a bhumidhar, land passes to legal heirs. Heirs must apply for mutation (succession mutation) at the Tahsildar's office — Section 33, UP Revenue Code 2006.",
+    "liability": "Bhumidhar must pay land revenue. Failure to pay can result in legal action by the Revenue Department."
+  },
+
+  "important_laws": [
+    {
+      "act_name": "UP Revenue Code 2006",
+      "section": "31 (Khatauni) and 30 (Khasra)",
+      "what_it_says": "Collector must maintain a Khatauni (Record of Rights) for each village listing all tenure holders, their plot numbers, areas, and interests. Khasra (field book) records plot-level details and changes. Both are the foundation of all land rights in UP.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "UP Revenue Code 2006",
+      "section": "33, 34, 35",
+      "what_it_says": "Mutation (Dakhil Kharij) — Sections 33-35. Every person who obtains land by succession or transfer must report to the Tahsildar. Tahsildar issues a proclamation, holds inquiry, and if undisputed, updates the Khatauni. Disputed cases are decided by Tahsildar. Mutation order can be appealed to SDO within 30 days.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "UP Revenue Code 2006",
+      "section": "221",
+      "what_it_says": "Right to inspect and obtain certified copies — All land records, registers, and documents are open to public inspection on payment of prescribed fee. Any person can obtain a certified copy of any land record.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "UP Revenue Code 2006",
+      "section": "23",
+      "what_it_says": "SDO powers for boundary disputes — In case of boundary dispute or dispossession, the Sub-Divisional Officer conducts summary inquiry, identifies rightful holder, and puts them in possession using force if necessary. Proceedings must be concluded within 3 months. Appeal to Commissioner within 30 days.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "UP Revenue Code 2006",
+      "section": "207 and 208",
+      "what_it_says": "First appeal — 30 days from order. Second appeal — 90 days from first appeal order, only on substantial questions of law. This is the revenue court appeal hierarchy for all land record disputes.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "UP Zamindari Abolition & Land Reforms Act 1950",
+      "section": "1-26 (Core chapters)",
+      "what_it_says": "Abolished zamindari system in UP. All intermediary interests vested in the State. Created Bhumidhar (highest tenure), Sirdar, and Asami categories. Bhumidhar has permanent, heritable, and (if transferable) transferable rights. Ejectment of illegal occupants governed by Sections 202-207.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "3",
+      "what_it_says": "No builder can advertise, market, book, or sell any plot/flat/building without RERA registration. Applicable to projects above 500 sq.m. or 8 apartments. Penalty for non-registration: up to 10% of project cost.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "13",
+      "what_it_says": "Builder cannot take more than 10% of cost as advance before signing a registered Agreement for Sale. Violation is a punishable offence.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "14(3)",
+      "what_it_says": "5-year structural defect warranty on new flats/buildings from date of possession. If defect reported within 5 years, builder must rectify within 30 days at no charge. If builder fails, buyer entitled to compensation.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "18",
+      "what_it_says": "If builder fails to complete project or hand over possession as per agreement, buyer can withdraw and get full refund with interest. If buyer does not want to withdraw, builder must pay interest for every month of delay.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "31",
+      "what_it_says": "Any aggrieved person can file complaint with RERA Authority against promoter, allottee, or real estate agent. Complaint fee: Rs. 1,000 in UP. RERA must dispose of complaint within 60 days.",
+      "jurisdiction": "uttar_pradesh"
+    },
+    {
+      "act_name": "RERA 2016",
+      "section": "59 and 63",
+      "what_it_says": "Penalties: S.59 — non-registration: up to 10% of project cost + 3 years jail for continued violation. S.63 — non-compliance with RERA orders: up to 5% of project cost per day of default.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Benami Transactions (Prohibition) Act 1988 (amended 2016)",
+      "section": "3 and 53",
+      "what_it_says": "Benami transactions prohibited. Penalty: 1–7 years rigorous imprisonment + fine up to 25% of fair market value of property. A benami transaction is one where property is held in another person's name but paid for by someone else.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Benami Transactions (Prohibition) Act 1988 (amended 2016)",
+      "section": "5 and 27",
+      "what_it_says": "Benami property is liable to confiscation by the Central Government — Section 5. After adjudication, property vests absolutely in Central Government with no compensation payable — Section 27(3). Real owner loses all rights.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Benami Transactions (Prohibition) Act 1988 (amended 2016)",
+      "section": "2(9) — Exemptions",
+      "what_it_says": "NOT benami: property held by Karta of HUF for family benefit from known sources; property in spouse or child's name from known income sources; property in name of sibling/lineal ascendant/descendant where both names appear as joint owners from known sources.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Transfer of Property Act 1882",
+      "section": "54",
+      "what_it_says": "Sale defined — ownership transfers only through a registered sale deed for immovable property above Rs. 100. An agreement to sell does NOT transfer ownership. Power of Attorney transactions do NOT transfer ownership — Supreme Court ruling (Suraj Lamp, 2011).",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Transfer of Property Act 1882",
+      "section": "58",
+      "what_it_says": "Mortgage — transfer of interest in property as security for a loan. Six types: simple mortgage, mortgage by conditional sale, usufructuary mortgage, English mortgage, mortgage by deposit of title deeds (equitable mortgage), and anomalous mortgage.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Transfer of Property Act 1882",
+      "section": "122 and 123",
+      "what_it_says": "Gift — voluntary transfer without consideration. For immovable property, gift deed must be registered to be valid — Section 123. Gift becomes complete only on acceptance by donee during donor's lifetime.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Registration Act 1908",
+      "section": "17",
+      "what_it_says": "Compulsory registration — sale deeds, gift deeds, lease deeds above 1 year, and mortgage deeds must be registered. Unregistered documents cannot be used as evidence for creating any right in immovable property.",
+      "jurisdiction": "central"
+    },
+    {
+      "act_name": "Registration Act 1908",
+      "section": "49",
+      "what_it_says": "Effect of non-registration — an unregistered document required to be registered is inadmissible in court as evidence of any transaction affecting immovable property. Effectively, an unregistered sale deed gives the buyer no legal protection.",
+      "jurisdiction": "central"
+    }
+  ],
+
+  "time_limits": {
+    "Mutation application after purchase/inheritance": "File at Tahsildar within 3 months of transfer — no strict limit but delay weakens claim",
+    "Appeal mutation order to SDO": "30 days from Tahsildar's order — UP Revenue Code S.35(2)",
+    "Second appeal to Board of Revenue": "90 days from first appeal order — UP Revenue Code S.208",
+    "Boundary dispute SDO resolution": "SDO must conclude proceedings within 3 months — UP Revenue Code S.23(3)",
+    "Appeal SDO boundary order to Commissioner": "30 days — Commissioner's order is final at revenue level",
+    "Property document registration after execution": "Within 4 months of execution of the deed — Registration Act 1908 S.23",
+    "RERA complaint resolution target": "60 days from receipt of complaint — RERA S.29(4)",
+    "Appeal RERA order to Appellate Tribunal": "60 days from RERA Authority's order — RERA S.44(2)",
+    "Appeal Appellate Tribunal to High Court": "60 days from Tribunal's order — RERA S.58",
+    "5-year structural defect warranty": "From date of possession — RERA S.14(3)",
+    "Benami attachment provisional period": "90 days from date of notice — Benami Act S.24(3)",
+    "Benami adjudication order": "Must be passed within 1 year from date of reference — Benami Act S.26(7)"
+  },
+
+  "penalties_for_offender": {
+    "Builder not registered with RERA (S.59)": "Fine up to 10% of project cost. If continued violation: 3 years imprisonment + further 10% fine, or both.",
+    "Builder non-compliance with RERA orders (S.63)": "Fine up to 5% of project cost per day of continued default.",
+    "Builder non-compliance with RERA Appellate Tribunal order (S.64)": "Up to 3 years imprisonment + fine up to 10% of project cost, or both.",
+    "Real estate agent operating without RERA registration (S.62)": "Rs. 10,000 per day of default, up to 5% of property cost.",
+    "Encroachment on public road or common village land (UP Revenue Code S.227)": "Fine Rs. 1,000–10,000 minimum. Personal bond up to Rs. 15,000 for future abstinence.",
+    "Destruction of boundary marks (UP Revenue Code S.227)": "Damages payable plus criminal action.",
+    "Benami transaction (Benami Act S.53)": "1–7 years rigorous imprisonment + fine up to 25% of fair market value of property. Property confiscated.",
+    "False information in Benami proceedings (S.54)": "6 months–5 years rigorous imprisonment + fine up to 10% of fair market value.",
+    "Fraudulent property transfer to defeat creditors (TPA S.53 / BNS S.320)": "Transfer can be set aside by court + criminal prosecution under BNS."
+  },
+
+  "sample_templates": [
+    {
+      "id": "property_template_001",
+      "title": "Mutation Application to Tahsildar — After Property Purchase",
+      "language": "english",
+      "use_case": "Use when you have bought land and need to get the Khatauni (Record of Rights) updated in your name at the Tahsildar's office.",
+      "template": "To,\nThe Tahsildar,\nTahsil [Tahsil Name], District [District Name], Uttar Pradesh\n\nSubject: Application for Mutation (Dakhil Kharij) of Land — Under Section 34, UP Revenue Code 2006\n\nRespected Sir/Madam,\n\nI, [Your Full Name], son/daughter of [Father's Name], resident of [Full Address], hereby submit this application for mutation of land in my name in the Record of Rights (Khatauni).\n\nDetails of the land:\n- Village: [Village Name]\n- Tehsil: [Tehsil Name]\n- District: [District Name]\n- Khasra Number(s): [Number(s)]\n- Area: [Area in Hectares/Bighas]\n- Previous owner's name (as per Khatauni): [Name]\n\nReason for transfer: [Purchase by registered Sale Deed / Inheritance / Gift]\n\nDate of transfer: [Date]\nRegistered deed number: [Number] (if applicable)\nRegistrar's office where registered: [Name]\n\nI request that the Record of Rights (Khatauni) for the above land be amended to reflect my name as the new tenure holder, in accordance with Section 35, UP Revenue Code 2006.\n\nEnclosures:\n1. Copy of registered Sale Deed / Succession Certificate / Gift Deed\n2. Copy of current Khatauni\n3. Copy of my ID proof (Aadhaar)\n\nYour Name: [Name]\nAddress: [Full Address]\nMobile: [Number]\nDate: [Today's Date]\nSignature: ___________"
+    },
+    {
+      "id": "property_template_002",
+      "title": "Encroachment Complaint to Tahsildar / SDO",
+      "language": "english",
+      "use_case": "Use when someone has encroached on your registered land or there is a boundary dispute.",
+      "template": "To,\nThe Sub-Divisional Officer (SDO) / Tahsildar,\nTahsil [Tahsil Name], District [District Name], Uttar Pradesh\n\nSubject: Complaint regarding encroachment on my land — Application under Section 23, UP Revenue Code 2006\n\nRespected Sir/Madam,\n\nI, [Your Full Name], resident of [Full Address], am the registered bhumidhar/tenure holder of the following land:\n- Village: [Village Name]\n- Khasra Number(s): [Number(s)]\n- Area: [Area]\n- Khatauni entry confirms my ownership (copy enclosed)\n\nI submit that [Name of Encroacher], resident of [Address], has illegally encroached upon my land on/around [Date]. The encroachment involves [brief description — e.g., construction of boundary wall, cultivation of my plot, blocking access path].\n\nThis encroachment is causing me loss and preventing me from using my land.\n\nI request that your office:\n1. Conduct a site inspection and survey of the land.\n2. Evict the encroacher and restore my possession under Section 23 UP Revenue Code 2006.\n3. Take appropriate penal action under Section 227 of the UP Revenue Code.\n\nEnclosures:\n1. Copy of Khatauni showing my name\n2. Copy of Bhu-Naksha (boundary map)\n3. Copy of registered Sale Deed / Succession documents\n4. Photographs of encroachment (if available)\n\nYour Name: [Name]\nAddress: [Full Address]\nMobile: [Number]\nDate: [Today's Date]\nSignature: ___________"
+    },
+    {
+      "id": "property_template_003",
+      "title": "RERA Complaint Draft — Builder Delay",
+      "language": "english",
+      "use_case": "Use to file a complaint on the UP RERA portal (up-rera.in) when your builder has delayed possession beyond the agreed date.",
+      "template": "Complaint before UP Real Estate Regulatory Authority\nUnder Section 31, RERA 2016\n\nComplainant: [Your Full Name]\nAddress: [Full Address]\nMobile: [Number]\nEmail: [Email]\n\nRespondent (Builder/Promoter): [Builder Company Name]\nRERA Registration Number of Project: [Number — check at up-rera.in]\nProject Name: [Project Name]\nLocation: [Project Address]\n\nNature of Complaint: Delay in possession / Failure to handover possession as per agreement\n\nFacts:\n1. I booked Unit No. [Unit Number], [Type — 2BHK/Plot etc.] in the above project on [Date of Booking].\n2. I paid a total amount of Rs. [Amount] to the promoter as follows: [list all payments with dates and receipts].\n3. As per the Builder Buyer Agreement (BBA) dated [Date], possession was to be handed over by [Agreed Date].\n4. As of today [Current Date], possession has not been handed over — delay of [X] months.\n5. The promoter has not provided any valid reason for the delay.\n\nRelief Sought:\n[Choose one]\nOption A: Direct the promoter to hand over possession immediately with registered sub-lease/sale deed AND pay interest for the delay period at prescribed rate under RERA.\nOption B: Direct the promoter to refund Rs. [Amount] paid with interest at prescribed RERA rate from date of each payment — as per RERA Section 18.\n\nDocuments Attached:\n1. Allotment Letter\n2. Builder Buyer Agreement (BBA)\n3. All payment receipts\n4. Correspondence with builder regarding delay\n\nDeclaration: I declare that the above facts are true and correct to the best of my knowledge.\n\nDate: [Date]\nSignature: ___________"
+    }
+  ],
+
+  "faqs": [
+    {
+      "q": "How do I check who owns a piece of land in UP?",
+      "a": "Visit upbhulekh.gov.in, select your district, tehsil, and village, then search by Khasra number or owner name. The Khatauni (Real-Time Record of Rights) will show the registered owner's name, plot area, and tenure type. This is legally valid and free to view online."
+    },
+    {
+      "q": "What is mutation (Dakhil Kharij) and is it the same as owning the land?",
+      "a": "Mutation is the process of updating the land's Khatauni (revenue record) in the new owner's name. It is NOT the same as owning the land. Actual ownership is established by a registered Sale Deed at the Sub-Registrar's office. Mutation only updates the revenue record for taxation purposes. However, mutation is important as it is required for loans, government schemes, and as supporting evidence in disputes."
+    },
+    {
+      "q": "The builder has not given me possession for 2 years — what can I do?",
+      "a": "First check if the project is RERA-registered at up-rera.in. If registered, file a complaint at up-rera.in with a fee of Rs. 1,000. You can demand: (1) Immediate possession with interest for every month of delay at the RERA-prescribed rate, OR (2) Full refund of all amounts paid with interest from the date of each payment. UP RERA is one of the most active RERA authorities in India and has ordered compensation against major builders."
+    },
+    {
+      "q": "What is benami property and how is it different from owning property jointly?",
+      "a": "Benami means property is held in someone else's name, but the money was paid by you and the property is for your benefit. Example: buying land in an employee's name to hide income — that is benami. Genuine family arrangements are NOT benami: property in wife's or children's name from your own declared income is legally valid. Property jointly owned by family members with proper documentation is also NOT benami. Benami property can be confiscated by the Central Government."
+    },
+    {
+      "q": "Someone built a wall on my land — what is the fastest way to get it removed?",
+      "a": "File a written complaint with the Sub-Divisional Officer (SDO) under Section 23 of the UP Revenue Code 2006. The SDO must conduct a summary inquiry and put the rightful owner back in possession within 3 months. Bring your Khatauni copy and Bhu-Naksha (boundary map) from upbhulekh.gov.in. The SDO can use police force if necessary to restore possession."
+    },
+    {
+      "q": "I bought land but the seller never gave me the original documents — is my purchase valid?",
+      "a": "Your purchase is valid only if you have a registered Sale Deed from the Sub-Registrar's office. An unregistered sale agreement or just giving money without registration has no legal validity under the Registration Act 1908, Section 49. If you have a registered deed, you are the legal owner regardless of who has the original documents. Apply for mutation at the Tahsildar's office with your registered deed copy."
+    },
+    {
+      "q": "The builder changed the flat design after I booked — is this allowed?",
+      "a": "No. Under RERA Section 14, the builder cannot make any alterations to the sanctioned plans, layout, or specifications agreed with you without your prior written consent. For changes to common areas, written consent of at least two-thirds of all allottees is required. If the builder made unauthorized changes, file a complaint at up-rera.in and demand compensation or reversal of changes."
+    },
+    {
+      "q": "How much stamp duty do I need to pay when buying property in UP?",
+      "a": "In UP: Stamp duty is 7% of property value for male buyers and 6% for female buyers (for properties up to Rs. 10 lakh). Registration fee is 1% of property value. For property transfers between blood relatives (family settlement, gift deed, partition deed), a flat stamp duty of Rs. 5,000 applies — under the UP Stamp Amendment 2024. Stamp duty must be paid before registration at the Sub-Registrar's office."
+    },
+    {
+      "q": "What documents should I check before buying agricultural land in UP?",
+      "a": "Check these before paying: (1) Real-Time Khatauni at upbhulekh.gov.in — verify seller's name, tenure type, area. (2) Dispute status on the same portal — ensure no active legal dispute. (3) Sale status — ensure the plot is not sale-restricted. (4) Bhu-Naksha (boundary map) at upbhunaksha.gov.in — verify boundaries. (5) Check if the land is agricultural and whether conversion to residential use is permitted. (6) Verify there is no pending land revenue dues. (7) Get a certified copy of the Khatauni from the Tahsildar's office."
+    }
+  ],
+
+  "helplines": {
+    "central": [
+      {
+        "name": "RERA Grievance — Ministry of Housing (Central)",
+        "phone": "1800-11-6163",
+        "note": "Central RERA helpline — for general RERA queries",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "Income Tax — Benami Property Report",
+        "phone": "1800-103-0025",
+        "note": "Report benami property to Income Tax Department",
+        "jurisdiction": "central"
+      },
+      {
+        "name": "NALSA — Free Legal Aid",
+        "phone": "15100",
+        "note": "Free legal aid for property disputes if you cannot afford a lawyer",
+        "jurisdiction": "central"
+      }
+    ],
+    "uttar_pradesh": [
+      {
+        "name": "UP RERA — Uttar Pradesh Real Estate Regulatory Authority",
+        "phone": "up-rera.in",
+        "note": "File builder complaints online. Office in Lucknow and Greater Noida (NCR Bench). Launched October 27, 2016.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Bhulekh — Land Records Portal",
+        "phone": "upbhulekh.gov.in | 0522-2217145 | bhulekh-up@gov.in",
+        "note": "Check Khatauni, Khasra, Bhu-Naksha online. Computer Cell, Board of Revenue, Lucknow.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "IGRSUP — Stamp and Registration Portal",
+        "phone": "igrsup.gov.in",
+        "note": "Online stamp duty payment, property registration status, certified copy requests",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "Board of Revenue — UP",
+        "phone": "boardofrevenue.up.nic.in",
+        "note": "Highest revenue authority in UP. Handles second appeals in land disputes.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "UP Legal Services Authority (Free Legal Aid)",
+        "phone": "0522-2209457",
+        "note": "Free lawyers for property disputes if you cannot afford one. District offices in every jila.",
+        "jurisdiction": "uttar_pradesh"
+      },
+      {
+        "name": "CM Helpline",
+        "phone": "1076",
+        "note": "For government official inaction — use if Tahsildar or SDO is not acting on your complaint",
+        "jurisdiction": "uttar_pradesh"
+      }
+    ]
+  },
+
+  "up_specific": {
+    "relevant_departments": [
+      "Board of Revenue, Uttar Pradesh (boardofrevenue.up.nic.in)",
+      "UP Revenue Department — District Collector's office",
+      "Tahsildar's office — for mutation, encroachment, Khatauni",
+      "Sub-Divisional Officer (SDO) — for boundary disputes",
+      "Sub-Registrar's office — for property registration",
+      "UP RERA (up-rera.in) — for builder disputes",
+      "UP Bhulekh (upbhulekh.gov.in) — online land records"
+    ],
+    "state_specific_rules": "UP follows the UP Zamindari Abolition & Land Reforms Act 1950 which abolished the zamindari system and created the Bhumidhar tenure. All agricultural land in UP has a revenue record maintained by the Patwari and Tahsildar. UP has digitized land records through Bhulekh portal with Real-Time Khatauni. UP RERA was launched on October 27, 2016 and handles the highest number of RERA complaints in India. UP Stamp Amendment 2024: property transfer between blood relatives — flat Rs. 5,000 stamp duty. Partition deeds, gift deeds within family — capped at Rs. 5,000. UP Land Ceiling: maximum land holding limits apply under UP Imposition of Ceiling on Land Holdings Act 1960.",
+    "local_contacts": "UP Bhulekh: upbhulekh.gov.in | UP RERA: up-rera.in | Property registration: igrsup.gov.in | Bhu-Naksha: upbhunaksha.gov.in | Board of Revenue: boardofrevenue.up.nic.in | CM Helpline for government inaction: 1076"
+  },
+
+  "emergency_keywords": [
+    "land grabbed",
+    "property dispute",
+    "illegal eviction",
+    "encroachment",
+    "builder fraud",
+    "possession not given",
+    "flat not delivered",
+    "money taken by builder",
+    "benami property",
+    "forged documents",
+    "fake sale deed",
+    "land mafia",
+    "bulldozer",
+    "forceful possession",
+    "boundary wall broken",
+    "khatauni tampered",
+    "mutation fraud",
+    "registration cancelled",
+    "plot sold twice",
+    "ancestral land dispute"
+  ]
+}

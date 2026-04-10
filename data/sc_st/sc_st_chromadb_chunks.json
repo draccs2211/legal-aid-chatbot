@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sc_st_001_overview",
+    "text": "SC/ST (Prevention of Atrocities) Act 1989 — Overview and Purpose. The Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act 1989 is a powerful law that protects Dalit (SC) and Adivasi (ST) communities from caste-based violence, discrimination, and social injustice. The Act was passed because older laws like IPC were insufficient to stop caste-based hate crimes. All offenses under this Act are cognizable — police can arrest without warrant. No anticipatory bail is available to the accused. Cases are tried in dedicated Special Courts for faster justice. The Act was strengthened by amendments in 2015 and 2018. Uttar Pradesh has the highest number of SC/ST atrocity cases in India — 23.78% of national cases. National Helpline Against Atrocities: 14566 (24x7, Hindi, English, regional languages).",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "SC/ST Act 1989"
+    }
+  },
+  {
+    "id": "sc_st_002_who_is_protected",
+    "text": "Who is protected under SC/ST Atrocities Act? Only Scheduled Castes (SC) and Scheduled Tribes (ST) are protected. SC communities are those listed under Article 341 of Constitution — in UP this includes communities like Chamar, Valmiki, Pasi, Kori, and many others. ST communities are listed under Article 342 — Adivasi communities. Important limitation: The Act only covers offenses by NON-SC/ST persons against SC/ST members. If an SC/ST person commits offense against another SC/ST person, this Act does NOT apply — general IPC applies instead. OBC (Other Backward Classes) are NOT covered under this Act — this is a common misconception. SC/ST certificate from government is required as proof of community identity when filing complaint.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "eligibility",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "SC/ST Act 1989 Section 2"
+    }
+  },
+  {
+    "id": "sc_st_003_what_is_atrocity",
+    "text": "What counts as an atrocity under SC/ST Act? Section 3 defines atrocities in these categories. Physical atrocities: forcing to eat inedible substances, dumping excreta in premises, forcibly removing clothes and parading naked, garlanding with shoes (chappal ki mala), beating, and forcing manual scavenging. Land-related atrocities: wrongfully occupying SC/ST land, dispossessing from land, destroying crops, denying irrigation or forest rights. Social atrocities: imposing social boycott, preventing use of public places or water sources, abusing using caste names (caste slurs) in public view, dedicating SC/ST women as devadasi, preventing from voting. Sexual atrocities: sexual assault on SC/ST woman, sexual exploitation, non-consensual touching. Legal harassment: filing false cases against SC/ST persons. All these are punishable with minimum 6 months to 5 years imprisonment.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "rights",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "SC/ST Act 1989 Section 3"
+    }
+  },
+  {
+    "id": "sc_st_004_special_features",
+    "text": "Special legal features of SC/ST Act — Why it is a powerful law. Cognizable offense: All offenses are cognizable — police can arrest without warrant and investigate without court permission. No anticipatory bail: Accused cannot get pre-arrest bail under Section 18 — this is absolute bar. No preliminary inquiry: After 2018 amendment, police cannot delay FIR by asking for preliminary inquiry — FIR must be registered directly. No senior approval needed: Police officer does not need DSP or SSP approval before making arrest. Presumption of guilt: In certain cases, court presumes accused is guilty — accused must prove innocence. Special Court: Cases must be tried in Exclusive Special Court — UP has 65 such courts. DSP-level investigation: Investigation must be by officer of rank not below Deputy Superintendent of Police.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "rights",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "SC/ST Act 1989 Sections 8, 14, 18, 18A"
+    }
+  },
+  {
+    "id": "sc_st_005_filing_complaint",
+    "text": "How to file complaint for SC/ST atrocity? Step 1: Go to nearest police station and file FIR. Since all offenses are cognizable, police MUST register FIR — cannot refuse. After 2018 amendment, no preliminary inquiry or senior approval is needed. Police can arrest accused immediately. Step 2: If police refuses FIR — go to SP or DIG. File online complaint at uppolice.gov.in. Call National Helpline 14566. File complaint before Magistrate under Section 156(3) CrPC. Contact UP SC/ST Commission at 0522-2236311. Step 3: Investigation must be by DSP-rank officer — if station officer is investigating, you can demand DSP-level officer. Step 4: Case goes to Special Court for trial — not ordinary court. Step 5: Claim victim compensation and relief through District Magistrate office.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "SC/ST Act 1989, CrPC"
+    }
+  },
+  {
+    "id": "sc_st_006_punishments",
+    "text": "Punishments under SC/ST Atrocities Act. General offenses under Section 3(1): Minimum 6 months, maximum 5 years imprisonment plus fine. Serious IPC offenses committed against SC/ST members (Section 3(2)): Life imprisonment plus fine — applies when underlying IPC offense carries 10+ years. Second and subsequent offenses: Minimum 1 year imprisonment — enhanced penalty for repeat offenders. Public servant neglect of duty: 6 months to 1 year. Property forfeiture: Property used in committing offense may be forfeited. Collective fine: Community that participated in or abetted offense may be collectively fined. These punishments are higher than ordinary IPC — reflecting the serious nature of caste-based violence in Indian context.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "penalties",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "SC/ST Act 1989 Sections 3, 4"
+    }
+  },
+  {
+    "id": "sc_st_007_victim_relief",
+    "text": "Victim compensation and relief under SC/ST Act. SC/ST atrocity victims are entitled to government relief and compensation. Entitlements include: financial compensation (amount varies by type of offense), free medical treatment, free legal aid and Special Public Prosecutor in court, traveling expenses for attending court hearings, food and shelter if displaced from home, agricultural and economic rehabilitation if land was forcibly taken. How to claim: Apply to District Magistrate office or Social Welfare Department (Samaj Kalyan Vibhag) in your district. Compensation must be given promptly — government cannot delay. Free legal aid also available from UPSLSA — call 0522-2209457. Many victims are unaware of these entitlements — this is an important right.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "relief",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "SC/ST Act 1989 Section 21, SC/ST Rules 1995"
+    }
+  },
+  {
+    "id": "sc_st_008_up_specific",
+    "text": "SC/ST atrocity situation in Uttar Pradesh. UP context is critical — Uttar Pradesh has the highest number of SC/ST atrocity cases in all of India. In 2022, UP accounted for 23.78% of all national SC atrocity cases. Over 3.3 lakh calls from UP to National Helpline 14566 since its launch in 2021 — nearly half of total national calls. UP has 65 Exclusive Special Courts for SC/ST cases — highest in any state. Key UP contacts: UP SC/ST Commission Lucknow: 0522-2236311. UP Social Welfare Department (Samaj Kalyan): handles relief and rehabilitation. UP Police has SC/ST Protection Cell. UPSLSA provides free lawyers at 0522-2209457. Important: UP does not yet have a contingency plan under Rule 15 of SC/ST Rules — victims must be more proactive in claiming relief.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "up_specific",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "NCRB 2022, Ministry of Social Justice"
+    }
+  },
+  {
+    "id": "sc_st_009_helplines",
+    "text": "Helplines and contacts for SC/ST atrocity victims. National level: 14566 — National Helpline Against Atrocities (NHAA), Ministry of Social Justice, 24x7 in Hindi/English/regional languages, provides legal guidance, helps in FIR registration, tracks complaints at nhapoa.gov.in. UP level: 112 — UP Police Emergency (24x7). 0522-2236311 — UP SC/ST Commission, Lucknow. 0522-2209457 — UP Legal Services Authority for free lawyer. 1076 — UP CM Helpline for unresolved complaints. Online: nhapoa.gov.in for online complaint with docket number and tracking. uppolice.gov.in for online FIR complaint. socialjustice.gov.in for central level information. Every complaint on NHAA gets a docket number and automated follow-up with authorities.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "helplines",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Ministry of Social Justice, UP Government"
+    }
+  },
+  {
+    "id": "sc_st_010_faqs_tips",
+    "text": "Key facts and common questions about SC/ST Act. Q: Can OBC use this Act? No — only SC and ST communities are covered. OBCs must use general IPC. Q: Can accused get bail? Regular bail is possible but anticipatory bail is completely barred — strong protection for victim. Q: What if offense happens in private not public? Physical and land atrocities do not need public view. Caste abuse under Section 3(1)(x) requires public view per Supreme Court. Q: Investigation by station officer? Demand DSP-level investigation — Rule 7 of 1995 Rules makes it mandatory. Q: How is SC/ST Act different from IPC? SC/ST Act has higher minimum punishments, no anticipatory bail, special courts, presumption of guilt in some cases, and victim compensation — making it stronger than IPC. Common mistake to avoid: Not filing FIR immediately — evidence is time-sensitive. Not claiming victim compensation — entitled as a right.",
+    "metadata": {
+      "domain": "sc_st",
+      "type": "faqs",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "SC/ST Act 1989, Supreme Court judgments"
+    }
+  }
+]
