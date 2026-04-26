@@ -100,6 +100,7 @@ async function sendMessage() {
     const res = await fetch(`${API_BASE}/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      signal: AbortSignal.timeout(120000),
       body: JSON.stringify({
         message: text,
         session_id: sessionId,
@@ -304,7 +305,7 @@ function getTime() { return new Date().toLocaleTimeString("en-IN", { hour: "2-di
 async function checkHealth() {
   const dot = document.getElementById("statusDot");
   try {
-    const res = await fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(5000) });
+    const res = await fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(60000) });
     if (res.ok) {
       if (dot) { dot.classList.add("online"); dot.title = "Connected"; }
     } else throw new Error();
