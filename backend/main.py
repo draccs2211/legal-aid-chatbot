@@ -209,7 +209,7 @@ async def clear_session(session_id: str):
 # main.py mein yeh 2 endpoints add karo — existing code ke baad
 
 from fastapi import UploadFile, File, Form
-from sarvam_speech import speech_to_text, text_to_speech
+from backend.sarvam_speech import speech_to_text, text_to_speech
 
 
 @app.post("/stt")
