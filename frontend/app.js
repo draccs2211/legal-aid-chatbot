@@ -1,5 +1,5 @@
 // ── NyayMitra App.js ── Clean Light UI
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://nyaymitra-backend-0q7g.onrender.com";
 
 // ── State ──
 let currentLang         = "en";
