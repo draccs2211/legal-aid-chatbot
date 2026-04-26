@@ -18,7 +18,7 @@ def ensure_db_loaded():
     if not db_loaded:
         print("🔄 Loading ChromaDB...")
         load_all_data()   # ✅ correct function
-        db_loaded = Tru
+        db_loaded = True
 
 def clean_reply(text: str) -> str:
     """Remove <think> reasoning tags from Sarvam-M output."""
