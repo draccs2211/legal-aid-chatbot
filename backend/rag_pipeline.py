@@ -2,7 +2,7 @@ import os
 import json
 import chromadb
 
-from config import CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS
+from backend.config import CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS
 
 # ─── Initialize ChromaDB client ───
 _client = None
