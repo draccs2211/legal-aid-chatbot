@@ -1,8 +1,15 @@
-#!/bin/bash
-# Render startup script — loads ChromaDB data then starts server
-
-echo "Loading ChromaDB data..."
+#!/usr/bin/env bash
+set -e
+ 
+echo "=== NyayMitra Startup ==="
+echo "PORT: $PORT"
+ 
+# Load ChromaDB data
+echo "Loading ChromaDB..."
 python scripts/load_chromadb.py
-
-echo "Starting NyayMitra server..."
-cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+ 
+# Start FastAPI server — must bind to $PORT
+echo "Starting server on port $PORT..."
+cd backend
+exec uvicorn main:app --host 0.0.0.0 --port "${PORT:-8000}"
+ 
