@@ -4,12 +4,12 @@ from pydantic import BaseModel
 from typing import Optional, List
 import uvicorn
 
-from backend.intent_detector import analyze_query
-from backend.rag_pipeline import retrieve_chunks, format_context, get_collection_stats
-from backend.sarvam_client import generate_response, translate_text
-from backend.config import DEEP_DOMAINS, BASIC_DOMAINS
+from intent_detector import analyze_query
+from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
+from sarvam_client import generate_response, translate_text
+from config import DEEP_DOMAINS, BASIC_DOMAINS
 import re
-from backend.rag_pipeline import load_all_data
+from rag_pipeline import load_all_data
 
 db_loaded = False
 
@@ -209,7 +209,7 @@ async def clear_session(session_id: str):
 # main.py mein yeh 2 endpoints add karo — existing code ke baad
 
 from fastapi import UploadFile, File, Form
-from backend.sarvam_speech import speech_to_text, text_to_speech
+from sarvam_speech import speech_to_text, text_to_speech
 
 
 @app.post("/stt")
