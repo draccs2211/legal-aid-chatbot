@@ -1,7 +1,7 @@
 import re
 import httpx
 from openai import OpenAI
-from backend.config import (
+from config import (
     SARVAM_API_KEY, SARVAM_BASE_URL, SARVAM_MODEL,
     SARVAM_TRANSLATE_URL, GROQ_API_KEY, GROQ_BASE_URL,
     GROQ_MODEL, SYSTEM_PROMPT, MAX_TOKENS, TEMPERATURE,
