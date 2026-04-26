@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>NyayMitra — Legal Aid Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-emblem">⚖</div>
+        <div>
+          <div class="sidebar-title">NyayMitra</div>
+          <div class="sidebar-motto">हर नागरिक का हक़</div>
+        </div>
+      </div>
+      <button class="sidebar-close" onclick="toggleSidebar()">✕</button>
+    </div>
+
+    <div class="sidebar-section-label">Legal Domains</div>
+    <nav class="sidebar-nav">
+      <button class="nav-item active" onclick="askDomain('rti')">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">RTI — Right to Information</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('fir')">
+        <span class="nav-icon">🚔</span>
+        <span class="nav-label">FIR & Police Complaints</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('property')">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Property & Land</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('traffic')">
+        <span class="nav-icon">🚗</span>
+        <span class="nav-label">Traffic & Challans</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('women_safety')">
+        <span class="nav-icon">🛡</span>
+        <span class="nav-label">Women Safety</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('tenant')">
+        <span class="nav-icon">🏘</span>
+        <span class="nav-label">Tenant & Rent</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('sc_st')">
+        <span class="nav-icon">⚖</span>
+        <span class="nav-label">SC/ST Rights</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('consumer')">
+        <span class="nav-icon">🛒</span>
+        <span class="nav-label">Consumer Rights</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('cyber')">
+        <span class="nav-icon">💻</span>
+        <span class="nav-label">Cyber Crime</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('labour')">
+        <span class="nav-icon">👷</span>
+        <span class="nav-label">Labour & Wages</span>
+      </button>
+      <button class="nav-item" onclick="askDomain('family')">
+        <span class="nav-icon">👨‍👩‍👧</span>
+        <span class="nav-label">Family & Matrimonial</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="emergency-sidebar-btn" onclick="showEmergency()">
+        🚨 Emergency Helplines
+      </button>
+      <div class="sidebar-info">Free Legal Aid · UP Citizens · 24/7</div>
+    </div>
+  </aside>
+
+  <!-- OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-btn" onclick="toggleSidebar()">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="topbar-brand">
+          <span class="brand-emblem">⚖</span>
+          <div class="brand-text">
+            <span class="brand-name">NyayMitra</span>
+            <span class="brand-tagline">हर नागरिक का हक़, हर सवाल का जवाब</span>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="status-dot" id="statusDot"></div>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" id="btn-hi" onclick="setLang('hi')">हि</button>
+        </div>
+        <button class="topbar-emergency" onclick="showEmergency()">🚨</button>
+      </div>
+    </header>
+
+    <!-- DOMAIN PILLS -->
+    <div class="domain-strip">
+      <div class="domain-scroll">
+        <button class="dpill active" onclick="askDomain('rti')"> RTI</button>
+        <button class="dpill" onclick="askDomain('fir')"> FIR</button>
+        <button class="dpill" onclick="askDomain('property')"> Property</button>
+        <button class="dpill" onclick="askDomain('traffic')"> Traffic</button>
+        <button class="dpill" onclick="askDomain('women_safety')">Women</button>
+        <button class="dpill" onclick="askDomain('tenant')"> Tenant</button>
+        <button class="dpill" onclick="askDomain('sc_st')"> SC/ST</button>
+        <button class="dpill" onclick="askDomain('consumer')"> Consumer</button>
+        <button class="dpill" onclick="askDomain('cyber')"> Cyber</button>
+        <button class="dpill" onclick="askDomain('labour')"> Labour</button>
+        <button class="dpill" onclick="askDomain('family')"> Family</button>
+      </div>
+    </div>
+
+    <!-- CHAT AREA -->
+    <main class="chat-area" id="chatArea">
+
+      <!-- WELCOME -->
+      <div class="welcome" id="welcomeScreen">
+        <div class="welcome-inner">
+          <div class="welcome-seal">⚖️</div>
+          <h1 class="welcome-heading" id="welcomeTitle">Namaste, I am NyayMitra</h1>
+          <p class="welcome-sub" id="welcomeSub">हर नागरिक का हक़, हर सवाल का जवाब<br>Free legal guidance for citizens of Uttar Pradesh</p>
+
+          <div class="suggestion-grid">
+            <button class="suggestion-card" onclick="sendStarter('RTI kaise file karein UP mein?')">
+              <div class="sc-icon">📋</div>
+              <div class="sc-text">
+                <div class="sc-title">RTI Application</div>
+                <div class="sc-sub">File RTI in UP</div>
+              </div>
+            </button>
+            <button class="suggestion-card" onclick="sendStarter('Police FIR likhne se mana kar rahi hai')">
+              <div class="sc-icon">🚔</div>
+              <div class="sc-text">
+                <div class="sc-title">Police FIR</div>
+                <div class="sc-sub">Not registering complaint</div>
+              </div>
+            </button>
+            <button class="suggestion-card" onclick="sendStarter('Pati maar raha hai ghar mein kya karoon?')">
+              <div class="sc-icon">🛡</div>
+              <div class="sc-text">
+                <div class="sc-title">Women Safety</div>
+                <div class="sc-sub">Domestic violence help</div>
+              </div>
+            </button>
+            <button class="suggestion-card" onclick="sendStarter('Landlord deposit wapas nahi de raha')">
+              <div class="sc-icon">🏘</div>
+              <div class="sc-text">
+                <div class="sc-title">Tenant Rights</div>
+                <div class="sc-sub">Security deposit dispute</div>
+              </div>
+            </button>
+            <button class="suggestion-card" onclick="sendStarter('SC ST act mein kya rights hain?')">
+              <div class="sc-icon">⚖</div>
+              <div class="sc-text">
+                <div class="sc-title">SC/ST Rights</div>
+                <div class="sc-sub">Know your protections</div>
+              </div>
+            </button>
+            <button class="suggestion-card" onclick="sendStarter('Online UPI fraud hua hai kya karoon?')">
+              <div class="sc-icon">💻</div>
+              <div class="sc-text">
+                <div class="sc-title">Cyber Fraud</div>
+                <div class="sc-sub">UPI / Online fraud</div>
+              </div>
+            </button>
+          </div>
+
+          <div class="welcome-disclaimer">
+            NyayMitra provides legal information, not professional legal advice.
+            For complex matters, please consult a qualified lawyer.
+          </div>
+        </div>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="messages" id="messages"></div>
+
+    </main>
+
+    <!-- QUICK ACTIONS -->
+    <div class="quick-bar" id="quickActions"></div>
+
+    <!-- INPUT AREA -->
+    <footer class="input-area">
+      <div class="input-container">
+        <div class="input-box" id="inputBox">
+          <textarea
+            id="userInput"
+            class="input-field"
+            placeholder="Type your legal question... (Hindi or English)"
+            rows="1"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <div class="input-actions">
+            <button class="action-btn mic-btn" id="micBtn" onclick="toggleRecording()" title="Speak">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="2"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <button class="action-btn send-btn" id="sendBtn" onclick="sendMessage()">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-footer-row">
+          <span class="input-caption" id="inputCaption">⚠️ Legal information only — not professional advice.</span>
+          <div class="input-footer-right">
+            <button class="voice-toggle" id="ttsToggle" onclick="toggleTTS()">🔊 Voice</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- EMERGENCY MODAL -->
+  <div class="modal-overlay" id="emergencyModal" onclick="closeEmergency()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-top">
+        <div class="modal-title-row">
+          <span class="modal-alert">🚨</span>
+          <h3 class="modal-title">Emergency Helplines — UP</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeEmergency()">✕</button>
+      </div>
+      <p class="modal-sub">Tap any number to call directly</p>
+      <div class="helpline-list">
+        <a href="tel:112" class="hline urgent">
+          <div class="hline-num">112</div>
+          <div class="hline-info">
+            <div class="hline-name">UP Police Emergency</div>
+            <div class="hline-tag">24/7 · GPS Response</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+        <a href="tel:1090" class="hline">
+          <div class="hline-num">1090</div>
+          <div class="hline-info">
+            <div class="hline-name">UP Mahila Power Line</div>
+            <div class="hline-tag">Women · 24/7</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+        <a href="tel:181" class="hline">
+          <div class="hline-num">181</div>
+          <div class="hline-info">
+            <div class="hline-name">One Stop Centre (Sakhi)</div>
+            <div class="hline-tag">Shelter + Legal Aid</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+        <a href="tel:1098" class="hline">
+          <div class="hline-num">1098</div>
+          <div class="hline-info">
+            <div class="hline-name">Child Helpline</div>
+            <div class="hline-tag">POCSO · 24/7</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+        <a href="tel:14566" class="hline">
+          <div class="hline-num">14566</div>
+          <div class="hline-info">
+            <div class="hline-name">SC/ST Atrocities Helpline</div>
+            <div class="hline-tag">National · 24/7</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+        <a href="tel:1076" class="hline">
+          <div class="hline-num">1076</div>
+          <div class="hline-info">
+            <div class="hline-name">UP CM Helpline</div>
+            <div class="hline-tag">Grievances · 24/7</div>
+          </div>
+          <div class="hline-call">Call</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

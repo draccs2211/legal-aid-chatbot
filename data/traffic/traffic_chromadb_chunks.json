@@ -1,0 +1,167 @@
+[
+  {
+    "id": "traffic_001_overview",
+    "text": "Traffic laws and e-challan system in Uttar Pradesh. UP operates under the Motor Vehicles Amendment Act 2019 which significantly increased traffic fines across India. Uttar Pradesh has one of India's largest digital traffic enforcement systems with over 2000 AI cameras installed across Lucknow, Prayagraj, Varanasi, Noida and Ghaziabad for automatic detection of violations. In 2024 alone UP recorded over 28 lakh traffic challans, up from 17 lakh in 2023, with Noida, Lucknow and Ghaziabad topping violation charts. E-challans are issued digitally and linked to the vehicle registration number and driving licence. Citizens can check and pay challans online at echallan.parivahan.gov.in or through the mParivahan app. Motor Vehicle Inspectors are now empowered to issue spot fines on the spot for violations including missing PUC and illegal parking. From 2026 a five-strike licence suspension policy applies in UP meaning five or more violations in a year results in three months licence suspension.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Amendment Act 2019, UP Traffic Police"
+    }
+  },
+  {
+    "id": "traffic_002_fines_table",
+    "text": "Complete traffic fine amounts in Uttar Pradesh under Motor Vehicles Act 2019. Driving without licence Rs 5000 flat fine for all vehicle types with no negotiation. Driving without insurance Rs 2000 first offence and Rs 4000 for repeat offence. Overspeeding for light vehicles like cars Rs 2000 and for heavy vehicles Rs 4000. No PUC pollution certificate Rs 10000 and treated as a spot offence. Drunk driving Rs 10000 fine and up to six months jail for first offence and Rs 15000 with two years jail for repeat offence. No helmet for two-wheeler rider or pillion Rs 1000. No seat belt Rs 1000. Jumping red signal Rs 1000 to Rs 5000. Using mobile phone while driving Rs 1000 to Rs 2000. No registration certificate RC for two-wheeler Rs 2000 first time and Rs 5000 from second time. No entry zone violation Rs 2000 to Rs 5000. Wrong side driving Rs 1000. Overloading passengers fine varies. Carrying inflammable items Rs 300 to Rs 600. Challans must be paid within 60 days of issuance.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "fines",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Amendment Act 2019, UP Traffic Police Notification"
+    }
+  },
+  {
+    "id": "traffic_003_echallan_check_pay",
+    "text": "How to check and pay e-challan in Uttar Pradesh. Online method via Parivahan portal: Visit echallan.parivahan.gov.in, enter your challan number or vehicle registration number or driving licence number, enter captcha and click Get Details, your pending challans will appear, click Pay Now and complete payment via UPI, debit or credit card, or net banking, save the transaction ID as receipt. Alternative online portals: UP Traffic Police official website uppolice.gov.in, mParivahan mobile app available on Play Store, and Paytm also supports challan payment. Offline method: Visit nearest UP traffic police station, carry driving licence, printed challan copy, and ID proof, show documents to officer, pay in cash, and get stamped challan as receipt. Payment deadline is 60 days from challan issuance. If challan is not paid within 60 days a case is registered under Section 187 of Motor Vehicles Act and court summons can be issued. Challans can also be paid in installments for high amounts through court if contested.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Traffic Police, echallan.parivahan.gov.in"
+    }
+  },
+  {
+    "id": "traffic_004_wrong_challan_dispute",
+    "text": "How to dispute a wrongly issued e-challan in Uttar Pradesh. If you receive a challan for a violation you did not commit do not ignore it even if it is wrong because ignoring leads to court summons and licence suspension. Step 1: Visit echallan.parivahan.gov.in and click the Complaint tab to go to Grievance System page. Step 2: Enter challan number, vehicle details, and state the reason for dispute clearly such as incorrect number plate reading or wrong location. Step 3: Upload supporting evidence such as photos or videos proving your location, GPS logs, toll receipts, parking invoices, or witness statements. Step 4: Submit and note the acknowledgment number for tracking. Step 5: Track status using your complaint number on the same portal. Resolution takes approximately 15 working days. If complaint is rejected escalate by emailing helpdesk-echallan@gov.in with all evidence attached. You can also visit local traffic police station with evidence or approach RTO office. For serious cases like drunk driving challans you may need a lawyer to appeal in court under Motor Vehicles Act. AI cameras sometimes misread number plates so challan disputes are common and the system accepts genuine complaints.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "dispute_challan",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "echallan.parivahan.gov.in, Motor Vehicles Act 1988 Section 187"
+    }
+  },
+  {
+    "id": "traffic_005_licence_suspension",
+    "text": "Driving licence suspension rules in Uttar Pradesh. Licence suspension happens in these situations: Five or more traffic violations in a calendar year from January 2026 leads to three months suspension under the new five-strike policy. Drunk driving leads to licence suspension in addition to fine and jail. Overspeeding, red light jumping, mobile phone use, and carrying passengers in goods vehicles can lead to DL seizure by traffic police who then send it to RTO for suspension proceedings. Only the RTO Regional Transport Office has the power to officially suspend a licence not the traffic police. Traffic police can seize the physical DL and recommend suspension to RTO. If your DL is digitally impounded or blocked on Parivahan portal it means deemed suspension. How to get DL back after suspension: Visit the RTO with the seizure memo, pay pending challan amount, and request release. You are entitled to a hearing before suspension order is passed and can submit a reply to show cause notice. Appeal against suspension can be filed under Section 19(3) of Motor Vehicles Act within one month of suspension order before the Appellate Authority. Keeping your DL on DigiLocker as digital copy is valid proof.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "licence_suspension",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act Section 19, UP RTO"
+    }
+  },
+  {
+    "id": "traffic_006_vehicle_seizure",
+    "text": "Vehicle seizure and impounding rules in UP traffic. Traffic police can seize a vehicle in these situations: non-payment of multiple challans, driving without valid insurance, driving without registration certificate RC, serious violations like drunk driving, vehicle found overloaded beyond legal limits, or vehicle parked illegally causing obstruction. What happens after seizure: Vehicle is taken to police yard and daily storage charges apply. RC can also be cancelled for repeated non-payment of challans. How to get vehicle released: Pay all pending challans at echallan.parivahan.gov.in or at RTO. Carry proof of insurance, valid RC, and PUC certificate. Visit the traffic police station or yard where vehicle is held, show payment proof and valid documents, and vehicle will be released. If vehicle is seized due to RC cancellation the process to reverse it is long and expensive involving court proceedings. To avoid seizure keep insurance, PUC, and RC all updated. UP traffic police conducts regular surprise checks particularly for PUC and insurance in cities like Lucknow, Kanpur, Noida, and Ghaziabad.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "vehicle_seizure",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act 2019, UP Traffic Police"
+    }
+  },
+  {
+    "id": "traffic_007_documents_required",
+    "text": "Mandatory documents every driver must carry in Uttar Pradesh. Valid driving licence or digital DL on DigiLocker app. Vehicle registration certificate RC original or digital copy on mParivahan app. Valid third party motor insurance certificate minimum requirement by law. PUC pollution under control certificate which must be renewed regularly at authorized emission testing centers. For commercial vehicles additional permits are required. What if documents are at home: Digital copies on DigiLocker or mParivahan app are legally valid and accepted by traffic police. You do not need to carry physical originals if digital copies are available on government apps. Documents needed for two-wheelers: DL, RC, insurance, PUC, and helmet must be worn. Documents for four-wheelers: DL, RC, insurance, PUC, and seat belt must be worn. PUC renewal centers are available across UP cities and renewal takes around 10 minutes with charges around Rs 60 to Rs 100. PUC validity is typically 6 months for petrol vehicles. Without valid PUC the fine is Rs 10000 which is one of the highest fines under MV Act 2019.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "documents",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act 2019, UP Transport Department"
+    }
+  },
+  {
+    "id": "traffic_008_drunk_driving",
+    "text": "Drunk driving DUI rules and penalties in Uttar Pradesh. Drunk driving is a non-compoundable offense meaning it cannot be settled by paying fine to traffic police on the spot and must go to court. Blood alcohol content limit is 30 mg per 100 ml of blood for private vehicles. First offense fine is Rs 10000 and up to six months imprisonment. Repeat offense fine is Rs 15000 and up to two years imprisonment. Driving licence is also suspended for drunk driving. Court proceedings are mandatory for drunk driving cases. Commercial vehicle drivers face stricter rules with lower alcohol tolerance limit of 30 mg per 100 ml. What to do if charged with drunk driving: Do not argue with police. You have the right to a breathalyzer test and can request a blood test at government hospital if you dispute the result. Contact a lawyer immediately as this is a serious criminal matter. You can appear before the Metropolitan Magistrate or Judicial Magistrate handling the case. In UP alcohol breath analysis is routinely conducted at night checkpoints especially in Lucknow, Noida, Kanpur, and expressway entry points. First time offenders with clean records sometimes get benefit of doubt from courts but legal representation is strongly advised.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "drunk_driving",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act Section 185, MV Amendment Act 2019"
+    }
+  },
+  {
+    "id": "traffic_009_expressway_rules",
+    "text": "Expressway specific traffic rules in Uttar Pradesh. UP has major expressways including Yamuna Expressway Agra to Greater Noida, Agra Lucknow Expressway, Purvanchal Expressway, Bundelkhand Expressway, and Gorakhpur Link Expressway. Speed limits on UP expressways: Cars and light vehicles maximum 100 kmph. Buses and trucks maximum 80 kmph. Tractors and slow vehicles are prohibited on expressways. Lane discipline is strictly enforced on expressways. Overtaking only from the right side. Stopping on expressway carriageway is prohibited except at designated rest areas. Emergency lanes must be kept free at all times. Penalties for expressway violations are same as regular MV Act fines but enforcement is stricter due to AI cameras installed at regular intervals. Accidents on UP expressways: Call 112 for police, 108 for ambulance, or UP expressway helplines. Yamuna Expressway helpline is 1800-1800-180. In case of breakdown switch on hazard lights and move vehicle to shoulder lane. UP expressways have ambulance stations every 50 km. Using mobile phone while driving on expressway attracts Rs 1000 to Rs 2000 fine.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "expressway",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Expressways Industrial Development Authority, MV Act 2019"
+    }
+  },
+  {
+    "id": "traffic_010_minor_driving",
+    "text": "Underage driving rules and penalties in Uttar Pradesh. Minimum age to drive a two-wheeler without gear is 16 years with parental consent and a learner licence. Minimum age to drive any other vehicle including geared two-wheeler and four-wheeler is 18 years. Driving by a person below 18 years is a serious offense under Section 199A of MV Amendment Act 2019. Penalty for minor driving: Vehicle owner or guardian is held responsible and faces fine of Rs 25000 and up to three years imprisonment in addition to cancellation of the registration of the vehicle for 12 months. The minor cannot receive a driving licence until the age of 25 years if caught driving underage. Parents and guardians must ensure minors do not access vehicle keys. In UP AI cameras and ANPR systems detect violations and challans are sent to the registered owner automatically. Schools and colleges in UP must not allow students to park vehicles without valid licence on premises. This rule is strictly enforced in cities like Lucknow and Noida.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "minor_driving",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Amendment Act 2019 Section 199A"
+    }
+  },
+  {
+    "id": "traffic_011_accident_procedure",
+    "text": "What to do in case of road accident in Uttar Pradesh. Immediate steps: Call 112 for UP Police emergency response. Call 108 for ambulance service which is free in UP. Do not move the injured person unless there is immediate danger as moving them can worsen injuries. Take photos of the accident scene, vehicle positions, number plates, and any skid marks before vehicles are moved. Report the accident to nearest police station within 24 hours as per Motor Vehicles Act Section 134. Hit and run accidents: If you are injured in a hit and run case report to police immediately. Compensation is available under Solatium Fund even without identifying the culprit. Victim compensation scheme: UP Motor Accident Claims Tribunal provides compensation for accident victims. You need FIR copy, medical bills, disability or death certificate, and vehicle documents of accused to file claim. Third party insurance covers victim compensation. Section 279 IPC applies for rash and negligent driving causing accident and punishment is up to six months jail or Rs 1000 fine or both. For death by negligence Section 304A IPC applies with up to two years jail. Free legal aid is available from UPSLSA at 0522-2209457 for accident victims.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "accident",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act Section 134, IPC 279, 304A, UP Motor Accident Claims Tribunal"
+    }
+  },
+  {
+    "id": "traffic_012_up_portals_helplines",
+    "text": "Important UP traffic portals, apps, and helplines. Official portals: echallan.parivahan.gov.in for checking and paying all challans online. parivahan.gov.in for vehicle and DL related services including RC status and DL status. uppolice.gov.in for UP Police services and traffic complaints. sarathi.parivahan.gov.in for driving licence related applications and renewals. Mobile apps: mParivahan app on Android and iOS for digital DL, RC, and challan checks. DigiLocker app for storing valid digital copies of DL and RC. Emergency numbers: 112 UP Police emergency. 108 ambulance free in UP. UP expressway helpline 1800-1800-180 for Yamuna Expressway. For challan dispute: echallan.parivahan.gov.in Complaint tab. Email helpdesk-echallan@gov.in. E-challan helpline plus 91-120-4925505 available 6 AM to 12 AM, select IVRS option 4 for challan queries. Vehicle RC and DL information: SMS VAHAN vehicle number to 7738299899 for vehicle details. For driving licence renewal and related services visit nearest RTO or apply online on parivahan.gov.in. UP has RTOs in every district headquarters.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "helplines",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Traffic Police, Parivahan Portal, Ministry of Road Transport"
+    }
+  },
+  {
+    "id": "traffic_013_faqs",
+    "text": "Frequently asked questions about traffic rules in UP. Q: I received a challan but was not driving at that time, what to do? File a dispute on echallan.parivahan.gov.in with proof that you were not at that location such as GPS data or photos. If vehicle was sold but ownership not transferred update RC immediately to avoid challans for new owner violations. Q: Can traffic police take my licence on the spot? Yes for serious violations like overspeeding, red light jumping, drunk driving police can seize physical DL and send it to RTO for suspension. You get an acknowledgment slip. Q: Is digital DL on DigiLocker valid? Yes, digital DL and RC on government apps like DigiLocker and mParivahan are legally valid as per a Supreme Court order and accepted by police. Q: I paid my challan but it still shows pending online, what to do? Wait 48 to 72 hours for database update. If still showing contact echallan helpline at 120-4925505. Q: What if I cannot pay Rs 10000 PUC challan at once? Pay online and if contested in court payment plans may be available. But PUC must be renewed immediately to avoid further challans. Q: Can I get challan cancelled for genuine reason? Only through formal dispute process on Parivahan portal or court, not by speaking to traffic police directly.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "faqs",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Traffic Police, Motor Vehicles Act 2019"
+    }
+  },
+  {
+    "id": "traffic_014_speed_limits",
+    "text": "Speed limits on different roads in Uttar Pradesh. Urban areas city roads maximum speed for cars and two-wheelers is 50 kmph. State highways and national highways maximum speed for cars is 70 to 80 kmph depending on road. Expressways maximum speed for cars and light vehicles is 100 kmph and for buses and trucks is 80 kmph. School zones and hospital zones maximum speed is 30 kmph. Speed cameras and ANPR cameras are installed across UP expressways and major highways. Overspeeding fine is Rs 2000 for light vehicles like cars and two-wheelers and Rs 4000 for heavy vehicles like trucks and buses. For heavy vehicles overloading and overspeeding both attract additional fines. Multiple overspeeding challans in one day are possible as cameras detect each violation separately. Under the five-strike rule from 2026 repeated speeding violations contribute to licence suspension. Checking your speed is especially important on Yamuna Expressway and Agra Lucknow Expressway which are heavily monitored with AI cameras that send e-challans directly to registered vehicle owners within hours of violation.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "speed_limits",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Motor Vehicles Act 2019, UPEIDA Expressway Rules"
+    }
+  },
+  {
+    "id": "traffic_015_tips_common_violations",
+    "text": "Most common traffic violations in UP and how to avoid them. Most common violations: Not wearing helmet in Lucknow, Noida, and Kanpur where cameras catch helmetless riders. Missing PUC certificate which carries the highest fine of Rs 10000. Expired insurance which leads to Rs 2000 fine and vehicle seizure risk. Overspeeding on expressways where AI cameras are most active. Jumping red signals at major intersections with installed cameras. Mobile phone use while driving. Practical tips for UP drivers: Renew PUC every 6 months at authorized centers, cost is only Rs 60 to Rs 100. Store DL and RC on DigiLocker and mParivahan so physical copies are never needed. Check echallan.parivahan.gov.in for pending challans every month especially if you drive frequently. Pay challans within 60 days to avoid court summons. Wear helmet always as UP traffic police conducts frequent helmet drives especially near colleges and market areas. Keep insurance policy expiry date reminder in phone. Do not argue with traffic police as this itself can attract a fine in Lucknow. From 2026 MVIs Motor Vehicle Inspectors can issue spot fines so violations that previously required police presence are now caught by more officials.",
+    "metadata": {
+      "domain": "traffic",
+      "type": "tips",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Traffic Police, Motor Vehicles Act 2019"
+    }
+  }
+]

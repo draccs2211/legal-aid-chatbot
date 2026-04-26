@@ -1,0 +1,222 @@
+[
+  {
+    "id": "women_safety_001_overview",
+    "text": "Women safety law in India provides strong legal protection to women against violence, harassment, exploitation, and discrimination. Multiple central laws and UP state laws work together to protect women. Key central laws include the Indian Penal Code (IPC) / Bharatiya Nyaya Sanhita 2023 (BNS), Protection of Women from Domestic Violence Act 2005, Dowry Prohibition Act 1961, Sexual Harassment of Women at Workplace Act 2013 (POSH), Indecent Representation of Women Act 1986, and the Protection of Children from Sexual Offences Act 2012 (POCSO). In Uttar Pradesh, the state government has additional mechanisms including Mission Shakti, UP Police Women Help Desk, Anti-Romeo Squads, and the 1090 Women Helpline. Every woman in UP has the right to file an FIR at any police station regardless of where the offence occurred. Police cannot refuse to register an FIR in cases involving violence against women.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IPC, BNS 2023, PWDVA 2005, Dowry Prohibition Act 1961, POSH Act 2013, POCSO 2012"
+    }
+  },
+  {
+    "id": "women_safety_002_helplines",
+    "text": "What are the emergency helplines available to women in Uttar Pradesh? 112: UP Police emergency helpline — for any emergency including assault, threat, or danger; police response within minutes in urban areas. 1090: UP Women Helpline — dedicated helpline for women facing harassment, eve-teasing, domestic violence, or any threat; available 24x7; calls can be made anonymously; can also register complaints via WhatsApp. 181: Women Helpline (national) — for women in distress, connects to nearest support centre. 1098: Childline — for girls below 18 in danger or distress. 7827170170: National Commission for Women helpline. 0522-2204188: UP State Women Commission, Lucknow. 1800-180-5522: UP Mahila Kalyan helpline. For online harassment, cyberstalking, or morphed images, report at cybercrime.gov.in or call 1930 (Cyber Crime helpline). In case of life-threatening danger, always call 112 first. Women can also approach the nearest Mahila Thana (Women Police Station) in their district.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "helplines",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Police, UP Women Helpline 1090, National Commission for Women"
+    }
+  },
+  {
+    "id": "women_safety_003_domestic_violence",
+    "text": "What is the law on domestic violence and what can a woman do? The Protection of Women from Domestic Violence Act 2005 (PWDVA) protects women from physical, sexual, verbal, emotional, and economic abuse by a husband, partner, or any male family member living in the same household. It covers not just wives but also live-in partners, daughters, sisters, mothers, and any woman living in a shared household. Reliefs available under PWDVA: Protection Order — court order restraining the abuser from committing violence; Residence Order — woman cannot be evicted from her own home; Monetary Relief — compensation for medical expenses, loss of earnings, and maintenance; Custody Order — temporary custody of children; Compensation Order — for injuries and mental agony. How to get help: approach a Protection Officer in your district (every district has one under PWDVA); contact any NGO registered as a Service Provider; approach the Magistrate directly; call 1090 or 112. In UP, the Protection Officer is usually an officer of the Social Welfare Department. The Magistrate must hear the case within 3 days of filing.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "domestic_violence",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Protection of Women from Domestic Violence Act 2005, Section 12, 17, 18, 19, 20"
+    }
+  },
+  {
+    "id": "women_safety_004_dowry_harassment",
+    "text": "What is the law against dowry and dowry harassment? The Dowry Prohibition Act 1961 makes demanding, giving, or taking dowry a criminal offence punishable with imprisonment of minimum 5 years and fine of Rs 15,000 or the value of dowry, whichever is more. Section 498A of IPC (Section 85 of BNS 2023) covers cruelty by husband or relatives including dowry harassment. It is a cognizable, non-bailable, and non-compoundable offence — meaning police must register FIR and the accused cannot get bail easily. Section 304B IPC (Section 80 BNS) covers dowry death — if a woman dies within 7 years of marriage under suspicious circumstances and was subjected to dowry harassment, it is presumed to be dowry death, punishable with minimum 7 years to life imprisonment. In UP, if a woman is facing dowry harassment, she can: file FIR at the nearest police station; call 1090 UP Women Helpline; approach the Mahila Thana of the district; contact the Protection Officer under PWDVA. Police must register FIR immediately and cannot refuse.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "dowry_harassment",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Dowry Prohibition Act 1961, IPC Section 498A, 304B, BNS 2023 Section 85, 80"
+    }
+  },
+  {
+    "id": "women_safety_005_sexual_assault",
+    "text": "What is the law on rape and sexual assault and what should a survivor do? Under BNS 2023 (earlier IPC Section 375-376), rape is defined broadly and includes any form of non-consensual penetration. Punishment for rape is minimum 10 years rigorous imprisonment extendable to life. Rape of a woman below 16 years carries minimum 20 years to life imprisonment. Gang rape carries minimum 20 years to life. Rape by a public servant or police officer carries minimum 10 years. Immediate steps a survivor should take: go to the nearest government hospital for medical examination — this is free and confidential; call 112 for police assistance; call 1090 Women Helpline; call 181 for immediate support. The survivor can file FIR at any police station — police must record it and cannot send her to another station. A woman police officer must record the statement. Medical examination must be done only by a lady doctor. The survivor's identity must be kept confidential — revealing identity is a punishable offence. Free legal aid is available to all rape survivors from the District Legal Services Authority.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "sexual_assault",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNS 2023 Section 63-70, IPC Section 375-376, BNSS 2023"
+    }
+  },
+  {
+    "id": "women_safety_006_eve_teasing_harassment",
+    "text": "What is the law against eve-teasing and street harassment in UP? Eve-teasing and street harassment are serious criminal offences in India. Under BNS 2023 (earlier IPC), relevant sections include: Section 75 BNS (Section 354 IPC) — assault or use of criminal force against a woman with intent to outrage her modesty, punishable with 1 to 5 years imprisonment; Section 79 BNS (Section 354D IPC) — stalking, following, or contacting a woman despite disinterest, punishable with up to 3 years for first offence and 5 years for repeat offence; Section 76 BNS (Section 354A IPC) — sexual harassment including unwanted physical contact, sexually coloured remarks, showing pornography without consent, punishable with up to 3 years. In Uttar Pradesh, the Anti-Romeo Squads operate near schools, colleges, and public places to prevent eve-teasing. Women can: call 1090 to report eve-teasing anonymously; approach the nearest police station; file complaint at the Women Help Desk present in every UP police station under Mission Shakti.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "eve_teasing_harassment",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "BNS 2023 Section 75, 76, 79, IPC Section 354, 354A, 354D, UP Mission Shakti"
+    }
+  },
+  {
+    "id": "women_safety_007_cyber_crime_women",
+    "text": "What cyber crimes specifically target women and what can they do? Women face several forms of cyber crime including: cyberstalking — repeatedly following or messaging a woman online to cause fear, punishable under Section 79 BNS; cyber harassment and trolling — sending obscene or threatening messages, punishable under IT Act Section 67 and BNS; morphing — digitally altering a woman's images to make them obscene, punishable under IT Act Section 66E and 67A; sextortion — threatening to share intimate images unless demands are met, punishable under BNS and IT Act; online blackmail — threatening exposure of private content. What women can do: file complaint at cybercrime.gov.in or call 1930; approach the Cyber Crime cell of UP Police in Lucknow or any district cyber cell; submit complaint at nearest police station under Section 154 BNSS. The CCPWC (Cyber Crime Prevention Against Women and Children) portal specifically handles complaints by women and children. UP Police Cyber Crime helpline is also reachable via 1090. Evidence like screenshots, URLs, and message records should be preserved before reporting.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "cyber_crime_women",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "IT Act 2000 Section 66E, 67, 67A, BNS 2023 Section 79, CCPWC Portal"
+    }
+  },
+  {
+    "id": "women_safety_008_workplace_safety",
+    "text": "What are women's rights and protections at the workplace? The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013 — POSH Act — protects every woman at any workplace. Sexual harassment includes unwelcome physical contact, sexual advances, sexually coloured remarks, showing pornography, and demands for sexual favours. Every employer with 10 or more employees must set up an Internal Complaints Committee (ICC). For smaller workplaces or when the complaint is against the employer, the Local Complaints Committee (LCC) at the district level handles it. The complaint must be filed within 3 months of the incident. The ICC must complete inquiry in 90 days. Employer must take action on ICC recommendations. Employer who fails to constitute ICC can be fined Rs 50,000. Repeat offences lead to cancellation of business license. In UP, women workers can also approach the Labour Department if the employer ignores ICC recommendations. Women working from home and domestic workers are also covered under POSH. Any woman facing workplace harassment can call 1090 or approach the District Officer for LCC.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "workplace_safety",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "POSH Act 2013, BNS 2023 Section 75, 76"
+    }
+  },
+  {
+    "id": "women_safety_009_marriage_rights",
+    "text": "What are women's legal rights in marriage and divorce? Minimum age of marriage for women is 18 years — marrying a girl below 18 is void under the Prohibition of Child Marriage Act 2006 and the person solemnizing or arranging such marriage can be imprisoned for up to 2 years. In case of divorce, a Hindu woman is entitled to: maintenance under Section 125 CrPC / Section 144 BNSS; alimony under Hindu Marriage Act; share in matrimonial property; custody of minor children. Muslim women are protected under the Muslim Women (Protection of Rights on Divorce) Act 1986 and the landmark triple talaq law — Muslim Women (Protection of Rights on Marriage) Act 2019 — which makes instant triple talaq (talaq-e-biddat) a criminal offence punishable with up to 3 years imprisonment. A woman can file for divorce on grounds of cruelty, desertion, adultery, conversion, mental illness, and more. In UP, Family Courts in every district handle matrimonial disputes. Free legal aid is available from District Legal Services Authority for women who cannot afford a lawyer.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "marriage_rights",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Marriage Act 1955, Prohibition of Child Marriage Act 2006, Muslim Women (Protection of Rights on Marriage) Act 2019, BNS 2023"
+    }
+  },
+  {
+    "id": "women_safety_010_acid_attack",
+    "text": "What is the law on acid attacks and what support is available for survivors? Acid attack is one of the most brutal crimes against women. Under BNS 2023 Section 124 (earlier IPC Section 326A), acid attack is punishable with minimum 10 years imprisonment extendable to life, plus fine to be paid to the survivor for medical treatment. Attempting an acid attack (Section 125 BNS, earlier 326B IPC) carries 5 to 7 years imprisonment. The acid attacker must pay all medical costs of the survivor. Key rights of acid attack survivors: free medical treatment at all government hospitals; UP government provides compensation of Rs 3 lakh to acid attack survivors under the Victim Compensation Scheme; District Legal Services Authority provides free legal aid; National Legal Services Authority (NALSA) has a scheme for compensation and rehabilitation of acid attack survivors. In UP, acid attack cases are investigated by UP Police and must be charge-sheeted within 60 days. Sale of acid without valid identity proof is also a punishable offence. Survivors can call 112 for immediate help and approach the District Magistrate for compensation.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "acid_attack",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "BNS 2023 Section 124-125, IPC Section 326A-326B, NALSA Scheme, UP Victim Compensation Scheme"
+    }
+  },
+  {
+    "id": "women_safety_011_trafficking",
+    "text": "What is the law against human trafficking and what help is available for victims? Human trafficking for sexual exploitation, forced labour, begging, or organ trade is a serious crime under BNS 2023 Section 143 (earlier IPC Section 370 and 370A). Punishment ranges from 7 years to life imprisonment depending on the victim's age and nature of exploitation. Trafficking of children carries minimum 10 years to life. Key protections: trafficked women and girls are treated as victims, not criminals; their identity is kept confidential; they are entitled to free legal aid, shelter, rehabilitation, and compensation. In Uttar Pradesh: Anti-Human Trafficking Units (AHTUs) are set up in all districts to investigate trafficking cases; Ujjawala scheme provides shelter and rehabilitation for trafficking victims; UP Rescue helpline for missing or trafficked women: call 1090 or 112. National helpline for human trafficking: 1800-419-8588 (iCall). Women rescued from trafficking are not prosecuted for any offence committed under compulsion. District Child Protection Officers handle trafficking cases involving girls below 18.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "trafficking",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNS 2023 Section 143, IPC Section 370, ITPA 1956, UP AHTU, Ujjawala Scheme"
+    }
+  },
+  {
+    "id": "women_safety_012_mission_shakti_up",
+    "text": "What is Mission Shakti and what does it offer women in Uttar Pradesh? Mission Shakti is the flagship programme of the UP government for the safety, security, and empowerment of women and girls. It has two components: Shakti (safety and security) and Shaurya (empowerment). Under the safety component: Women Help Desks have been set up in every police station in UP to provide immediate assistance and first point of contact for women in distress; Anti-Romeo Squads patrol areas near schools, colleges, bus stands, and markets; Special fast-track courts for crimes against women have been set up; CCTV surveillance has been expanded in cities. Under the empowerment component: Shakti Mobile Vans provide legal aid, health services, and support at the doorstep in rural areas; One Stop Centres (Sakhi Centres) in every district provide integrated support including shelter, police assistance, legal aid, medical help, and psycho-social counselling under one roof; Vocational training and self-employment support is provided. Sakhi Centres (One Stop Centres) in UP can be reached by calling 181. There is at least one Sakhi Centre per district in UP.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "mission_shakti_up",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Mission Shakti, One Stop Centre Scheme (Sakhi), Ministry of Women and Child Development"
+    }
+  },
+  {
+    "id": "women_safety_013_fir_rights",
+    "text": "What are a woman's rights when filing an FIR for a crime against her? A woman has the following rights when reporting a crime to police: Right to file FIR at any police station regardless of where the crime occurred — police cannot send her away or refuse to register the FIR; Zero FIR can be filed at any station and then transferred to the correct jurisdiction. Statement of a rape survivor must be recorded at her residence or a place of her choice by a woman police officer; no woman should be called to the police station between sunset and sunrise. Woman can file complaint directly before the Magistrate under Section 175 BNSS if police refuse to register FIR. If police refuse to register FIR, complaint can be sent by registered post to the Superintendent of Police. The Supreme Court has held that refusal to register FIR in cases of violence against women is a serious dereliction of duty. In UP, the DGP Women Cell at Lucknow monitors such refusals. Women can also approach the UP State Human Rights Commission or UP State Women Commission if police are unresponsive.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "fir_rights",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "BNSS 2023 Section 173, 175, Supreme Court guidelines, UP Police Standing Orders"
+    }
+  },
+  {
+    "id": "women_safety_014_property_rights",
+    "text": "What are women's property rights under Indian law? Hindu women have equal property rights under the Hindu Succession (Amendment) Act 2005. A daughter has equal right to her father's ancestral property as a son — this right exists from birth and cannot be taken away even if the father dies before the daughter. A widow has the right to inherit her husband's property. A woman has absolute right over her streedhan — all gifts, jewelry, and property given to her before, during, and after marriage — and no one can forcibly take it. Under the Indian Succession Act, Christian, Parsi, and secular women have equal inheritance rights. Muslim women's inheritance rights are governed by Muslim personal law. In UP, a woman can approach the Revenue Court or Civil Court to assert her property rights. If a woman is being forcibly dispossessed of her property, she can file a complaint under Section 145 CrPC or approach the District Magistrate. Women can get their name mutated in land records at the Tehsildar office and check land records at upbhulekh.gov.in.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "property_rights",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Succession (Amendment) Act 2005, Indian Succession Act 1925, UP Revenue Code 2006"
+    }
+  },
+  {
+    "id": "women_safety_015_maternity_health_rights",
+    "text": "What are the health and maternity rights of women? Every pregnant woman has the right to free antenatal care, institutional delivery, and postnatal care at all government hospitals and primary health centres in UP. Janani Suraksha Yojana (JSY) provides cash assistance for institutional delivery: Rs 1,400 for rural women and Rs 1,000 for urban women in UP. Pradhan Mantri Matru Vandana Yojana (PMMVY) provides Rs 5,000 in three instalments to pregnant and lactating mothers for the first child. Under the Maternity Benefit Act 1961 (amended 2017), working women are entitled to 26 weeks of paid maternity leave for the first two children. Emergency delivery must not be refused by any hospital — private or government — under the Clinical Establishments Act. The Janani Shishu Suraksha Karyakram (JSSK) provides completely free treatment to pregnant women including medicines, diagnostics, diet, blood, and transport. In UP, 108 ambulance service provides free transport for pregnant women. Any denial of maternity health services can be reported to the Chief Medical Officer of the district.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "maternity_health_rights",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Maternity Benefit Act 1961, JSY, PMMVY, JSSK, Clinical Establishments Act 2010"
+    }
+  },
+  {
+    "id": "women_safety_016_pocso",
+    "text": "What is POCSO and how does it protect girl children? The Protection of Children from Sexual Offences Act 2012 (POCSO) protects all children including girls below 18 years from sexual abuse, sexual harassment, and pornography. Key provisions: penetrative sexual assault on a child carries minimum 20 years to life imprisonment; aggravated penetrative assault (by relative, police, or teacher) carries life imprisonment or death; non-penetrative sexual assault carries 3 to 5 years; sexual harassment of a child carries up to 3 years. Any person who receives information about sexual abuse of a child must report it to the police — failure to report is itself an offence punishable with 6 months imprisonment. The child's identity must be kept completely confidential. Child's statement must be recorded by a woman police officer in a child-friendly manner. Trial must be completed within one year. Special courts handle POCSO cases. In UP, every district has a Special POCSO Court. The child is not required to testify in front of the accused. Free legal aid and psychological support is provided to POCSO survivors.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "pocso",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "POCSO Act 2012, Section 3-12, 19, 28"
+    }
+  },
+  {
+    "id": "women_safety_017_women_commission_up",
+    "text": "What is the UP State Women Commission and how can it help? The Uttar Pradesh State Women Commission (UP Rajya Mahila Aayog) is a statutory body that works to protect the rights and interests of women in UP. It can: inquire into complaints of violations of women's rights; summon any person or government officer; recommend action against erring officials; take suo motu cognizance of incidents reported in media. The Commission accepts complaints related to: domestic violence; harassment at workplace; dowry issues; property rights denial; police inaction on women's complaints; any other violation of women's rights. How to approach: file written complaint at UP State Women Commission office in Lucknow; call 0522-2204188; visit the office at Gomti Nagar, Lucknow. The Commission also conducts jan sunwai (public hearing) in different districts. National Commission for Women (NCW) in New Delhi also accepts complaints from UP women at ncwapps.nic.in or call 7827170170. Both commissions can direct police and other authorities to take action.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "women_commission_up",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP State Women Commission, National Commission for Women Act 1990"
+    }
+  },
+  {
+    "id": "women_safety_018_shelter_homes",
+    "text": "What shelter and support facilities are available for women in distress in UP? Women in UP who need immediate shelter and support can access: One Stop Centres (Sakhi Centres) — present in every district, provides shelter, police help, legal aid, medical help, and counselling under one roof; call 181 to locate the nearest Sakhi Centre. Nari Niketan — government-run homes for destitute women, deserted women, and women who have faced violence; present in major cities across UP. Short Stay Homes — temporary shelter for women in crisis situations. Swadhar Greh — for women in difficult circumstances including survivors of family violence, trafficking victims, women released from jail, and women with no support. Ujjawala Centres — for trafficked women's rehabilitation. Mahila Shakti Kendra — at the block level provides a link between women and government schemes. Any woman in immediate danger can call 112 for police assistance and request to be taken to a safe shelter. District Probation Officer handles placement in Nari Niketans. All shelter facilities are free of cost for women.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "shelter_homes",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "One Stop Centre Scheme, Swadhar Greh Scheme, Ujjawala Scheme, UP Social Welfare Department"
+    }
+  },
+  {
+    "id": "women_safety_019_legal_aid_women",
+    "text": "What free legal aid and support is available to women involved in legal cases? Every woman who cannot afford a lawyer has the right to free legal aid under the Legal Services Authorities Act 1987. Free legal aid is available from: District Legal Services Authority (DLSA) — present in every district, provides free lawyers and legal advice; State Legal Services Authority (SLSA) — UP SLSA at Lucknow; call 1516 for free legal aid helpline (NALSA helpline). Women are among priority categories for free legal aid along with SC/ST persons, children, and persons with disabilities. Free legal aid is available for: filing FIR; getting bail; fighting divorce or domestic violence cases; claiming maintenance; property disputes; and any criminal proceedings involving the woman. In UP, DLSA also runs mobile legal aid clinics that visit panchayats and remote areas. Legal aid lawyers assigned by DLSA are paid by the government. Women facing domestic violence can also get help from NGOs like Jagori, Shakti Shalini, and local women's organizations. National Legal Services Authority website: nalsa.gov.in.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "legal_aid_women",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Legal Services Authorities Act 1987, NALSA, UP SLSA, DLSA"
+    }
+  },
+  {
+    "id": "women_safety_020_use_cases",
+    "text": "Common real life women safety situations in UP and where to go. Domestic violence by husband or in-laws: call 1090 or 112, approach Protection Officer at Social Welfare Department, file complaint at Mahila Thana, approach District Magistrate for protection order under PWDVA. Dowry harassment: file FIR at Mahila Thana under Section 498A BNS, call 1090, approach Women Commission. Eve-teasing or stalking near college or market: call 1090 or approach Anti-Romeo Squad, file complaint at Women Help Desk in nearest police station. Morphed photos or cyber harassment: file complaint at cybercrime.gov.in or call 1930, approach Cyber Cell UP Police. Sexual assault or rape: call 112 immediately, go to nearest government hospital for free medical examination, file Zero FIR at any police station, get free legal aid from DLSA. Husband filing false dowry case against wife: approach High Court for anticipatory bail, file counter complaint with evidence. Girl missing or trafficked: call 1090 or 1098 immediately, file missing report at nearest police station, approach AHTU. Workplace sexual harassment: file with ICC of employer or call 1090 for LCC. Need shelter urgently: call 181 for Sakhi One Stop Centre.",
+    "metadata": {
+      "domain": "women_safety",
+      "type": "use_cases",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Multiple Women Safety Laws, UP Police, UP Mission Shakti, PWDVA 2005"
+    }
+  }
+]

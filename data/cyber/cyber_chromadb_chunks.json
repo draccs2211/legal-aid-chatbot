@@ -1,0 +1,222 @@
+[
+  {
+    "id": "cyber_001_overview",
+    "text": "Cyber law in India governs all crimes, offences, and legal issues arising from the use of computers, internet, mobile phones, and digital technology. The primary law is the Information Technology Act 2000 (IT Act) and its Amendment of 2008, along with relevant sections of the Bharatiya Nyaya Sanhita 2023 (BNS) which replaced the IPC. The IT Act covers hacking, data theft, online fraud, cyberstalking, morphing, identity theft, phishing, ransomware, and publishing obscene content online. In 2023, the Digital Personal Data Protection Act (DPDP Act) was also passed to protect citizens' personal data. In Uttar Pradesh, dedicated Cyber Crime cells operate in every district and the UP Police Cyber Crime department is headquartered in Lucknow. Cybercrime complaints can be filed online at cybercrime.gov.in or by calling the national cyber helpline 1930. UP Police also has a dedicated cyber complaint portal at upcop.gov.in. Cyber law applies to every citizen, company, and government body in India regardless of where the offender is located.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000, IT Amendment Act 2008, BNS 2023, DPDP Act 2023"
+    }
+  },
+  {
+    "id": "cyber_002_helplines_reporting",
+    "text": "Where and how to report cybercrime in Uttar Pradesh? National Cyber Crime Helpline: 1930 — call immediately if you are a victim of online financial fraud; fastest way to freeze fraudulent transactions. Online portal: cybercrime.gov.in — file complaints for all types of cybercrime including financial fraud, cyber harassment, morphed images, sextortion, hacking, and child pornography. UP Police Cyber Crime portal: upcop.gov.in — for UP-specific complaints. Physical reporting: visit the Cyber Crime Cell of your district police or any police station and file an FIR or written complaint. For financial cyber fraud, also immediately call your bank to block the transaction and report to RBI at bankingombudsman.rbi.org.in. For social media account hacking or impersonation, also report directly to the platform — Facebook, Instagram, WhatsApp, Google. For email fraud, report to CERT-In at incident@cert-in.org.in. Evidence to preserve before reporting: screenshots of the crime, URLs, chat logs, transaction IDs, email headers, and the fraudster's phone number or account details. Time is critical — report immediately, especially in financial fraud, as funds can be recovered if reported within hours.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "helplines_reporting",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "MHA Cyber Crime Portal, UP Police, CERT-In, RBI"
+    }
+  },
+  {
+    "id": "cyber_003_online_financial_fraud",
+    "text": "What is online financial fraud and what can victims do? Online financial fraud is the most common cybercrime in India and UP. Types include: UPI fraud — fraudster sends a collect request or tricks victim into scanning a QR code; OTP fraud — fraudster calls posing as bank or KYC officer and tricks victim into sharing OTP; phishing — fake websites or emails that steal banking credentials; SIM swap fraud — fraudster gets a duplicate SIM of victim's number and accesses bank accounts; investment fraud — fake apps or schemes promising high returns on investment; lottery and prize fraud — fraudulent messages claiming the victim has won a prize. What to do immediately: call 1930 within minutes; call your bank to freeze the account; file complaint at cybercrime.gov.in with transaction details. Legal provisions: online fraud is punishable under IT Act Section 66C (identity theft, up to 3 years), Section 66D (cheating by impersonation, up to 3 years), and BNS Section 318 (cheating). Victims can also approach the Banking Ombudsman for refund of fraudulently transferred funds. Courts have ordered banks to refund in several cases where the bank's security was at fault.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "online_financial_fraud",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 66C, 66D, BNS 2023 Section 318, RBI Circular on Cyber Fraud"
+    }
+  },
+  {
+    "id": "cyber_004_hacking_data_theft",
+    "text": "What is hacking and what are the legal provisions against it? Hacking means unauthorized access to any computer, server, mobile device, or network. Under IT Act Section 43 and Section 66, unauthorized access to a computer system is punishable with imprisonment up to 3 years and fine up to Rs 5 lakh. Section 43 also covers unauthorized downloading of data, introducing viruses, damaging computer systems, and disrupting services. If hacking causes damage to a body corporate (company), compensation up to Rs 5 crore can be claimed. Data theft — stealing personal or business data from a computer — is covered under IT Act Section 43 and Section 66B (receiving stolen computer resource), punishable with up to 3 years. Ransomware attacks — where hackers encrypt data and demand payment — are punishable under IT Act Section 66 and BNS extortion provisions. Any business or individual whose computer system is hacked should: preserve evidence; file FIR at local police; report to CERT-In at cert-in.org.in which is India's nodal agency for cybersecurity incidents. In UP, the State Cyber Cell Lucknow handles major hacking cases.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "hacking_data_theft",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 43, 66, 66B, BNS 2023"
+    }
+  },
+  {
+    "id": "cyber_005_cyberstalking_harassment",
+    "text": "What is cyberstalking and online harassment and what legal action can be taken? Cyberstalking means using the internet, email, social media, or any electronic means to stalk, follow, monitor, or harass a person repeatedly causing fear or distress. Online harassment includes sending threatening or abusive messages, creating fake profiles to defame someone, sending unsolicited sexual content, and doxxing (publishing someone's private information online). Legal provisions: BNS Section 79 (stalking including cyberstalking) — up to 3 years for first offence, up to 5 years for repeat; IT Act Section 67 (publishing obscene material online) — up to 3 years and Rs 5 lakh fine; BNS Section 351 (criminal intimidation by sending threatening messages) — up to 7 years. For women victims, additional provisions under BNS Section 75 apply. What to do: preserve all evidence including screenshots and message records; block the harasser on the platform; report the profile to the social media platform; file complaint at cybercrime.gov.in or call 1930; file FIR at nearest police station or Cyber Crime Cell. In UP, women can also call 1090 for cyberstalking complaints.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "cyberstalking_harassment",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNS 2023 Section 79, 351, IT Act Section 67, 66E"
+    }
+  },
+  {
+    "id": "cyber_006_morphing_sextortion",
+    "text": "What is image morphing and sextortion and what legal protections exist? Morphing means digitally altering someone's photos to make them obscene or defamatory and sharing them online. Sextortion means threatening to share intimate or morphed images unless the victim pays money or complies with demands. Both are serious crimes. Legal provisions: IT Act Section 66E — violation of privacy by capturing, publishing, or transmitting private images without consent, punishable with up to 3 years and Rs 2 lakh fine; IT Act Section 67A — publishing sexually explicit material electronically, punishable with up to 5 years and Rs 10 lakh fine; BNS Section 79 — cyberstalking including persistent online contact. What victims should do: do not pay the sextortionist as it encourages further demands; preserve all evidence; immediately report at cybercrime.gov.in selecting the Women and Children category; call 1930 or 1090 (for women in UP); request the platform to take down the content; file FIR with Cyber Crime Cell. Platforms like Facebook, Instagram, and Google have takedown mechanisms for non-consensual intimate images. Courts in India have granted emergency interim relief to victims including immediate takedown orders.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "morphing_sextortion",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 66E, 67A, BNS 2023 Section 79, CCPWC Portal"
+    }
+  },
+  {
+    "id": "cyber_007_social_media_defamation",
+    "text": "What are the laws on social media defamation, fake news, and impersonation? Defamation online — posting false statements of fact that damage someone's reputation — is covered under BNS Section 356 (defamation), punishable with up to 2 years imprisonment. Creating a fake profile in someone's name to defame, cheat, or harass them is covered under IT Act Section 66C (identity theft, up to 3 years) and IT Act Section 66D (cheating by impersonation, up to 3 years). Spreading fake news or misinformation that causes public panic, communal tension, or harm to national integrity is covered under BNS Section 197 and 353. What victims can do: gather screenshot evidence; report the fake profile directly to the social media platform for removal; file FIR at Cyber Crime Cell or nearest police station; file complaint at cybercrime.gov.in. For urgent cases, approach the High Court for an emergency injunction to remove defamatory content. Government officials or public servants posting inflammatory content can also face action under service rules. In UP, spreading communally sensitive misinformation online is taken very seriously by UP Police and frequently results in arrests.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "social_media_defamation",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNS 2023 Section 356, 197, 353, IT Act Section 66C, 66D"
+    }
+  },
+  {
+    "id": "cyber_008_child_online_safety",
+    "text": "What are the laws protecting children from online abuse and exploitation? Children face serious online threats including grooming, cyberbullying, exposure to pornographic content, and online sexual exploitation. Legal provisions: POCSO Act 2012 Section 13-15 — using a child for pornographic content or storing child sexual abuse material (CSAM) carries 5 to 7 years imprisonment; IT Act Section 67B — publishing or transmitting material depicting children in sexually explicit acts carries up to 7 years imprisonment; BNS Section 74 — assault or sexual harassment of a child. Platforms are legally required to report child sexual abuse material to NCMEC and Indian authorities. Parents and guardians must report: visit cybercrime.gov.in and select the Child Pornography or Child Sexual Abuse Material category; call 1098 Childline for children in immediate danger; report to NCPCR at ncpcr.gov.in. Schools in UP are mandated under POCSO to have a child protection policy and designated teacher for reporting. Cyberbullying of children should be reported to school authorities, the platform, and Cyber Crime Cell. Identity of child victims is fully protected by law.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "child_online_safety",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "POCSO Act 2012 Section 13-15, IT Act Section 67B, BNS 2023"
+    }
+  },
+  {
+    "id": "cyber_009_data_protection",
+    "text": "What are citizens' rights regarding personal data privacy under Indian law? The Digital Personal Data Protection Act 2023 (DPDP Act) is India's landmark data privacy law. Key rights of every citizen (called Data Principal): Right to information — you can ask any company or government body (called Data Fiduciary) what personal data they hold about you; Right to correction — you can demand correction of inaccurate personal data; Right to erasure — you can request deletion of your personal data when it is no longer necessary; Right to grievance redressal — every Data Fiduciary must have a grievance officer; Right to nominate — you can nominate someone to exercise your rights in case of death or incapacity. Data Fiduciaries must: obtain free, informed, and specific consent before processing personal data; use data only for the stated purpose; protect data with reasonable security measures; report data breaches to the Data Protection Board within prescribed time. The Data Protection Board of India will adjudicate complaints. Currently citizens can file data privacy complaints with CERT-In or approach consumer forums. For Aadhaar data misuse, contact UIDAI at 1947 or grievances.uidai.gov.in.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "data_protection",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Digital Personal Data Protection Act 2023, IT Act Section 43A, CERT-In"
+    }
+  },
+  {
+    "id": "cyber_010_email_phishing_scams",
+    "text": "What are phishing and email scams and how can people protect themselves and seek remedy? Phishing means fraudulent emails, SMS, or WhatsApp messages that appear to come from trusted sources like banks, UIDAI, IT department, or courts, tricking victims into revealing passwords, OTPs, or personal information. Common scams targeting UP residents: fake KYC update messages threatening to block bank account or SIM; fake income tax refund emails asking for bank details; fake job offer emails asking for registration fees; fake lottery win messages; courier fraud calls claiming a parcel has illegal items. Legal provisions: IT Act Section 66C (identity theft) and Section 66D (cheating by impersonation) — both punishable with up to 3 years; BNS Section 318 (cheating). Prevention tips: never share OTP with anyone on call; no bank ever asks for your password; verify by calling the official number; check sender email address carefully for slight spelling differences. If victimized: call 1930 immediately; file complaint at cybercrime.gov.in; inform your bank; preserve all messages as evidence. CERT-In regularly publishes advisories about active phishing campaigns at cert-in.org.in.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "email_phishing_scams",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 66C, 66D, BNS 2023 Section 318, CERT-In Advisories"
+    }
+  },
+  {
+    "id": "cyber_011_it_act_key_sections",
+    "text": "What are the key sections of the IT Act 2000 that every citizen should know? Section 43: Penalty for unauthorized access to computer — compensation up to Rs 1 crore. Section 65: Tampering with computer source code — up to 3 years and Rs 2 lakh fine. Section 66: Computer related offences (hacking) — up to 3 years and Rs 5 lakh fine. Section 66A: (Struck down by Supreme Court in Shreya Singhal case 2015) — was used to arrest people for social media posts. Section 66B: Receiving stolen computer resource — up to 3 years. Section 66C: Identity theft — up to 3 years and Rs 1 lakh fine. Section 66D: Cheating by personation using computer — up to 3 years and Rs 1 lakh fine. Section 66E: Violation of privacy — up to 3 years and Rs 2 lakh fine. Section 66F: Cyber terrorism — up to life imprisonment. Section 67: Publishing obscene material online — up to 3 years. Section 67A: Publishing sexually explicit material — up to 5 years. Section 67B: Child pornography — up to 7 years. Section 69: Government power to intercept or monitor information — with safeguards. Section 72: Breach of confidentiality and privacy by officials — up to 2 years.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "it_act_key_sections",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Information Technology Act 2000, IT Amendment Act 2008"
+    }
+  },
+  {
+    "id": "cyber_012_cyber_terrorism",
+    "text": "What is cyber terrorism and what are the legal provisions? Cyber terrorism under IT Act Section 66F means using computers or internet to threaten the unity, integrity, security, or sovereignty of India, or to strike terror in people by denying access to computer resources, or by penetrating critical infrastructure. This includes attacks on power grids, banking systems, defence systems, and communication networks. Punishment for cyber terrorism is life imprisonment. It is one of the most serious offences under Indian cyber law. Threats to bomb or attack critical infrastructure sent via email or social media are also covered. In practice, cyber terrorism provisions are invoked for: attacks on government websites; spreading content that incites communal violence; coordinated disinformation campaigns targeting national security. Cyber terrorism complaints go to the National Investigation Agency (NIA) and the National Cyber Security Coordinator under the Prime Minister's Office. CERT-In is the nodal agency for protecting critical information infrastructure. Citizens who come across content threatening national security online should report at cybercrime.gov.in and to their local police.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "cyber_terrorism",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 66F, National Cyber Security Policy"
+    }
+  },
+  {
+    "id": "cyber_013_digital_evidence",
+    "text": "How is digital evidence collected and used in cyber crime cases? Digital evidence includes emails, chat messages, social media posts, call records, CCTV footage, GPS location data, browser history, transaction records, and any data stored on electronic devices. Under the Indian Evidence Act (now Bharatiya Sakshya Adhiniyam 2023), electronic records are admissible as evidence if they meet certain conditions: the computer or device was used regularly and working properly; the data was stored or transmitted in the ordinary course of activities; the device was operating properly at the time. A certificate under Section 63 of Bharatiya Sakshya Adhiniyam from the person responsible for the device must be provided for electronic evidence. Key tips for victims: take screenshots with date and time visible; do not delete any messages or records even if they are disturbing; note down URLs, profile links, and phone numbers; if possible get the evidence certified by a notary. Police cyber cells have forensic tools to recover deleted data from devices. Courts regularly accept WhatsApp screenshots, call records, email printouts, and transaction history as evidence in cyber crime cases.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "digital_evidence",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Bharatiya Sakshya Adhiniyam 2023, Section 57-63, IT Act 2000 Section 79A"
+    }
+  },
+  {
+    "id": "cyber_014_social_media_rights",
+    "text": "What are citizens' rights and limits on social media in India? Every citizen has the right to free speech and expression online under Article 19(1)(a) of the Constitution — but this right has reasonable restrictions. What is allowed: sharing opinions, political commentary, criticism of government policies, satire, and factual reporting. What is NOT allowed and can lead to criminal action: posting content that threatens national security or sovereignty; spreading content that promotes enmity between communities or religions; posting obscene or sexually explicit content; making false statements that damage someone's reputation (defamation); sharing someone's private images without consent; posting content that incites violence. The IT (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021 require large social media platforms to appoint a Grievance Officer in India. Every platform must resolve user complaints within 15 days. Users can report content to the platform and also escalate to the Grievance Appellate Committee set up by the government if the platform does not act. Citizens wrongly arrested for social media posts should know that IT Act Section 66A was struck down by the Supreme Court and cannot be applied.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "social_media_rights",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT (Intermediary Guidelines) Rules 2021, Constitution Article 19, Supreme Court Shreya Singhal judgment 2015"
+    }
+  },
+  {
+    "id": "cyber_015_aadhaar_misuse",
+    "text": "What are the laws protecting Aadhaar data and what to do if it is misused? Aadhaar is protected under the Aadhaar (Targeted Delivery of Financial and Other Subsidies, Benefits and Services) Act 2016. Key protections: no one can compel you to share your Aadhaar biometrics for authentication except for government schemes; sharing or misusing Aadhaar data without authorization is punishable with up to 3 years imprisonment and Rs 10 lakh fine; impersonating someone using their Aadhaar carries up to 3 years. Aadhaar number sharing should be limited — use a masked Aadhaar (which shows only the last 4 digits) for non-essential purposes. If your Aadhaar is misused or linked to a mobile number or bank account without your consent: lock your Aadhaar biometrics at myaadhaar.uidai.gov.in or call UIDAI helpline 1947; check which mobile numbers are linked to your Aadhaar at tafcop.dgtelecom.gov.in; report unauthorized linking to UIDAI at grievances.uidai.gov.in; file cybercrime complaint at cybercrime.gov.in. Never share your Aadhaar OTP with anyone. Fake UIDAI update calls and messages are a common phishing scam in UP — always verify by calling 1947 directly.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "aadhaar_misuse",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Aadhaar Act 2016, UIDAI Regulations, IT Act 2000"
+    }
+  },
+  {
+    "id": "cyber_016_intermediary_liability",
+    "text": "What is intermediary liability and are platforms like WhatsApp and Facebook responsible for content? Under IT Act Section 79, intermediaries like WhatsApp, Facebook, Instagram, YouTube, and Twitter are not liable for third-party content if they act as a neutral conduit and follow due diligence rules. However, platforms lose this safe harbour protection if they have actual knowledge of illegal content and fail to take it down promptly. The IT (Intermediary Guidelines) Rules 2021 require significant social media platforms (with more than 50 lakh users) to: appoint a Chief Compliance Officer, Nodal Contact Person, and Grievance Officer in India; acknowledge user complaints within 24 hours and resolve within 15 days; proactively identify and remove child sexual abuse material; trace the first originator of a message when required by government order (relevant for WhatsApp). Users who are aggrieved by platform decisions can approach the Grievance Appellate Committee. Platforms that repeatedly fail to act on court orders or government notices can be made liable for hosted content. This means victims of defamation or harassment can sue both the poster and the platform in some circumstances.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "intermediary_liability",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act 2000 Section 79, IT (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021"
+    }
+  },
+  {
+    "id": "cyber_017_cyber_crime_investigation_up",
+    "text": "How does UP Police investigate cybercrime cases? Uttar Pradesh has a dedicated Cyber Crime investigation infrastructure. The UP Cyber Crime department is headquartered in Lucknow with district-level Cyber Crime Cells in all 75 districts. When a cybercrime complaint is filed: if filed online at cybercrime.gov.in, it is assigned to the relevant state or district cyber cell; if filed at a local police station, it is forwarded to the district Cyber Crime Cell for investigation; in financial fraud cases, the 1930 helpline coordinates between banks, payment gateways, and police to freeze fraudulent accounts. UP Police Cyber Cell has tools for: IP address tracing; social media account identification; call detail record (CDR) analysis; device forensics. For major cases involving organized cybercrime gangs, the UP STF (Special Task Force) Cyber Cell Lucknow leads investigation. Cooperation with international agencies like Interpol and CBI Cyber Division is sought for cross-border cybercrimes. Victims should always get a written acknowledgment of their complaint and follow up with the concerned Cyber Cell. Complaints can be tracked at cybercrime.gov.in using the complaint number.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "cyber_crime_investigation_up",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Police Cyber Cell, MHA Cyber Crime Portal, UP STF"
+    }
+  },
+  {
+    "id": "cyber_018_right_to_be_forgotten",
+    "text": "What is the right to be forgotten and can people get content removed from the internet? The right to be forgotten — the right to have personal information removed from the internet — is an emerging right in India. The Supreme Court in the Puttaswamy judgment 2017 recognized the right to privacy as a fundamental right under Article 21, which forms the basis for right to be forgotten. The Digital Personal Data Protection Act 2023 includes a right to erasure of personal data. In practice, individuals can: request removal of personal data from company databases under DPDP Act; approach High Courts for removal of private information published without consent; request search engines like Google to de-index harmful or outdated content through their removal request tools; approach the IT Grievance Appellate Committee if platforms refuse to remove content; for court order related information, approach the concerned court to restrict public access. Sensitive categories of information such as medical records, sexual orientation, and financial details have stronger protection. Victims of revenge porn, defamation, or unauthorized data publishing have successfully obtained court orders for content removal in India including from UP High Court at Allahabad.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "right_to_be_forgotten",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "DPDP Act 2023, Puttaswamy judgment 2017, IT (Intermediary Guidelines) Rules 2021"
+    }
+  },
+  {
+    "id": "cyber_019_cyber_law_for_businesses",
+    "text": "What cyber law compliance obligations do businesses in UP have? Businesses that handle personal data or operate digital systems have significant obligations under Indian cyber law. Key compliance requirements: IT Act Section 43A — body corporates that possess, deal with, or handle sensitive personal data must implement reasonable security practices; failure causing wrongful loss can lead to compensation liability. CERT-In Directions 2022 — all service providers, intermediaries, data centres, and body corporates must: report cybersecurity incidents to CERT-In within 6 hours; maintain logs of all IT systems for 180 days; mandatorily use NTP servers for time synchronization. DPDP Act 2023 — businesses must obtain valid consent before processing personal data; appoint a Data Protection Officer if processing large volumes; implement data security measures. E-commerce businesses must comply with Consumer Protection (E-Commerce) Rules 2020. Fintech businesses must follow RBI cybersecurity guidelines. Penalty for non-compliance: CERT-In can impose penalties; DPDP Act allows fines up to Rs 250 crore per violation. Small businesses in UP can contact UP MSME department or STPI Lucknow for guidance on cyber compliance.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "cyber_law_for_businesses",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "IT Act Section 43A, CERT-In Directions 2022, DPDP Act 2023"
+    }
+  },
+  {
+    "id": "cyber_020_use_cases",
+    "text": "Common real life cyber law situations in UP and where to go. Money transferred to fraud UPI account: call 1930 immediately, call bank to freeze account, file complaint at cybercrime.gov.in with transaction ID. Fake job offer asking for registration fees: file complaint at cybercrime.gov.in, report the phone number to DoT at sancharsaathi.gov.in. Morphed photos shared on WhatsApp groups: report to platform for takedown, file complaint at cybercrime.gov.in selecting Women and Children category, call 1090 for women victims. Social media account hacked: report to platform immediately, change all linked passwords, file complaint at cybercrime.gov.in, file FIR at Cyber Crime Cell. Someone creating fake Facebook or Instagram profile in your name: report to platform, file complaint at cybercrime.gov.in under cyber impersonation, file FIR under IT Act Section 66C and 66D. Aadhaar linked to unknown mobile number without consent: lock Aadhaar biometrics at myaadhaar.uidai.gov.in, call UIDAI at 1947, file complaint. Receiving threats or abusive messages online: preserve screenshots, file FIR at nearest police station or Cyber Crime Cell, apply for protection order from Magistrate. Business website hacked: report to CERT-In at cert-in.org.in, file FIR with UP Cyber Crime Cell, restore from backup.",
+    "metadata": {
+      "domain": "cyber_law",
+      "type": "use_cases",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "IT Act 2000, BNS 2023, CERT-In, UP Police Cyber Cell, MHA Cyber Crime Portal"
+    }
+  }
+]

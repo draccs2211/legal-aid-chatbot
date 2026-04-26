@@ -1,0 +1,222 @@
+[
+  {
+    "id": "family_001_overview",
+    "text": "Family law in India governs personal matters like marriage, divorce, maintenance, child custody, adoption, guardianship, and inheritance. India has a plural legal system where different personal laws apply based on religion: Hindu Marriage Act 1955 and Hindu Succession Act 1956 for Hindus, Buddhists, Jains, and Sikhs; Muslim Personal Law (Shariat) Application Act 1937 for Muslims; Indian Christian Marriage Act 1872 and Divorce Act 1869 for Christians; Parsi Marriage and Divorce Act 1936 for Parsis. The Special Marriage Act 1954 applies to inter-religion marriages and civil marriages. In Uttar Pradesh, family disputes are heard by Family Courts in every district under the Family Courts Act 1984. Family Courts have exclusive jurisdiction over matrimonial disputes, maintenance, custody, and guardianship. Free legal aid is available from the District Legal Services Authority (DLSA) in every UP district for women, children, and economically weaker persons. Mediation is strongly encouraged in Family Courts before litigation begins. The Allahabad High Court supervises all Family Courts in UP and has passed several landmark judgments on maintenance and custody.",
+    "metadata": {
+      "domain": "family",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Family Courts Act 1984, Hindu Marriage Act 1955, Muslim Personal Law, Special Marriage Act 1954"
+    }
+  },
+  {
+    "id": "family_002_marriage_registration",
+    "text": "What are the rules for marriage registration in UP? Marriage registration provides legal proof for passport, visa, property, and insurance purposes. In UP, Hindu marriages are registered under the Hindu Marriage Act 1955 through the online portal igrsup.gov.in run by the UP Registration and Stamp Department. Process: both spouses apply online at igrsup.gov.in; attend the Sub-Registrar's office of the area; submit marriage certificate from priest or temple, wedding photographs, age proof (Aadhaar, birth certificate), address proof, and two witnesses with ID; certificate is issued after verification. Fee is nominal. Muslim marriages are registered through the Waqf Board or local Qazi — registration is not mandatory under Muslim personal law but strongly advisable. Christian marriages are registered at the church and under the Indian Christian Marriage Act 1872. Civil marriages under Special Marriage Act 1954 are registered with the Marriage Officer (Sub-Registrar) of the district. Minimum age: 18 years for women and 21 years for men — marrying below this age is illegal under Prohibition of Child Marriage Act 2006. UP government has integrated marriage registration with Aadhaar for authenticity.",
+    "metadata": {
+      "domain": "family",
+      "type": "marriage_registration",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Hindu Marriage Act 1955 Section 8, igrsup.gov.in, Prohibition of Child Marriage Act 2006"
+    }
+  },
+  {
+    "id": "family_003_divorce",
+    "text": "What are the grounds and process for divorce in UP? Divorce law varies by religion. For Hindus under Hindu Marriage Act 1955, grounds for divorce include: cruelty, adultery, desertion for 2 or more years, conversion to another religion, mental disorder, leprosy, venereal disease, renunciation of world, and presumption of death. Mutual consent divorce: both parties can file for divorce by mutual consent under Section 13B HMA; after 6 months cooling off period (courts can waive this under Supreme Court ruling), divorce is granted. For Muslims: instant triple talaq is banned under Muslim Women (Protection of Rights on Marriage) Act 2019 — punishable with 3 years imprisonment; a Muslim woman can seek divorce through Khula or court-based Faskh. For Christians: Divorce Act 1869 applies — grounds include adultery, conversion, insanity, and cruelty. Special Marriage Act: divorce grounds similar to Hindu Marriage Act. All divorce petitions in UP are filed at the Family Court of the district where the couple last lived together. Filing fee is nominal. Average time for contested divorce in UP Family Courts is 2 to 5 years; mutual consent divorce typically takes 6 to 18 months. Free legal aid is available from DLSA for women in divorce cases.",
+    "metadata": {
+      "domain": "family",
+      "type": "divorce",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Marriage Act 1955 Section 13, 13B, Muslim Women (Protection of Rights on Marriage) Act 2019, Divorce Act 1869"
+    }
+  },
+  {
+    "id": "family_004_maintenance",
+    "text": "What is maintenance and who can claim it in UP? Maintenance means financial support ordered by a court for the upkeep of a spouse, children, or parents. Section 144 of BNSS 2023 (earlier Section 125 CrPC) provides a secular remedy for all religions: a wife, minor children, and parents who cannot maintain themselves can claim maintenance from the husband or adult son. Who can claim: wife including divorced wife until remarriage; minor children including illegitimate children; adult children with physical or mental disability; parents who cannot maintain themselves. Amount: the court decides based on the claimant's needs and the payer's income — there is no fixed minimum or maximum. Interim maintenance can be ordered quickly within weeks while the main case is pending. Non-payment of maintenance order is punishable with 1 month imprisonment. In addition to Section 144 BNSS, Hindu wives can claim maintenance under Section 24 and 25 of Hindu Marriage Act. Muslim divorced women are entitled to maintenance under Muslim Women (Protection of Rights on Divorce) Act 1986 and the Supreme Court's landmark Mohd Ahmed Khan vs Shah Bano Begum judgment. In UP, maintenance applications are filed at the Family Court of the district. DLSA provides free legal aid for maintenance cases.",
+    "metadata": {
+      "domain": "family",
+      "type": "maintenance",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNSS 2023 Section 144, Hindu Marriage Act 1955 Section 24-25, Muslim Women (Protection of Rights on Divorce) Act 1986"
+    }
+  },
+  {
+    "id": "family_005_child_custody",
+    "text": "What are the rules for child custody after separation or divorce in UP? Child custody is decided by the Family Court based on the best interests of the child — this is the paramount consideration above all else including parental rights. Types of custody: Physical custody — child lives with one parent; Legal custody — right to make decisions about child's education, health, and welfare (can be joint); Sole custody — one parent has both; Joint custody — both parents share. Factors considered: age of child (children below 5 usually with mother); financial stability of each parent; emotional bonding; educational needs; child's own preference for older children. Interim custody can be granted quickly while the main case is pending. Visitation rights are usually given to the non-custodial parent — typically alternate weekends and holidays. Taking the child to another city or country without court permission is contempt of court and can amount to kidnapping under BNS. In UP, custody matters go to the Family Court of the district. For NRI custody cases, the Allahabad High Court has specific guidelines under the Hague Convention framework. Grandparents can apply for visitation rights under Guardian and Wards Act 1890. Mediation through the Family Court counsellor is strongly encouraged for custody arrangements.",
+    "metadata": {
+      "domain": "family",
+      "type": "child_custody",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Minority and Guardianship Act 1956, Guardian and Wards Act 1890, Family Courts Act 1984"
+    }
+  },
+  {
+    "id": "family_006_streedhan_rights",
+    "text": "What is streedhan and what are a woman's rights over her gifts and jewelry in UP? Streedhan is all property — cash, jewelry, gifts, and assets — given to a woman before, during, or after marriage by her parents, in-laws, husband, or relatives. Streedhan is the absolute and exclusive property of the woman — no one else has any right over it. The husband or in-laws cannot demand, take, or use streedhan without the woman's consent. Taking or withholding streedhan is a criminal offence under Section 85 BNS (cruelty) and also amounts to theft or criminal breach of trust under BNS. A woman leaving her matrimonial home due to cruelty or divorce has the right to recover all her streedhan regardless of how long ago it was taken. If streedhan is withheld, the woman can: file FIR at Mahila Thana or nearest police station; approach the Family Court for recovery order; file complaint under PWDVA 2005 for monetary relief to recover streedhan. The Allahabad High Court has in several judgments upheld women's right to recover streedhan even years after separation. In UP, the Mahila Thana in each district handles streedhan complaints. The UP State Women Commission also intervenes in streedhan recovery cases when police are unresponsive.",
+    "metadata": {
+      "domain": "family",
+      "type": "streedhan_rights",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "BNS 2023 Section 85, 303, 316, PWDVA 2005, Allahabad High Court judgments on streedhan"
+    }
+  },
+  {
+    "id": "family_007_domestic_violence_family",
+    "text": "What family law remedies are available for domestic violence victims in UP? The Protection of Women from Domestic Violence Act 2005 (PWDVA) provides civil remedies for women facing domestic violence. Domestic violence under PWDVA includes physical violence, sexual violence by husband, emotional and verbal abuse, and economic abuse such as denying household expenses or taking away streedhan. Remedies: Protection Order — restrains abuser from committing acts of violence; Residence Order — wife cannot be thrown out of shared household even if it belongs to in-laws; Monetary Relief — for medical expenses, loss of earnings, maintenance, and streedhan recovery; Custody Order — temporary custody of children; Compensation Order — for injuries and mental agony. How to file in UP: approach the Protection Officer at the District Social Welfare Office of your district; or file application directly before the Judicial Magistrate First Class of the district; or approach any NGO recognized as a Service Provider under PWDVA. In UP, Protection Officers are appointed in all 75 districts. The Magistrate must hear the matter within 3 days of filing. Emergency protection orders can be issued the same day in urgent situations. Call 1090 Women Helpline or 112 for immediate police assistance. Free legal aid is available from DLSA.",
+    "metadata": {
+      "domain": "family",
+      "type": "domestic_violence_family",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Protection of Women from Domestic Violence Act 2005, Section 12, 17, 18, 19, 20, 22"
+    }
+  },
+  {
+    "id": "family_008_child_marriage",
+    "text": "What is the law against child marriage in UP and how to report it? Child marriage is prohibited under the Prohibition of Child Marriage Act 2006 (PCMA). Minimum age for marriage is 18 years for girls and 21 years for boys. A child marriage is voidable at the option of the minor — the child can get it declared void by approaching the court within 2 years of becoming an adult. Under BNS, a girl married below 18 can seek annulment at any time. Punishment: anyone who solemnizes, conducts, directs, or permits child marriage including parents, guardians, priests, and relatives can be imprisoned for up to 2 years and fined Rs 1 lakh. Every district in UP has a Child Marriage Prohibition Officer (CMPO) — usually the District Probation Officer. How to report in UP: call Childline 1098; call 112 UP Police; report to the CMPO of the district; approach the Child Welfare Committee; file complaint at the nearest police station. Courts can issue injunctions to stop child marriages before they take place. UP has seen child marriage incidents especially in rural districts like Bahraich, Shravasti, Sitapur, and Hardoi — Mission Shakti and Kanya Sumangala Yojana are specifically targeting reduction of child marriages in these districts. Reporting child marriage protects the girl's right to education and a dignified life.",
+    "metadata": {
+      "domain": "family",
+      "type": "child_marriage",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Prohibition of Child Marriage Act 2006, BNS 2023, UP Mission Shakti"
+    }
+  },
+  {
+    "id": "family_009_adoption",
+    "text": "What are the rules for adoption in India? Adoption law in India differs by religion. For Hindus, Buddhists, Jains, and Sikhs: adoption is governed by the Hindu Adoption and Maintenance Act 1956; a Hindu male or female can adopt with spouse's consent if married; a child given in adoption loses all rights in the biological family and gains full rights in the adoptive family. For all religions (secular adoption): the Juvenile Justice (Care and Protection of Children) Act 2015 governs adoption of children declared legally free for adoption by Child Welfare Committees; adoption is processed through CARA (Central Adoption Resource Authority) at cara.nic.in. Eligibility: married couple with 2 or more years of stable marriage, or single person; combined age of couple should not exceed 110 years for a child below 5 years. Muslims, Christians, and Parsis do not have adoption under their personal law — they can adopt under JJ Act or take children under guardianship under Guardian and Wards Act 1890. In UP, adoption-related matters are handled by the District Child Protection Unit (DCPU) at the District Probation Officer's office and the Child Welfare Committee of the district. Illegal or informal adoption without legal process is not recognized by courts and creates complications for the child's rights.",
+    "metadata": {
+      "domain": "family",
+      "type": "adoption",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Adoption and Maintenance Act 1956, JJ Act 2015, CARA cara.nic.in, Guardian and Wards Act 1890"
+    }
+  },
+  {
+    "id": "family_010_succession_inheritance",
+    "text": "What are the inheritance rights of family members under Indian law? Inheritance law is religion-based. For Hindus under Hindu Succession Act 1956 amended in 2005: Class I heirs (son, daughter, widow, mother) inherit equally; daughters have equal rights to ancestral property as sons since the 2005 amendment — this applies even if the daughter was born before 2005 or the father died before 2005 as clarified by the Supreme Court in Vineeta Sharma vs Rakesh Sharma 2020; a widow inherits the husband's share. For Muslims: inheritance follows Islamic law — share of a female heir is generally half of a male heir in the same class; no will can cover more than one-third of property. For Christians and Parsis: Indian Succession Act 1925 applies — spouse and children inherit equally with no gender discrimination. Will (Wasiyatnama): any person of sound mind above 18 years can make a will; must be signed by testator and witnessed by two persons; registration at Sub-Registrar office in UP is not mandatory but strongly advisable as registered wills are harder to challenge. Inheritance disputes in UP are filed in the Civil Court having jurisdiction over the property location. Allahabad High Court has jurisdiction over appeals from all UP Civil Courts in inheritance matters.",
+    "metadata": {
+      "domain": "family",
+      "type": "succession_inheritance",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Succession Act 1956, Amendment 2005, Indian Succession Act 1925, Vineeta Sharma vs Rakesh Sharma SC 2020"
+    }
+  },
+  {
+    "id": "family_011_muslim_personal_law",
+    "text": "What are the key provisions of Muslim personal law relevant to family matters in UP? Muslim personal law applies under the Muslim Personal Law (Shariat) Application Act 1937. Key provisions: Marriage (Nikah) is a contract between a man and woman with offer, acceptance, and mehr (dower) — minimum age under PCMA is 18 for girls and 21 for boys regardless of religion. Mehr: an amount promised by husband to wife at marriage — it is the wife's absolute right and must be paid. Divorce: instant triple talaq (talaq-e-biddat) is now a criminal offence under the Muslim Women (Protection of Rights on Marriage) Act 2019 — punishable with 3 years imprisonment and fine; a Muslim man can still pronounce talaq through proper procedure; a Muslim woman can seek Khula (divorce by returning mehr) or court-based Faskh. Maintenance: divorced Muslim women are entitled to maintenance during iddat period; the Supreme Court in Mohd Ahmed Khan vs Shah Bano 1985 and subsequent judgments held that Section 125 CrPC (now Section 144 BNSS) maintenance also applies to Muslim divorced women. Inheritance: daughters get half the share of sons; wife gets one-eighth share if children exist. In UP, Muslim family matters are handled by the Family Court of the district — there are no separate Shariat courts with civil jurisdiction.",
+    "metadata": {
+      "domain": "family",
+      "type": "muslim_personal_law",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Muslim Personal Law (Shariat) Application Act 1937, Muslim Women (Protection of Rights on Marriage) Act 2019, Shah Bano judgment 1985"
+    }
+  },
+  {
+    "id": "family_012_special_marriage_act",
+    "text": "What is the Special Marriage Act 1954 and how is it used in UP? The Special Marriage Act 1954 (SMA) allows any two people to marry regardless of religion, caste, or nationality — it is the law for inter-religion or inter-caste marriages and civil marriages. Process in UP: give notice of intended marriage to the Marriage Officer (Sub-Registrar) of the district where either party has resided for at least 30 days; notice is displayed publicly for 30 days; if no valid objection, marriage is solemnized in presence of 3 witnesses and Marriage Certificate is issued. The Allahabad High Court has held in multiple judgments that the mandatory 30-day public notice requirement violates the right to privacy under Article 21 — couples fearing social opposition or threat can request the Marriage Officer to waive public display. After SMA marriage, succession and inheritance are governed by the Indian Succession Act not personal law. Divorce under SMA is filed at the Family Court on grounds similar to Hindu Marriage Act. SMA marriages are common in UP for Hindu-Muslim, Hindu-Christian, and other inter-faith couples. Free legal aid is available from DLSA for couples facing threats or pressure against their SMA marriage. The Allahabad High Court's Hadiya-type orders protect couples facing family opposition to their inter-faith marriage.",
+    "metadata": {
+      "domain": "family",
+      "type": "special_marriage_act",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Special Marriage Act 1954, Allahabad High Court judgments on SMA and right to privacy"
+    }
+  },
+  {
+    "id": "family_013_guardianship",
+    "text": "What are the rules for guardianship of children and minors in UP? Guardianship means legal responsibility for care and welfare of a child. The Guardian and Wards Act 1890 applies to all religions for court appointment of guardians. Under Hindu law, Hindu Minority and Guardianship Act 1956 applies — natural guardian of a minor Hindu boy or unmarried girl is the father; after father, it is the mother; for child below 5 years custody is ordinarily with the mother. Courts appoint a guardian if natural guardian is unfit, deceased, or incapacitated — paramount consideration is welfare of the child. A guardian appointed by court is called a Certificated Guardian and needs court permission to sell the minor's property. Testamentary guardianship: a father can appoint a guardian for his children through a will. Guardianship of a mentally disabled adult is governed by the Mental Healthcare Act 2017 — application is made to the District Court. In UP, guardianship applications are filed at the Family Court of the district. UP Courts give significant weight to the child's preference when the child is above 9 to 10 years of age. Foreign custody orders are not automatically enforceable in UP — the parent must approach the Family Court or High Court for recognition and enforcement of the foreign order.",
+    "metadata": {
+      "domain": "family",
+      "type": "guardianship",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Guardian and Wards Act 1890, Hindu Minority and Guardianship Act 1956, Mental Healthcare Act 2017"
+    }
+  },
+  {
+    "id": "family_014_family_court_process",
+    "text": "How does the Family Court process work in Uttar Pradesh? Family Courts were set up under the Family Courts Act 1984 to resolve matrimonial and family disputes in a conciliatory and less adversarial manner. All 75 districts of UP have Family Courts. Jurisdiction: divorce and matrimonial disputes; maintenance; child custody and guardianship; recovery of streedhan; declaration of validity of marriage. Process: file a petition at the Family Court of the district with relevant documents and nominal court fee; court issues notice to the opposite party; both parties appear; court refers the matter to a court counsellor or mediator for reconciliation attempt; if reconciliation fails, the case proceeds to regular hearing; evidence is recorded and final order passed. Timelines: interim orders like interim maintenance or interim custody can be obtained within weeks; final disposal varies from 6 months to several years. Appeals from UP Family Courts go to the Allahabad High Court. Free legal aid is available from DLSA for women, children, and persons earning below Rs 3 lakh per year. In UP, the Principal Judge Family Court in Lucknow handles cases from Lucknow district and is also the administrative head of all UP Family Courts. Parties can appear without a lawyer in Family Court though legal representation is advisable for contested matters.",
+    "metadata": {
+      "domain": "family",
+      "type": "family_court_process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Family Courts Act 1984, UP Family Courts, Allahabad High Court, DLSA"
+    }
+  },
+  {
+    "id": "family_015_kanya_sumangala_schemes",
+    "text": "What are the key UP government schemes for girls and families? Kanya Sumangala Yojana is the flagship UP government scheme for welfare of girl children. Benefits: total Rs 25,000 in 6 instalments from birth to graduation — Rs 2,000 at birth; Rs 1,000 at 1-year immunization; Rs 2,000 at Class 1 admission; Rs 2,000 at Class 6 admission; Rs 3,000 at Class 9 admission; Rs 5,000 at graduation or diploma. Eligibility: families with annual income up to Rs 3 lakh; maximum 2 girls per family. Apply at mksy.up.gov.in or District Probation Officer's office. Other important UP family schemes: Widow Pension Yojana — Rs 500 per month for widows through the Social Welfare Department; Nirashrit Mahila Pension — for destitute women; Mukhyamantri Balika Ashirvad Yojana — cash support for girls; One Stop Centre (Sakhi Centres) — integrated support for women in distress; UP Bharan Poshan Yojana — nutritional support for pregnant and lactating women. For all these schemes, apply at the District Probation Officer's office or through the CM Helpline 1076. The UP government has significantly increased welfare spending for girls and women under Mission Shakti since 2020.",
+    "metadata": {
+      "domain": "family",
+      "type": "kanya_sumangala_schemes",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Kanya Sumangala Yojana UP, mksy.up.gov.in, UP Social Welfare Department, Mission Shakti"
+    }
+  },
+  {
+    "id": "family_016_property_rights_women",
+    "text": "What property rights do women have in the family context in UP? A Hindu woman's property rights under the Hindu Succession (Amendment) Act 2005 are equal to those of men. Key rights: a daughter has equal right to ancestral property as a son from birth — this cannot be taken away even if the father died before 2005 as clarified by the Supreme Court in Vineeta Sharma vs Rakesh Sharma 2020; a widow inherits her husband's full share of property; a woman has absolute right over her streedhan and no family member can take it. In UP, a woman can get her name entered in land records (khata/khatauni) at the Tehsildar's office — check land records at upbhulekh.gov.in. If a woman is being prevented from taking possession of her inherited property, she can: file a civil suit in the Civil Court of the district; file a complaint with the District Magistrate under Section 145 CrPC; file an RTI to check mutation records. For Muslim women, inheritance rights are governed by Islamic law under the Muslim Personal Law — daughters get half the share of sons but this is their legal entitlement and cannot be denied. The Allahabad High Court has in several cases upheld Muslim women's right to their inherited property.",
+    "metadata": {
+      "domain": "family",
+      "type": "property_rights_women",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Hindu Succession Amendment Act 2005, Vineeta Sharma vs Rakesh Sharma SC 2020, upbhulekh.gov.in"
+    }
+  },
+  {
+    "id": "family_017_free_legal_aid_family",
+    "text": "What free legal aid is available for family law matters in UP? Every woman, child, person earning below the poverty line, and victim of domestic violence has the right to free legal aid under the Legal Services Authorities Act 1987. Free legal aid for family matters is available from: District Legal Services Authority (DLSA) — present in every UP district; provides free lawyers and legal advice for divorce, maintenance, custody, streedhan recovery, and domestic violence cases; call 1516 (NALSA toll free helpline). Services provided by DLSA: free lawyer for court representation; free legal advice at Lok Adalats; assistance in drafting petitions and legal notices; Lok Adalat settlement for maintenance and matrimonial disputes — settlements at Lok Adalat are final and binding and happen faster than regular courts. In UP, Family Courts have attached Family Court Counsellors who provide free counselling and help parties understand their legal options before they engage in litigation. Women facing domestic violence can also get legal help from UP State Women Commission and NGOs like Mahila Samakhya. National Legal Services Authority website: nalsa.gov.in. UP SLSA helpline: 0522-2303626. Free legal aid lawyers in DLSA are paid by the government — there is no cost to the litigant.",
+    "metadata": {
+      "domain": "family",
+      "type": "free_legal_aid_family",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Legal Services Authorities Act 1987, NALSA, UP SLSA, DLSA, Family Courts Act 1984"
+    }
+  },
+  {
+    "id": "family_018_triple_talaq_law",
+    "text": "What is the triple talaq law and how does it protect Muslim women in UP? The Muslim Women (Protection of Rights on Marriage) Act 2019 made instant triple talaq — pronouncing talaq three times in one sitting verbally, in writing, or electronically — a criminal offence. Before this law, instant triple talaq was a major source of insecurity for Muslim women in UP. Key provisions: pronouncing instant triple talaq is void (has no legal effect) and is a cognizable, non-bailable offence; the husband can be imprisoned for up to 3 years and fined; the wife is entitled to maintenance for herself and dependent children from the husband; the wife gets custody of minor children. How to file a complaint in UP: file FIR at the nearest police station — police must register it as a cognizable offence; call 1090 Women Helpline; approach the Mahila Thana of the district. Only the wife or her blood relatives or a person related to her by marriage can file the complaint — strangers cannot file on her behalf. The wife has the right to withdraw the complaint at any stage which leads to bail for the husband. UP has seen significant cases under this law especially in districts like Moradabad, Rampur, Bareilly, Lucknow, and Meerut. The Act provides protection while also giving the wife control over whether to proceed with prosecution.",
+    "metadata": {
+      "domain": "family",
+      "type": "triple_talaq_law",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Muslim Women (Protection of Rights on Marriage) Act 2019, UP Police"
+    }
+  },
+  {
+    "id": "family_019_lok_adalat_family",
+    "text": "What is Lok Adalat and how can it help resolve family disputes faster in UP? Lok Adalat is an alternative dispute resolution mechanism under the Legal Services Authorities Act 1987. It provides a free, fast, and final settlement platform for disputes including family matters. Benefits of Lok Adalat for family disputes: completely free — no court fee; faster than regular courts — settlement in one or two sessions; settlement is final and binding and cannot be appealed; preserves dignity and relationship between parties. Family matters that can be resolved at Lok Adalat: maintenance disputes; divorce by mutual consent; property division between family members; matrimonial property disputes; matters pending in Family Court. National Lok Adalats are held four times a year — the National Legal Services Authority fixes dates. Permanent Lok Adalats function continuously. In UP, District Legal Services Authorities organize Lok Adalats in every district on the scheduled dates. How to approach: contact DLSA of your district; request referral of your family case to Lok Adalat; both parties must agree to participate. Lok Adalat settlement on maintenance: if both parties agree on a maintenance amount, the settlement deed is passed as a decree of the court — it is immediately enforceable. Call 1516 to find out about upcoming Lok Adalats in your UP district.",
+    "metadata": {
+      "domain": "family",
+      "type": "lok_adalat_family",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Legal Services Authorities Act 1987, NALSA, UP SLSA, DLSA"
+    }
+  },
+  {
+    "id": "family_020_use_cases",
+    "text": "Common real life family law situations in UP and where to go. Husband not paying maintenance after separation — file application under Section 144 BNSS at Family Court of district; call DLSA 1516 for free legal aid. Wife thrown out of house by in-laws — call 1090 or 112 immediately; approach Protection Officer at District Social Welfare Office under PWDVA; file for Residence Order in Magistrate Court. Husband pronounced triple talaq — file FIR at Mahila Thana under Muslim Women (Protection of Rights on Marriage) Act 2019; call 1090. Daughter being denied share in father's property — file civil suit in Civil Court; get name mutated in land records at Tehsildar office; check records at upbhulekh.gov.in. Child marriage being arranged for daughter — call Childline 1098 or 112 immediately; approach CMPO of district. Wife's streedhan and jewelry not returned — file FIR at Mahila Thana under Section 85 BNS; file complaint at UP State Women Commission. Husband seeking divorce and custody of children — approach Family Court with free legal aid from DLSA. Adoption process guidance — contact District Child Protection Unit at District Probation Officer's office; register at cara.nic.in. Need fast maintenance settlement without long court case — approach DLSA for Lok Adalat referral; call 1516.",
+    "metadata": {
+      "domain": "family",
+      "type": "use_cases",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Family Courts Act 1984, PWDVA 2005, BNSS 2023 Section 144, Muslim Women Acts, Hindu Succession Act, UP DLSA"
+    }
+  }
+]

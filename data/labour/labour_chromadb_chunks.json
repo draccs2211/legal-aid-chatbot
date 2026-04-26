@@ -1,0 +1,222 @@
+[
+  {
+    "id": "labour_001_overview",
+    "text": "Labour law in India protects the rights of workers in both organized and unorganized sectors. Every worker whether in a factory, shop, construction site, domestic work, or agriculture has legal rights related to wages, working hours, safety, and termination. In Uttar Pradesh, both Central Government laws (applicable nationwide) and UP State Government laws apply together. Key central laws include the Minimum Wages Act 1948, Payment of Wages Act 1936, Factories Act 1948, Industrial Disputes Act 1947, and the new Labour Codes (2019-2020). Key UP-specific laws include the UP Shops and Commercial Establishments Act 1962 and UP Industrial Disputes Act provisions. Workers can file complaints with Labour Department UP, Labour Court, or approach the Assistant Labour Commissioner of their district.",
+    "metadata": {
+      "domain": "labour",
+      "type": "overview",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Minimum Wages Act 1948, Industrial Disputes Act 1947, Labour Codes 2019-2020"
+    }
+  },
+  {
+    "id": "labour_002_minimum_wages",
+    "text": "What is minimum wage and what are the current rates in UP? Every employer must pay at least the minimum wage fixed by the government, paying less is a criminal offence. Minimum wages in Uttar Pradesh are revised periodically by the UP Labour Department. As of 2024, UP minimum wages are: Unskilled workers approximately Rs 10,285 per month; Semi-skilled approximately Rs 11,385 per month; Skilled approximately Rs 12,545 per month; Highly skilled approximately Rs 13,505 per month. These rates vary by industry and are revised twice yearly in April and October. Minimum wages apply to all workers including domestic workers, construction workers, agricultural workers, shop employees, and factory workers. If an employer pays less than minimum wage, the worker can file a complaint with the Assistant Labour Commissioner of the district. The employer can be fined up to Rs 500 and sentenced to 6 months imprisonment.",
+    "metadata": {
+      "domain": "labour",
+      "type": "minimum_wages",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Minimum Wages Act 1948, UP Labour Department Notification 2024"
+    }
+  },
+  {
+    "id": "labour_003_payment_of_wages",
+    "text": "What are the rules for payment of wages? Under the Payment of Wages Act 1936, wages must be paid on time. For establishments with fewer than 1000 workers, wages must be paid by the 7th of every month; for larger establishments, by the 10th. Wages cannot be deducted except for: absence from duty, damage caused, advance taken, income tax, PF contribution, and ESI contribution. Deductions cannot exceed 50% of wages in a month (75% in case of debt repayment). Wages must be paid in cash or by bank transfer, payment in kind is not allowed. Any unauthorized deduction or delay in wages can be reported to the Inspector under Payment of Wages Act. The employer can be penalized with fine up to Rs 7,500. For UP workers, complaints go to the Assistant Labour Commissioner of the concerned district.",
+    "metadata": {
+      "domain": "labour",
+      "type": "payment_of_wages",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Payment of Wages Act 1936, Section 3, 7, 15"
+    }
+  },
+  {
+    "id": "labour_004_working_hours",
+    "text": "What are the legal working hours for workers? Under the Factories Act 1948, a worker in a factory cannot be made to work more than 9 hours per day and 48 hours per week. Overtime is allowed but must be paid at double the ordinary wage rate. Weekly rest of at least one day is mandatory. Spread-over of work cannot exceed 10.5 hours in a day. Women workers cannot be employed between 7 PM and 6 AM in factories. For shops and commercial establishments in UP, the UP Shops and Commercial Establishments Act 1962 applies: maximum 9 hours per day and 54 hours per week; one day off per week mandatory. Any employee working on a weekly holiday must be given a substitute holiday or double wages. Violation of working hour rules can be reported to the Factory Inspector or Assistant Labour Commissioner.",
+    "metadata": {
+      "domain": "labour",
+      "type": "working_hours",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Factories Act 1948 Section 51-56, UP Shops and Commercial Establishments Act 1962"
+    }
+  },
+  {
+    "id": "labour_005_pf_esi",
+    "text": "What are PF and ESI and who is entitled to them? Provident Fund (PF): Under the Employees Provident Fund Act 1952, every establishment with 20 or more employees must enroll workers in EPFO. Employee contributes 12% of basic salary; employer also contributes 12%. Workers can check PF balance on the EPFO portal epfindia.gov.in or by missed call to 011-22901406. PF can be withdrawn on retirement, resignation after 2 months of unemployment, medical emergency, home purchase, or child education. ESI (Employee State Insurance): Under the ESI Act 1948, workers earning up to Rs 21,000 per month in establishments with 10 or more employees are entitled to ESI. Employee contributes 0.75% of wages; employer contributes 3.25%. ESI provides free medical treatment, sickness benefit of 70% wages during illness, maternity benefit for 26 weeks, disability benefit, and dependent benefit. Complaints of PF or ESI denial can be filed with Regional PF Commissioner UP or ESIC Regional Office Lucknow.",
+    "metadata": {
+      "domain": "labour",
+      "type": "pf_esi",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "EPF Act 1952, ESI Act 1948"
+    }
+  },
+  {
+    "id": "labour_006_termination_retrenchment",
+    "text": "What are the rules for termination and retrenchment of workers? For workers with 1 year or more of continuous service in establishments with 100 or more workers, the employer must obtain prior permission from the government before retrenchment or closure, this is called Chapter VB of the Industrial Disputes Act 1947. For establishments with fewer than 100 workers, one month notice or payment in lieu of notice must be given. Retrenchment compensation is 15 days average pay for every completed year of service. Workers cannot be dismissed for trade union activity or going on legal strike. In UP, wrongful termination can be challenged before the Labour Court by filing an industrial dispute. The complaint must be filed within 3 years of termination. Additionally, any worker dismissed without proper procedure can demand reinstatement with back wages through the Labour Court.",
+    "metadata": {
+      "domain": "labour",
+      "type": "termination",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Industrial Disputes Act 1947, Section 25F, 25N, Chapter VB"
+    }
+  },
+  {
+    "id": "labour_007_gratuity",
+    "text": "What is gratuity and who is eligible? Gratuity is a lump sum amount paid by an employer to an employee as recognition for services rendered. Under the Payment of Gratuity Act 1972, every employee who has completed 5 or more years of continuous service is entitled to gratuity on resignation, retirement, death, or disablement. The formula is: Gratuity equals last drawn basic salary plus DA multiplied by 15 divided by 26 multiplied by number of years of service. The maximum gratuity payable is Rs 20 lakh as amended in 2018. For death or disability, the 5-year rule is waived. Gratuity must be paid within 30 days of it becoming due, delay attracts simple interest at 10% per annum. If employer refuses to pay gratuity, the worker can file a complaint with the Controlling Authority which is the Assistant Labour Commissioner in UP. Gratuity is tax-exempt up to Rs 20 lakh for both government and private sector employees.",
+    "metadata": {
+      "domain": "labour",
+      "type": "gratuity",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Payment of Gratuity Act 1972, Section 4, 7"
+    }
+  },
+  {
+    "id": "labour_008_maternity_benefits",
+    "text": "What maternity benefits are women workers entitled to? Under the Maternity Benefit Act 1961 amended in 2017, every woman employee who has worked for at least 80 days in the last 12 months is entitled to: 26 weeks of paid maternity leave for the first two children; 12 weeks for the third child onwards; 12 weeks for mothers adopting a child below 3 months; 6 weeks in case of miscarriage or medical termination. The employer must pay the woman her full average daily wage during maternity leave. Creche facility is mandatory for establishments with 50 or more employees. A nursing break of 2 intervals per day is allowed. A woman cannot be dismissed or discharged during maternity leave. Complaints of denial of maternity benefits can be filed with the Inspector under the Act or the Assistant Labour Commissioner in UP. Employers who violate maternity benefit rules can be imprisoned for up to 1 year and fined up to Rs 5,000.",
+    "metadata": {
+      "domain": "labour",
+      "type": "maternity_benefits",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Maternity Benefit Act 1961, Amendment 2017"
+    }
+  },
+  {
+    "id": "labour_009_child_labour",
+    "text": "What is the law on child labour in India and UP? Under the Child Labour (Prohibition and Regulation) Amendment Act 2016, employment of children below 14 years is completely prohibited in all occupations and industries. Children between 14 and 18 years known as adolescents are prohibited from working in hazardous occupations like mines, factories, and construction. Adolescents can work in non-hazardous work but not during school hours and not more than 3 hours per day. Children can help in family-run businesses or in entertainment after school hours. The penalty for employing a child below 14 years is imprisonment of 6 months to 2 years and fine of Rs 20,000 to Rs 50,000. Repeat offences attract higher penalties. In UP, complaints of child labour can be filed with the District Labour Office, Childline at 1098, or UP Police. The District Magistrate has special powers to rescue child labourers.",
+    "metadata": {
+      "domain": "labour",
+      "type": "child_labour",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Child Labour (Prohibition and Regulation) Amendment Act 2016"
+    }
+  },
+  {
+    "id": "labour_010_bonded_labour",
+    "text": "What is bonded labour and what protections exist? Bonded labour also called bandhua mazdoori is a form of forced labour where a worker is bound to work for an employer to repay a debt, often under threat or coercion. Bonded labour is completely abolished in India under the Bonded Labour System (Abolition) Act 1976. Any bonded labour agreement is void and unenforceable. The bonded worker cannot be forced to repay the debt. District Magistrates are responsible for identifying, releasing, and rehabilitating bonded labourers. Released bonded labourers are entitled to rehabilitation assistance under the Central Sector Scheme: up to Rs 1 lakh for individuals and Rs 2 lakh for families. In UP, complaints of bonded labour can be filed with the District Magistrate, District Labour Office, or UP Police. The National Human Rights Commission (NHRC) also takes cognizance of bonded labour cases.",
+    "metadata": {
+      "domain": "labour",
+      "type": "bonded_labour",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Bonded Labour System (Abolition) Act 1976, Central Sector Scheme for Rehabilitation"
+    }
+  },
+  {
+    "id": "labour_011_construction_workers",
+    "text": "What special rights do construction workers have in UP? Construction workers are covered under the Building and Other Construction Workers (Regulation of Employment and Conditions of Service) Act 1996. Every construction worker who has worked for at least 90 days in the past 12 months must be registered with the UP Building and Other Construction Workers Welfare Board at upbocw.in. Benefits for registered construction workers in UP include: financial assistance of Rs 15,000 for marriage of daughters; scholarship for children's education; maternity benefit of Rs 12,000; medical assistance up to Rs 5 lakh; accident compensation up to Rs 1 lakh; pension after retirement; financial assistance for tools and equipment. The construction employer must pay 1% of total construction cost as cess to the welfare fund. Registration is done online at upbocw.in. An unregistered construction worker loses access to all these benefits.",
+    "metadata": {
+      "domain": "labour",
+      "type": "construction_workers",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "BOCW Act 1996, UP Building and Other Construction Workers Welfare Board"
+    }
+  },
+  {
+    "id": "labour_012_domestic_workers",
+    "text": "What are the rights of domestic workers in UP? Domestic workers including maids, cooks, drivers, and gardeners employed in households are among the most vulnerable workers. There is no dedicated Central law for domestic workers yet, but they are protected under several provisions. UP is yet to notify a specific state policy for domestic workers. However, domestic workers are entitled to minimum wages under the Minimum Wages Act 1948 if notified in the state schedule. They are protected from bonded labour, forced labour, and physical abuse under IPC. They can report workplace abuse or withheld wages to the local police or District Labour Office. The Unorganised Workers Social Security Act 2008 provides for registration of domestic workers as unorganised workers so they can access welfare schemes like Pradhan Mantri Shram Yogi Maandhan (PM-SYM), a pension scheme for unorganised workers earning less than Rs 15,000 per month. Workers can enroll via Jan Seva Kendra.",
+    "metadata": {
+      "domain": "labour",
+      "type": "domestic_workers",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Unorganised Workers Social Security Act 2008, Minimum Wages Act 1948"
+    }
+  },
+  {
+    "id": "labour_013_sexual_harassment",
+    "text": "What is the law on sexual harassment at the workplace? The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013, commonly called the POSH Act, protects every woman worker from sexual harassment at any workplace including offices, factories, shops, hospitals, educational institutions, and even domestic work. Every employer with 10 or more employees must constitute an Internal Complaints Committee (ICC). The complaint must be filed within 3 months of the incident. The ICC must complete inquiry within 90 days. If the complaint is found valid, the employer must take action ranging from written apology to termination and compensation. For workplaces with fewer than 10 workers or against the employer himself, complaints go to the Local Complaints Committee (LCC) formed by the District Officer. In UP, the District Officer at district headquarters oversees LCCs. Victims can also file a criminal complaint under IPC Section 354 for outraging modesty.",
+    "metadata": {
+      "domain": "labour",
+      "type": "sexual_harassment",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "POSH Act 2013, IPC Section 354"
+    }
+  },
+  {
+    "id": "labour_014_labour_codes",
+    "text": "What are the new Labour Codes and how do they affect workers? The Government of India consolidated 29 central labour laws into 4 Labour Codes between 2019 and 2020: First, the Code on Wages 2019 covers minimum wages, payment of wages, bonus, and equal remuneration for all workers including unorganised sector. Second, the Industrial Relations Code 2020 covers trade unions, industrial disputes, and standing orders. Third, the Social Security Code 2020 covers PF, ESI, gratuity, maternity benefit, and social security for gig and platform workers. Fourth, the Occupational Safety, Health and Working Conditions Code 2020 covers safety, working hours, and conditions across all industries. As of 2024, the Labour Codes have been passed by Parliament but not yet fully implemented as states including UP are still drafting their rules. Until implementation, the old laws continue to apply. Workers should follow existing laws while staying aware that codes may bring changes.",
+    "metadata": {
+      "domain": "labour",
+      "type": "labour_codes",
+      "language": "english",
+      "jurisdiction": "central",
+      "source": "Code on Wages 2019, Industrial Relations Code 2020, Social Security Code 2020, OSH Code 2020"
+    }
+  },
+  {
+    "id": "labour_015_complaint_process",
+    "text": "How to file a labour complaint in Uttar Pradesh? Step 1: Identify the right authority. For wage disputes and minimum wages go to the Assistant Labour Commissioner of your district. For PF complaints go to the Regional PF Commissioner at the EPFO office. For ESI complaints go to ESIC Regional Office Lucknow. For factory safety violations go to the Factory Inspector of the district. For child labour complaints go to the District Labour Officer or call Childline at 1098. For wrongful termination go to the Labour Court of the district. Step 2: File a written complaint with details of the employer, nature of violation, and proof if available. Step 3: The Labour Department must conduct an inquiry. Step 4: If unsatisfied with Labour Department action, approach the Labour Court by filing an industrial dispute. You do not need a lawyer for this, a union representative or the worker himself can file. UP Labour Department helpline: 1800-180-5412 toll free. Online complaint portal: upsamadhan.in or jansunwai.up.nic.in.",
+    "metadata": {
+      "domain": "labour",
+      "type": "complaint_process",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Industrial Disputes Act 1947, UP Labour Department"
+    }
+  },
+  {
+    "id": "labour_016_up_shops_act",
+    "text": "What is the UP Shops and Commercial Establishments Act 1962 and who does it cover? The UP Shops and Commercial Establishments Act 1962 governs all shops, hotels, restaurants, eating houses, theatres, cinemas, and other commercial establishments in Uttar Pradesh. It does not apply to factories covered by the Factories Act or government offices. Key provisions include: maximum 9 hours of work per day and 54 hours per week; one day of weekly rest is mandatory; overtime must be paid at double rate; workers are entitled to annual leave at 1 day for every 20 days of work; the establishment must be registered with the local municipality or UP Labour Department; workers cannot be dismissed without one month notice or salary in lieu of notice; women and young workers cannot be employed after 10 PM. Violations can be reported to the Chief Inspector of Shops and Establishments in the district.",
+    "metadata": {
+      "domain": "labour",
+      "type": "up_shops_act",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "UP Shops and Commercial Establishments Act 1962"
+    }
+  },
+  {
+    "id": "labour_017_trade_unions",
+    "text": "What are the rights of trade unions and workers to organize? Under the Trade Unions Act 1926, any 7 or more workers can form a trade union and get it registered with the Registrar of Trade Unions. A registered trade union has the right to negotiate with the employer collectively through collective bargaining. Registered trade unions are protected from civil and criminal prosecution for legitimate trade union activities. Workers cannot be dismissed or victimized for being a member of or forming a trade union, which is an Unfair Labour Practice under the Industrial Disputes Act. Workers have the right to go on strike but for establishments classified as public utility services, 14 days advance notice must be given. In UP, the Registrar of Trade Unions office is in Lucknow. Common UP trade union registrations cover textile, brick kiln, construction, transport, and agricultural workers.",
+    "metadata": {
+      "domain": "labour",
+      "type": "trade_unions",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Trade Unions Act 1926, Industrial Disputes Act 1947 Section 25T"
+    }
+  },
+  {
+    "id": "labour_018_unorganised_workers",
+    "text": "What benefits are available to unorganised workers in UP? Unorganised workers including street vendors, rickshaw pullers, daily wage labourers, agricultural workers, and home-based workers are covered under the Unorganised Workers Social Security Act 2008. Key government schemes available to them: PM Shram Yogi Maandhan (PM-SYM) provides pension of Rs 3,000 per month after 60 years for workers earning less than Rs 15,000 per month; Ayushman Bharat provides free health insurance up to Rs 5 lakh per year for eligible families; PM Jeevan Jyoti Bima Yojana provides life insurance of Rs 2 lakh at Rs 436 per year; PM Suraksha Bima Yojana provides accident insurance of Rs 2 lakh at Rs 20 per year; e-Shram card is a national database of unorganised workers that also provides Rs 2 lakh accident insurance free. Register at eshram.gov.in or any Jan Seva Kendra. UP Labour Department runs special camps for registration.",
+    "metadata": {
+      "domain": "labour",
+      "type": "unorganised_workers",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Unorganised Workers Social Security Act 2008, e-Shram portal, PM-SYM"
+    }
+  },
+  {
+    "id": "labour_019_equal_remuneration",
+    "text": "Is there a law against wage discrimination on the basis of gender? Yes. The Equal Remuneration Act 1976, now subsumed under the Code on Wages 2019, mandates equal pay for equal work regardless of gender. An employer cannot pay a woman worker less than a male worker for the same or similar work. Discrimination in recruitment on the basis of gender is also prohibited except in jobs where the government specifically permits it. Violations can be reported to the Labour Department. The employer can be fined between Rs 10,000 and Rs 20,000 for first offence and imprisoned for 2 years for repeat offences. In practice, wage discrimination against women remains common especially in agriculture and unorganised sectors in UP. Women workers are advised to document wage discrepancies and file complaints with the Assistant Labour Commissioner of the district.",
+    "metadata": {
+      "domain": "labour",
+      "type": "equal_remuneration",
+      "language": "english",
+      "jurisdiction": "both",
+      "source": "Equal Remuneration Act 1976, Code on Wages 2019"
+    }
+  },
+  {
+    "id": "labour_020_use_cases",
+    "text": "Common real life labour law situations in UP and where to go. Employer not paying minimum wage: complain to Assistant Labour Commissioner of district. Salary delayed beyond 7th or 10th of month: complaint under Payment of Wages Act to Labour Inspector. PF not deposited by employer: file online complaint at epfigms.gov.in or visit EPFO district office. ESI not provided though eligible: complaint to ESIC Regional Office Lucknow. Dismissed without notice or reason: file industrial dispute at Labour Court within 3 years. Maternity leave denied: complaint to Inspector under Maternity Benefit Act at Labour Department. Child working in shop or factory: call Childline 1098 or District Labour Office. Sexual harassment at workplace: file with Internal Complaints Committee or Local Complaints Committee at District Office. Construction worker not getting welfare benefits: register at upbocw.in and apply for benefits. Bonded labour situation: contact District Magistrate or call UP Police 112.",
+    "metadata": {
+      "domain": "labour",
+      "type": "use_cases",
+      "language": "english",
+      "jurisdiction": "uttar_pradesh",
+      "source": "Multiple Labour Laws, UP Labour Department"
+    }
+  }
+]
