@@ -4,10 +4,10 @@ from pydantic import BaseModel
 from typing import Optional, List
 import uvicorn
 
-from intent_detector import analyze_query
-from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
-from sarvam_client import generate_response, translate_text
-from config import DEEP_DOMAINS, BASIC_DOMAINS
+from backend.intent_detector import analyze_query
+from backend.rag_pipeline import retrieve_chunks, format_context, get_collection_stats
+from backend.sarvam_client import generate_response, translate_text
+from backend.config import DEEP_DOMAINS, BASIC_DOMAINS
 import re
 from scripts.load_chromadb import load_all_domains
 
