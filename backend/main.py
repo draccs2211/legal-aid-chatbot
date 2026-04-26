@@ -9,7 +9,7 @@ from backend.rag_pipeline import retrieve_chunks, format_context, get_collection
 from backend.sarvam_client import generate_response, translate_text
 from backend.config import DEEP_DOMAINS, BASIC_DOMAINS
 import re
-from scripts.load_chromadb import load_all_domains
+from backend.rag_pipeline import load_all_data
 
 db_loaded = False
 
@@ -17,8 +17,8 @@ def ensure_db_loaded():
     global db_loaded
     if not db_loaded:
         print("🔄 Loading ChromaDB...")
-        load_all_domains()
-        db_loaded = True
+        load_all_data()   # ✅ correct function
+        db_loaded = Tru
 
 def clean_reply(text: str) -> str:
     """Remove <think> reasoning tags from Sarvam-M output."""
