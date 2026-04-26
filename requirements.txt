@@ -5,3 +5,5 @@ sentence-transformers
 langdetect
 python-dotenv
 requests
+openai
+httpx
