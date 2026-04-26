@@ -9,6 +9,16 @@ from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
 from sarvam_client import generate_response, translate_text
 from config import DEEP_DOMAINS, BASIC_DOMAINS
 import re
+from scripts.load_chromadb import load_all_domains
+
+db_loaded = False
+
+def ensure_db_loaded():
+    global db_loaded
+    if not db_loaded:
+        print("🔄 Loading ChromaDB...")
+        load_all_domains()
+        db_loaded = True
 
 def clean_reply(text: str) -> str:
     """Remove <think> reasoning tags from Sarvam-M output."""
@@ -80,6 +90,7 @@ def get_quick_actions(domain: str, intent: str) -> List[str]:
 
 @app.get("/", response_model=HealthResponse)
 async def root():
+    ensure_db_loaded()   # 🔥 ADD THIS
     stats = get_collection_stats()
     return HealthResponse(
         status="ok",
@@ -106,7 +117,7 @@ async def chat(request: ChatRequest):
         intent = analysis["intent"]
         language = analysis["language"]
         is_emergency = analysis["is_emergency"]
-
+        ensure_db_loaded()
         # ─── Step 2: Retrieve relevant chunks ───
         chunks = retrieve_chunks(
             query=message,
@@ -184,7 +195,7 @@ async def get_domains():
 
 @app.get("/stats")
 async def get_stats():
-    """Get ChromaDB collection statistics."""
+    ensure_db_loaded()   # 🔥 ADD THIS
     return get_collection_stats()
 
 
