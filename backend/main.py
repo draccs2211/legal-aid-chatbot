@@ -99,7 +99,7 @@ async def root():
     )
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 async def health():
     return {"status": "ok", "service": "NyayMitra Legal Aid API"}
 
