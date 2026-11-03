@@ -4,7 +4,7 @@ DEVANAGARI = re.compile(r'[\u0900-\u097F]')
 
 HINGLISH_MARKERS = set([
     "kaise", "kya", "kab", "kyun", "kyunki", "kaun", "kitna", "kitni",
-    "mera", "meri", "mujhe", "mere", "hamara", "hamari", "tumhara",'hogyi','hogya'
+    "mera", "meri", "mujhe", "mere", "hamara", "hamari", "tumhara", "hogyi", "hogya",
     "aapka", "aapki", "unka", "uska", "iski", "iska",
     "karein", "karo", "karoon", "kar", "karna", "karte", "karti",
     "dena", "diya", "de", "dedo", "milega", "milegi", "milta",
@@ -124,11 +124,33 @@ def detect_emergency(text: str) -> bool:
     return any(kw in text_lower for kw in EMERGENCY_KEYWORDS)
 
 
+def _keyword_pattern(keyword: str):
+    """Match a keyword only as a whole word (optionally pluralised).
+
+    Plain `kw in text` also matches inside other words, e.g. 'sic' inside
+    'music' or 'st' inside 'first'. Lookarounds on \\w keep Devanagari and
+    keywords such as '156(3)' working.
+    """
+    return re.compile(r"(?<!\w)" + re.escape(keyword) + r"(?:s|es)?(?!\w)")
+
+
+_DOMAIN_PATTERNS = {
+    domain: [(_keyword_pattern(kw), len(kw.split())) for kw in keywords]
+    for domain, keywords in DOMAIN_KEYWORDS.items()
+}
+
+
 def detect_domain(text: str) -> str:
+    """Pick the domain whose keywords match best.
+
+    Each matched keyword scores its number of words, so a specific phrase
+    ('upi fraud') outweighs a generic word ('fraud'). Ties go to the domain
+    listed first in DOMAIN_KEYWORDS.
+    """
     text_lower = text.lower()
     domain_scores = {}
-    for domain, keywords in DOMAIN_KEYWORDS.items():
-        score = sum(1 for kw in keywords if kw in text_lower)
+    for domain, patterns in _DOMAIN_PATTERNS.items():
+        score = sum(weight for pattern, weight in patterns if pattern.search(text_lower))
         if score > 0:
             domain_scores[domain] = score
     if not domain_scores:

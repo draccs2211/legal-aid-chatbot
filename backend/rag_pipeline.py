@@ -2,7 +2,7 @@ import os
 import json
 import chromadb
 
-from config import CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS
+from config import CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS, DOMAIN_METADATA
 
 # ─── Initialize ChromaDB client ───
 _client = None
@@ -70,6 +70,11 @@ def load_all_data():
     return total_loaded
 
 
+def chroma_domain_value(domain: str) -> str:
+    """Translate a detector domain name into the value stored in the metadata."""
+    return DOMAIN_METADATA.get(domain, domain)
+
+
 def retrieve_chunks(query: str, domain: str = None, top_k: int = TOP_K_RESULTS) -> list:
     """Retrieve relevant chunks for a query."""
     collection = get_collection()
@@ -77,7 +82,7 @@ def retrieve_chunks(query: str, domain: str = None, top_k: int = TOP_K_RESULTS) 
     # Build filter
     where_filter = None
     if domain and domain != "general":
-        where_filter = {"domain": domain}
+        where_filter = {"domain": chroma_domain_value(domain)}
 
     results = collection.query(
         query_texts=[query],

@@ -140,7 +140,8 @@ async def chat(request: ChatRequest):
             context=context,
             language=language,
             is_emergency=is_emergency,
-            conversation_history=session_history
+            conversation_history=session_history,
+            domain=domain
         )
         response_text = clean_reply(response_text)
         # ─── Step 5: Update session history ───

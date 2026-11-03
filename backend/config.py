@@ -35,6 +35,12 @@ DOMAINS      = ["rti", "fir", "property", "traffic", "women_safety",
 DEEP_DOMAINS  = ["rti", "fir", "property", "traffic", "women_safety"]
 BASIC_DOMAINS = ["labour", "consumer", "cyber", "sc_st", "tenant", "family"]
 
+# ── Detector domain name -> value stored in Chroma metadata["domain"] ──
+# Only cyber differs: the data was ingested with domain="cyber_law".
+# Mapped in code (not by editing the data) because the loader never updates
+# chunks that already exist.
+DOMAIN_METADATA = {"cyber": "cyber_law"}
+
 # ── Domain helplines map ──
 DOMAIN_HELPLINES = {
     "rti":          "UP State Information Commission: 0522-2308904 | RTI Online: rtionline.gov.in",
