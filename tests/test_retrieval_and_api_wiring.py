@@ -65,3 +65,26 @@ def test_chat_passes_detected_domain_to_the_llm_layer(client):
 def test_chat_rejects_empty_message(client):
     c, _ = client
     assert c.post("/chat", json={"message": "   "}).status_code == 400
+
+
+def test_retrieve_chunks_returns_chunk_ids(monkeypatch):
+    """The evaluation harness scores retrieval by chunk id."""
+    class Fake:
+        def query(self, **kwargs):
+            return {"ids": [["rti_003_fees", "rti_006_time_limits"]],
+                    "documents": [["a", "b"]],
+                    "metadatas": [[{"domain": "rti"}, {"domain": "rti"}]],
+                    "distances": [[0.1, 0.2]]}
+
+    monkeypatch.setattr(rag_pipeline, "get_collection", lambda: Fake())
+    chunks = rag_pipeline.retrieve_chunks("fee", domain="rti")
+    assert [c["id"] for c in chunks] == ["rti_003_fees", "rti_006_time_limits"]
+
+
+def test_retrieve_chunks_tolerates_a_result_without_ids(monkeypatch):
+    class Fake:
+        def query(self, **kwargs):
+            return {"documents": [["a"]], "metadatas": [[{}]], "distances": [[0.1]]}
+
+    monkeypatch.setattr(rag_pipeline, "get_collection", lambda: Fake())
+    assert rag_pipeline.retrieve_chunks("x")[0]["id"] is None

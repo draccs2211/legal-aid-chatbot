@@ -1,0 +1,1160 @@
+[
+ {
+  "id": "q001",
+  "query": "RTI application fee kitni hoti hai?",
+  "lang": "hinglish",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_003_fees": 2
+  },
+  "answer_keywords": [
+   "Rs 10"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q002",
+  "query": "How long does a PIO have to reply to an RTI?",
+  "lang": "en",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_006_time_limits": 2
+  },
+  "answer_keywords": [
+   "30 days"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q003",
+  "query": "RTI ka jawab nahi aaya to kya karein",
+  "lang": "hinglish",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_007_appeal": 2,
+   "rti_009_penalties": 1,
+   "rti_006_time_limits": 1
+  },
+  "answer_keywords": [
+   "First Appeal"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q004",
+  "query": "आरटीआई ऑनलाइन कैसे डालें",
+  "lang": "devanagari",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_004_online_process": 2
+  },
+  "answer_keywords": [
+   "rtionline.gov.in"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q005",
+  "query": "Which information is exempt from RTI?",
+  "lang": "en",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_008_exemptions": 2
+  },
+  "answer_keywords": [
+   "Section 8"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q006",
+  "query": "UP sarkar ke vibhag mein RTI kahan file karein",
+  "lang": "hinglish",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_011_up_specific": 2,
+   "rti_005_offline_process": 1
+  },
+  "answer_keywords": [
+   "Uttar Pradesh"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q007",
+  "query": "Can a foreigner file an RTI application?",
+  "lang": "en",
+  "expected_domain": "rti",
+  "answerable": true,
+  "relevant": {
+   "rti_002_eligibility": 2
+  },
+  "answer_keywords": [
+   "citizen"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q008",
+  "query": "Police FIR likhne se mana kar rahi hai",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_006_appeal": 2,
+   "fir_002_rights": 1,
+   "fir_003_process": 1,
+   "fir_009_faqs": 1
+  },
+  "answer_keywords": [
+   "police"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q009",
+  "query": "What is a Zero FIR?",
+  "lang": "en",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_002_rights": 2,
+   "fir_007_emergency": 2
+  },
+  "answer_keywords": [
+   "Zero FIR"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q010",
+  "query": "FIR kaise darj karein UP mein",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_003_process": 2,
+   "fir_008_up_specific": 1
+  },
+  "answer_keywords": [
+   "Step 1"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q011",
+  "query": "Cognizable aur non cognizable offence mein kya fark hai",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_011_cognizable_vs_noncognizable": 2
+  },
+  "answer_keywords": [
+   "Cognizable"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q012",
+  "query": "anticipatory bail kya hota hai",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_013_bail_types": 2
+  },
+  "answer_keywords": [
+   "Anticipatory"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q013",
+  "query": "Chargesheet kitne din mein file hoti hai",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_012_chargesheet": 2
+  },
+  "answer_keywords": [
+   "90 days"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q014",
+  "query": "BNSS ne CrPC mein kya badla",
+  "lang": "hinglish",
+  "expected_domain": "fir",
+  "answerable": true,
+  "relevant": {
+   "fir_014_bnss_2023": 2
+  },
+  "answer_keywords": [
+   "BNSS"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q015",
+  "query": "Mera landlord deposit wapas nahi de raha",
+  "lang": "hinglish",
+  "expected_domain": "tenant",
+  "answerable": true,
+  "relevant": {
+   "tenant_004_security_deposit": 2,
+   "tenant_011_case_examples": 1,
+   "tenant_007_dispute_process": 1,
+   "tenant_006_common_issues": 1
+  },
+  "answer_keywords": [
+   "deposit"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q016",
+  "query": "Can my landlord evict me without notice?",
+  "lang": "en",
+  "expected_domain": "tenant",
+  "answerable": true,
+  "relevant": {
+   "tenant_003_eviction_rules": 2,
+   "tenant_010_faqs": 2
+  },
+  "answer_keywords": [
+   "notice"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q017",
+  "query": "मकान मालिक ने बिना नोटिस घर खाली करने को कहा",
+  "lang": "devanagari",
+  "expected_domain": "tenant",
+  "answerable": true,
+  "relevant": {
+   "tenant_003_eviction_rules": 2,
+   "tenant_010_faqs": 1,
+   "tenant_005_notice_rules": 1
+  },
+  "answer_keywords": [
+   "notice"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q018",
+  "query": "Rent control court mein complaint kahan karein",
+  "lang": "hinglish",
+  "expected_domain": "tenant",
+  "answerable": true,
+  "relevant": {
+   "tenant_008_dispute_forums": 2
+  },
+  "answer_keywords": [
+   "Rent Control"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q019",
+  "query": "Kiraya nahi dene wale tenant ko kaise hataye",
+  "lang": "hinglish",
+  "expected_domain": "tenant",
+  "answerable": true,
+  "relevant": {
+   "tenant_006_common_issues": 2,
+   "tenant_003_eviction_rules": 2
+  },
+  "answer_keywords": [
+   "rent"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q020",
+  "query": "Challan galat kata hai mera",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_004_wrong_challan_dispute": 2,
+   "traffic_003_echallan_check_pay": 1,
+   "traffic_013_faqs": 1
+  },
+  "answer_keywords": [
+   "challan"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q021",
+  "query": "e-challan online kaise bharein",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_003_echallan_check_pay": 2
+  },
+  "answer_keywords": [
+   "echallan.parivahan.gov.in"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q022",
+  "query": "Fine for driving without helmet in UP",
+  "lang": "en",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_002_fines_table": 2,
+   "traffic_015_tips_common_violations": 1
+  },
+  "answer_keywords": [
+   "helmet"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q023",
+  "query": "Drunk driving ki saza kya hai",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_008_drunk_driving": 2
+  },
+  "answer_keywords": [
+   "Drunk"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q024",
+  "query": "Gaadi seize ho gayi, wapas kaise milegi",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_006_vehicle_seizure": 2
+  },
+  "answer_keywords": [
+   "seiz"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q025",
+  "query": "What documents must I carry while driving?",
+  "lang": "en",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_007_documents_required": 2
+  },
+  "answer_keywords": [
+   "driving licence"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q026",
+  "query": "Road accident hone par kya karna chahiye",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_011_accident_procedure": 2
+  },
+  "answer_keywords": [
+   "112"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q027",
+  "query": "Yamuna Expressway speed limit kya hai",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_014_speed_limits": 2,
+   "traffic_009_expressway_rules": 2
+  },
+  "answer_keywords": [
+   "Expressway"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q028",
+  "query": "Learner licence ki minimum age kitni hai",
+  "lang": "hinglish",
+  "expected_domain": "traffic",
+  "answerable": true,
+  "relevant": {
+   "traffic_010_minor_driving": 2
+  },
+  "answer_keywords": [
+   "learner"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q029",
+  "query": "Defective mobile phone ka refund kaise milega",
+  "lang": "hinglish",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_006_how_to_file_complaint": 1,
+   "consumer_020_use_cases": 2,
+   "consumer_004_what_complaints": 1
+  },
+  "answer_keywords": [
+   "defective"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q030",
+  "query": "Consumer court mein complaint kaise file karein",
+  "lang": "hinglish",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_006_how_to_file_complaint": 2,
+   "consumer_019_edaakhil_portal": 1,
+   "consumer_005_forum_jurisdiction": 1
+  },
+  "answer_keywords": [
+   "Step 1"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q031",
+  "query": "Which consumer forum should I approach for a 30 lakh claim?",
+  "lang": "en",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_005_forum_jurisdiction": 2
+  },
+  "answer_keywords": [
+   "District"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q032",
+  "query": "Online order mein galat product aaya aur return nahi le rahe",
+  "lang": "hinglish",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_008_ecommerce_rights": 2
+  },
+  "answer_keywords": [
+   "e-commerce"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q033",
+  "query": "Insurance claim reject ho gaya kya karein",
+  "lang": "hinglish",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_010_insurance_complaints": 2
+  },
+  "answer_keywords": [
+   "insurance"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q034",
+  "query": "Builder possession nahi de raha, kya karein",
+  "lang": "hinglish",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_011_builder_rera": 2,
+   "property_007_rera_complaint": 2
+  },
+  "answer_keywords": [
+   "RERA"
+  ],
+  "qtype": "cross_domain"
+ },
+ {
+  "id": "q035",
+  "query": "What is the National Consumer Helpline?",
+  "lang": "en",
+  "expected_domain": "consumer",
+  "answerable": true,
+  "relevant": {
+   "consumer_018_national_consumer_helpline": 2
+  },
+  "answer_keywords": [
+   "National Consumer Helpline"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q036",
+  "query": "Online UPI fraud hua hai",
+  "lang": "hinglish",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_003_online_financial_fraud": 2,
+   "cyber_002_helplines_reporting": 1,
+   "cyber_020_use_cases": 1
+  },
+  "answer_keywords": [
+   "fraud"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q037",
+  "query": "Where do I report a cyber crime in UP?",
+  "lang": "en",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_002_helplines_reporting": 2,
+   "cyber_017_cyber_crime_investigation_up": 1
+  },
+  "answer_keywords": [
+   "1930"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q038",
+  "query": "Mere photo morph karke blackmail kar rahe hain",
+  "lang": "hinglish",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_006_morphing_sextortion": 2,
+   "cyber_002_helplines_reporting": 1
+  },
+  "answer_keywords": [
+   "Morphing"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q039",
+  "query": "Instagram par fake account bana kar badnaam kar raha hai",
+  "lang": "hinglish",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_007_social_media_defamation": 2,
+   "cyber_005_cyberstalking_harassment": 1
+  },
+  "answer_keywords": [
+   "impersonation"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q040",
+  "query": "Aadhaar misuse hua to kya karein",
+  "lang": "hinglish",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_015_aadhaar_misuse": 2
+  },
+  "answer_keywords": [
+   "Aadhaar"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q041",
+  "query": "फिशिंग ईमेल से पैसे कट गए",
+  "lang": "devanagari",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_010_email_phishing_scams": 2,
+   "cyber_003_online_financial_fraud": 2
+  },
+  "answer_keywords": [
+   "Phishing"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q042",
+  "query": "My personal data was leaked, what are my rights under DPDP?",
+  "lang": "en",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_009_data_protection": 2
+  },
+  "answer_keywords": [
+   "Digital Personal"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q043",
+  "query": "Right to be forgotten kya hai",
+  "lang": "hinglish",
+  "expected_domain": "cyber",
+  "answerable": true,
+  "relevant": {
+   "cyber_018_right_to_be_forgotten": 2
+  },
+  "answer_keywords": [
+   "forgotten"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q044",
+  "query": "Divorce ka process kya hai UP mein",
+  "lang": "hinglish",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_003_divorce": 2,
+   "family_014_family_court_process": 1
+  },
+  "answer_keywords": [
+   "divorce"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q045",
+  "query": "Husband maintenance nahi de raha",
+  "lang": "hinglish",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_004_maintenance": 2,
+   "family_020_use_cases": 1
+  },
+  "answer_keywords": [
+   "maintenance"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q046",
+  "query": "Child custody ke rules kya hain",
+  "lang": "hinglish",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_005_child_custody": 2
+  },
+  "answer_keywords": [
+   "custody"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q047",
+  "query": "स्त्रीधन क्या होता है",
+  "lang": "devanagari",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_006_streedhan_rights": 2
+  },
+  "answer_keywords": [
+   "Streedhan"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q048",
+  "query": "How to register a marriage in UP?",
+  "lang": "en",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_002_marriage_registration": 2
+  },
+  "answer_keywords": [
+   "registration"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q049",
+  "query": "Triple talaq law kya kehta hai",
+  "lang": "hinglish",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_018_triple_talaq_law": 2
+  },
+  "answer_keywords": [
+   "talaq"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q050",
+  "query": "Pita ki property mein beti ka hissa hota hai kya",
+  "lang": "hinglish",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_010_succession_inheritance": 2,
+   "family_016_property_rights_women": 2
+  },
+  "answer_keywords": [
+   "daughter"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q051",
+  "query": "How can I adopt a child in India?",
+  "lang": "en",
+  "expected_domain": "family",
+  "answerable": true,
+  "relevant": {
+   "family_009_adoption": 2
+  },
+  "answer_keywords": [
+   "adoption"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q052",
+  "query": "Salary nahi mili 3 mahine se",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_003_payment_of_wages": 2,
+   "labour_015_complaint_process": 1,
+   "labour_020_use_cases": 1
+  },
+  "answer_keywords": [
+   "wages"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q053",
+  "query": "UP mein minimum wage kitni hai",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_002_minimum_wages": 2
+  },
+  "answer_keywords": [
+   "minimum wage"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q054",
+  "query": "Gratuity kitne saal baad milti hai",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_007_gratuity": 2
+  },
+  "answer_keywords": [
+   "gratuity"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q055",
+  "query": "Company ne bina notice ke nikal diya",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_006_termination_retrenchment": 2
+  },
+  "answer_keywords": [
+   "notice"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q056",
+  "query": "Maternity leave kitni milti hai",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_008_maternity_benefits": 2
+  },
+  "answer_keywords": [
+   "26 weeks"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q057",
+  "query": "Employer PF nahi kaat raha",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_005_pf_esi": 2
+  },
+  "answer_keywords": [
+   "Provident Fund"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q058",
+  "query": "Domestic worker ke kya rights hain",
+  "lang": "hinglish",
+  "expected_domain": "labour",
+  "answerable": true,
+  "relevant": {
+   "labour_012_domestic_workers": 2
+  },
+  "answer_keywords": [
+   "Domestic"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q059",
+  "query": "Khatauni khasra online kaise dekhein",
+  "lang": "hinglish",
+  "expected_domain": "property",
+  "answerable": true,
+  "relevant": {
+   "property_002_land_records": 2
+  },
+  "answer_keywords": [
+   "Khatauni"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q060",
+  "query": "Dakhil kharij kaise karwayein",
+  "lang": "hinglish",
+  "expected_domain": "property",
+  "answerable": true,
+  "relevant": {
+   "property_003_mutation": 2
+  },
+  "answer_keywords": [
+   "Mutation"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q061",
+  "query": "Stamp duty in UP property registration",
+  "lang": "en",
+  "expected_domain": "property",
+  "answerable": true,
+  "relevant": {
+   "property_004_registration": 2
+  },
+  "answer_keywords": [
+   "Stamp"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q062",
+  "query": "Padosi ne meri zameen par kabza kar liya",
+  "lang": "hinglish",
+  "expected_domain": "property",
+  "answerable": true,
+  "relevant": {
+   "property_006_encroachment": 2,
+   "property_013_appeal": 1
+  },
+  "answer_keywords": [
+   "Encroachment"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q063",
+  "query": "Benami property kya hoti hai",
+  "lang": "hinglish",
+  "expected_domain": "property",
+  "answerable": true,
+  "relevant": {
+   "property_008_benami": 2
+  },
+  "answer_keywords": [
+   "Benami"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q064",
+  "query": "Pati maar raha hai ghar mein, kya karoon?",
+  "lang": "hinglish",
+  "expected_domain": "women_safety",
+  "answerable": true,
+  "relevant": {
+   "women_005_emergency_steps": 2,
+   "women_006_filing_complaint": 1,
+   "women_012_helplines": 1,
+   "women_007_protection_order": 1,
+   "women_004_key_rights": 1
+  },
+  "answer_keywords": [
+   "safety"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q065",
+  "query": "How do I get a Protection Order under the Domestic Violence Act?",
+  "lang": "en",
+  "expected_domain": "women_safety",
+  "answerable": true,
+  "relevant": {
+   "women_007_protection_order": 2
+  },
+  "answer_keywords": [
+   "Protection Order"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q066",
+  "query": "दहेज के लिए ससुराल वाले परेशान कर रहे हैं",
+  "lang": "devanagari",
+  "expected_domain": "women_safety",
+  "answerable": true,
+  "relevant": {
+   "women_008_dowry_harassment": 2
+  },
+  "answer_keywords": [
+   "498A"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q067",
+  "query": "Women helpline numbers in UP",
+  "lang": "en",
+  "expected_domain": "women_safety",
+  "answerable": true,
+  "relevant": {
+   "women_012_helplines": 2
+  },
+  "answer_keywords": [
+   "1090"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q068",
+  "query": "Office mein boss galat comments karta hai",
+  "lang": "hinglish",
+  "expected_domain": "women_safety",
+  "answerable": true,
+  "relevant": {
+   "women_010_workplace_harassment": 2,
+   "labour_013_sexual_harassment": 2
+  },
+  "answer_keywords": [
+   "harassment"
+  ],
+  "qtype": "cross_domain"
+ },
+ {
+  "id": "q069",
+  "query": "SC ST act mein kya rights hain?",
+  "lang": "hinglish",
+  "expected_domain": "sc_st",
+  "answerable": true,
+  "relevant": {
+   "sc_st_001_overview": 2,
+   "sc_st_004_special_features": 1,
+   "sc_st_003_what_is_atrocity": 1
+  },
+  "answer_keywords": [
+   "SC"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q070",
+  "query": "Jaati suchak gaali dene par complaint kaise karein",
+  "lang": "hinglish",
+  "expected_domain": "sc_st",
+  "answerable": true,
+  "relevant": {
+   "sc_st_005_filing_complaint": 2,
+   "sc_st_003_what_is_atrocity": 1
+  },
+  "answer_keywords": [
+   "complaint"
+  ],
+  "qtype": "situation"
+ },
+ {
+  "id": "q071",
+  "query": "SC/ST victim ko compensation kitna milta hai",
+  "lang": "hinglish",
+  "expected_domain": "sc_st",
+  "answerable": true,
+  "relevant": {
+   "sc_st_007_victim_relief": 2
+  },
+  "answer_keywords": [
+   "compensation"
+  ],
+  "qtype": "direct"
+ },
+ {
+  "id": "q072",
+  "query": "GST registration kaise karein",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q073",
+  "query": "Passport renewal ka process kya hai",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q074",
+  "query": "How do I file my income tax return?",
+  "lang": "en",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q075",
+  "query": "Best restaurant in Lucknow",
+  "lang": "en",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q076",
+  "query": "cricket world cup ka score kya hai",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q077",
+  "query": "Aadhaar card mein address kaise change karein",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q078",
+  "query": "Home loan ka interest rate kitna hai",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q079",
+  "query": "Death certificate kaise banwayein",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q080",
+  "query": "How to start a private limited company?",
+  "lang": "en",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q081",
+  "query": "Kya aap mujhe ek achha vakeel bata sakte hain",
+  "lang": "hinglish",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q082",
+  "query": "मेरे बच्चे का स्कूल एडमिशन कैसे होगा",
+  "lang": "devanagari",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ },
+ {
+  "id": "q083",
+  "query": "Weather in Lucknow today",
+  "lang": "en",
+  "expected_domain": "general",
+  "answerable": false,
+  "relevant": {},
+  "answer_keywords": [],
+  "qtype": "unanswerable"
+ }
+]
