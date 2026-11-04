@@ -1,5 +1,7 @@
 import re
 
+from safety import ALERT_LEVELS, assess_risk
+
 DEVANAGARI = re.compile(r'[\u0900-\u097F]')
 
 HINGLISH_MARKERS = set([
@@ -99,16 +101,6 @@ DOMAIN_KEYWORDS = {
     ],
 }
 
-EMERGENCY_KEYWORDS = [
-    "maar pit", "maar raha hai", "maar diya", "bachao", "help me",
-    "kidnapping", "utha liya", "rape", "jabardasti",
-    "jaan ka khatra", "jaan se marna", "khoon", "hatya", "murder",
-    "aag lagi", "jalaya", "accident", "pistol", "chaku",
-    "emergency", "danger", "khatra", "ghar mein ghus aaye",
-    "dhamki de raha", "loot", "dacoity", "maar dega", "jaan lega",
-]
-
-
 def detect_language(text: str) -> str:
     if DEVANAGARI.search(text):
         return "hindi"
@@ -120,8 +112,12 @@ def detect_language(text: str) -> str:
 
 
 def detect_emergency(text: str) -> bool:
-    text_lower = text.lower()
-    return any(kw in text_lower for kw in EMERGENCY_KEYWORDS)
+    """True when the message needs the emergency or self-harm path.
+
+    Thin wrapper kept for backward compatibility; the real logic (four risk
+    levels, negation handling, Hindi/Hinglish phrases) lives in safety.py.
+    """
+    return assess_risk(text)["level"] in ALERT_LEVELS
 
 
 def _keyword_pattern(keyword: str):
@@ -174,9 +170,16 @@ def detect_intent(text: str) -> str:
 
 
 def analyze_query(text: str) -> dict:
+    risk = assess_risk(text)
+    language = detect_language(text)
+    # Short Hinglish messages ("marna chahta hoon") can look English to the
+    # marker-based detector; trust the phrase that actually matched.
+    if risk["level"] in ALERT_LEVELS and risk["language_hint"] == "hindi":
+        language = "hindi"
     return {
-        "language":     detect_language(text),
+        "language":     language,
         "domain":       detect_domain(text),
         "intent":       detect_intent(text),
-        "is_emergency": detect_emergency(text),
+        "is_emergency": risk["level"] in ALERT_LEVELS,
+        "risk_level":   risk["level"],
     }

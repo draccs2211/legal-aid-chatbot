@@ -9,19 +9,10 @@ from config import (
 )
 import os
 
+from safety import emergency_block
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL   = "gpt-4o-mini"
-
-EMERGENCY_HELPLINES = (
-    "EMERGENCY HELPLINES: "
-    "UP Police Emergency 112. "
-    "UP Mahila Power Line 1090. "
-    "One Stop Centre Sakhi 181. "
-    "Child Helpline 1098. "
-    "SC ST Atrocities Helpline 14566. "
-    "UP CM Helpline 1076."
-)
-
 
 def clean_response(text: str) -> str:
     """Remove think tags, markdown, and special characters for clean ASR/TTS output."""
@@ -131,13 +122,13 @@ def generate_response(query: str, context: str, language: str = "english",
             print(f"⚠️  OpenAI failed: {e}")
 
     if raw_reply is None:
-        return EMERGENCY_HELPLINES if is_emergency else \
+        return emergency_block(language) if is_emergency else \
                "Sorry, unable to process right now. Please call 112 for emergency or 1076 for UP CM Helpline."
 
     cleaned = clean_response(raw_reply)
 
     if is_emergency:
-        cleaned = EMERGENCY_HELPLINES + "\n\n" + cleaned
+        cleaned = emergency_block(language) + "\n\n" + cleaned
 
     return cleaned
 
