@@ -91,9 +91,11 @@ def retrieve_chunks(query: str, domain: str = None, top_k: int = TOP_K_RESULTS) 
     )
 
     chunks = []
+    ids = (results.get("ids") or [[]])[0] if results else []
     if results and results["documents"] and results["documents"][0]:
         for i, doc in enumerate(results["documents"][0]):
             chunks.append({
+                "id": ids[i] if i < len(ids) else None,
                 "text": doc,
                 "metadata": results["metadatas"][0][i],
                 "distance": results["distances"][0][i] if results.get("distances") else None

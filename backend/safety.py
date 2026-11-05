@@ -117,6 +117,17 @@ _SELF_HARM_STRONG = [
     (r"(?:जीना|जीने)\s+नहीं\s+(?:चाह\S*|है|हैं)", "hi", True),
     (r"जीने\s+का\s+मन\s+नहीं", "hi", True),
     (r"(?:ज़िंदा|ज़िन्दा|जिंदा|जिन्दा|जिंदगी|ज़िंदगी)\s+नहीं\s+रह\S*", "hi", True),
+    # Awadhi / Bundeli (best-effort, pending native-speaker review; see docs/language-support.md)
+    (r"(?:मरै|मरब|मरिबे|मरबे|मरबो)\s+(?:\S+\s+){0,1}(?:चाह|चात|चाउ)\S*", "hi", False),
+    (r"मर\s+(?:जाब|जइब|जैहों|जैहौं|जाहों)", "hi", False),
+    (r"(?:जियै|जिए|जीबे|जीबो)\s+(?:का|क|को|के)\s+(?:मन|मनवा|दिल)\s+(?:नाहीं|नाही|नईं|नइ|नहीं)", "hi", True),
+    (r"(?:जिए|जियै|जीबो|जीवै)\s+(?:नाहीं|नाही|नईं)\s+(?:चाह|चात|चाउ)\S*", "hi", True),
+    (r"(?:आतमहत्या|आत्महत्या)\s+(?:कइ|कर|करि)\s+(?:लेब|लेहौं|लैहों|लूँगा|लूंगा)", "hi", False),
+    (r"(?:जहर|ज़हर)\s+(?:खाय|खाइ|खा)\s+(?:लेब|लेहौं|लैहों|लूँगा|लूंगा)", "hi", False),
+    (r"फांसी\s+(?:लगाय|लगा|लगाइ)\s+(?:लेब|लेहौं|लैहों|लूँगा|लूंगा)", "hi", False),
+    (r"jaan\s+de\s+deb", "hi", False),
+    (r"mar(?:ai|ae|e)\s+chah\S*", "hi", False),
+    (r"marbo\s+chah\S*", "hi", False),
 ]
 
 # Mentions that need a gentle footer but are not, by themselves, a crisis
@@ -171,7 +182,7 @@ _EMERGENCY_STRONG = [
     (r"utha\s+(?:liya|liye|le\s+gaye|le\s+gaya|le\s+gayi|ke\s+le\s+gaye|le\s+gaye\s+hain)", "hi", False),
     (r"apaharan\s+(?:kar|ho|hua)\S*", "hi", False),
     (r"kidnap\s+(?:kar\s+liya|kar\s+liye|ho\s+gaya|ho\s+gayi|kar\s+rahe|kar\s+raha)", "hi", False),
-    (r"ghar\s+(?:mein|me|main)\s+(?:\S+\s+){0,3}ghus\S*", "hi", False),
+    (r"ghar\s+(?:mein|me|main|ma|maa)\s+(?:\S+\s+){0,3}ghus\S*", "hi", False),
     (r"(?:chaku|chakoo|pistol|bandook|tamancha|katta|talwar|gun|knife)\s+(?:dikha\S*|se|lekar|le\s+kar|laga\S*|nikal\S*|tan\S*)", "hi", False),
     (r"(?:rape|balatkar)\s+(?:kar\s+diya|kar\s+di|ho\s+gaya|hua|hui|kiya)", "hi", False),
     (r"khoon\s+(?:beh|bah|nikal|aa)\S*", "hi", False),
@@ -188,9 +199,22 @@ _EMERGENCY_STRONG = [
     (r"जला\s+(?:दूंगा|दूँगा|देगा|दिया|दूंगी|डालेगा)", "hi", False),
     (r"जलाने\s+की\s+(?:धमकी|कोशिश)", "hi", False),
     (r"उठा\s+(?:लिया|ले\s+गए|ले\s+गया|ले\s+गई)", "hi", False),
-    (r"घर\s+में\s+(?:\S+\s+){0,3}घुस\S*", "hi", False),
+    (r"घर\s+(?:में|मा|मे|मों)\s+(?:\S+\s+){0,3}घुस\S*", "hi", False),
     (r"(?:चाकू|पिस्तौल|बंदूक|तमंचा|कट्टा)\s+(?:दिखा\S*|से|लेकर|ले\s+कर|लगा\S*|निकाल\S*)", "hi", False),
     (r"खून\s+(?:बह|निकल)\S*", "hi", False),
+    # Awadhi / Bundeli (best-effort, pending native-speaker review)
+    (r"(?:मार|पीट)त\s+(?:बा|बाटै|बाटे|बाटैं|बाटी|बाटीं|हवै|हवे|अहै|आय)", "hi", False),
+    (r"(?:मार|पीट)\s+(?:रओ|रई|रये|रयो|रहो)", "hi", False),
+    (r"मार\s+(?:डार|डर|दिह|देह)\S*", "hi", False),
+    (r"जरा\s+(?:देब|दीन|दिहिस|देहै|देहें|दिहैं)", "hi", False),
+    (r"(?:हमका|मोय|मोखों|मोहे|मोये)\s+(?:\S+\s+){0,2}(?:मारिस|मारेस|पीटिस|पीटेस|मारो|पीटो)", "hi", False),
+    (r"बचावा", "hi", False),
+    (r"बचा\s+(?:लेओ|लियो|लेव)", "hi", False),
+    (r"(?:हमका|मोय|मोखों)\s+बचा\S*", "hi", False),
+    (r"उठा\s+(?:लिहिन|लइगे|लई\s+गे|ले\s+गे|ले\s+गइन|ले\s+गयो)", "hi", False),
+    (r"(?:maar|peet|pit)at\s+(?:ba|bate|baate|bati|hawai|hai|hain)", "hi", False),
+    (r"maar\s+(?:dalab|dalihe|dalihen|daarab|dari|dihe|dihen)", "hi", False),
+    (r"(?:maar|peet|pit)\s+(?:rao|rai|raye|rayo|raho)", "hi", False),
 ]
 
 _POSSIBLE_WEAK = [

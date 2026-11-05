@@ -6,6 +6,16 @@ Run from the repo root (after scripts/load_chromadb.py):
     python evaluation/run_retrieval_eval.py --label soft --retrievers baseline,soft_0.10 --modes routed
     python evaluation/run_retrieval_eval.py --label deep --modes oracle,unfiltered --k-max 30
 
+Retriever specs (comma-separated in --retrievers):
+    baseline                         production Chroma index, default embedder
+    soft_0.15                        baseline + soft routing with that delta
+    st:<hf-model-id>                 in-memory index built with a sentence-transformers model
+    st:<hf-model-id>+soft_0.15       the same, plus soft routing
+
+Language experiment (same questions, three phrasings; labels are inherited):
+    python evaluation/run_retrieval_eval.py --label lang_hi --quiet \
+        --parallel evaluation/data/retrieval_parallel.json --variant hi --modes oracle,unfiltered
+
 Three modes separate different failure causes:
   routed      domain chosen by the app's keyword router (what users get today)
   oracle      the labelled domain is used as the filter (embedding quality
@@ -23,6 +33,7 @@ import datetime
 import hashlib
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -37,26 +48,97 @@ RESULTS = os.path.join(ROOT, "evaluation", "results")
 
 
 # ---------------------------------------------------------------------------
-# Retrievers: name -> function(query, domain, k) -> [{"id", "distance", ...}]
-# To compare a new technique, add one entry here and re-run with --retriever.
+# Retrievers are built from a spec string (see the module docstring).
+# A retriever is a function(query, domain, k) -> [{"id", "distance", ...}].
 # ---------------------------------------------------------------------------
-def baseline_retriever(query, domain, k):
-    from rag_pipeline import retrieve_chunks
-    return retrieve_chunks(query, domain=domain, top_k=k)
+_INDEX_CACHE = {}
 
 
-def _soft(delta):
-    def build(query, domain, k):
-        from rag_pipeline import chroma_domain_value, retrieve_chunks
-        return make_soft_retriever(
-            lambda q, d, n: retrieve_chunks(q, domain=d, top_k=n), chroma_domain_value, delta
-        )(query, domain, k)
-    return build
+def parse_spec(spec):
+    """'st:model+soft_0.15' -> ('st:model', 0.15); 'soft_0.10' -> ('baseline', 0.10)."""
+    base, _, soft = spec.strip().partition("+")
+    delta = None
+    try:
+        if soft:
+            if not soft.startswith("soft_"):
+                raise ValueError
+            delta = float(soft[len("soft_"):])
+        if base.startswith("soft_"):
+            if delta is not None:
+                raise ValueError
+            delta, base = float(base[len("soft_"):]), "baseline"
+    except ValueError:
+        raise ValueError(f"Bad retriever spec: {spec!r}") from None
+    if base != "baseline" and not (base.startswith("st:") and len(base) > 3):
+        raise ValueError(f"Bad retriever spec: {spec!r} (use baseline, soft_<d>, st:<model>[+soft_<d>])")
+    if delta is not None and delta < 0:
+        raise ValueError(f"Bad retriever spec: {spec!r} (delta must be >= 0)")
+    return base, delta
 
 
-RETRIEVERS = {"baseline": baseline_retriever}
-for _delta in (0.05, 0.10, 0.15, 0.25):
-    RETRIEVERS[f"soft_{_delta:.2f}"] = _soft(_delta)
+def build_retriever(spec, embedder_factory=None):
+    """Return (retriever, info) for a spec. info describes the embedding model."""
+    from rag_pipeline import chroma_domain_value, retrieve_chunks
+
+    base, delta = parse_spec(spec)
+    info = {}
+    if base == "baseline":
+        def retrieve(query, domain, k):
+            return retrieve_chunks(query, domain=domain, top_k=k)
+    else:
+        model = base[3:]
+        if model not in _INDEX_CACHE:
+            from evaluation import embedders
+            from config import DATA_DIR
+            factory = embedder_factory or embedders.sentence_transformer_embedders
+            embed_docs, embed_query, model_info = factory(model)
+            collection = embedders.build_index(embedders.load_chunks(DATA_DIR), embed_docs)
+            _INDEX_CACHE[model] = (
+                embedders.make_index_retriever(collection, embed_query, chroma_domain_value), model_info)
+        retrieve, info = _INDEX_CACHE[model]
+    if delta is None:
+        return retrieve, info
+    return make_soft_retriever(retrieve, chroma_domain_value, delta), info
+
+
+VARIANT_LANG = {"en": "en", "hi": "devanagari", "awa": "awadhi", "bns": "bundeli"}
+DIALECT_VARIANTS = ("awa", "bns")
+
+
+def apply_variant(dataset, translations, variant):
+    """Keep only queries that have a parallel entry for this phrasing and, for
+    anything but 'original', swap that phrasing in. Labels are inherited.
+
+    variant: original | en | hi | awa (Awadhi) | bns (Bundeli). Entries with no
+    (or an empty) text for a dialect are skipped, so a half-filled file works.
+    """
+    if variant != "original" and variant not in VARIANT_LANG:
+        raise ValueError("variant must be original, en, hi, awa or bns")
+    out = []
+    for item in dataset:
+        entry = translations.get(item["id"])
+        if entry is None:
+            continue
+        new = dict(item)
+        if variant != "original":
+            text = (entry.get(variant) or "").strip()
+            if not text:
+                continue
+            new["query"] = text
+            new["lang"] = VARIANT_LANG[variant]
+        out.append(new)
+    return out
+
+
+def unreviewed_count(translations, dataset, variant):
+    """How many used dialect entries have no reviewer recorded (<variant>_by)."""
+    if variant not in DIALECT_VARIANTS:
+        return 0
+    return sum(1 for item in dataset if not (translations.get(item["id"], {}).get(variant + "_by") or "").strip())
+
+
+def safe_name(text):
+    return re.sub(r"[^A-Za-z0-9._-]+", "_", text).strip("_")
 
 
 def evaluate(dataset, retriever, mode, k_max, k_values, router=None):
@@ -163,13 +245,13 @@ def comparison_rows(summaries, k_app):
 
 
 def print_comparison(rows, k_app):
-    print("\n" + "=" * 100)
+    print("\n" + "=" * 132)
     print("COMPARISON (answerable queries)")
-    print("=" * 100)
-    print(f"{'retriever':<12}{'mode':<11}{'Hit@'+str(k_app):>7}{'Hit@10':>8}{'MRR':>7}{'nDCG@'+str(k_app):>8}"
+    print("=" * 132)
+    print(f"{'retriever':<44}{'mode':<11}{'Hit@'+str(k_app):>7}{'Hit@10':>8}{'MRR':>7}{'nDCG@'+str(k_app):>8}"
           f"{'en':>7}{'hinglish':>10}{'devanagari':>12}")
     for r in rows:
-        print(f"{r['retriever']:<12}{r['mode']:<11}{fmt(r[f'hit@{k_app}']):>7}{fmt(r['hit@10']):>8}{fmt(r['mrr']):>7}"
+        print(f"{r['retriever']:<44}{r['mode']:<11}{fmt(r[f'hit@{k_app}']):>7}{fmt(r['hit@10']):>8}{fmt(r['mrr']):>7}"
               f"{fmt(r[f'ndcg@{k_app}']):>8}{fmt(r['hit_en']):>7}{fmt(r['hit_hinglish']):>10}{fmt(r['hit_devanagari']):>12}")
 
 
@@ -177,13 +259,25 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--label", default="baseline", help="name for the results file")
     ap.add_argument("--retrievers", default="baseline",
-                    help="comma-separated, from: " + ", ".join(sorted(RETRIEVERS)))
+                    help="comma-separated specs: baseline, soft_<delta>, st:<model>[+soft_<delta>]")
     ap.add_argument("--modes", default="routed,oracle,unfiltered")
-    ap.add_argument("--k-max", type=int, default=10, help="retrieve this many per query (try 30 to size a reranker pool)")
+    ap.add_argument("--k-max", type=int, default=10,
+                    help="retrieve this many per query (try 30 to size a reranker pool)")
+    ap.add_argument("--parallel", help="path to a parallel-translations JSON (see retrieval_parallel.json)")
+    ap.add_argument("--variant", default="original", choices=["original", "en", "hi", "awa", "bns"],
+                    help="with --parallel: which phrasing of each question to use")
+    ap.add_argument("--quiet", action="store_true", help="print only the comparison table")
     args = ap.parse_args()
 
+    names = [n.strip() for n in args.retrievers.split(",") if n.strip()]
+    for n in names:
+        try:
+            parse_spec(n)
+        except ValueError as e:
+            sys.exit(str(e))
+
     from config import TOP_K_RESULTS
-    from rag_pipeline import get_collection_stats
+    from rag_pipeline import get_collection, get_collection_stats
     from intent_detector import detect_domain
 
     stats = get_collection_stats()
@@ -193,40 +287,50 @@ def main():
     with open(DATA, encoding="utf-8") as f:
         raw = f.read()
     dataset = json.loads(raw)
+    if args.parallel:
+        with open(args.parallel, encoding="utf-8") as f:
+            translations = json.load(f)["translations"]
+        dataset = apply_variant(dataset, translations, args.variant)
+        if not dataset:
+            sys.exit(f"No entries for variant '{args.variant}' yet. Fill evaluation/templates/"
+                     "dialect_queries_template.csv and run evaluation/import_dialects.py first.")
+        print(f"Parallel experiment: variant={args.variant}, {len(dataset)} queries")
+        n_unrev = unreviewed_count(translations, dataset, args.variant)
+        if n_unrev:
+            print(f"WARNING: {n_unrev} of {len(dataset)} '{args.variant}' queries have no reviewer recorded. "
+                  "Treat the numbers as provisional until a native speaker has reviewed them.")
     k_values = [k for k in (1, 3, 5, 10, 20, 30) if k <= args.k_max]
 
     routing = [(d, detect_domain(d["query"])) for d in dataset if d["answerable"]]
     routing_ok = sum(1 for d, got in routing if got == d["expected_domain"])
     print(f"Router accuracy on answerable queries: {routing_ok}/{len(routing)}")
-    for d, got in routing:
-        if got != d["expected_domain"]:
-            print(f"  misrouted: expected={d['expected_domain']:<13} got={got:<13} | {d['query']}")
+    if not args.quiet:
+        for d, got in routing:
+            if got != d["expected_domain"]:
+                print(f"  misrouted: expected={d['expected_domain']:<13} got={got:<13} | {d['query']}")
 
-    names = [n.strip() for n in args.retrievers.split(",") if n.strip()]
-    unknown = [n for n in names if n not in RETRIEVERS]
-    if unknown:
-        sys.exit(f"Unknown retriever(s): {unknown}. Choose from: {sorted(RETRIEVERS)}")
-
-    from rag_pipeline import get_collection
     emb = {}
     try:
         col = get_collection()
         ef = getattr(col, "_embedding_function", None)
         emb["embedding_function"] = type(ef).__name__ if ef is not None else None
-        space = (getattr(col, "configuration", None) or {}).get("hnsw", {}).get("space")
-        emb["distance_space"] = space
+        emb["distance_space"] = (getattr(col, "configuration", None) or {}).get("hnsw", {}).get("space")
     except Exception:
         pass
 
     summaries = {}
     for name in names:
+        retriever, model_info = build_retriever(name)
         report = {
-            "label": args.label, "retriever": name,
+            "label": args.label, "retriever": name, "variant": args.variant if args.parallel else None,
             "date": datetime.datetime.now().isoformat(timespec="seconds"),
             "dataset_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16],
             "n_queries": len(dataset), "collection": stats, "k_app": TOP_K_RESULTS,
-            "router_accuracy": [routing_ok, len(routing)], "modes": {}, **emb,
+            "router_accuracy": [routing_ok, len(routing)], "modes": {},
+            "embedding_model": model_info or None, **emb,
         }
+        if model_info:
+            print(f"[{name}] embedding model info: {model_info}")
         try:
             import chromadb
             report["chromadb_version"] = chromadb.__version__
@@ -234,20 +338,23 @@ def main():
             pass
 
         for mode in [m.strip() for m in args.modes.split(",") if m.strip()]:
-            print(f"\n##### retriever={name} #####")
-            records = evaluate(dataset, RETRIEVERS[name], mode, args.k_max, k_values, router=detect_domain)
+            records = evaluate(dataset, retriever, mode, args.k_max, k_values, router=detect_domain)
             summary = summarize(records, k_values)
-            print_report(mode, summary, records, k_values, TOP_K_RESULTS)
+            if not args.quiet:
+                print(f"\n##### retriever={name} #####")
+                print_report(mode, summary, records, k_values, TOP_K_RESULTS)
             report["modes"][mode] = {"summary": summary, "records": records}
             summaries[(name, mode)] = summary
 
         os.makedirs(RESULTS, exist_ok=True)
-        fname = f"{args.label}.json" if len(names) == 1 else f"{args.label}_{name}.json"
+        fname = f"{args.label}.json" if len(names) == 1 else f"{args.label}_{safe_name(name)}.json"
         path = os.path.join(RESULTS, fname)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(report, f, ensure_ascii=False, indent=1)
-        print(f"\nSaved {path}")
+        print(f"Saved {path}")
 
+    if args.parallel:
+        print(f"\n>>> variant={args.variant}  ({len(dataset)} queries)")
     print_comparison(comparison_rows(summaries, TOP_K_RESULTS), TOP_K_RESULTS)
 
 

@@ -40,7 +40,7 @@ def test_every_gap_has_a_note():
 
 def test_dataset_covers_all_levels_and_languages():
     assert {d["label"] for d in DATA} == {"none", "possible", "emergency", "self_harm"}
-    assert {d["lang"] for d in DATA} == {"en", "hinglish", "devanagari"}
+    assert {"en", "hinglish", "devanagari", "awadhi", "bundeli"} <= {d["lang"] for d in DATA}
     assert len(DATA) >= 90
 
 
@@ -54,3 +54,18 @@ def test_no_benign_message_triggers_an_alert():
     false_alarms = [d["text"] for d in DATA
                     if d["label"] == "none" and assess_risk(d["text"])["level"] in ALERT_LEVELS]
     assert false_alarms == []
+
+
+DIALECT = [d for d in DATA if d["lang"] in ("awadhi", "bundeli")]
+
+
+def test_dialect_cases_exist_for_both_languages_and_all_alert_levels():
+    for lang in ("awadhi", "bundeli"):
+        labels = {d["label"] for d in DIALECT if d["lang"] == lang}
+        assert {"emergency", "self_harm", "none"} <= labels
+
+
+def test_every_dialect_case_is_marked_as_needing_native_review():
+    """These were written by a non-native drafter. Remove the flag only after a
+    native speaker of that language has confirmed the wording is natural."""
+    assert DIALECT and all(d.get("needs_native_review") for d in DIALECT)

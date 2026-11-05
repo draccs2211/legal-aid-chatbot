@@ -602,5 +602,172 @@
   "label": "none",
   "lang": "hinglish",
   "category": "informational"
+ },
+ {
+  "text": "हमार मनई हमका रोज मारत बाटै",
+  "label": "emergency",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "ससुरारी वाले हमका जरा देब कहत बाटैं",
+  "label": "emergency",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "हमका बचावा कोई मारत बा",
+  "label": "emergency",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "कुछ लोग घर मा घुसि आए हैं",
+  "label": "emergency",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "हम मरै चाहित है",
+  "label": "self_harm",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "अब हमका जिए क मन नाहीं",
+  "label": "self_harm",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "ऊ हमका धमकी देत बा",
+  "label": "possible",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मकान मालिक हमार डिपॉजिट नाहीं देत बा",
+  "label": "none",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "RTI कइसे दाखिल करी",
+  "label": "none",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "पुलिस हमार रिपोर्ट नाहीं लिखत बा",
+  "label": "none",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "hamar manai hamka roj maarat bate",
+  "label": "emergency",
+  "lang": "awadhi",
+  "category": "dialect_roman",
+  "needs_native_review": true
+ },
+ {
+  "text": "ham marai chahit hai",
+  "label": "self_harm",
+  "lang": "awadhi",
+  "category": "dialect_roman",
+  "needs_native_review": true
+ },
+ {
+  "text": "हमार जिनगी बेकार होइ गई बा, अब कुछ नाहीं बचा",
+  "label": "self_harm",
+  "lang": "awadhi",
+  "category": "dialect",
+  "needs_native_review": true,
+  "known_gap": true,
+  "note": "indirect Awadhi phrasing is not covered"
+ },
+ {
+  "text": "मोरो आदमी मोखों रोज मार रओ",
+  "label": "emergency",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "बे मोय मार डारहें कै रये",
+  "label": "emergency",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मोखों बचा लेओ",
+  "label": "emergency",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मोय जीबे को मन नईं",
+  "label": "self_harm",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मरबो चात हों",
+  "label": "self_harm",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मकान मालक मोरो डिपॉजिट नईं दे रओ",
+  "label": "none",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "पटवारी खतौनी नईं दे रओ",
+  "label": "none",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true
+ },
+ {
+  "text": "मोखों ऐसो लगत के अब कछु नईं बचो",
+  "label": "self_harm",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true,
+  "known_gap": true,
+  "note": "indirect Bundeli phrasing is not covered"
+ },
+ {
+  "text": "बे मोखों धमका रये",
+  "label": "possible",
+  "lang": "bundeli",
+  "category": "dialect",
+  "needs_native_review": true,
+  "known_gap": true,
+  "note": "Bundeli/Hindi verb form 'धमका' is not in the phrase tables"
+ },
+ {
+  "text": "mora aadmi mokhon roj maar rao",
+  "label": "emergency",
+  "lang": "bundeli",
+  "category": "dialect_roman",
+  "needs_native_review": true
  }
 ]
