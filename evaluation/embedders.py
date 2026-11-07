@@ -13,13 +13,7 @@ import json
 import os
 import uuid
 
-
-def model_prefixes(model_name):
-    """(query_prefix, passage_prefix). E5 models need 'query: ' / 'passage: '
-    on both sides, even for non-English text (see the model card)."""
-    if "e5" in model_name.lower():
-        return "query: ", "passage: "
-    return "", ""
+from embedding import model_prefixes  # noqa: F401  (shared with the production backend)
 
 
 def load_chunks(data_dir):
@@ -38,7 +32,7 @@ def build_index(chunks, embed_docs, client=None):
     if client is None:
         import chromadb
         client = chromadb.EphemeralClient()
-    collection = client.create_collection(f"eval_{uuid.uuid4().hex[:12]}")
+    collection = client.create_collection(f"eval_{uuid.uuid4().hex[:12]}", metadata={"hnsw:space": "cosine"})
     batch = 64
     for i in range(0, len(chunks), batch):
         part = chunks[i:i + batch]
@@ -100,7 +94,8 @@ def sentence_transformer_embedders(model_name):
 
     info = {
         "model": model_name,
-        "dimension": model.get_sentence_embedding_dimension(),
+        "dimension": (getattr(model, "get_embedding_dimension", None)
+                      or model.get_sentence_embedding_dimension)(),
         "max_seq_length": getattr(model, "max_seq_length", None),
         "query_prefix": q_prefix, "passage_prefix": d_prefix,
     }

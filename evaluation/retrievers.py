@@ -18,6 +18,8 @@ chunk is already within `delta` of the wrong one.
 queries nobody tuned against.
 """
 
+from collections import Counter
+
 _INF = float("inf")
 
 
@@ -52,5 +54,35 @@ def make_soft_retriever(retrieve, domain_value, delta):
 
         ranked = sorted(pool.values(), key=adjusted)[:k]
         return [dict(c, adjusted_distance=adjusted(c)) for c in ranked]
+
+    return retriever
+
+
+def make_vote_retriever(retrieve, domain_value, delta, vote_k=3):
+    """Soft routing whose domain comes from the retrieval itself, not keywords.
+
+    1. Search without a filter and look at the domains of the top `vote_k` chunks.
+    2. The most common domain wins (ties go to the better-ranked chunk).
+    3. Run the soft-routing retriever with that domain.
+
+    This works in any language the embedding model understands, so it needs no
+    keyword list. The router's own domain argument is ignored. Each returned
+    chunk carries `voted_domain` for analysis. With no metadata to vote on it
+    falls back to a plain unfiltered search.
+    """
+    soft = make_soft_retriever(retrieve, domain_value, delta)
+
+    def retriever(query, domain, k):
+        votes, first = Counter(), {}
+        for rank, chunk in enumerate(retrieve(query, None, max(vote_k, 1))):
+            dom = chunk.get("metadata", {}).get("domain")
+            if dom is None:
+                continue
+            votes[dom] += 1
+            first.setdefault(dom, rank)
+        if not votes:
+            return soft(query, "general", k)
+        best = min(votes, key=lambda d: (-votes[d], first[d]))
+        return [dict(c, voted_domain=best) for c in soft(query, best, k)]
 
     return retriever

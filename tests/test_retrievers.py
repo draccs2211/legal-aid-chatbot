@@ -1,7 +1,7 @@
 """Soft-routing retriever and comparison helpers, with fake retrieval (no Chroma)."""
 import pytest
 
-from evaluation.retrievers import make_soft_retriever
+from evaluation.retrievers import make_soft_retriever, make_vote_retriever
 from evaluation.run_retrieval_eval import comparison_rows
 
 
@@ -102,3 +102,42 @@ def test_comparison_rows_pick_the_headline_numbers():
     assert rows[0]["retriever"] == "baseline" and rows[0]["hit@5"] == 0.8
     assert rows[0]["hit_en"] == 1.0 and rows[0]["hit_hinglish"] == 0.7
     assert rows[0]["hit_devanagari"] is None
+
+
+# --- vote router ---------------------------------------------------------------
+def test_vote_router_picks_the_majority_domain_of_the_top_results_and_boosts_it():
+    # unfiltered top-3 is fir_a .40, fir_b .42, ten_x .45  -> 'fir' wins the vote
+    vote = make_vote_retriever(FakeRetrieve(), lambda d: d, delta=0.10, vote_k=3)
+    out = vote("q", "tenant", 4)            # the keyword router's 'tenant' is ignored
+    assert all(c["voted_domain"] == "fir" for c in out)
+    assert ids(out)[:2] == ["fir_a", "fir_b"]
+
+
+def test_vote_ties_go_to_the_better_ranked_chunk():
+    corpus = [chunk("a", "x", 0.30), chunk("b", "y", 0.31)]
+    vote = make_vote_retriever(lambda q, d, k: sorted(corpus, key=lambda c: c["distance"])[:k],
+                               lambda d: d, delta=0.0, vote_k=2)
+    assert vote("q", "general", 2)[0]["voted_domain"] == "x"
+
+
+def test_vote_router_works_without_any_keyword_router_domain():
+    vote = make_vote_retriever(FakeRetrieve(), lambda d: d, delta=0.10)
+    assert ids(vote("q", None, 2)) and ids(vote("q", "general", 2)) == ids(vote("q", None, 2))
+
+
+def test_vote_router_falls_back_to_unfiltered_when_nothing_can_be_voted_on():
+    class NoMeta:
+        def __call__(self, q, d, k):
+            return [{"id": "a", "metadata": {}, "distance": 0.1}, {"id": "b", "metadata": {}, "distance": 0.2}]
+
+    out = make_vote_retriever(NoMeta(), lambda d: d, 0.1)("q", "fir", 2)
+    assert ids(out) == ["a", "b"] and "voted_domain" not in out[0]
+
+
+def test_vote_router_maps_metadata_domain_back_through_domain_value():
+    """Voting yields stored values (cyber_law); the mapping must accept them."""
+    corpus = [chunk("c1", "cyber_law", 0.40), chunk("c2", "cyber_law", 0.41), chunk("o1", "fir", 0.42)]
+    vote = make_vote_retriever(lambda q, d, k: [c for c in sorted(corpus, key=lambda c: c["distance"])
+                                                if d is None or c["metadata"]["domain"] == d][:k],
+                               lambda d: {"cyber": "cyber_law"}.get(d, d), delta=0.1)
+    assert ids(vote("q", "general", 3))[0] == "c1"

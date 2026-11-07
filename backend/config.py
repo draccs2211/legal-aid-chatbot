@@ -15,11 +15,36 @@ GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 GROQ_MODEL    = "llama-3.3-70b-versatile"
 
 # ── ChromaDB ──
-CHROMADB_PATH   = os.getenv("CHROMADB_PATH", "./chromadb_store")
+# Resolved against the repo root, not the current directory, so the same
+# setting means the same folder wherever the app, a script or a test is started
+# from (audit F-12). Absolute values are used as given.
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _resolve_path(value, root=REPO_ROOT):
+    return value if os.path.isabs(value) else os.path.normpath(os.path.join(root, value))
+
+
+CHROMADB_PATH   = _resolve_path(os.getenv("CHROMADB_PATH", "chromadb_store"))
 COLLECTION_NAME = "nyaymitra_legal"
 
 # ── Embeddings ──
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+def _choice(name, default, allowed):
+    """Read an env var and fail fast on a typo instead of silently misbehaving."""
+    value = os.getenv(name, default)
+    if value not in allowed:
+        raise ValueError(f"{name}={value!r} is not valid; use one of {sorted(allowed)}")
+    return value
+
+
+# chroma_default       Chroma's built-in English MiniLM (current production behaviour)
+# sentence_transformers a multilingual model loaded in-process (docs/embedding-migration.md)
+EMBEDDING_BACKEND = _choice("EMBEDDING_BACKEND", "chroma_default", {"chroma_default", "sentence_transformers"})
+# Used only when EMBEDDING_BACKEND=sentence_transformers.
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "intfloat/multilingual-e5-small")
+# hard: filter retrieval by the keyword router's domain (current behaviour).
+# none: never filter; measured better with the multilingual model (see docs).
+ROUTING_MODE = _choice("ROUTING_MODE", "hard", {"hard", "none"})
 
 # ── RAG Settings ──
 TOP_K_RESULTS = 5

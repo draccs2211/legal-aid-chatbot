@@ -87,17 +87,18 @@ def test_load_chunks_reads_the_real_corpus():
 
 # --- spec parsing ------------------------------------------------------------
 @pytest.mark.parametrize("spec, expected", [
-    ("baseline", ("baseline", None)),
-    ("soft_0.10", ("baseline", 0.10)),
-    ("baseline+soft_0.15", ("baseline", 0.15)),
-    ("st:intfloat/multilingual-e5-small", ("st:intfloat/multilingual-e5-small", None)),
-    ("st:org/model+soft_0.05", ("st:org/model", 0.05)),
+    ("baseline", ("baseline", None, None)),
+    ("soft_0.10", ("baseline", 0.10, "soft")),
+    ("baseline+soft_0.15", ("baseline", 0.15, "soft")),
+    ("st:intfloat/multilingual-e5-small", ("st:intfloat/multilingual-e5-small", None, None)),
+    ("st:org/model+soft_0.05", ("st:org/model", 0.05, "soft")),
+    ("st:org/model+vote_0.15", ("st:org/model", 0.15, "vote")),
 ])
 def test_parse_spec(spec, expected):
     assert R.parse_spec(spec) == expected
 
 
-@pytest.mark.parametrize("spec", ["", "st:", "other", "baseline+boost_1", "soft_x", "soft_0.1+soft_0.2", "soft_-0.1"])
+@pytest.mark.parametrize("spec", ["", "st:", "other", "baseline+boost_1", "soft_x", "soft_0.1+soft_0.2", "soft_-0.1", "st:m+vote_x", "st:m+vote_-1", "vote_0.1"])
 def test_parse_spec_rejects_bad_input(spec):
     with pytest.raises(ValueError):
         R.parse_spec(spec)
@@ -145,3 +146,10 @@ def test_unknown_variant_is_rejected():
 
 def test_safe_name_is_a_valid_windows_filename():
     assert R.safe_name("st:intfloat/multilingual-e5-small+soft_0.15") == "st_intfloat_multilingual-e5-small_soft_0.15"
+
+
+def test_build_retriever_supports_vote_routing(monkeypatch):
+    monkeypatch.setattr(R, "_INDEX_CACHE", {})
+    vote, _ = R.build_retriever("st:fake/model+vote_0.1", embedder_factory=fake_factory)
+    out = vote("rti application fee", "general", 3)
+    assert out and all("voted_domain" in c for c in out)

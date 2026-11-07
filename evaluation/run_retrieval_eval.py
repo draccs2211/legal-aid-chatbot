@@ -10,7 +10,8 @@ Retriever specs (comma-separated in --retrievers):
     baseline                         production Chroma index, default embedder
     soft_0.15                        baseline + soft routing with that delta
     st:<hf-model-id>                 in-memory index built with a sentence-transformers model
-    st:<hf-model-id>+soft_0.15       the same, plus soft routing
+    st:<hf-model-id>+soft_0.15       the same, plus soft routing (keyword router)
+    st:<hf-model-id>+vote_0.15       the same, plus soft routing whose domain is voted by the top-3 results
 
 Language experiment (same questions, three phrasings; labels are inherited):
     python evaluation/run_retrieval_eval.py --label lang_hi --quiet \
@@ -41,7 +42,7 @@ sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "backend"))
 
 from evaluation import metrics as M  # noqa: E402
-from evaluation.retrievers import make_soft_retriever  # noqa: E402
+from evaluation.retrievers import make_soft_retriever, make_vote_retriever  # noqa: E402
 
 DATA = os.path.join(ROOT, "evaluation", "data", "retrieval_labelled.json")
 RESULTS = os.path.join(ROOT, "evaluation", "results")
@@ -55,32 +56,41 @@ _INDEX_CACHE = {}
 
 
 def parse_spec(spec):
-    """'st:model+soft_0.15' -> ('st:model', 0.15); 'soft_0.10' -> ('baseline', 0.10)."""
-    base, _, soft = spec.strip().partition("+")
-    delta = None
+    """Return (base, delta, router).
+
+    'baseline'                  -> ('baseline', None, None)
+    'soft_0.10'                 -> ('baseline', 0.10, 'soft')
+    'st:org/model+soft_0.15'    -> ('st:org/model', 0.15, 'soft')   keyword router + soft bonus
+    'st:org/model+vote_0.15'    -> ('st:org/model', 0.15, 'vote')   retrieval-vote router + soft bonus
+    """
+    base, _, extra = spec.strip().partition("+")
+    delta, router = None, None
     try:
-        if soft:
-            if not soft.startswith("soft_"):
+        if extra:
+            for kind in ("soft", "vote"):
+                if extra.startswith(kind + "_"):
+                    delta, router = float(extra[len(kind) + 1:]), kind
+                    break
+            else:
                 raise ValueError
-            delta = float(soft[len("soft_"):])
         if base.startswith("soft_"):
-            if delta is not None:
+            if router is not None:
                 raise ValueError
-            delta, base = float(base[len("soft_"):]), "baseline"
+            delta, router, base = float(base[len("soft_"):]), "soft", "baseline"
     except ValueError:
         raise ValueError(f"Bad retriever spec: {spec!r}") from None
     if base != "baseline" and not (base.startswith("st:") and len(base) > 3):
-        raise ValueError(f"Bad retriever spec: {spec!r} (use baseline, soft_<d>, st:<model>[+soft_<d>])")
+        raise ValueError(f"Bad retriever spec: {spec!r} (use baseline, soft_<d>, st:<model>[+soft_<d>|+vote_<d>])")
     if delta is not None and delta < 0:
         raise ValueError(f"Bad retriever spec: {spec!r} (delta must be >= 0)")
-    return base, delta
+    return base, delta, router
 
 
 def build_retriever(spec, embedder_factory=None):
     """Return (retriever, info) for a spec. info describes the embedding model."""
     from rag_pipeline import chroma_domain_value, retrieve_chunks
 
-    base, delta = parse_spec(spec)
+    base, delta, router = parse_spec(spec)
     info = {}
     if base == "baseline":
         def retrieve(query, domain, k):
@@ -98,7 +108,8 @@ def build_retriever(spec, embedder_factory=None):
         retrieve, info = _INDEX_CACHE[model]
     if delta is None:
         return retrieve, info
-    return make_soft_retriever(retrieve, chroma_domain_value, delta), info
+    maker = make_vote_retriever if router == "vote" else make_soft_retriever
+    return maker(retrieve, chroma_domain_value, delta), info
 
 
 VARIANT_LANG = {"en": "en", "hi": "devanagari", "awa": "awadhi", "bns": "bundeli"}
@@ -245,13 +256,14 @@ def comparison_rows(summaries, k_app):
 
 
 def print_comparison(rows, k_app):
-    print("\n" + "=" * 132)
+    w = max([len(r["retriever"]) for r in rows] + [10]) + 2
+    print("\n" + "=" * (w + 88))
     print("COMPARISON (answerable queries)")
-    print("=" * 132)
-    print(f"{'retriever':<44}{'mode':<11}{'Hit@'+str(k_app):>7}{'Hit@10':>8}{'MRR':>7}{'nDCG@'+str(k_app):>8}"
+    print("=" * (w + 88))
+    print(f"{'retriever':<{w}}{'mode':<11}{'Hit@'+str(k_app):>7}{'Hit@10':>8}{'MRR':>7}{'nDCG@'+str(k_app):>8}"
           f"{'en':>7}{'hinglish':>10}{'devanagari':>12}")
     for r in rows:
-        print(f"{r['retriever']:<44}{r['mode']:<11}{fmt(r[f'hit@{k_app}']):>7}{fmt(r['hit@10']):>8}{fmt(r['mrr']):>7}"
+        print(f"{r['retriever']:<{w}}{r['mode']:<11}{fmt(r[f'hit@{k_app}']):>7}{fmt(r['hit@10']):>8}{fmt(r['mrr']):>7}"
               f"{fmt(r[f'ndcg@{k_app}']):>8}{fmt(r['hit_en']):>7}{fmt(r['hit_hinglish']):>10}{fmt(r['hit_devanagari']):>12}")
 
 
@@ -259,7 +271,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--label", default="baseline", help="name for the results file")
     ap.add_argument("--retrievers", default="baseline",
-                    help="comma-separated specs: baseline, soft_<delta>, st:<model>[+soft_<delta>]")
+                    help="comma-separated specs: baseline, soft_<delta>, st:<model>[+soft_<delta>|+vote_<delta>]")
     ap.add_argument("--modes", default="routed,oracle,unfiltered")
     ap.add_argument("--k-max", type=int, default=10,
                     help="retrieve this many per query (try 30 to size a reranker pool)")

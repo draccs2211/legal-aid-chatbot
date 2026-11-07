@@ -181,3 +181,4 @@ cython_debug/
 .cursorindexingignore
 chromadb_store/
 baseline-freeze.txt
+chromadb_store*/

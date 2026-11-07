@@ -3,11 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
 import uvicorn
+from contextlib import asynccontextmanager
 
 from intent_detector import analyze_query
 from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
 from sarvam_client import generate_response, translate_text
-from config import DEEP_DOMAINS, BASIC_DOMAINS
+from config import DEEP_DOMAINS, BASIC_DOMAINS, ROUTING_MODE
+from embedding import get_embedder, uses_external_embedder
 from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
 import re
 from rag_pipeline import load_all_data
@@ -21,12 +23,27 @@ def ensure_db_loaded():
         load_all_data()   # ✅ correct function
         db_loaded = True
 
+def warm_up():
+    """Load the multilingual model and the index at startup instead of on the
+    first user request (loading takes seconds). Does nothing on the default backend."""
+    if uses_external_embedder():
+        get_embedder()
+        ensure_db_loaded()
+
+
 def clean_reply(text: str) -> str:
     """Remove <think> reasoning tags from Sarvam-M output."""
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
     return text.strip()
+@asynccontextmanager
+async def lifespan(_app):
+    warm_up()
+    yield
+
+
 # ─── FastAPI App ───
 app = FastAPI(
+    lifespan=lifespan,
     title="NyayMitra API",
     description="AI-powered Legal Aid Chatbot for UP Citizens",
     version="1.0.0"
@@ -139,7 +156,7 @@ async def chat(request: ChatRequest):
         # ─── Step 2: Retrieve relevant chunks ───
         chunks = retrieve_chunks(
             query=message,
-            domain=domain if domain != "general" else None,
+            domain=domain if (ROUTING_MODE == "hard" and domain != "general") else None,
             top_k=5
         )
 

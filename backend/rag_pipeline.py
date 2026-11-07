@@ -1,8 +1,11 @@
 import os
+import re
 import json
 import chromadb
 
-from config import CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS, DOMAIN_METADATA
+from config import (CHROMADB_PATH, COLLECTION_NAME, TOP_K_RESULTS, DATA_DIR, DOMAINS, DOMAIN_METADATA,
+                    EMBEDDING_BACKEND, EMBEDDING_MODEL)
+from embedding import get_embedder
 
 # ─── Initialize ChromaDB client ───
 _client = None
@@ -12,19 +15,42 @@ _collection = None
 def get_client():
     global _client
     if _client is None:
+        # Printed once so a wrong CHROMADB_PATH is visible in the logs instead of
+        # silently producing a second, empty database.
+        print(f"[rag] ChromaDB path: {CHROMADB_PATH} (exists: {os.path.isdir(CHROMADB_PATH)})")
         _client = chromadb.PersistentClient(path=CHROMADB_PATH)
     return _client
+
+
+def _external():
+    return EMBEDDING_BACKEND == "sentence_transformers"
+
+
+def active_collection_name():
+    """The default collection keeps its name. A multilingual model gets its own
+    collection so both can coexist and rollback is just an env var."""
+    if not _external():
+        return COLLECTION_NAME
+    slug = re.sub(r"[^a-zA-Z0-9]+", "_", EMBEDDING_MODEL).strip("_").lower()
+    return f"{COLLECTION_NAME}__{slug}"[:200]
 
 
 def get_collection():
     global _collection
     if _collection is None:
         client = get_client()
-        # Use ChromaDB default embedding (no external download needed)
-        _collection = client.get_or_create_collection(
-            name=COLLECTION_NAME,
-            metadata={"hnsw:space": "cosine"}
-        )
+        metadata = {"hnsw:space": "cosine"}
+        if _external():
+            metadata.update({"embedding_backend": EMBEDDING_BACKEND, "embedding_model": EMBEDDING_MODEL})
+        collection = client.get_or_create_collection(name=active_collection_name(), metadata=metadata)
+        if _external():
+            built_with = (collection.metadata or {}).get("embedding_model")
+            if built_with != EMBEDDING_MODEL:
+                raise RuntimeError(
+                    f"Collection {collection.name!r} was built with embedding model {built_with!r} but "
+                    f"EMBEDDING_MODEL is {EMBEDDING_MODEL!r}. Mixing models silently ruins retrieval; "
+                    "re-ingest into a fresh collection.")
+        _collection = collection
     return _collection
 
 
@@ -57,10 +83,14 @@ def load_all_data():
             continue
 
         # Load new chunks
+        add_kwargs = {}
+        if _external():
+            add_kwargs["embeddings"] = get_embedder().embed_documents([c["text"] for c in new_chunks])
         collection.add(
             ids=[c["id"] for c in new_chunks],
             documents=[c["text"] for c in new_chunks],
-            metadatas=[c["metadata"] for c in new_chunks]
+            metadatas=[c["metadata"] for c in new_chunks],
+            **add_kwargs
         )
 
         print(f"  ✅ {domain} — loaded {len(new_chunks)} new chunks")
@@ -84,10 +114,14 @@ def retrieve_chunks(query: str, domain: str = None, top_k: int = TOP_K_RESULTS) 
     if domain and domain != "general":
         where_filter = {"domain": chroma_domain_value(domain)}
 
+    if _external():
+        query_args = {"query_embeddings": [get_embedder().embed_query(query)]}
+    else:
+        query_args = {"query_texts": [query]}
     results = collection.query(
-        query_texts=[query],
         n_results=top_k,
-        where=where_filter
+        where=where_filter,
+        **query_args
     )
 
     chunks = []
@@ -139,6 +173,8 @@ def get_collection_stats() -> dict:
     count = collection.count()
     return {
         "total_chunks": count,
-        "collection_name": COLLECTION_NAME,
-        "chromadb_path": CHROMADB_PATH
+        "collection_name": active_collection_name(),
+        "chromadb_path": CHROMADB_PATH,
+        "embedding_backend": EMBEDDING_BACKEND,
+        "embedding_model": EMBEDDING_MODEL if _external() else "chroma default (all-MiniLM-L6-v2)",
     }
