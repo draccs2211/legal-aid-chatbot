@@ -96,3 +96,60 @@ def test_empty_store_with_no_data_anywhere_says_to_run_the_loader(tmp_path):
     root.mkdir()
     make_store(root / "chromadb_store", 0)
     assert "load_chromadb" in doctor.diagnose(str(root), {})["verdict"]
+
+
+# --- the doctor must be read-only ----------------------------------------------------
+def _snapshot(folder):
+    import hashlib
+    snap = {}
+    for dirpath, _, files in os.walk(folder):
+        for f in files:
+            full = os.path.join(dirpath, f)
+            with open(full, "rb") as fh:
+                snap[os.path.relpath(full, folder)] = hashlib.sha256(fh.read()).hexdigest()
+    return snap
+
+
+def test_inspecting_a_store_changes_not_a_single_byte(tmp_path):
+    store = tmp_path / "chromadb_store"
+    make_store(store, 5)
+    before = _snapshot(store)
+    assert doctor.inspect_store(str(store)) == [("nyaymitra_legal", 5)]
+    assert _snapshot(store) == before
+
+
+def test_the_full_report_leaves_every_store_untouched(tmp_path):
+    root = tmp_path / "repo"
+    root.mkdir()
+    make_store(root / "chromadb_store", 4)
+    make_store(root / "scripts" / "chromadb_storecd backend", 2)
+    before = _snapshot(root)
+    doctor.format_report(doctor.diagnose(str(root), {"CHROMADB_PATH": "./chromadb_storecd backend"}))
+    assert _snapshot(root) == before
+
+
+def test_deleted_chunks_are_not_counted(tmp_path):
+    store = tmp_path / "s"
+    make_store(store, 5)
+    client = chromadb.PersistentClient(path=str(store))
+    client.get_collection("nyaymitra_legal").delete(ids=["c0", "c1"])
+    del client
+    assert doctor.inspect_store(str(store)) == [("nyaymitra_legal", 3)]
+
+
+def test_an_unreadable_database_is_reported_not_raised(tmp_path):
+    store = tmp_path / "broken"
+    store.mkdir()
+    (store / "chroma.sqlite3").write_bytes(b"this is not a sqlite database")
+    result = doctor.inspect_store(str(store))
+    assert isinstance(result, str) and "could not read" in result
+
+
+def test_no_temporary_copies_are_left_behind(tmp_path):
+    import tempfile
+    store = tmp_path / "s"
+    make_store(store, 1)
+    before = {d for d in os.listdir(tempfile.gettempdir()) if d.startswith("doctor_")}
+    doctor.inspect_store(str(store))
+    after = {d for d in os.listdir(tempfile.gettempdir()) if d.startswith("doctor_")}
+    assert after == before

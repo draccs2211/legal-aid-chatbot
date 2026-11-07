@@ -6,10 +6,17 @@ Prints the effective ChromaDB path and where it came from, every .env file that
 could be loaded, and every Chroma store found under the repository with its
 chunk count. It never prints a secret: from .env files it shows only keys that
 start with CHROMADB_, COLLECTION_, EMBEDDING_ or ROUTING_, and counts the rest.
-It never creates a store: stores are opened only if they already exist.
+
+It never writes to a store and never creates one. Chunk counts are read from a
+temporary COPY of each store's chroma.sqlite3. (An earlier version opened stores
+with the Chroma client, and Chroma writes to a store when it opens it, which
+modified tracked files in the repository.)
 """
 import os
+import shutil
+import sqlite3
 import sys
+import tempfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 sys.path.insert(0, os.path.join(ROOT, "backend"))
@@ -69,16 +76,40 @@ def find_stores(root, max_depth=3):
     return sorted(d for d, files in _walk(root, max_depth) if "chroma.sqlite3" in files)
 
 
+MAX_COPY_BYTES = 500 * 1024 * 1024
+
+
 def inspect_store(path):
-    """[(collection, count)] for an EXISTING store, or an error string."""
-    if not os.path.isfile(os.path.join(path, "chroma.sqlite3")):
+    """[(collection, chunk count)] for an EXISTING store, or an error string.
+
+    Read-only: queries a temporary copy of chroma.sqlite3 (plus its -wal/-shm
+    files if present) and leaves the store untouched.
+    """
+    db = os.path.join(path, "chroma.sqlite3")
+    if not os.path.isfile(db):
         return []
+    if os.path.getsize(db) > MAX_COPY_BYTES:
+        return "database file too large to inspect safely"
+    tmp = tempfile.mkdtemp(prefix="doctor_")
     try:
-        import chromadb
-        client = chromadb.PersistentClient(path=path)
-        return [(c.name, c.count()) for c in client.list_collections()]
-    except Exception as e:  # pragma: no cover - depends on the installed chromadb
-        return f"could not open: {type(e).__name__}: {e}"
+        for name in ("chroma.sqlite3", "chroma.sqlite3-wal", "chroma.sqlite3-shm"):
+            src = os.path.join(path, name)
+            if os.path.exists(src):
+                shutil.copy2(src, tmp)
+        con = sqlite3.connect(os.path.join(tmp, "chroma.sqlite3"))
+        try:
+            rows = con.execute(
+                "SELECT c.name, COUNT(e.id) FROM collections c "
+                "JOIN segments s ON s.collection = c.id AND s.scope = 'METADATA' "
+                "LEFT JOIN embeddings e ON e.segment_id = s.id GROUP BY c.name ORDER BY c.name"
+            ).fetchall()
+        finally:
+            con.close()
+        return [(name, int(count)) for name, count in rows]
+    except sqlite3.Error as e:
+        return f"could not read (different Chroma version?): {type(e).__name__}: {e}"
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
 
 
 def effective_path(environ, dotenv_files, root):

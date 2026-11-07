@@ -4,7 +4,10 @@
 
 Run the doctor first. It prints the effective database path, where that value
 came from, every `.env` that could be loaded, and every Chroma store in the
-repo with its chunk count. It never prints a secret and never creates a store.
+repo with its chunk count. It never prints a secret, never creates a store and
+never writes to one (counts come from a temporary copy of `chroma.sqlite3`).
+An early version opened stores with the Chroma client, which modifies files;
+that was fixed on 2026-11-06.
 
     python scripts\doctor.py
 
