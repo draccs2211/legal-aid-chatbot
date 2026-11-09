@@ -1,0 +1,11 @@
+# Minimal packages to run the test suite in CI. No PyTorch, no sentence-transformers:
+# the tests use fake embedders, so the multi-gigabyte model stack is not needed here.
+# Unpinned like requirements.txt; pinning from a measured environment is a separate task.
+fastapi
+uvicorn
+httpx
+openai
+python-dotenv
+python-multipart
+chromadb
+pytest
