@@ -1,0 +1,225 @@
+{
+ "_note": "Same intent as the original query, so the relevance labels are inherited. Drafted by an AI assistant; Hindi needs review by a native speaker. 'hi' for the five originally-Devanagari queries is their own text.",
+ "translations": {
+  "q001": {
+   "en": "How much is the RTI application fee?",
+   "hi": "आरटीआई आवेदन की फीस कितनी होती है?"
+  },
+  "q003": {
+   "en": "What should I do if I get no reply to my RTI?",
+   "hi": "आरटीआई का जवाब न आए तो क्या करें?"
+  },
+  "q006": {
+   "en": "Where do I file an RTI for a UP government department?",
+   "hi": "यूपी सरकार के विभाग में आरटीआई कहाँ दाखिल करें?"
+  },
+  "q008": {
+   "en": "The police are refusing to write my FIR.",
+   "hi": "पुलिस मेरी एफआईआर लिखने से मना कर रही है।"
+  },
+  "q010": {
+   "en": "How do I register an FIR in UP?",
+   "hi": "यूपी में एफआईआर कैसे दर्ज करें?"
+  },
+  "q011": {
+   "en": "What is the difference between a cognizable and a non-cognizable offence?",
+   "hi": "संज्ञेय और असंज्ञेय अपराध में क्या अंतर है?"
+  },
+  "q012": {
+   "en": "What is anticipatory bail?",
+   "hi": "अग्रिम जमानत क्या होती है?"
+  },
+  "q013": {
+   "en": "Within how many days is a chargesheet filed?",
+   "hi": "आरोपपत्र कितने दिनों में दाखिल होता है?"
+  },
+  "q014": {
+   "en": "What did BNSS change from the CrPC?",
+   "hi": "बीएनएसएस ने सीआरपीसी में क्या बदला?"
+  },
+  "q015": {
+   "en": "My landlord is not returning my deposit.",
+   "hi": "मेरा मकान मालिक मेरा डिपॉजिट वापस नहीं दे रहा।"
+  },
+  "q018": {
+   "en": "Where do I complain to the rent control court?",
+   "hi": "रेंट कंट्रोल कोर्ट में शिकायत कहाँ करें?"
+  },
+  "q019": {
+   "en": "How do I evict a tenant who is not paying rent?",
+   "hi": "किराया न देने वाले किरायेदार को कैसे हटाएँ?"
+  },
+  "q020": {
+   "en": "My challan was issued wrongly.",
+   "hi": "मेरा चालान गलत कट गया है।"
+  },
+  "q021": {
+   "en": "How do I pay an e-challan online?",
+   "hi": "ई-चालान ऑनलाइन कैसे भरें?"
+  },
+  "q023": {
+   "en": "What is the punishment for drunk driving?",
+   "hi": "शराब पीकर गाड़ी चलाने की सज़ा क्या है?"
+  },
+  "q024": {
+   "en": "My vehicle has been seized. How do I get it back?",
+   "hi": "मेरी गाड़ी जब्त हो गई है, वापस कैसे मिलेगी?"
+  },
+  "q026": {
+   "en": "What should I do after a road accident?",
+   "hi": "सड़क दुर्घटना होने पर क्या करना चाहिए?"
+  },
+  "q027": {
+   "en": "What is the speed limit on the Yamuna Expressway?",
+   "hi": "यमुना एक्सप्रेसवे पर स्पीड लिमिट क्या है?"
+  },
+  "q028": {
+   "en": "What is the minimum age for a learner licence?",
+   "hi": "लर्नर लाइसेंस के लिए न्यूनतम आयु कितनी है?"
+  },
+  "q029": {
+   "en": "How do I get a refund for a defective mobile phone?",
+   "hi": "खराब मोबाइल फोन का रिफंड कैसे मिलेगा?"
+  },
+  "q030": {
+   "en": "How do I file a complaint in consumer court?",
+   "hi": "कंज्यूमर कोर्ट में शिकायत कैसे दर्ज करें?"
+  },
+  "q032": {
+   "en": "I received the wrong product in an online order and they will not take it back.",
+   "hi": "ऑनलाइन ऑर्डर में गलत सामान आया और वे वापस नहीं ले रहे।"
+  },
+  "q033": {
+   "en": "My insurance claim was rejected. What should I do?",
+   "hi": "मेरा बीमा क्लेम खारिज हो गया, क्या करें?"
+  },
+  "q034": {
+   "en": "The builder is not handing over possession. What should I do?",
+   "hi": "बिल्डर कब्ज़ा नहीं दे रहा, क्या करें?"
+  },
+  "q036": {
+   "en": "I have been a victim of online UPI fraud.",
+   "hi": "मेरे साथ ऑनलाइन यूपीआई धोखाधड़ी हुई है।"
+  },
+  "q038": {
+   "en": "They are blackmailing me with morphed photos of me.",
+   "hi": "वे मेरी फोटो मॉर्फ करके मुझे ब्लैकमेल कर रहे हैं।"
+  },
+  "q039": {
+   "en": "Someone made a fake Instagram account to defame me.",
+   "hi": "कोई इंस्टाग्राम पर फर्जी अकाउंट बनाकर मुझे बदनाम कर रहा है।"
+  },
+  "q040": {
+   "en": "What should I do if my Aadhaar has been misused?",
+   "hi": "आधार का दुरुपयोग हो तो क्या करें?"
+  },
+  "q043": {
+   "en": "What is the right to be forgotten?",
+   "hi": "भुलाए जाने का अधिकार क्या है?"
+  },
+  "q044": {
+   "en": "What is the divorce process in UP?",
+   "hi": "यूपी में तलाक की प्रक्रिया क्या है?"
+  },
+  "q045": {
+   "en": "My husband is not paying maintenance.",
+   "hi": "मेरा पति गुज़ारा भत्ता नहीं दे रहा।"
+  },
+  "q046": {
+   "en": "What are the rules on child custody?",
+   "hi": "बच्चे की कस्टडी के नियम क्या हैं?"
+  },
+  "q049": {
+   "en": "What does the triple talaq law say?",
+   "hi": "तीन तलाक कानून क्या कहता है?"
+  },
+  "q050": {
+   "en": "Does a daughter have a share in her father's property?",
+   "hi": "क्या पिता की संपत्ति में बेटी का हिस्सा होता है?"
+  },
+  "q052": {
+   "en": "I have not received my salary for 3 months.",
+   "hi": "मुझे 3 महीने से सैलरी नहीं मिली।"
+  },
+  "q053": {
+   "en": "What is the minimum wage in UP?",
+   "hi": "यूपी में न्यूनतम मजदूरी कितनी है?"
+  },
+  "q054": {
+   "en": "After how many years is gratuity payable?",
+   "hi": "ग्रेच्युटी कितने साल बाद मिलती है?"
+  },
+  "q055": {
+   "en": "My company fired me without notice.",
+   "hi": "कंपनी ने मुझे बिना नोटिस के निकाल दिया।"
+  },
+  "q056": {
+   "en": "How much maternity leave do I get?",
+   "hi": "मातृत्व अवकाश कितना मिलता है?"
+  },
+  "q057": {
+   "en": "My employer is not deducting my PF.",
+   "hi": "मेरा नियोक्ता पीएफ नहीं काट रहा।"
+  },
+  "q058": {
+   "en": "What are the rights of a domestic worker?",
+   "hi": "घरेलू कामगार के क्या अधिकार हैं?"
+  },
+  "q059": {
+   "en": "How do I view khatauni and khasra records online?",
+   "hi": "खतौनी और खसरा ऑनलाइन कैसे देखें?"
+  },
+  "q060": {
+   "en": "How do I get a mutation (dakhil kharij) done?",
+   "hi": "दाखिल खारिज कैसे करवाएँ?"
+  },
+  "q062": {
+   "en": "My neighbour has encroached on my land.",
+   "hi": "पड़ोसी ने मेरी ज़मीन पर कब्ज़ा कर लिया है।"
+  },
+  "q063": {
+   "en": "What is benami property?",
+   "hi": "बेनामी संपत्ति क्या होती है?"
+  },
+  "q064": {
+   "en": "My husband is beating me at home. What should I do?",
+   "hi": "पति घर में मारपीट कर रहा है, मैं क्या करूँ?"
+  },
+  "q068": {
+   "en": "My boss makes inappropriate comments at the office.",
+   "hi": "ऑफिस में बॉस गलत टिप्पणियाँ करता है।"
+  },
+  "q069": {
+   "en": "What rights are there under the SC/ST Act?",
+   "hi": "एससी/एसटी एक्ट में क्या अधिकार हैं?"
+  },
+  "q070": {
+   "en": "How do I complain about caste-based abuse?",
+   "hi": "जाति सूचक गाली देने पर शिकायत कैसे करें?"
+  },
+  "q071": {
+   "en": "How much compensation does an SC/ST victim get?",
+   "hi": "एससी/एसटी पीड़ित को कितना मुआवज़ा मिलता है?"
+  },
+  "q004": {
+   "en": "How do I file an RTI online?",
+   "hi": "आरटीआई ऑनलाइन कैसे डालें"
+  },
+  "q017": {
+   "en": "My landlord told me to vacate the house without notice.",
+   "hi": "मकान मालिक ने बिना नोटिस घर खाली करने को कहा"
+  },
+  "q041": {
+   "en": "Money was deducted from my account after a phishing email.",
+   "hi": "फिशिंग ईमेल से पैसे कट गए"
+  },
+  "q047": {
+   "en": "What is stridhan?",
+   "hi": "स्त्रीधन क्या होता है"
+  },
+  "q066": {
+   "en": "My in-laws are harassing me for dowry.",
+   "hi": "दहेज के लिए ससुराल वाले परेशान कर रहे हैं"
+  }
+ }
+}

@@ -3,11 +3,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
 import uvicorn
+from contextlib import asynccontextmanager
 
 from intent_detector import analyze_query
 from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
 from sarvam_client import generate_response, translate_text
-from config import DEEP_DOMAINS, BASIC_DOMAINS
+from config import DEEP_DOMAINS, BASIC_DOMAINS, ROUTING_MODE
+from embedding import get_embedder, uses_external_embedder
+from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
 import re
 from rag_pipeline import load_all_data
 
@@ -20,12 +23,27 @@ def ensure_db_loaded():
         load_all_data()   # ✅ correct function
         db_loaded = True
 
+def warm_up():
+    """Load the multilingual model and the index at startup instead of on the
+    first user request (loading takes seconds). Does nothing on the default backend."""
+    if uses_external_embedder():
+        get_embedder()
+        ensure_db_loaded()
+
+
 def clean_reply(text: str) -> str:
     """Remove <think> reasoning tags from Sarvam-M output."""
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
     return text.strip()
+@asynccontextmanager
+async def lifespan(_app):
+    warm_up()
+    yield
+
+
 # ─── FastAPI App ───
 app = FastAPI(
+    lifespan=lifespan,
     title="NyayMitra API",
     description="AI-powered Legal Aid Chatbot for UP Citizens",
     version="1.0.0"
@@ -54,6 +72,7 @@ class ChatResponse(BaseModel):
     language: str
     is_emergency: bool
     session_id: str
+    risk_level: str = "none"
     quick_actions: List[str] = []
 
 
@@ -117,11 +136,27 @@ async def chat(request: ChatRequest):
         intent = analysis["intent"]
         language = analysis["language"]
         is_emergency = analysis["is_emergency"]
+        risk_level = analysis["risk_level"]
+
+        # ─── Self-harm: static supportive message only. No retrieval, no LLM,
+        # nothing stored in the session, so it works even if every provider is down.
+        if risk_level == SELF_HARM:
+            return ChatResponse(
+                reply=self_harm_message(language),
+                domain=domain,
+                intent=intent,
+                language=language,
+                is_emergency=True,
+                risk_level=risk_level,
+                session_id=request.session_id,
+                quick_actions=[]
+            )
+
         ensure_db_loaded()
         # ─── Step 2: Retrieve relevant chunks ───
         chunks = retrieve_chunks(
             query=message,
-            domain=domain if domain != "general" else None,
+            domain=domain if (ROUTING_MODE == "hard" and domain != "general") else None,
             top_k=5
         )
 
@@ -140,13 +175,19 @@ async def chat(request: ChatRequest):
             context=context,
             language=language,
             is_emergency=is_emergency,
-            conversation_history=session_history
+            conversation_history=session_history,
+            domain=domain
         )
         response_text = clean_reply(response_text)
         # ─── Step 5: Update session history ───
         session_history.append({"role": "user", "content": message})
         session_history.append({"role": "assistant", "content": response_text})
         sessions[request.session_id] = session_history[-10:]  # Keep last 5 turns
+
+        # Ambiguous risk words: normal answer plus a short "call 112" footer
+        # (added after the history update so it is not fed back to the model).
+        if risk_level == POSSIBLE:
+            response_text = response_text + "\n\n" + possible_footer(language)
 
         # ─── Step 6: Get quick actions ───
         quick_actions = get_quick_actions(domain, intent)
@@ -157,6 +198,7 @@ async def chat(request: ChatRequest):
             intent=intent,
             language=language,
             is_emergency=is_emergency,
+            risk_level=risk_level,
             session_id=request.session_id,
             quick_actions=quick_actions
         )

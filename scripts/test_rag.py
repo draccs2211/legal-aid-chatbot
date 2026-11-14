@@ -1,10 +1,14 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "backend"))
 
-from backend.rag_pipeline import retrieve_chunks, format_context, get_collection_stats
-from backend.intent_detector import analyze_query
+# Same flat-import layout as backend/main.py: put backend/ on the path.
+# (Running `python scripts/test_rag.py` puts scripts/ on the path, not the
+# repo root, so `from backend.xxx import ...` cannot work from here.)
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "backend"))
+
+from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
+from intent_detector import analyze_query
 
 TEST_QUERIES = [
     "RTI kaise file karein UP mein?",
@@ -15,6 +19,11 @@ TEST_QUERIES = [
     "Challan galat kata hai mera",
     "Online UPI fraud hua hai",
 ]
+
+
+def format_distance(dist) -> str:
+    """Format a Chroma distance for printing; tolerate None / 'N/A'."""
+    return f"{dist:.4f}" if isinstance(dist, float) else str(dist)
 
 
 def test_query(query: str):
@@ -32,8 +41,9 @@ def test_query(query: str):
         for i, c in enumerate(chunks, 1):
             meta = c.get('metadata', {})
             dist = c.get('distance', 'N/A')
+            dist_str = format_distance(dist)
             print(f"  Chunk {i}: [{meta.get('domain','?')}] {meta.get('type','?')} "
-                  f"— distance: {dist:.4f if isinstance(dist, float) else dist}")
+                  f"— distance: {dist_str}")
             print(f"    Preview: {c['text'][:100]}...")
     else:
         print("  ⚠️  No chunks found!")

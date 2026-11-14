@@ -1,10 +1,12 @@
 import re
 
+from safety import ALERT_LEVELS, assess_risk
+
 DEVANAGARI = re.compile(r'[\u0900-\u097F]')
 
 HINGLISH_MARKERS = set([
     "kaise", "kya", "kab", "kyun", "kyunki", "kaun", "kitna", "kitni",
-    "mera", "meri", "mujhe", "mere", "hamara", "hamari", "tumhara",'hogyi','hogya'
+    "mera", "meri", "mujhe", "mere", "hamara", "hamari", "tumhara", "hogyi", "hogya",
     "aapka", "aapki", "unka", "uska", "iski", "iska",
     "karein", "karo", "karoon", "kar", "karna", "karte", "karti",
     "dena", "diya", "de", "dedo", "milega", "milegi", "milta",
@@ -99,16 +101,6 @@ DOMAIN_KEYWORDS = {
     ],
 }
 
-EMERGENCY_KEYWORDS = [
-    "maar pit", "maar raha hai", "maar diya", "bachao", "help me",
-    "kidnapping", "utha liya", "rape", "jabardasti",
-    "jaan ka khatra", "jaan se marna", "khoon", "hatya", "murder",
-    "aag lagi", "jalaya", "accident", "pistol", "chaku",
-    "emergency", "danger", "khatra", "ghar mein ghus aaye",
-    "dhamki de raha", "loot", "dacoity", "maar dega", "jaan lega",
-]
-
-
 def detect_language(text: str) -> str:
     if DEVANAGARI.search(text):
         return "hindi"
@@ -120,15 +112,41 @@ def detect_language(text: str) -> str:
 
 
 def detect_emergency(text: str) -> bool:
-    text_lower = text.lower()
-    return any(kw in text_lower for kw in EMERGENCY_KEYWORDS)
+    """True when the message needs the emergency or self-harm path.
+
+    Thin wrapper kept for backward compatibility; the real logic (four risk
+    levels, negation handling, Hindi/Hinglish phrases) lives in safety.py.
+    """
+    return assess_risk(text)["level"] in ALERT_LEVELS
+
+
+def _keyword_pattern(keyword: str):
+    """Match a keyword only as a whole word (optionally pluralised).
+
+    Plain `kw in text` also matches inside other words, e.g. 'sic' inside
+    'music' or 'st' inside 'first'. Lookarounds on \\w keep Devanagari and
+    keywords such as '156(3)' working.
+    """
+    return re.compile(r"(?<!\w)" + re.escape(keyword) + r"(?:s|es)?(?!\w)")
+
+
+_DOMAIN_PATTERNS = {
+    domain: [(_keyword_pattern(kw), len(kw.split())) for kw in keywords]
+    for domain, keywords in DOMAIN_KEYWORDS.items()
+}
 
 
 def detect_domain(text: str) -> str:
+    """Pick the domain whose keywords match best.
+
+    Each matched keyword scores its number of words, so a specific phrase
+    ('upi fraud') outweighs a generic word ('fraud'). Ties go to the domain
+    listed first in DOMAIN_KEYWORDS.
+    """
     text_lower = text.lower()
     domain_scores = {}
-    for domain, keywords in DOMAIN_KEYWORDS.items():
-        score = sum(1 for kw in keywords if kw in text_lower)
+    for domain, patterns in _DOMAIN_PATTERNS.items():
+        score = sum(weight for pattern, weight in patterns if pattern.search(text_lower))
         if score > 0:
             domain_scores[domain] = score
     if not domain_scores:
@@ -152,9 +170,16 @@ def detect_intent(text: str) -> str:
 
 
 def analyze_query(text: str) -> dict:
+    risk = assess_risk(text)
+    language = detect_language(text)
+    # Short Hinglish messages ("marna chahta hoon") can look English to the
+    # marker-based detector; trust the phrase that actually matched.
+    if risk["level"] in ALERT_LEVELS and risk["language_hint"] == "hindi":
+        language = "hindi"
     return {
-        "language":     detect_language(text),
+        "language":     language,
         "domain":       detect_domain(text),
         "intent":       detect_intent(text),
-        "is_emergency": detect_emergency(text),
+        "is_emergency": risk["level"] in ALERT_LEVELS,
+        "risk_level":   risk["level"],
     }
