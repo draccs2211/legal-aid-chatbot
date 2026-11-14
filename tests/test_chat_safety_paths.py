@@ -103,3 +103,8 @@ def test_emergency_reply_starts_with_helplines_when_a_provider_answers(monkeypat
     out = sarvam_client.generate_response("bachao", "ctx", language="hindi", is_emergency=True)
     assert out.startswith("आपातकालीन हेल्पलाइन")
     assert out.endswith("Here is what you can do.")
+
+
+def test_all_providers_down_a_hindi_question_gets_a_hindi_message(no_keys):
+    out = sarvam_client.generate_response("किराया नहीं मिला", "ctx", language="hindi", is_emergency=False)
+    assert DEVANAGARI.search(out) and "112" in out and "1076" not in out

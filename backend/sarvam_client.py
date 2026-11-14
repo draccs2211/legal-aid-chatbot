@@ -9,7 +9,7 @@ from config import (
 )
 import os
 
-from safety import emergency_block
+from safety import emergency_block, unavailable_message
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL   = "gpt-4o-mini"
@@ -123,7 +123,7 @@ def generate_response(query: str, context: str, language: str = "english",
 
     if raw_reply is None:
         return emergency_block(language) if is_emergency else \
-               "Sorry, unable to process right now. Please call 112 for emergency or 1076 for UP CM Helpline."
+               unavailable_message(language)
 
     cleaned = clean_response(raw_reply)
 

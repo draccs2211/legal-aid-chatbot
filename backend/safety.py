@@ -397,6 +397,14 @@ SELF_HARM_MESSAGE = {
 }
 
 
+UNAVAILABLE_MESSAGE = {
+    "english": ("Sorry, I can't answer right now. Please try again in a few minutes. "
+                "If you or someone else is in danger, call 112."),
+    "hindi": ("क्षमा करें, अभी मैं जवाब नहीं दे पा रहा हूँ। कृपया कुछ मिनट बाद फिर कोशिश करें। "
+              "अगर आप या कोई और खतरे में है, तो 112 पर कॉल करें।"),
+}
+
+
 def _lang(language: str) -> str:
     return "hindi" if language == "hindi" else "english"
 
@@ -411,3 +419,9 @@ def possible_footer(language: str = "english") -> str:
 
 def self_harm_message(language: str = "english") -> str:
     return SELF_HARM_MESSAGE[_lang(language)]
+
+
+def unavailable_message(language: str = "english") -> str:
+    """Shown when every AI provider failed on an ordinary question. It never
+    invents an answer, and it is in the user's language."""
+    return UNAVAILABLE_MESSAGE[_lang(language)]

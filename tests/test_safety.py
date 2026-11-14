@@ -14,6 +14,7 @@ from safety import (
     normalize,
     possible_footer,
     self_harm_message,
+    unavailable_message,
 )
 
 # Numbers recorded as verified in docs/verified-helplines.md
@@ -125,3 +126,14 @@ def test_self_harm_message_gives_no_method_or_judgement():
     low = self_harm_message("english").lower()
     for banned in ("how to", "method", "pills", "your fault", "selfish"):
         assert banned not in low
+
+
+@pytest.mark.parametrize("language", ["english", "hindi"])
+def test_unavailable_message_is_safe_in_both_languages(language):
+    msg = unavailable_message(language)
+    assert "112" in msg and _numbers(msg) <= VERIFIED
+
+
+def test_unavailable_message_follows_the_users_script():
+    dev = re.compile(r"[\u0900-\u097F]")
+    assert dev.search(unavailable_message("hindi")) and not dev.search(unavailable_message("english"))
