@@ -4,11 +4,11 @@ Rule: one phase at a time, one task per branch commit group, tests with every ch
 Status legend: [ ] todo  [~] in progress  [x] done (only after evidence: tests run, output shown)
 
 ## Phase A: fix what is broken (est. 2-3 days)
-- [ ] A0 Orientation: confirm repo state, run tests, reconcile docs with code
+- [x] A0 Orientation: confirm repo state, run tests, reconcile docs with code (2026-11-23: 645 passed, 11 xfailed)
 - [ ] A1 Provider layer: replace deprecated `sarvam-30b` (check CURRENT Sarvam docs), env-configurable model names,
       verify Groq and OpenAI model names, log which provider answered, timeouts, bounded retries, fake-provider tests
 - [ ] A2 `tests/conftest.py`: blank API keys, block network in all tests; prove it
-- [ ] A3 Check GitHub Actions CI result for the branch; fix anything red (first real run of CI)
+- [x] A3 Check GitHub Actions CI result for the branch; fix anything red (2026-11-23: last 5 runs green, nothing to fix)
 Acceptance: smoke test shows which provider answered; no test can reach a real API.
 
 ## Phase B: security and trust (est. 4-6 days)

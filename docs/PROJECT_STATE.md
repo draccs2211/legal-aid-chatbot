@@ -1,7 +1,9 @@
 # Project state (2026-11-23)
 
-Branch `audit/phase1`, last pushed commit `efc359c`. Run `git status` and `git log --oneline -5` to see anything newer.
-GitHub Actions result for the CI workflow has NOT been reported yet: check the Actions tab.
+Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
+CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
+An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
+Test suite on the owner's machine (2026-11-23): 645 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -56,4 +58,6 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
 
 ## Next session
 (Claude Code: write here, at the end of each task, what to do next and anything half-finished.)
-- Not started: Phase A0 orientation. See docs/ROADMAP.md.
+- A0 done (2026-11-23): docs reconciled with code; only lag was this file's commit/CI lines.
+- A3 done: CI green, nothing to fix.
+- Next: A2 (conftest blanks keys, blocks network), then A1 (provider layer).
