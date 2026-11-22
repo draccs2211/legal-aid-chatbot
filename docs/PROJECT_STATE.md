@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23, after A1): 706 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 718 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -21,7 +21,8 @@ Test suite on the owner's machine (2026-11-23, after A1): 706 passed, 11 xfailed
   three keys before any backend import (dotenv never overrides an existing variable) and blocks every
   non-loopback socket and DNS lookup. Proven by `tests/test_test_guards.py`.
 - 1076 (UP CM grievance helpline) verified against two UP government pages; not used in emergency text.
-- Provider layer (A1, code + fake-provider tests only; NOT yet confirmed against the real APIs):
+- Provider layer (A1). Sarvam path confirmed by the owner's real-key smoke run (2026-11-23, see below);
+  Groq and OpenAI request parameters NEVER exercised against the real APIs (Sarvam answered every time):
   defaults `sarvam-105b-conversations`, `openai/gpt-oss-120b` (Groq), `gpt-6-luna` (OpenAI), all env-configurable;
   30 s per attempt, 60 s total budget (frontend aborts /chat at 120 s), 1 retry on timeout/5xx/429 only;
   SDK's own retries off (it used to retry twice with a 10-minute timeout); reasoning text stripped;
@@ -41,16 +42,20 @@ Test suite on the owner's machine (2026-11-23, after A1): 706 passed, 11 xfailed
 - A distance cut-off cannot separate answerable from unanswerable questions (ranges overlap).
 - e5-small: ~595 MB after load, ~685 MB after 20 queries, 59 ms per query on the owner's PC.
 
-## Smoke test (local server, multilingual embedder, real keys): 13/13 PASS (run of 2026-11-14, BEFORE A1)
-- Sarvam call failed with 400: model `sarvam-30b` deprecated. All answers came from the OpenAI fallback.
-- Not re-run since the A1 provider changes.
-- Answer latency 4-19 s. Self-harm path 7 ms (static). Empty message correctly rejected.
+## Smoke test (local server, real keys)
+- 2026-11-23, AFTER A1 (owner's run): 13/13 PASS. All 8 LLM answers came from Sarvam `sarvam-105b-conversations`;
+  median latency 1.27 s (whole run, including static and rejected cases). Groq and OpenAI were never reached, so their
+  parameters (`gpt-oss-120b` reasoning settings, `gpt-6-luna` `max_completion_tokens` / `reasoning_effort=none`)
+  remain unverified: run `scripts/provider_check.py` to test each one directly.
+- 2026-11-14, BEFORE A1: 13/13 PASS, but Sarvam returned 400 (`sarvam-30b` deprecated) and every answer came from
+  the OpenAI fallback. Answer latency 4-19 s. Self-harm path 7 ms (static). Empty message correctly rejected.
+- Answer QUALITY is still not evaluated (the smoke test checks status, safety level, helplines, script; not content).
 
 ## Open backlog (rough priority)
-1. Provider layer: done in code (A1); waiting for the owner's smoke run with real keys.
-2. `/chat` is `async def` but calls the provider chain synchronously, so one slow answer (up to the 60 s budget)
+1. Provider layer: done (A1). Groq/OpenAI parameters unverified until `scripts/provider_check.py` is run.
+2. (Roadmap B0a) `/chat` is `async def` but calls the provider chain synchronously, so one slow answer (up to the 60 s budget)
    blocks the event loop for every other user. Fix: run it in a thread pool (`run_in_threadpool`). Found in A1, not fixed.
-3. The per-attempt timeout is httpx's: it limits each connect/read wait, not the total wall time of one call. For a
+3. (Roadmap B0b) The per-attempt timeout is httpx's: it limits each connect/read wait, not the total wall time of one call. For a
    non-streamed reply this is close to the total, but a provider trickling bytes could exceed it. The chain budget is
    checked between attempts. Found in A1, not fixed.
 4. Security hardening: error text leaks (`str(e)` in 500s), no auth or rate limit on paid endpoints, no size limit on
@@ -74,7 +79,9 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
 - A0 done (2026-11-23): docs reconciled with code; only lag was this file's commit/CI lines.
 - A3 done: CI green, nothing to fix.
 - A2 done: conftest guards + proof tests.
-- A1 [~]: code and fake-provider tests done (`tests/test_provider_chain.py`). NOT pushed yet (owner confirms first).
-  To finish: owner runs the smoke test with real keys and checks `answered by:` shows sarvam (or groq/openai) and
-  no 400s in the server log. If gpt-6-luna rejects a parameter, set `OPENAI_MODEL=gpt-4o-mini` (works to 2027-01-14).
-- Then: backlog item 2 (`/chat` blocks the event loop) is a small, high-value fix before Phase B.
+- A1 done: owner's smoke run 13/13, all answers from Sarvam. Caveat: Groq and OpenAI parameters never exercised.
+- Added `scripts/provider_check.py` (one tiny prompt to EACH provider, no fallback) and `smoke_test.py --save-answers`
+  (full answers to git-ignored `evaluation/results/smoke_answers/`). Owner to run provider_check with real keys;
+  if gpt-6-luna rejects a parameter, set `OPENAI_MODEL=gpt-4o-mini` (works to 2027-01-14).
+- Commits since `03feed2` are local, NOT pushed (owner confirms first).
+- Next: B0a (`/chat` blocks other users), then B0b (per-call total timeout).

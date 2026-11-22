@@ -5,13 +5,19 @@ Status legend: [ ] todo  [~] in progress  [x] done (only after evidence: tests r
 
 ## Phase A: fix what is broken (est. 2-3 days)
 - [x] A0 Orientation: confirm repo state, run tests, reconcile docs with code (2026-11-23: 645 passed, 11 xfailed)
-- [~] A1 (code + fake tests done 2026-11-23; waiting for the owner's real-key smoke run) Provider layer: replace deprecated `sarvam-30b` (check CURRENT Sarvam docs), env-configurable model names,
+- [x] A1 (2026-11-23: owner's real-key smoke 13/13, all 8 LLM answers from `sarvam-105b-conversations`, median 1.27 s.
+      CAVEAT: Groq and OpenAI parameters never exercised; check with `scripts/provider_check.py`) Provider layer: replace deprecated `sarvam-30b` (check CURRENT Sarvam docs), env-configurable model names,
       verify Groq and OpenAI model names, log which provider answered, timeouts, bounded retries, fake-provider tests
 - [x] A2 `tests/conftest.py`: blank API keys, block network in all tests; prove it (2026-11-23: `tests/test_test_guards.py`, 655 passed)
 - [x] A3 Check GitHub Actions CI result for the branch; fix anything red (2026-11-23: last 5 runs green, nothing to fix)
 Acceptance: smoke test shows which provider answered; no test can reach a real API.
 
 ## Phase B: security and trust (est. 4-6 days)
+- [ ] B0a `/chat` must not block other users: it is `async def` but runs the provider chain synchronously, so one slow
+      answer (up to the 60 s budget) freezes the event loop. Run it in a thread pool; test that a second request is
+      served while the first is waiting on a provider
+- [ ] B0b Per-call total timeout: httpx's timeout limits each connect/read wait, not one call's total time, so a provider
+      trickling bytes could run past it. Enforce a wall-clock limit per call inside the chain budget; test it
 - [ ] B1 Error handling: no `str(e)` in responses, no stack traces or key-like strings (tested)
 - [ ] B2 Limits: size limits on `/stt` upload and `/tts` text; rate limiting on `/chat`, `/stt`, `/tts`
 - [ ] B3 CORS configurable via env (no `*` in production); `/stats` no longer exposes server paths
