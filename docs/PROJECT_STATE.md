@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 645 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 655 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -17,6 +17,9 @@ Test suite on the owner's machine (2026-11-23): 645 passed, 11 xfailed.
   Path now resolves against the repo root; `scripts/doctor.py` diagnoses it; `.env.example` added.
 - Provider-down fallback message is now language-aware (found by the smoke test).
 - `.python-version` pins 3.10 (Render's default for new services is 3.14).
+- Tests could load real keys: `config.py` runs `load_dotenv()` on import. `tests/conftest.py` now blanks all
+  three keys before any backend import (dotenv never overrides an existing variable) and blocks every
+  non-loopback socket and DNS lookup. Proven by `tests/test_test_guards.py`.
 
 ## Retrieval measurements (71 answerable + 12 unanswerable labelled queries; dev set, optimistic)
 | Pipeline | Hit@5 | Hit@10 | MRR |
@@ -60,4 +63,6 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
 (Claude Code: write here, at the end of each task, what to do next and anything half-finished.)
 - A0 done (2026-11-23): docs reconciled with code; only lag was this file's commit/CI lines.
 - A3 done: CI green, nothing to fix.
-- Next: A2 (conftest blanks keys, blocks network), then A1 (provider layer).
+- A2 done: conftest guards + proof tests.
+- Next: A1 (provider layer). Plan shown to the owner first; owner asked for configurable timeout (~30 s),
+  total chain budget, retry only on timeout/5xx/429, reasoning-text stripping, safe logging, self-harm no-provider test.

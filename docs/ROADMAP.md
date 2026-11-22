@@ -7,7 +7,7 @@ Status legend: [ ] todo  [~] in progress  [x] done (only after evidence: tests r
 - [x] A0 Orientation: confirm repo state, run tests, reconcile docs with code (2026-11-23: 645 passed, 11 xfailed)
 - [ ] A1 Provider layer: replace deprecated `sarvam-30b` (check CURRENT Sarvam docs), env-configurable model names,
       verify Groq and OpenAI model names, log which provider answered, timeouts, bounded retries, fake-provider tests
-- [ ] A2 `tests/conftest.py`: blank API keys, block network in all tests; prove it
+- [x] A2 `tests/conftest.py`: blank API keys, block network in all tests; prove it (2026-11-23: `tests/test_test_guards.py`, 655 passed)
 - [x] A3 Check GitHub Actions CI result for the branch; fix anything red (2026-11-23: last 5 runs green, nothing to fix)
 Acceptance: smoke test shows which provider answered; no test can reach a real API.
 
