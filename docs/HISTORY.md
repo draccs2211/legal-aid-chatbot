@@ -19,7 +19,9 @@
   Lesson: validate paths, run the doctor. The owner rewrote `.env` without BOM via PowerShell.
 - The first doctor was not read-only: opening Chroma writes to disk and dirtied tracked files. Fixed with a temp-copy approach.
 - Distance-scale bug: the eval index used squared-L2 while production uses cosine. Fixed. Older e5 distance tables must be halved.
-- Provider-down message was hard-coded English; now language-aware. An unverified helpline number (1076) was removed.
+- Provider-down message was hard-coded English; now language-aware. An unverified helpline number (1076) was removed
+  from that message. 1076 (UP CM grievance helpline) was later verified on 2026-11-23 against two UP government
+  pages (see `docs/verified-helplines.md`); it remains in the `general` domain helpline, not in emergency text.
 - A predicted crash in `test_rag.py` was misdiagnosed once (it was ModuleNotFoundError, not ValueError). Lesson: reproduce before claiming.
 - A zip applied without its dependency caused 2 failing tests. Lesson: small commits, run the full suite each time.
 - Sarvam `sarvam-30b` returns 400 (deprecated). Not fixed yet = task A1. All real answers came from OpenAI, so
