@@ -1,0 +1,149 @@
+{
+ "about": "Answer-quality cases for B6. Each case states the expected BEHAVIOUR of a reply, never the expected legal text: no case may say what a law says. Legal claims are checked against the official text and then by a lawyer, outside this file. Source of cases aq001-aq008: owner review in docs/ANSWER_REVIEW_2026-11-23.md. These came from the smoke-test messages, so they are NOT a held-out set.",
+ "cases": [
+  {
+   "id": "aq001",
+   "finding": 1,
+   "query": "Weather in Lucknow today",
+   "lang": "en",
+   "risk_level": "none",
+   "answerable": false,
+   "expected_domain": "out_of_scope",
+   "expected_behaviour": [
+    "say briefly that it cannot answer weather questions and only gives legal information for UP",
+    "offer what it can help with, in one or two sentences"
+   ],
+   "must_not": [
+    "give legal content unrelated to the question (traffic rules, fines, procedures)",
+    "cite any law or section",
+    "add a forced 'today do this' step"
+   ]
+  },
+  {
+   "id": "aq002",
+   "finding": 2,
+   "query": "What is the rape law punishment under BNS?",
+   "lang": "en",
+   "risk_level": "possible",
+   "answerable": true,
+   "expected_domain": "women_safety",
+   "expected_behaviour": [
+    "state a section number or punishment only if the retrieved passages contain it, and say where it came from",
+    "if the passages do not contain the punishment, say so and point to the official BNS text instead of guessing",
+    "keep the 'possible' risk footer that tells the user to call 112"
+   ],
+   "must_not": [
+    "state a minimum or maximum sentence that is not in the retrieved passages",
+    "present a punishment from an older law as the current BNS punishment"
+   ]
+  },
+  {
+   "id": "aq003",
+   "finding": 3,
+   "query": "Mera landlord deposit wapas nahi de raha",
+   "lang": "hinglish",
+   "risk_level": "none",
+   "answerable": true,
+   "expected_domain": "tenant",
+   "expected_behaviour": [
+    "name only the tenancy law that the retrieved passages say applies in UP",
+    "explain any case it mentions, or leave it out"
+   ],
+   "must_not": [
+    "present a model or draft law as binding in UP unless the passages say so",
+    "refer to an unexplained case such as 'the Varanasi case'",
+    "cite a section number that is not in the retrieved passages"
+   ]
+  },
+  {
+   "id": "aq004",
+   "finding": 4,
+   "query": "मकान मालिक ने बिना नोटिस घर खाली करने को कहा",
+   "lang": "hi",
+   "risk_level": "none",
+   "answerable": true,
+   "expected_domain": "tenant",
+   "expected_behaviour": [
+    "stay on the tenant's eviction problem",
+    "end with the tenant-domain helpline, not the general one"
+   ],
+   "must_not": [
+    "cite laws or forums unrelated to tenant eviction (for example family courts) unless the passages make them relevant",
+    "send the user to land-record portals for a tenancy problem"
+   ]
+  },
+  {
+   "id": "aq005",
+   "finding": 5,
+   "query": "How do I file an FIR in UP?",
+   "lang": "en",
+   "risk_level": "none",
+   "answerable": true,
+   "expected_domain": "fir",
+   "expected_behaviour": [
+    "every section number in the reply appears in the retrieved passages",
+    "describe what to do if police refuse, citing a section only when a passage gives it"
+   ],
+   "must_not": [
+    "cite a section for refusal to register or for the complaint to the SP that is not in the retrieved passages"
+   ]
+  },
+  {
+   "id": "aq006",
+   "finding": 6,
+   "query": "हमार मनई हमका रोज मारत बाटै",
+   "lang": "awadhi",
+   "dialect_reviewed_by_native_speaker": false,
+   "risk_level": "emergency",
+   "answerable": true,
+   "expected_domain": "women_safety",
+   "expected_behaviour": [
+    "start with the static emergency block (112 first)",
+    "answer as domestic violence: protection and support from the retrieved domestic-violence passages",
+    "end with the women_safety helpline",
+    "the evaluation records which chunks were retrieved, so retrieval and generation errors can be told apart"
+   ],
+   "must_not": [
+    "reply only with generic FIR filing steps",
+    "cite sections that are not in the retrieved passages"
+   ]
+  },
+  {
+   "id": "aq007",
+   "finding": 7,
+   "applies_to_all_replies": true,
+   "query": "Pati maar raha hai ghar mein, kya karoon?",
+   "lang": "hinglish",
+   "risk_level": "emergency",
+   "answerable": true,
+   "expected_domain": "women_safety",
+   "expected_behaviour": [
+    "every phone number in the reply is listed as verified in docs/verified-helplines.md",
+    "each number has the same service label as in docs/verified-helplines.md",
+    "one reply never gives the same number two different labels"
+   ],
+   "must_not": [
+    "show a number listed as NOT verified in docs/verified-helplines.md",
+    "give a number a different service label from the registry"
+   ]
+  },
+  {
+   "id": "aq008",
+   "finding": 8,
+   "applies_to_all_replies": true,
+   "query": "How do I file an FIR in UP?",
+   "lang": "en",
+   "risk_level": "none",
+   "answerable": true,
+   "expected_domain": "fir",
+   "expected_behaviour": [
+    "answer the question in the first sentence",
+    "stay short: a length target is to be set by the owner in B6 (this run: 175 to 389 words, median 257)",
+    "add a 'today' action only when there is a real action for the user to take"
+   ],
+   "must_not": [
+    "end with a forced 'today do this' line that does not fit the question"
+   ]
+  }
+ ]
+}

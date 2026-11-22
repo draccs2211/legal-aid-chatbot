@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 718 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 752 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -50,6 +50,9 @@ Test suite on the owner's machine (2026-11-23): 718 passed, 11 xfailed.
 - 2026-11-14, BEFORE A1: 13/13 PASS, but Sarvam returned 400 (`sarvam-30b` deprecated) and every answer came from
   the OpenAI fallback. Answer latency 4-19 s. Self-harm path 7 ms (static). Empty message correctly rejected.
 - Answer QUALITY is still not evaluated (the smoke test checks status, safety level, helplines, script; not content).
+- Owner's first read of real answers (2026-11-23): 8 findings in `docs/ANSWER_REVIEW_2026-11-23.md` (no abstain on
+  out-of-scope, possibly wrong/outdated sections, irrelevant laws, Awadhi DV answered with FIR steps, helpline labels,
+  forced long answers). No legal claim is marked verified or wrong. Labelled as cases aq001-aq008 for B6.
 
 ## Open backlog (rough priority)
 1. Provider layer: done (A1). Groq/OpenAI parameters unverified until `scripts/provider_check.py` is run.
@@ -84,4 +87,5 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
   (full answers to git-ignored `evaluation/results/smoke_answers/`). Owner to run provider_check with real keys;
   if gpt-6-luna rejects a parameter, set `OPENAI_MODEL=gpt-4o-mini` (works to 2027-01-14).
 - Commits since `03feed2` are local, NOT pushed (owner confirms first).
+- Answer review recorded; B5/B6 have their inputs. Legal claims in it still need checking against official texts, then a lawyer.
 - Next: B0a (`/chat` blocks other users), then B0b (per-call total timeout).

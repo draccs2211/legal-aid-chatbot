@@ -24,7 +24,17 @@ Acceptance: smoke test shows which provider answered; no test can reach a real A
 - [ ] B4 Sessions: server-generated ids, no shared "default", eviction of old sessions
 - [ ] B5 Grounding: return sources with each answer; prompt forces use of passages only; abstain when passages do not
       answer; stop invented section numbers (current system prompt says "always mention section")
-- [ ] B6 Answer-quality evaluation: answerable vs unanswerable set, faithfulness, abstain accuracy, citation correctness,
+      Input: owner review `docs/ANSWER_REVIEW_2026-11-23.md`:
+      (1) out-of-scope question answered with traffic content, no abstain;
+      (2)(3)(5) section numbers and laws that may be wrong, outdated or not binding in UP;
+      (4) irrelevant laws and portals in the eviction answer;
+      (6) Awadhi domestic-violence message answered with FIR steps (retrieval or generation: not yet known);
+      (7) helpline numbers and labels copied from `DOMAIN_HELPLINES` (1076, "One Stop Centre: 181", unverified landlines);
+          helpline is chosen by the keyword detector, which returns `general` for Devanagari;
+      (8) prompt forces long answers and a "today do this" line (SYSTEM_PROMPT rule 8, `build_user_message` item 8)
+- [ ] B6 Input: start from `evaluation/data/answer_quality_cases.json` (aq001-aq008, behaviour only, one per review finding;
+      from smoke messages, so NOT held-out). Record retrieved chunk ids with every answer; owner sets the length target.
+      Answer-quality evaluation: answerable vs unanswerable set, faithfulness, abstain accuracy, citation correctness,
       reply-language check; fake providers in CI, real providers on demand
 Acceptance: threat-model doc lists each risk with its fix or status; answer eval report committed with honest numbers.
 
