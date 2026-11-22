@@ -13,6 +13,7 @@ import config
 import embedding
 import main
 import rag_pipeline
+import sarvam_client
 
 DIM = 64
 
@@ -161,7 +162,7 @@ def api(monkeypatch):
     seen = {}
     monkeypatch.setattr(main, "ensure_db_loaded", lambda: None)
     monkeypatch.setattr(main, "retrieve_chunks", lambda **kw: seen.setdefault("domains", []).append(kw["domain"]) or [])
-    monkeypatch.setattr(main, "generate_response", lambda **kw: "ok")
+    monkeypatch.setattr(main, "generate_reply", lambda **kw: sarvam_client.Reply("ok", "fake"))
     main.sessions.clear()
     return TestClient(main.app), seen
 

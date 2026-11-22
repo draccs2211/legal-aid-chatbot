@@ -76,8 +76,9 @@ def run(cases, post, get):
                         "seconds": secs, "detail": body if path == "/stats" else None})
     for i, case in enumerate(cases, 1):
         status, body, secs = post("/chat", {"message": case["message"], "session_id": f"smoke-{i}"})
+        provider = body.get("provider") if isinstance(body, dict) else None
         results.append({"name": case["name"], "problems": evaluate_case(case, status, body),
-                        "seconds": secs, "detail": None})
+                        "seconds": secs, "detail": None, "provider": provider})
     return results
 
 
@@ -85,6 +86,15 @@ def summarise(results):
     secs = sorted(r["seconds"] for r in results)
     return {"passed": sum(1 for r in results if not r["problems"]), "total": len(results),
             "p50": secs[len(secs) // 2] if secs else 0.0, "max": secs[-1] if secs else 0.0}
+
+
+def provider_counts(results):
+    """How many /chat replies each provider wrote, e.g. {'openai': 7, 'static': 2}."""
+    counts = {}
+    for r in results:
+        if r.get("provider"):
+            counts[r["provider"]] = counts.get(r["provider"], 0) + 1
+    return counts
 
 
 def _http(base, method, path, payload=None, timeout=60):
@@ -107,7 +117,9 @@ def _http(base, method, path, payload=None, timeout=60):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--base-url", default="http://127.0.0.1:8000")
-    ap.add_argument("--timeout", type=int, default=60)
+    # Longer than the server's LLM budget (LLM_TOTAL_BUDGET_SECONDS, default 60)
+    # so a slow answer is reported as slow, not as a client-side timeout.
+    ap.add_argument("--timeout", type=int, default=90)
     args = ap.parse_args(argv)
     post = lambda p, d: _http(args.base_url, "POST", p, d, args.timeout)  # noqa: E731
     get = lambda p: _http(args.base_url, "GET", p, None, args.timeout)  # noqa: E731
@@ -118,13 +130,15 @@ def main(argv=None):
         return 2
     for r in results:
         mark = "PASS" if not r["problems"] else "FAIL"
-        print(f"[{mark}] {r['name']:<34} {r['seconds'] * 1000:7.0f} ms")
+        who = f"  provider={r['provider']}" if r.get("provider") else ""
+        print(f"[{mark}] {r['name']:<34} {r['seconds'] * 1000:7.0f} ms{who}")
         for p in r["problems"]:
             print(f"        - {p}")
         if r["detail"]:
             print(f"        stats: {r['detail']}")
     s = summarise(results)
     print(f"\n{s['passed']}/{s['total']} checks passed; median {s['p50'] * 1000:.0f} ms, slowest {s['max'] * 1000:.0f} ms")
+    print(f"answered by: {provider_counts(results)}")
     return 0 if s["passed"] == s["total"] else 1
 
 

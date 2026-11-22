@@ -16,7 +16,7 @@ def api(monkeypatch):
 
     def fake_generate(**kwargs):
         calls["generate"].append(kwargs)
-        return "model answer"
+        return sarvam_client.Reply("model answer", "fake")
 
     def fake_retrieve(**kwargs):
         calls["retrieve"] += 1
@@ -24,7 +24,7 @@ def api(monkeypatch):
 
     monkeypatch.setattr(main, "ensure_db_loaded", lambda: None)
     monkeypatch.setattr(main, "retrieve_chunks", fake_retrieve)
-    monkeypatch.setattr(main, "generate_response", fake_generate)
+    monkeypatch.setattr(main, "generate_reply", fake_generate)
     main.sessions.clear()
     return TestClient(main.app), calls
 

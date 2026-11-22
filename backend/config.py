@@ -3,16 +3,57 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+def _positive_float(name, default):
+    """Read a positive number of seconds; fail fast on a typo or a non-positive value."""
+    raw = os.getenv(name, str(default))
+    try:
+        value = float(raw)
+    except ValueError:
+        raise ValueError(f"{name}={raw!r} is not a number") from None
+    if value <= 0:
+        raise ValueError(f"{name}={raw!r} must be greater than 0")
+    return value
+
+
+def _non_negative_int(name, default):
+    raw = os.getenv(name, str(default))
+    try:
+        value = int(raw)
+    except ValueError:
+        raise ValueError(f"{name}={raw!r} is not a whole number") from None
+    if value < 0:
+        raise ValueError(f"{name}={raw!r} must be 0 or more")
+    return value
+
+
+# ── LLM provider chain: Sarvam -> Groq -> OpenAI ──
+# Model names go stale: re-check each provider's docs before changing them
+# (facts and sources in docs/HISTORY.md).
+
 # ── Sarvam API ──
 SARVAM_API_KEY      = os.getenv("SARVAM_API_KEY", "")
 SARVAM_BASE_URL     = "https://api.sarvam.ai/v1"
-SARVAM_MODEL        = "sarvam-30b"
+# sarvam-30b is deprecated (400). -conversations never reasons: faster, cheaper.
+SARVAM_MODEL        = os.getenv("SARVAM_MODEL", "sarvam-105b-conversations")
 SARVAM_TRANSLATE_URL= "https://api.sarvam.ai/translate"
 
 # ── Groq Fallback ──
 GROQ_API_KEY  = os.getenv("GROQ_API_KEY", "")
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL    = "llama-3.3-70b-versatile"
+# llama-3.3-70b-versatile was shut down for free/developer tiers on 2026-08-16.
+GROQ_MODEL    = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+
+# ── OpenAI Fallback ──
+# gpt-4o-mini is deprecated and shuts down on 2027-01-14; gpt-6-luna is the
+# documented replacement. Its request parameters are unverified until a smoke run.
+OPENAI_MODEL  = os.getenv("OPENAI_MODEL", "gpt-6-luna")
+
+# Per-attempt timeout, and a budget for the whole chain (all providers and
+# retries). Keep the budget well under the frontend's 120 s /chat timeout.
+LLM_TIMEOUT_SECONDS      = _positive_float("LLM_TIMEOUT_SECONDS", 30)
+LLM_TOTAL_BUDGET_SECONDS = _positive_float("LLM_TOTAL_BUDGET_SECONDS", 60)
+# Extra attempts per provider, only after a timeout, a 5xx or a 429.
+LLM_MAX_RETRIES          = _non_negative_int("LLM_MAX_RETRIES", 1)
 
 # ── ChromaDB ──
 # Resolved against the repo root, not the current directory, so the same

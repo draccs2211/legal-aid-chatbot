@@ -7,12 +7,16 @@ from contextlib import asynccontextmanager
 
 from intent_detector import analyze_query
 from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
-from sarvam_client import generate_response, translate_text
+from sarvam_client import generate_reply, translate_text
 from config import DEEP_DOMAINS, BASIC_DOMAINS, ROUTING_MODE
 from embedding import get_embedder, uses_external_embedder
 from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
-import re
 from rag_pipeline import load_all_data
+import logging
+
+# Show the provider chain's INFO lines (provider, status, latency; never user
+# text). Does nothing if logging was already configured.
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 
 db_loaded = False
 
@@ -31,10 +35,6 @@ def warm_up():
         ensure_db_loaded()
 
 
-def clean_reply(text: str) -> str:
-    """Remove <think> reasoning tags from Sarvam-M output."""
-    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
-    return text.strip()
 @asynccontextmanager
 async def lifespan(_app):
     warm_up()
@@ -74,6 +74,9 @@ class ChatResponse(BaseModel):
     session_id: str
     risk_level: str = "none"
     quick_actions: List[str] = []
+    # Who wrote the reply: sarvam | groq | openai | none (all providers failed,
+    # static message) | static (self-harm message, no provider by design).
+    provider: str = "none"
 
 
 class HealthResponse(BaseModel):
@@ -149,7 +152,8 @@ async def chat(request: ChatRequest):
                 is_emergency=True,
                 risk_level=risk_level,
                 session_id=request.session_id,
-                quick_actions=[]
+                quick_actions=[],
+                provider="static",
             )
 
         ensure_db_loaded()
@@ -170,7 +174,7 @@ async def chat(request: ChatRequest):
         session_history = sessions.get(request.session_id, [])
 
         # ─── Step 4: Generate response ───
-        response_text = generate_response(
+        reply = generate_reply(
             query=message,
             context=context,
             language=language,
@@ -178,7 +182,7 @@ async def chat(request: ChatRequest):
             conversation_history=session_history,
             domain=domain
         )
-        response_text = clean_reply(response_text)
+        response_text = reply.text
         # ─── Step 5: Update session history ───
         session_history.append({"role": "user", "content": message})
         session_history.append({"role": "assistant", "content": response_text})
@@ -200,7 +204,8 @@ async def chat(request: ChatRequest):
             is_emergency=is_emergency,
             risk_level=risk_level,
             session_id=request.session_id,
-            quick_actions=quick_actions
+            quick_actions=quick_actions,
+            provider=reply.provider,
         )
 
     except HTTPException:

@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 655 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23, after A1): 706 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -20,6 +20,12 @@ Test suite on the owner's machine (2026-11-23): 655 passed, 11 xfailed.
 - Tests could load real keys: `config.py` runs `load_dotenv()` on import. `tests/conftest.py` now blanks all
   three keys before any backend import (dotenv never overrides an existing variable) and blocks every
   non-loopback socket and DNS lookup. Proven by `tests/test_test_guards.py`.
+- 1076 (UP CM grievance helpline) verified against two UP government pages; not used in emergency text.
+- Provider layer (A1, code + fake-provider tests only; NOT yet confirmed against the real APIs):
+  defaults `sarvam-105b-conversations`, `openai/gpt-oss-120b` (Groq), `gpt-6-luna` (OpenAI), all env-configurable;
+  30 s per attempt, 60 s total budget (frontend aborts /chat at 120 s), 1 retry on timeout/5xx/429 only;
+  SDK's own retries off (it used to retry twice with a 10-minute timeout); reasoning text stripped;
+  one log line per attempt without user text; `/chat` returns `provider`; smoke test prints it.
 
 ## Retrieval measurements (71 answerable + 12 unanswerable labelled queries; dev set, optimistic)
 | Pipeline | Hit@5 | Hit@10 | MRR |
@@ -35,25 +41,29 @@ Test suite on the owner's machine (2026-11-23): 655 passed, 11 xfailed.
 - A distance cut-off cannot separate answerable from unanswerable questions (ranges overlap).
 - e5-small: ~595 MB after load, ~685 MB after 20 queries, 59 ms per query on the owner's PC.
 
-## Smoke test (local server, multilingual embedder, real keys): 13/13 PASS
+## Smoke test (local server, multilingual embedder, real keys): 13/13 PASS (run of 2026-11-14, BEFORE A1)
 - Sarvam call failed with 400: model `sarvam-30b` deprecated. All answers came from the OpenAI fallback.
+- Not re-run since the A1 provider changes.
 - Answer latency 4-19 s. Self-harm path 7 ms (static). Empty message correctly rejected.
 
 ## Open backlog (rough priority)
-1. Provider layer: replace `sarvam-30b` (check current Sarvam docs), make model names env-configurable, verify Groq and
-   OpenAI model names, log which provider answered, bounded timeouts and retries, tests for each failure mode.
-2. `tests/conftest.py`: blank all API keys and block network in every test so a real key can never be used by accident.
-3. Security hardening: error text leaks (`str(e)` in 500s), no auth or rate limit on paid endpoints, no size limit on
+1. Provider layer: done in code (A1); waiting for the owner's smoke run with real keys.
+2. `/chat` is `async def` but calls the provider chain synchronously, so one slow answer (up to the 60 s budget)
+   blocks the event loop for every other user. Fix: run it in a thread pool (`run_in_threadpool`). Found in A1, not fixed.
+3. The per-attempt timeout is httpx's: it limits each connect/read wait, not the total wall time of one call. For a
+   non-streamed reply this is close to the total, but a provider trickling bytes could exceed it. The chain budget is
+   checked between attempts. Found in A1, not fixed.
+4. Security hardening: error text leaks (`str(e)` in 500s), no auth or rate limit on paid endpoints, no size limit on
    `/stt` upload and `/tts` text, CORS `*`, `/stats` shows server path, sessions (shared "default", guessable ids, never evicted).
-4. Grounding: return sources, stop invented section numbers (system prompt says "always mention section"), abstain when passages
+5. Grounding: return sources, stop invented section numbers (system prompt says "always mention section"), abstain when passages
    do not answer; answer-quality evaluation (faithfulness, citation correctness, hallucination, language of the reply).
-5. Safe ingestion: update/delete chunks, content hashes, stable ids, source registry (URL, date, version), stray
+6. Safe ingestion: update/delete chunks, content hashes, stable ids, source registry (URL, date, version), stray
    `data/women_safety_chromadb_chunks.json` (20 chunks, not loaded) vs folder file (15).
-6. Safety gaps (documented xfail tests): fire/medical emergencies, indirect suicidal phrasing, third-party crisis, being followed.
-7. Speech: migrate STT off `saarika:v2.5`; error paths; measure on real Hindi and dialect audio.
-8. Frontend: self-harm reply still shows the red "EMERGENCY - Call 112" banner; loading/error states; Android source missing.
-9. Deployment: Render staging per `docs/render-staging-plan.md` (untested: CPU-only torch, model cache), readiness check, structured logs.
-10. Docs: README, architecture and request diagrams, threat model, benchmark report, release report.
+7. Safety gaps (documented xfail tests): fire/medical emergencies, indirect suicidal phrasing, third-party crisis, being followed.
+8. Speech: migrate STT off `saarika:v2.5`; error paths; measure on real Hindi and dialect audio.
+9. Frontend: self-harm reply still shows the red "EMERGENCY - Call 112" banner; loading/error states; Android source missing.
+10. Deployment: Render staging per `docs/render-staging-plan.md` (untested: CPU-only torch, model cache), readiness check, structured logs.
+11. Docs: README, architecture and request diagrams, threat model, benchmark report, release report.
 
 ## Waiting on the owner (people tasks)
 Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer for `legal_review_template.csv`,
@@ -64,5 +74,7 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
 - A0 done (2026-11-23): docs reconciled with code; only lag was this file's commit/CI lines.
 - A3 done: CI green, nothing to fix.
 - A2 done: conftest guards + proof tests.
-- Next: A1 (provider layer). Plan shown to the owner first; owner asked for configurable timeout (~30 s),
-  total chain budget, retry only on timeout/5xx/429, reasoning-text stripping, safe logging, self-harm no-provider test.
+- A1 [~]: code and fake-provider tests done (`tests/test_provider_chain.py`). NOT pushed yet (owner confirms first).
+  To finish: owner runs the smoke test with real keys and checks `answered by:` shows sarvam (or groq/openai) and
+  no 400s in the server log. If gpt-6-luna rejects a parameter, set `OPENAI_MODEL=gpt-4o-mini` (works to 2027-01-14).
+- Then: backlog item 2 (`/chat` blocks the event loop) is a small, high-value fix before Phase B.

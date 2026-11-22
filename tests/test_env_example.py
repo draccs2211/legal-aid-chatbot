@@ -24,7 +24,8 @@ def _example_keys():
 def _variables_read_by_the_backend():
     names = set()
     for path in glob.glob(os.path.join(ROOT, "backend", "*.py")):
-        names |= set(re.findall(r'(?:getenv|_choice)\(\s*"([A-Z][A-Z0-9_]+)"', _read(path)))
+        names |= set(re.findall(r'(?:getenv|_choice|_positive_float|_non_negative_int)\(\s*"([A-Z][A-Z0-9_]+)"',
+                                _read(path)))
     return names
 
 

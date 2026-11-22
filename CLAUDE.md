@@ -33,7 +33,7 @@ Read on demand: docs/GOALS.md (why, targets, pilot checklist), docs/HISTORY.md (
 
 ## Environment (Windows, PowerShell, Python 3.10)
 - Python: `.\.venv\Scripts\python.exe`   (activate: `.\.venv\Scripts\Activate.ps1`)
-- Tests: `.\.venv\Scripts\python.exe -m pytest`   (last known: 655 passed, 11 xfailed; xfail = documented gap).
+- Tests: `.\.venv\Scripts\python.exe -m pytest`   (last known: 706 passed, 11 xfailed; xfail = documented gap).
   `tests/conftest.py` blanks API keys and blocks outside network in every test; keep it that way.
 - Server: `cd backend; ..\.venv\Scripts\python.exe -m uvicorn main:app --port 8000`
 - Smoke test (server running): `.\.venv\Scripts\python.exe scripts\smoke_test.py`
@@ -63,8 +63,9 @@ A new embedding model gets its own collection. Never mix models inside one colle
 - Production is NOT switched to the multilingual embedder yet. Plan: `docs/render-staging-plan.md`.
 
 ## Facts you must not rediscover the hard way
-- `sarvam-30b` is DEPRECATED: the live API returns 400. Per Sarvam docs the replacements are `sarvam-105b` and
-  `sarvam-105b-conversations`. Until fixed, every answer comes from the OpenAI fallback.
+- `sarvam-30b` is DEPRECATED (400). Default is now `sarvam-105b-conversations`; Groq `openai/gpt-oss-120b`;
+  OpenAI `gpt-6-luna`. All env-configurable; none confirmed by a real call yet. Sources: docs/HISTORY.md.
+- `/chat` returns `provider` (sarvam | groq | openai | none | static). Provider logs never contain user text.
 - Sarvam STT `saarika:v2.5` is listed as deprecated; Saaras (v4 recommended) is current. Not migrated yet.
 - A wrong `CHROMADB_PATH` in `.env` once silently created an empty database. Run the doctor first.
 - Real LLM latency seen in a smoke run: 4 to 19 seconds per answer. Nothing has been optimised.

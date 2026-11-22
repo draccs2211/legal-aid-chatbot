@@ -4,6 +4,7 @@ from fastapi.testclient import TestClient
 
 import main
 import rag_pipeline
+from sarvam_client import Reply
 
 
 class FakeCollection:
@@ -44,11 +45,11 @@ def client(monkeypatch):
 
     def fake_generate(**kwargs):
         captured.update(kwargs)
-        return "ok reply"
+        return Reply("ok reply", "fake")
 
     monkeypatch.setattr(main, "ensure_db_loaded", lambda: None)
     monkeypatch.setattr(main, "retrieve_chunks", lambda **kw: [])
-    monkeypatch.setattr(main, "generate_response", fake_generate)
+    monkeypatch.setattr(main, "generate_reply", fake_generate)
     main.sessions.clear()
     return TestClient(main.app), captured
 
