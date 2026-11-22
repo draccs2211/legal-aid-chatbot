@@ -2,6 +2,7 @@
 
     python scripts/smoke_test.py                                   # http://127.0.0.1:8000
     python scripts/smoke_test.py --base-url https://my-service.onrender.com
+    python scripts/smoke_test.py --save-answers   # also keep the full replies (git-ignored file)
 
 It sends a handful of realistic questions and checks what can be checked without
 knowing the model's wording: the status code, a non-empty reply, no leaked error
@@ -13,7 +14,9 @@ It sends one self-harm test sentence. That path answers with a fixed message and
 calls no AI provider.
 """
 import argparse
+import datetime
 import json
+import os
 import re
 import sys
 import time
@@ -23,6 +26,8 @@ import urllib.request
 LEAK_PATTERNS = [r"Traceback", r"Internal error", r"gsk_[A-Za-z0-9]{10,}", r"sk-[A-Za-z0-9_-]{16,}",
                  r"File \".*\.py\"", r"chromadb_store"]
 DEVANAGARI = re.compile(r"[\u0900-\u097F]")
+# --save-answers writes here; the folder is git-ignored.
+ANSWERS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "evaluation", "results", "smoke_answers")
 
 CASES = [
     {"name": "Hinglish RTI fee", "message": "RTI application fee kitni hoti hai?", "risk": "none", "domain": "rti"},
@@ -76,10 +81,28 @@ def run(cases, post, get):
                         "seconds": secs, "detail": body if path == "/stats" else None})
     for i, case in enumerate(cases, 1):
         status, body, secs = post("/chat", {"message": case["message"], "session_id": f"smoke-{i}"})
-        provider = body.get("provider") if isinstance(body, dict) else None
+        is_dict = isinstance(body, dict)
         results.append({"name": case["name"], "problems": evaluate_case(case, status, body),
-                        "seconds": secs, "detail": None, "provider": provider})
+                        "seconds": secs, "detail": None, "provider": body.get("provider") if is_dict else None,
+                        "message": case["message"], "status": status,
+                        "risk_level": body.get("risk_level") if is_dict else None,
+                        "reply": body.get("reply") if is_dict else body})
     return results
+
+
+def save_answers(results, base_url, directory=ANSWERS_DIR, now=None):
+    """Write every /chat case with its FULL reply to a JSON file for reading.
+    The default folder is git-ignored. Contains only the fixed test messages."""
+    now = now or datetime.datetime.now()
+    os.makedirs(directory, exist_ok=True)
+    path = os.path.join(directory, f"smoke_{now:%Y%m%d_%H%M%S}.json")
+    cases = [{k: r.get(k) for k in ("name", "message", "status", "risk_level", "provider", "seconds", "problems",
+                                    "reply")}
+             for r in results if "message" in r]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"base_url": base_url, "date": now.isoformat(timespec="seconds"), "cases": cases},
+                  f, ensure_ascii=False, indent=2)
+    return path
 
 
 def summarise(results):
@@ -120,6 +143,8 @@ def main(argv=None):
     # Longer than the server's LLM budget (LLM_TOTAL_BUDGET_SECONDS, default 60)
     # so a slow answer is reported as slow, not as a client-side timeout.
     ap.add_argument("--timeout", type=int, default=90)
+    ap.add_argument("--save-answers", action="store_true",
+                    help="write the full replies to evaluation/results/smoke_answers/ (git-ignored)")
     args = ap.parse_args(argv)
     post = lambda p, d: _http(args.base_url, "POST", p, d, args.timeout)  # noqa: E731
     get = lambda p: _http(args.base_url, "GET", p, None, args.timeout)  # noqa: E731
@@ -139,6 +164,8 @@ def main(argv=None):
     s = summarise(results)
     print(f"\n{s['passed']}/{s['total']} checks passed; median {s['p50'] * 1000:.0f} ms, slowest {s['max'] * 1000:.0f} ms")
     print(f"answered by: {provider_counts(results)}")
+    if args.save_answers:
+        print(f"full answers saved to {os.path.normpath(save_answers(results, args.base_url))}")
     return 0 if s["passed"] == s["total"] else 1
 
 

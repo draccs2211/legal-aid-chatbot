@@ -97,6 +97,40 @@ def test_the_whole_case_list_passes_against_the_app_with_providers_off(adapters)
     assert failures == {}
 
 
+def test_save_answers_keeps_full_replies_with_hindi_intact(adapters, tmp_path):
+    import datetime
+    import json
+
+    post, get = adapters
+    results = smoke.run(smoke.CASES, post, get)
+    path = smoke.save_answers(results, "http://x", directory=str(tmp_path),
+                              now=datetime.datetime(2026, 11, 23, 10, 5, 0))
+    assert os.path.basename(path) == "smoke_20261123_100500.json"
+    with open(path, encoding="utf-8") as f:
+        saved = json.load(f)
+    raw = open(path, encoding="utf-8").read()
+    assert saved["base_url"] == "http://x" and len(saved["cases"]) == len(smoke.CASES)   # /health, /stats left out
+    self_harm = next(c for c in saved["cases"] if c["name"] == "Self-harm (Hinglish)")
+    assert self_harm["provider"] == "static" and "14416" in self_harm["reply"]
+    assert smoke.DEVANAGARI.search(raw), "Hindi must be stored as text, not \\u escapes"
+    assert set(saved["cases"][0]) == {"name", "message", "status", "risk_level", "provider", "seconds",
+                                      "problems", "reply"}
+
+
+def test_save_answers_default_folder_is_ignored_by_git():
+    import shutil
+    import subprocess
+
+    if shutil.which("git") is None:
+        pytest.skip("git not available")
+    root = os.path.join(HERE, "..")
+    target = os.path.relpath(os.path.join(smoke.ANSWERS_DIR, "smoke_x.json"), root)
+    result = subprocess.run(["git", "check-ignore", "-q", target], cwd=root)
+    if result.returncode == 128:
+        pytest.skip("not a git repository")
+    assert result.returncode == 0, f"{target} is not git-ignored"
+
+
 def test_the_case_list_covers_every_risk_level_and_three_scripts():
     assert {c.get("risk") for c in smoke.CASES} >= {"none", "possible", "emergency", "self_harm"}
     text = " ".join(c["message"] for c in smoke.CASES)
