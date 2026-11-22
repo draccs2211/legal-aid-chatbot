@@ -195,6 +195,15 @@ class Reply(NamedTuple):
     provider: str   # "sarvam" | "groq" | "openai" | "none" (static fallback message)
 
 
+def call_provider_once(provider: Provider, messages: list, timeout: float) -> str:
+    """One request to one provider, exactly as the chain sends it. Raises on any
+    failure (including EmptyReply); no retry, no fallback. Also used by
+    scripts/provider_check.py so the check tests the production request."""
+    client = _get_client(provider.base_url, provider.api_key, timeout=timeout)
+    response = client.chat.completions.create(model=provider.model, messages=messages, **provider.params)
+    return extract_answer(response)
+
+
 def _run_chain(messages) -> tuple:
     """Try each provider in order within one time budget.
     Returns (raw_text, provider_name) or (None, "none")."""
@@ -210,10 +219,7 @@ def _run_chain(messages) -> tuple:
                 return None, "none"
             started = _clock()
             try:
-                client = _get_client(provider.base_url, provider.api_key, timeout=min(LLM_TIMEOUT_SECONDS, remaining))
-                response = client.chat.completions.create(
-                    model=provider.model, messages=messages, **provider.params)
-                text = extract_answer(response)
+                text = call_provider_once(provider, messages, timeout=min(LLM_TIMEOUT_SECONDS, remaining))
             except Exception as exc:  # classified; never logged as text
                 failure = _classify(exc)
                 _log_attempt(provider, attempt, "error", started, failure)
