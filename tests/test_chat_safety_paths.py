@@ -92,14 +92,11 @@ def test_all_providers_down_normal_query_gets_a_safe_error_not_an_invented_answe
 
 
 def test_emergency_reply_starts_with_helplines_when_a_provider_answers(monkeypatch):
-    class FakeCompletions:
-        def create(self, **kwargs):
-            msg = type("M", (), {"content": "Here is what you can do."})
-            return type("R", (), {"choices": [type("C", (), {"message": msg})]})
+    from fakes import completion, fake_client
 
-    fake_client = type("F", (), {"chat": type("Ch", (), {"completions": FakeCompletions()})})
     monkeypatch.setattr(sarvam_client, "SARVAM_API_KEY", "x")
-    monkeypatch.setattr(sarvam_client, "_get_client", lambda *a, **k: fake_client)
+    monkeypatch.setattr(sarvam_client, "_get_client",
+                        lambda *a, **k: fake_client(lambda **kw: completion("Here is what you can do.")))
     out = sarvam_client.generate_response("bachao", "ctx", language="hindi", is_emergency=True)
     assert out.startswith("आपातकालीन हेल्पलाइन")
     assert out.endswith("Here is what you can do.")

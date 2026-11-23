@@ -8,6 +8,7 @@ import openai
 import pytest
 
 import sarvam_client
+from fakes import fake_client
 
 HERE = os.path.dirname(__file__)
 spec = importlib.util.spec_from_file_location("provider_check", os.path.join(HERE, "..", "scripts", "provider_check.py"))
@@ -46,7 +47,7 @@ def providers(monkeypatch):
                         raise outcome
                     return completion(outcome)
 
-            return type("Client", (), {"chat": type("Chat", (), {"completions": Completions()})()})()
+            return fake_client(Completions().create)
 
         monkeypatch.setattr(sarvam_client, "_get_client", get_client)
         return calls

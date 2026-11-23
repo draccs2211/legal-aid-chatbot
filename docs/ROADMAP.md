@@ -16,7 +16,8 @@ Acceptance: smoke test shows which provider answered; no test can reach a real A
 - [x] B0a (2026-11-23: `def chat` + load lock; `tests/test_concurrency.py` failed 3/3 before, passes after) `/chat` must not block other users: it is `async def` but runs the provider chain synchronously, so one slow
       answer (up to the 60 s budget) freezes the event loop. Run it in a thread pool; test that a second request is
       served while the first is waiting on a provider
-- [ ] B0b Per-call total timeout: httpx's timeout limits each connect/read wait, not one call's total time, so a provider
+- [x] B0b (2026-11-23: AsyncOpenAI + asyncio.wait_for; `tests/test_provider_timeouts.py` against a real trickling
+      loopback server failed 3/5 before, passes after; call stops at 1.03 s with a 1.0 s limit) Per-call total timeout: httpx's timeout limits each connect/read wait, not one call's total time, so a provider
       trickling bytes could run past it. Enforce a wall-clock limit per call inside the chain budget; test it
 - [ ] B1 Error handling: no `str(e)` in responses, no stack traces or key-like strings (tested)
 - [ ] B2 Limits: size limits on `/stt` upload and `/tts` text; rate limiting on `/chat`, `/stt`, `/tts`

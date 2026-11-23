@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import re
@@ -6,7 +7,6 @@ from typing import NamedTuple, Optional
 
 import httpx
 import openai
-from openai import OpenAI
 from config import (
     SARVAM_API_KEY, SARVAM_BASE_URL, SARVAM_MODEL,
     SARVAM_TRANSLATE_URL, GROQ_API_KEY, GROQ_BASE_URL,
@@ -90,10 +90,12 @@ Your Task:
 """
 
 
-def _get_client(base_url: Optional[str], api_key: str, timeout: float = LLM_TIMEOUT_SECONDS) -> OpenAI:
+def _get_client(base_url: Optional[str], api_key: str, timeout: float = LLM_TIMEOUT_SECONDS) -> openai.AsyncOpenAI:
     # max_retries=0: the SDK would otherwise retry twice on its own, including
     # cases our policy does not retry. Its default timeout is 10 minutes.
-    return OpenAI(api_key=api_key, base_url=base_url, timeout=timeout, max_retries=0)
+    # `timeout` here is httpx's per-wait limit: an inner safety net only; the
+    # hard limit is asyncio.wait_for in call_provider_once.
+    return openai.AsyncOpenAI(api_key=api_key, base_url=base_url, timeout=timeout, max_retries=0)
 
 
 class Provider(NamedTuple):
@@ -162,7 +164,9 @@ def _classify(exc: Exception) -> _Failure:
     """Retry only what a retry can fix: timeouts, 5xx and 429.
     Never 400/401/403/404/422 (bad request, bad key, bad model name), never a
     connection error, never an empty reply: those go straight to the next provider."""
-    if isinstance(exc, openai.APITimeoutError):   # subclass of APIConnectionError: check first
+    # APITimeoutError: httpx's per-wait limit. asyncio.TimeoutError: our hard
+    # per-call limit (on Python 3.10 it is NOT the built-in TimeoutError).
+    if isinstance(exc, (openai.APITimeoutError, asyncio.TimeoutError, TimeoutError)):
         return _Failure("timeout", None, True, None)
     if isinstance(exc, openai.APIStatusError):
         status = exc.status_code
@@ -198,10 +202,22 @@ class Reply(NamedTuple):
 def call_provider_once(provider: Provider, messages: list, timeout: float) -> str:
     """One request to one provider, exactly as the chain sends it. Raises on any
     failure (including EmptyReply); no retry, no fallback. Also used by
-    scripts/provider_check.py so the check tests the production request."""
-    client = _get_client(provider.base_url, provider.api_key, timeout=timeout)
-    response = client.chat.completions.create(model=provider.model, messages=messages, **provider.params)
-    return extract_answer(response)
+    scripts/provider_check.py so the check tests the production request.
+
+    `timeout` is a HARD wall-clock limit for the whole call (B0b). httpx's own
+    timeout restarts whenever a few bytes arrive, so a provider trickling its
+    reply would never trip it. asyncio.wait_for cancels the request and closes
+    the connection when the limit is reached. Must be called from a thread
+    without a running event loop (/chat is a plain `def`, see B0a)."""
+
+    async def _create():
+        async with _get_client(provider.base_url, provider.api_key, timeout=timeout) as client:
+            return await client.chat.completions.create(model=provider.model, messages=messages, **provider.params)
+
+    async def _with_limit():
+        return await asyncio.wait_for(_create(), timeout=timeout)
+
+    return extract_answer(asyncio.run(_with_limit()))
 
 
 def _run_chain(messages) -> tuple:

@@ -19,6 +19,7 @@ from fastapi.testclient import TestClient
 import config
 import main
 import sarvam_client
+from fakes import fake_client
 from sarvam_client import EmptyReply, extract_answer
 
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
@@ -97,7 +98,7 @@ class FakeProviders:
                     raise outcome
                 return completion(outcome)
 
-        return type("Client", (), {"chat": type("Chat", (), {"completions": Completions()})()})()
+        return fake_client(Completions().create)
 
     def providers_called(self):
         return [c["provider"] for c in self.calls]
@@ -405,7 +406,8 @@ def test_self_harm_never_calls_a_provider(api_with_real_chain, monkeypatch, mess
 
     monkeypatch.setattr(sarvam_client, "_get_client", boom)
     monkeypatch.setattr(sarvam_client, "_run_chain", boom)
-    monkeypatch.setattr(sarvam_client, "OpenAI", boom)
+    monkeypatch.setattr(sarvam_client.openai, "AsyncOpenAI", boom)
+    monkeypatch.setattr(sarvam_client, "call_provider_once", boom)
     monkeypatch.setattr(main, "retrieve_chunks", boom)
     body = client.post("/chat", json={"message": message, "session_id": "sh"}).json()
     assert body["risk_level"] == "self_harm"

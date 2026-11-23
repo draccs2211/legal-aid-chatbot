@@ -15,6 +15,7 @@ import pytest
 
 import main
 import sarvam_client
+from fakes import fake_client
 
 SAFETY_TIMEOUT = 3.0   # a broken build fails after this instead of hanging CI
 
@@ -38,7 +39,7 @@ def slow_provider(monkeypatch):
                     return completion("slow answer")
                 return completion("fast answer")
 
-        return type("Client", (), {"chat": type("Chat", (), {"completions": Completions()})()})()
+        return fake_client(Completions().create)
 
     monkeypatch.setattr(sarvam_client, "SARVAM_API_KEY", "fake-key")
     monkeypatch.setattr(sarvam_client, "_get_client", get_client)
