@@ -311,6 +311,6 @@ def translate_text(text: str, source_lang: str, target_lang: str) -> str:
                 return r.json().get("translated_text", text)
             print(f"⚠️  Translate API: {r.status_code}")
     except Exception as e:
-        print(f"⚠️  Translation error: {e}")
+        print(f"⚠️  Translation error: {type(e).__name__}")   # class only (B1)
 
     return text

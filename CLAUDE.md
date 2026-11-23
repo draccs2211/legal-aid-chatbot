@@ -33,7 +33,7 @@ Read on demand: docs/GOALS.md (why, targets, pilot checklist), docs/HISTORY.md (
 
 ## Environment (Windows, PowerShell, Python 3.10)
 - Python: `.\.venv\Scripts\python.exe`   (activate: `.\.venv\Scripts\Activate.ps1`)
-- Tests: `.\.venv\Scripts\python.exe -m pytest`   (last known: 761 passed, 11 xfailed; xfail = documented gap).
+- Tests: `.\.venv\Scripts\python.exe -m pytest`   (last known: 773 passed, 11 xfailed; xfail = documented gap).
   `tests/conftest.py` blanks API keys and blocks outside network in every test; keep it that way.
 - Server: `cd backend; ..\.venv\Scripts\python.exe -m uvicorn main:app --port 8000`
 - Smoke test (server running): `.\.venv\Scripts\python.exe scripts\smoke_test.py` (add `--save-answers` to keep the
@@ -71,6 +71,8 @@ A new embedding model gets its own collection. Never mix models inside one colle
 - `/chat` is a plain `def` on purpose (FastAPI thread pool) and each provider call runs `asyncio.run(wait_for(...))`
   for a hard time limit. Do not make `/chat` `async def` again: tests/test_concurrency.py and asyncio.run would fail.
   Fake providers in tests use `tests/fakes.py` (`fake_client`).
+- Errors: never put `str(e)` in a response or a log. Use `_internal_error(endpoint, e)` in `main.py` (fixed message +
+  error id; log has class and traceback frames only). `tests/test_error_handling.py` guards this.
 - Sarvam STT `saarika:v2.5` is listed as deprecated; Saaras (v4 recommended) is current. Not migrated yet.
 - A wrong `CHROMADB_PATH` in `.env` once silently created an empty database. Run the doctor first.
 - Real LLM latency seen in a smoke run: 4 to 19 seconds per answer. Nothing has been optimised.

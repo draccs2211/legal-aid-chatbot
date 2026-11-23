@@ -19,7 +19,7 @@ Acceptance: smoke test shows which provider answered; no test can reach a real A
 - [x] B0b (2026-11-23: AsyncOpenAI + asyncio.wait_for; `tests/test_provider_timeouts.py` against a real trickling
       loopback server failed 3/5 before, passes after; call stops at 1.03 s with a 1.0 s limit) Per-call total timeout: httpx's timeout limits each connect/read wait, not one call's total time, so a provider
       trickling bytes could run past it. Enforce a wall-clock limit per call inside the chain budget; test it
-- [ ] B1 Error handling: no `str(e)` in responses, no stack traces or key-like strings (tested)
+- [x] B1 (2026-11-23: `tests/test_error_handling.py` failed 10/12 before, passes after) Error handling: no `str(e)` in responses, no stack traces or key-like strings (tested)
 - [ ] B2 Limits: size limits on `/stt` upload and `/tts` text; rate limiting on `/chat`, `/stt`, `/tts`
 - [ ] B3 CORS configurable via env (no `*` in production); `/stats` no longer exposes server paths
 - [ ] B4 Sessions: server-generated ids, no shared "default", eviction of old sessions

@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 761 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 773 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -67,7 +67,8 @@ Test suite on the owner's machine (2026-11-23): 761 passed, 11 xfailed.
    min(LLM_TIMEOUT_SECONDS, budget left)); a timeout is retried like any other. The 60 s budget is now hard (only
    overshoot: under 1 s of retry pause, already checked). Proven with a real trickling server on 127.0.0.1.
    NOT yet re-checked against the real providers: re-run `provider_check.py` and the smoke test.
-4. Security hardening: error text leaks (`str(e)` in 500s), no auth or rate limit on paid endpoints, no size limit on
+4. Security hardening: error text leaks FIXED (B1, 2026-11-23: fixed 500 message with an error id; the log has the id,
+   error class and traceback frames, never the message; speech failures are a fixed 503). Still open: no auth or rate limit on paid endpoints, no size limit on
    `/stt` upload and `/tts` text, CORS `*`, `/stats` shows server path, sessions (shared "default", guessable ids, never evicted).
 5. Grounding: return sources, stop invented section numbers (system prompt says "always mention section"), abstain when passages
    do not answer; answer-quality evaluation (faithfulness, citation correctness, hallucination, language of the reply).
@@ -97,3 +98,5 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
 - B0a done (not pushed). Not verified on a real running server under concurrent load.
 - B0b done (not pushed): the provider call path is now async inside each worker thread. Owner: re-run
   `scripts\provider_check.py` and `scripts\smoke_test.py` with real keys to confirm it on the real network.
+- B1 done (not pushed). To find a user's error: search the server log for `error_id=<id from their screen>`.
+- Next: B2 (size limits on /stt and /tts, rate limiting).

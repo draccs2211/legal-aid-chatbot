@@ -13,11 +13,39 @@ from embedding import get_embedder, uses_external_embedder
 from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
 from rag_pipeline import load_all_data
 import logging
+import re
 import threading
+import traceback
+import uuid
 
 # Show the provider chain's INFO lines (provider, status, latency; never user
 # text). Does nothing if logging was already configured.
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
+log = logging.getLogger("nyaymitra.api")
+
+SPEECH_UNAVAILABLE = "Speech service is not available right now."
+
+
+def _internal_error(endpoint: str, exc: Exception) -> HTTPException:
+    """A safe 500 (B1). The caller gets a fixed message and an error id; the log
+    gets the same id, the error class and the traceback FRAMES (file, line,
+    function) but never the exception message, which can contain keys, paths,
+    provider replies or the user's text."""
+    error_id = uuid.uuid4().hex[:8]
+    frames = "".join(traceback.format_tb(exc.__traceback__))
+    log.error("endpoint_failed endpoint=%s error_id=%s error=%s\n%s",
+              endpoint, error_id, type(exc).__name__, frames)
+    return HTTPException(status_code=500, detail=f"Something went wrong. Error id: {error_id}")
+
+
+def _speech_unavailable(endpoint: str, error: str) -> HTTPException:
+    """Speech provider failed or is not configured: fixed 503, nothing from the provider.
+    Only a short class-name or status code is logged, never provider text."""
+    # Short fixed reasons only ("RuntimeError", "STT failed: 503"); anything else is replaced.
+    safe = error if re.fullmatch(r"[A-Za-z_ :]{1,40}", error or "") or re.fullmatch(r"[A-Za-z :]{1,20}\d{3}", error or "") \
+        else "speech_error"
+    log.warning("speech_unavailable endpoint=%s reason=%s", endpoint, safe)
+    return HTTPException(status_code=503, detail=SPEECH_UNAVAILABLE)
 
 db_loaded = False
 # /chat runs in a thread pool, so two first requests can arrive together:
@@ -221,8 +249,7 @@ def chat(request: ChatRequest):
     except HTTPException:
         raise
     except Exception as e:
-        print(f"Chat error: {e}")
-        raise HTTPException(status_code=500, detail=f"Internal error: {str(e)}")
+        raise _internal_error("chat", e)
 
 
 @app.post("/translate")
@@ -238,7 +265,7 @@ def translate(source_text: str, source_lang: str = "english", target_lang: str =
             "target_lang": target_lang
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("translate", e)
 
 
 @app.get("/domains")
@@ -287,7 +314,7 @@ async def stt_endpoint(
         result = await speech_to_text(audio_bytes, language)
 
         if "error" in result and not result.get("transcript"):
-            raise HTTPException(status_code=500, detail=result["error"])
+            raise _speech_unavailable("stt", result["error"])
 
         return {
             "transcript": result.get("transcript", ""),
@@ -298,7 +325,7 @@ async def stt_endpoint(
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("stt", e)
 
 
 # main.py mein /tts endpoint update karo — yeh replace karo purana wala
@@ -321,7 +348,7 @@ async def tts_endpoint(request: dict):
         result = await text_to_speech(text, language)
 
         if "error" in result:
-            raise HTTPException(status_code=500, detail=result["error"])
+            raise _speech_unavailable("tts", result["error"])
 
         return {
             "audio_chunks":  result["audio_chunks"],
@@ -333,7 +360,7 @@ async def tts_endpoint(request: dict):
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("tts", e)
 # ─── Run ───
 if __name__ == "__main__":
     uvicorn.run(
