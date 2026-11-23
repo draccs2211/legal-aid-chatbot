@@ -13,7 +13,7 @@ Status legend: [ ] todo  [~] in progress  [x] done (only after evidence: tests r
 Acceptance: smoke test shows which provider answered; no test can reach a real API.
 
 ## Phase B: security and trust (est. 4-6 days)
-- [ ] B0a `/chat` must not block other users: it is `async def` but runs the provider chain synchronously, so one slow
+- [x] B0a (2026-11-23: `def chat` + load lock; `tests/test_concurrency.py` failed 3/3 before, passes after) `/chat` must not block other users: it is `async def` but runs the provider chain synchronously, so one slow
       answer (up to the 60 s budget) freezes the event loop. Run it in a thread pool; test that a second request is
       served while the first is waiting on a provider
 - [ ] B0b Per-call total timeout: httpx's timeout limits each connect/read wait, not one call's total time, so a provider

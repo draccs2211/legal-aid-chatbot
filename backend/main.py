@@ -13,19 +13,26 @@ from embedding import get_embedder, uses_external_embedder
 from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
 from rag_pipeline import load_all_data
 import logging
+import threading
 
 # Show the provider chain's INFO lines (provider, status, latency; never user
 # text). Does nothing if logging was already configured.
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 
 db_loaded = False
+# /chat runs in a thread pool, so two first requests can arrive together:
+# the lock makes sure the data is loaded once.
+_db_load_lock = threading.Lock()
 
 def ensure_db_loaded():
     global db_loaded
-    if not db_loaded:
-        print("🔄 Loading ChromaDB...")
-        load_all_data()   # ✅ correct function
-        db_loaded = True
+    if db_loaded:
+        return
+    with _db_load_lock:
+        if not db_loaded:
+            print("🔄 Loading ChromaDB...")
+            load_all_data()
+            db_loaded = True
 
 def warm_up():
     """Load the multilingual model and the index at startup instead of on the
@@ -127,7 +134,10 @@ async def health():
 
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
+def chat(request: ChatRequest):
+    # Plain `def`, not `async def`: retrieval and the provider chain block (up to
+    # the LLM budget). FastAPI runs a `def` endpoint in its thread pool, so one
+    # slow answer does not freeze the event loop for every other user (B0a).
     try:
         message = request.message.strip()
         if not message:

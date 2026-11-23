@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 752 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 755 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -56,8 +56,10 @@ Test suite on the owner's machine (2026-11-23): 752 passed, 11 xfailed.
 
 ## Open backlog (rough priority)
 1. Provider layer: done (A1). Groq/OpenAI parameters unverified until `scripts/provider_check.py` is run.
-2. (Roadmap B0a) `/chat` is `async def` but calls the provider chain synchronously, so one slow answer (up to the 60 s budget)
-   blocks the event loop for every other user. Fix: run it in a thread pool (`run_in_threadpool`). Found in A1, not fixed.
+2. (Roadmap B0a) FIXED 2026-11-23: `/chat` was `async def` with blocking calls, so one slow answer froze the event loop
+   for everyone. Now plain `def` (FastAPI runs it in its thread pool, AnyIO default 40 threads) and the first DB load
+   is behind a lock. Proven on one event loop by `tests/test_concurrency.py` (failed 3/3 before the fix).
+   Same pattern still in `/translate` (blocking 30 s httpx call) and `/`, `/stats` on a cold DB load: not fixed.
 3. (Roadmap B0b) The per-attempt timeout is httpx's: it limits each connect/read wait, not the total wall time of one call. For a
    non-streamed reply this is close to the total, but a provider trickling bytes could exceed it. The chain budget is
    checked between attempts. Found in A1, not fixed.
@@ -88,4 +90,5 @@ Native Awadhi/Bundeli speakers (templates in `evaluation/templates/`), a lawyer 
   if gpt-6-luna rejects a parameter, set `OPENAI_MODEL=gpt-4o-mini` (works to 2027-01-14).
 - Commits since `03feed2` are local, NOT pushed (owner confirms first).
 - Answer review recorded; B5/B6 have their inputs. Legal claims in it still need checking against official texts, then a lawyer.
-- Next: B0a (`/chat` blocks other users), then B0b (per-call total timeout).
+- B0a done (not pushed). Not verified on a real running server under concurrent load.
+- Next: B0b (per-call total timeout).
