@@ -32,6 +32,13 @@ Acceptance: smoke test shows which provider answered; no test can reach a real A
       (7) helpline numbers and labels copied from `DOMAIN_HELPLINES` (1076, "One Stop Centre: 181", unverified landlines);
           helpline is chosen by the keyword detector, which returns `general` for Devanagari;
       (8) prompt forces long answers and a "today do this" line (SYSTEM_PROMPT rule 8, `build_user_message` item 8)
+- [ ] B5a Single source of truth for helplines: `DOMAIN_HELPLINES` in `backend/config.py` is generated from, or tested
+      against, `docs/verified-helplines.md` (number AND service label); unverified landlines removed from replies until verified
+- [ ] B5b Helpline domain must not come from the keyword detector when `ROUTING_MODE=none` (it returns `general` for
+      Devanagari); out-of-scope questions get no domain helpline
+- [ ] B5c Abstain path, with its own tests: out-of-scope or unanswerable questions get a short "I can't answer this"
+      reply, no invented law, no forced steps (input: aq001)
+- [ ] B6a `smoke_test.py --save-answers` also records retrieved chunk ids and distances for every answer (input: aq006)
 - [ ] B6 Input: start from `evaluation/data/answer_quality_cases.json` (aq001-aq008, behaviour only, one per review finding;
       from smoke messages, so NOT held-out). Record retrieved chunk ids with every answer; owner sets the length target.
       Answer-quality evaluation: answerable vs unanswerable set, faithfulness, abstain accuracy, citation correctness,

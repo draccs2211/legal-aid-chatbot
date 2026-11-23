@@ -184,3 +184,5 @@ baseline-freeze.txt
 chromadb_store*/
 # Full smoke-test replies (scripts/smoke_test.py --save-answers): for reading, not for the repo.
 evaluation/results/smoke_answers/
+# Owner's local copy of saved answers for reading.
+answers_view.txt
