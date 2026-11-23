@@ -3,7 +3,7 @@
 Branch `audit/phase1`, last pushed commit `03feed2`. Run `git status` and `git log --oneline -5` to see anything newer.
 CI (GitHub Actions `tests` workflow) is GREEN: last 5 runs succeeded, latest 2026-11-22 (push + pull_request).
 An open pull request from `audit/phase1` exists. Do NOT merge it (merging deploys to production).
-Test suite on the owner's machine (2026-11-23): 760 passed, 11 xfailed.
+Test suite on the owner's machine (2026-11-23): 761 passed, 11 xfailed.
 
 ## Fixed and verified (tests pass on the owner's Windows machine)
 - Domain routing matched word fragments ("music" -> RTI). Now whole words.
@@ -59,7 +59,9 @@ Test suite on the owner's machine (2026-11-23): 760 passed, 11 xfailed.
 2. (Roadmap B0a) FIXED 2026-11-23: `/chat` was `async def` with blocking calls, so one slow answer froze the event loop
    for everyone. Now plain `def` (FastAPI runs it in its thread pool, AnyIO default 40 threads) and the first DB load
    is behind a lock. Proven on one event loop by `tests/test_concurrency.py` (failed 3/3 before the fix).
-   Same pattern still in `/translate` (blocking 30 s httpx call) and `/`, `/stats` on a cold DB load: not fixed.
+   `/translate` fixed the same way (plain `def`, tested). Still open: `/` and `/stats` on a cold DB load; and
+   `translate_text` itself has only httpx's per-wait timeout (trickle risk). The frontend never calls `/translate`,
+   so removing the endpoint may be simplest: owner's decision.
 3. (Roadmap B0b) FIXED 2026-11-23: httpx's timeout restarts whenever bytes arrive, so a trickling provider could run
    past it. Each call now uses the SDK's async client inside `asyncio.wait_for` (hard wall-clock limit =
    min(LLM_TIMEOUT_SECONDS, budget left)); a timeout is retried like any other. The 60 s budget is now hard (only

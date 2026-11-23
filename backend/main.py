@@ -226,8 +226,9 @@ def chat(request: ChatRequest):
 
 
 @app.post("/translate")
-async def translate(source_text: str, source_lang: str = "english", target_lang: str = "hindi"):
-    """Translate text using Sarvam Translate API."""
+def translate(source_text: str, source_lang: str = "english", target_lang: str = "hindi"):
+    """Translate text using Sarvam Translate API.
+    Plain `def` (thread pool): translate_text is a blocking httpx call, see B0a."""
     try:
         translated = translate_text(source_text, source_lang, target_lang)
         return {

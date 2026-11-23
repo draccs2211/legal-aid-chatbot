@@ -91,6 +91,40 @@ def test_a_self_harm_message_is_answered_while_a_slow_request_waits(slow_provide
     assert slow_provider["released_by_timeout"] is False
 
 
+def test_a_slow_translate_does_not_block_other_requests(monkeypatch):
+    """/translate calls the blocking Sarvam translate API (httpx, up to 30 s per wait)."""
+    release = threading.Event()
+    state = {"released_by_timeout": None}
+
+    def slow_translate(text, source_lang, target_lang):
+        state["released_by_timeout"] = not release.wait(SAFETY_TIMEOUT)
+        return "translated"
+
+    monkeypatch.setattr(main, "translate_text", slow_translate)
+    order = []
+
+    async def main_coro():
+        transport = httpx.ASGITransport(app=main.app)
+        async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+            async def translate():
+                r = await client.post("/translate", params={"source_text": "hello"})
+                order.append("translate")
+                return r
+
+            task = asyncio.create_task(translate())
+            await asyncio.sleep(0.05)
+            health = await client.get("/health")
+            order.append("health")
+            release.set()
+            return await task, health
+
+    translate, health = asyncio.run(main_coro())
+    assert translate.status_code == 200 and translate.json()["translated"] == "translated"
+    assert health.status_code == 200
+    assert order == ["health", "translate"], "/health had to wait for /translate"
+    assert state["released_by_timeout"] is False
+
+
 def test_the_database_is_loaded_once_even_when_first_requests_arrive_together(monkeypatch):
     """With /chat in a thread pool, two cold-start requests could both start the load."""
     calls = []
