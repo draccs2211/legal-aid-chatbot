@@ -3,29 +3,82 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
 import uvicorn
+from contextlib import asynccontextmanager
 
 from intent_detector import analyze_query
 from rag_pipeline import retrieve_chunks, format_context, get_collection_stats
-from sarvam_client import generate_response, translate_text
-from config import DEEP_DOMAINS, BASIC_DOMAINS
-import re
+from sarvam_client import generate_reply, translate_text
+from config import DEEP_DOMAINS, BASIC_DOMAINS, ROUTING_MODE
+from embedding import get_embedder, uses_external_embedder
+from safety import SELF_HARM, POSSIBLE, self_harm_message, possible_footer
 from rag_pipeline import load_all_data
+import logging
+import re
+import threading
+import traceback
+import uuid
+
+# Show the provider chain's INFO lines (provider, status, latency; never user
+# text). Does nothing if logging was already configured.
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
+log = logging.getLogger("nyaymitra.api")
+
+SPEECH_UNAVAILABLE = "Speech service is not available right now."
+
+
+def _internal_error(endpoint: str, exc: Exception) -> HTTPException:
+    """A safe 500 (B1). The caller gets a fixed message and an error id; the log
+    gets the same id, the error class and the traceback FRAMES (file, line,
+    function) but never the exception message, which can contain keys, paths,
+    provider replies or the user's text."""
+    error_id = uuid.uuid4().hex[:8]
+    frames = "".join(traceback.format_tb(exc.__traceback__))
+    log.error("endpoint_failed endpoint=%s error_id=%s error=%s\n%s",
+              endpoint, error_id, type(exc).__name__, frames)
+    return HTTPException(status_code=500, detail=f"Something went wrong. Error id: {error_id}")
+
+
+def _speech_unavailable(endpoint: str, error: str) -> HTTPException:
+    """Speech provider failed or is not configured: fixed 503, nothing from the provider.
+    Only a short class-name or status code is logged, never provider text."""
+    # Short fixed reasons only ("RuntimeError", "STT failed: 503"); anything else is replaced.
+    safe = error if re.fullmatch(r"[A-Za-z_ :]{1,40}", error or "") or re.fullmatch(r"[A-Za-z :]{1,20}\d{3}", error or "") \
+        else "speech_error"
+    log.warning("speech_unavailable endpoint=%s reason=%s", endpoint, safe)
+    return HTTPException(status_code=503, detail=SPEECH_UNAVAILABLE)
 
 db_loaded = False
+# /chat runs in a thread pool, so two first requests can arrive together:
+# the lock makes sure the data is loaded once.
+_db_load_lock = threading.Lock()
 
 def ensure_db_loaded():
     global db_loaded
-    if not db_loaded:
-        print("🔄 Loading ChromaDB...")
-        load_all_data()   # ✅ correct function
-        db_loaded = True
+    if db_loaded:
+        return
+    with _db_load_lock:
+        if not db_loaded:
+            print("🔄 Loading ChromaDB...")
+            load_all_data()
+            db_loaded = True
 
-def clean_reply(text: str) -> str:
-    """Remove <think> reasoning tags from Sarvam-M output."""
-    text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
-    return text.strip()
+def warm_up():
+    """Load the multilingual model and the index at startup instead of on the
+    first user request (loading takes seconds). Does nothing on the default backend."""
+    if uses_external_embedder():
+        get_embedder()
+        ensure_db_loaded()
+
+
+@asynccontextmanager
+async def lifespan(_app):
+    warm_up()
+    yield
+
+
 # ─── FastAPI App ───
 app = FastAPI(
+    lifespan=lifespan,
     title="NyayMitra API",
     description="AI-powered Legal Aid Chatbot for UP Citizens",
     version="1.0.0"
@@ -54,7 +107,11 @@ class ChatResponse(BaseModel):
     language: str
     is_emergency: bool
     session_id: str
+    risk_level: str = "none"
     quick_actions: List[str] = []
+    # Who wrote the reply: sarvam | groq | openai | none (all providers failed,
+    # static message) | static (self-harm message, no provider by design).
+    provider: str = "none"
 
 
 class HealthResponse(BaseModel):
@@ -105,7 +162,10 @@ async def health():
 
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
+def chat(request: ChatRequest):
+    # Plain `def`, not `async def`: retrieval and the provider chain block (up to
+    # the LLM budget). FastAPI runs a `def` endpoint in its thread pool, so one
+    # slow answer does not freeze the event loop for every other user (B0a).
     try:
         message = request.message.strip()
         if not message:
@@ -117,11 +177,28 @@ async def chat(request: ChatRequest):
         intent = analysis["intent"]
         language = analysis["language"]
         is_emergency = analysis["is_emergency"]
+        risk_level = analysis["risk_level"]
+
+        # ─── Self-harm: static supportive message only. No retrieval, no LLM,
+        # nothing stored in the session, so it works even if every provider is down.
+        if risk_level == SELF_HARM:
+            return ChatResponse(
+                reply=self_harm_message(language),
+                domain=domain,
+                intent=intent,
+                language=language,
+                is_emergency=True,
+                risk_level=risk_level,
+                session_id=request.session_id,
+                quick_actions=[],
+                provider="static",
+            )
+
         ensure_db_loaded()
         # ─── Step 2: Retrieve relevant chunks ───
         chunks = retrieve_chunks(
             query=message,
-            domain=domain if domain != "general" else None,
+            domain=domain if (ROUTING_MODE == "hard" and domain != "general") else None,
             top_k=5
         )
 
@@ -135,18 +212,24 @@ async def chat(request: ChatRequest):
         session_history = sessions.get(request.session_id, [])
 
         # ─── Step 4: Generate response ───
-        response_text = generate_response(
+        reply = generate_reply(
             query=message,
             context=context,
             language=language,
             is_emergency=is_emergency,
-            conversation_history=session_history
+            conversation_history=session_history,
+            domain=domain
         )
-        response_text = clean_reply(response_text)
+        response_text = reply.text
         # ─── Step 5: Update session history ───
         session_history.append({"role": "user", "content": message})
         session_history.append({"role": "assistant", "content": response_text})
         sessions[request.session_id] = session_history[-10:]  # Keep last 5 turns
+
+        # Ambiguous risk words: normal answer plus a short "call 112" footer
+        # (added after the history update so it is not fed back to the model).
+        if risk_level == POSSIBLE:
+            response_text = response_text + "\n\n" + possible_footer(language)
 
         # ─── Step 6: Get quick actions ───
         quick_actions = get_quick_actions(domain, intent)
@@ -157,20 +240,22 @@ async def chat(request: ChatRequest):
             intent=intent,
             language=language,
             is_emergency=is_emergency,
+            risk_level=risk_level,
             session_id=request.session_id,
-            quick_actions=quick_actions
+            quick_actions=quick_actions,
+            provider=reply.provider,
         )
 
     except HTTPException:
         raise
     except Exception as e:
-        print(f"Chat error: {e}")
-        raise HTTPException(status_code=500, detail=f"Internal error: {str(e)}")
+        raise _internal_error("chat", e)
 
 
 @app.post("/translate")
-async def translate(source_text: str, source_lang: str = "english", target_lang: str = "hindi"):
-    """Translate text using Sarvam Translate API."""
+def translate(source_text: str, source_lang: str = "english", target_lang: str = "hindi"):
+    """Translate text using Sarvam Translate API.
+    Plain `def` (thread pool): translate_text is a blocking httpx call, see B0a."""
     try:
         translated = translate_text(source_text, source_lang, target_lang)
         return {
@@ -180,7 +265,7 @@ async def translate(source_text: str, source_lang: str = "english", target_lang:
             "target_lang": target_lang
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("translate", e)
 
 
 @app.get("/domains")
@@ -229,7 +314,7 @@ async def stt_endpoint(
         result = await speech_to_text(audio_bytes, language)
 
         if "error" in result and not result.get("transcript"):
-            raise HTTPException(status_code=500, detail=result["error"])
+            raise _speech_unavailable("stt", result["error"])
 
         return {
             "transcript": result.get("transcript", ""),
@@ -240,7 +325,7 @@ async def stt_endpoint(
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("stt", e)
 
 
 # main.py mein /tts endpoint update karo — yeh replace karo purana wala
@@ -263,7 +348,7 @@ async def tts_endpoint(request: dict):
         result = await text_to_speech(text, language)
 
         if "error" in result:
-            raise HTTPException(status_code=500, detail=result["error"])
+            raise _speech_unavailable("tts", result["error"])
 
         return {
             "audio_chunks":  result["audio_chunks"],
@@ -275,7 +360,7 @@ async def tts_endpoint(request: dict):
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise _internal_error("tts", e)
 # ─── Run ───
 if __name__ == "__main__":
     uvicorn.run(

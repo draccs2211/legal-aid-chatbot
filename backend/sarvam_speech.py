@@ -122,7 +122,8 @@ async def speech_to_text(audio_bytes: bytes, language: str = "unknown") -> dict:
             print(f"STT Error: {response.status_code}")
             return {"error": f"STT failed: {response.status_code}", "transcript": ""}
     except Exception as e:
-        return {"error": str(e), "transcript": ""}
+        # Class name only: the message can contain the URL, headers or provider text (B1).
+        return {"error": type(e).__name__, "transcript": ""}
 
 
 async def tts_single_chunk(text: str, language: str, speaker: str) -> str | None:
@@ -139,10 +140,11 @@ async def tts_single_chunk(text: str, language: str, speaker: str) -> str | None
             if response.status_code == 200:
                 audios = response.json().get("audios", [])
                 return audios[0] if audios else None
-            print(f"TTS chunk error: {response.status_code} — {response.text}")
+            # Status only: the body can echo the text being spoken (B1).
+            print(f"TTS chunk error: {response.status_code}")
             return None
     except Exception as e:
-        print(f"TTS chunk exception: {e}")
+        print(f"TTS chunk exception: {type(e).__name__}")
         return None
 
 
